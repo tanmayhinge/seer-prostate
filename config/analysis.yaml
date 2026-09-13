@@ -1,0 +1,180 @@
+# Analysis definitions for the timeliness study. Rationale for every rule is in PROTOCOL.md.
+# Labels are copied exactly from the SEER export (see reports/phase0.md, Appendix A).
+
+seed: 20260913
+
+columns:
+  year: "Year of diagnosis"
+  sequence: "Sequence number"
+  stage: "Combined Summary Stage with Expanded Regional Codes (2004+)"
+  survival_flag: "Survival months flag"
+  age: "Age recode with <1 year olds and 90+"
+  surgery_old: "RX Summ--Surg Prim Site (1998-2022)"
+  surgery_new: "RX Summ--Surg Prim Site 2023 (2023+)"
+  radiation: "Radiation recode"
+  interval: "Time from diagnosis to treatment in days recode"
+  gleason_clinical: "Gleason Score Clinical Recode (2010+)"
+  psa: "PSA Lab Value Recode (2010+)"
+  marital: "Marital status at diagnosis"
+  rurality: "Rural-Urban Continuum Code"
+  income: "Median household income inflation adj to 2024"
+
+cohort:
+  first_primary_labels: ["One primary only", "1st of 2 or more primaries"]
+  first_primary_strict_labels: ["One primary only"]
+  localised_labels: ["Localized only"]
+  regional_extension_labels: ["Regional by direct extension only"]
+  regional_node_labels:
+    - "Regional lymph nodes involved only"
+    - "Regional by both direct extension and lymph node involvement"
+  dco_labels: ["Not calculated because a Death Certificate Only or Autopsy Only case"]
+  excluded_age_labels:
+    - "00 years"
+    - "01-04 years"
+    - "05-09 years"
+    - "10-14 years"
+    - "15-19 years"
+    - "20-24 years"
+    - "25-29 years"
+    - "30-34 years"
+    - "35-39 years"
+  year_min: 2010
+  year_max: 2022
+  sensitivity_year_max: 2023
+
+treatment:
+  blank_label: "Blank(s)"
+  # SEER Program Coding and Staging Manual, Appendix C prostate surgery codes, 2021 and 2023 editions.
+  prostatectomy_codes: ["50", "70", "80", "A500", "A700", "A800"]
+  prostatectomy_nos_codes: ["80", "A800"]
+  surgery_other_codes:
+    - "00"
+    - "10"
+    - "14"
+    - "15"
+    - "16"
+    - "17"
+    - "18"
+    - "19"
+    - "20"
+    - "21"
+    - "22"
+    - "23"
+    - "24"
+    - "25"
+    - "26"
+    - "30"
+    - "90"
+    - "99"
+    - "A000"
+    - "A100"
+    - "A140"
+    - "A150"
+    - "A160"
+    - "A170"
+    - "A180"
+    - "A190"
+    - "A200"
+    - "A210"
+    - "A220"
+    - "A230"
+    - "A240"
+    - "A250"
+    - "A260"
+    - "A300"
+    - "A900"
+    - "A990"
+  radiation_labels:
+    - "Beam radiation"
+    - "Radioactive implants (includes brachytherapy) (1988+)"
+    - "Combination of beam with implants or isotopes"
+    - "Radioisotopes (1988+)"
+    - "Radiation, NOS  method or source not specified"
+  radiation_other_labels:
+    - "None/Unknown"
+    - "Recommended, unknown if administered"
+    - "Refused (1988+)"
+
+interval:
+  missing_labels: ["Unable to calculate"]
+  top_code_label: "731+ days"
+  top_code_days: 731
+  primary_threshold_days: 90       # Australian prostate OCP: surgery or radiation within 3 months of diagnosis
+  sensitivity_thresholds_days: [60, 120, 180]
+
+risk:
+  gleason_pattern: '^Gleason score (\d+)$'
+  gleason_missing_labels:
+    - "Blank(s)"
+    - "Not documented; Not assessed or unknown if assessed"
+    - "No needle core biopsy/TURP performed"
+    - "Not applicable: Information not collected for this case"
+  psa_missing_labels:
+    - "Blank(s)"
+    - "Not documented; not assessed; unknown"
+    - "Test ordered, results not in chart"
+  psa_top_codes:
+    "98.0 ng/ml or greater": 98.0
+    "0.1 or less nanograms/milliliter (ng/ml)": 0.1
+  low_max_gleason: 6
+  intermediate_gleason: 7
+  high_min_gleason: 8
+  low_psa_below: 10.0
+  high_psa_above: 20.0
+
+features:
+  covid_year: 2020
+  age_midpoints:
+    "40-44 years": 42.0
+    "45-49 years": 47.0
+    "50-54 years": 52.0
+    "55-59 years": 57.0
+    "60-64 years": 62.0
+    "65-69 years": 67.0
+    "70-74 years": 72.0
+    "75-79 years": 77.0
+    "80-84 years": 82.0
+    "85-89 years": 87.0
+    "90+ years": 92.0
+  marital_labels:
+    - "Married (including common law)"
+    - "Single (never married)"
+    - "Divorced"
+    - "Separated"
+    - "Widowed"
+    - "Unmarried or Domestic Partner"
+    - "Unknown"
+  rurality_labels:
+    - "Counties in metropolitan areas ge 1 million pop"
+    - "Counties in metropolitan areas of 250,000 to 1 million pop"
+    - "Counties in metropolitan areas of lt 250 thousand pop"
+    - "Nonmetropolitan counties adjacent to a metropolitan area"
+    - "Nonmetropolitan counties not adjacent to a metropolitan area"
+  rurality_unknown_labels:
+    - "Unknown/missing/no match (Alaska or Hawaii - Entire State)"
+    - "Unknown/missing/no match/Not 1990-2024"
+  income_order:            # lowest to highest
+    - "< $40,000"
+    - "$40,000 - $44,999"
+    - "$45,000 - $49,999"
+    - "$50,000 - $54,999"
+    - "$55,000 - $59,999"
+    - "$60,000 - $64,999"
+    - "$65,000 - $69,999"
+    - "$70,000 - $74,999"
+    - "$75,000 - $79,999"
+    - "$80,000 - $84,999"
+    - "$85,000 - $89,999"
+    - "$90,000 - $94,999"
+    - "$95,000 - $99,999"
+    - "$100,000 - $109,999"
+    - "$110,000 - $119,999"
+    - "$120,000+"
+  income_unknown_labels: ["Unknown/missing/no match/Not 1990-2024"]
+
+modelling:
+  cv_folds: 5
+  bootstrap_resamples: 500
+  tuning_rows: 50000
+  min_meaningful_percentage_points: 3.0
+  min_meaningful_days: 7.0

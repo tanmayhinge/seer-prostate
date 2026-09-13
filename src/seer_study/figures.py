@@ -180,6 +180,7 @@ def area_and_concentration_figure(
     value_label: str = "Standardised %",
     curve_labels: tuple[str, str] = ("Cumulative share of men", "Cumulative share of the outcome"),
     stratum: str = "all",
+    curve_difference: bool = False,
 ) -> Figure:
     """(a) Standardised percentages for joint area profiles by model; (b) concentration curves by stratum."""
     with _style(spec):
@@ -204,14 +205,23 @@ def area_and_concentration_figure(
         for k, (key, label) in enumerate(strata.items()):
             curve = curves[curves["stratum"] == key].sort_values("population_share")
             if len(curve):
-                ax_b.plot(curve["population_share"], curve["outcome_share"], color=colors[k], lw=1.1, label=label)
-        ax_b.plot([0, 1], [0, 1], color="0.5", lw=0.8, ls="--", label="Line of equality")
-        ax_b.set_xlim(0, 1)
-        ax_b.set_ylim(0, 1)
+                y = curve["outcome_share"] - curve["population_share"] if curve_difference else curve["outcome_share"]
+                ax_b.plot(curve["population_share"], y, color=colors[k], lw=1.1, label=label)
+        if curve_difference:
+            # Difference from the line of equality: curves separate visibly when they sit close to the diagonal.
+            ax_b.axhline(0, color="0.5", lw=0.8, ls="--", label="Line of equality")
+            ax_b.set_xlim(0, 1)
+        else:
+            ax_b.plot([0, 1], [0, 1], color="0.5", lw=0.8, ls="--", label="Line of equality")
+            ax_b.set_xlim(0, 1)
+            ax_b.set_ylim(0, 1)
         ax_b.set_xlabel(curve_labels[0])
         ax_b.set_ylabel(curve_labels[1])
         ax_b.set_title(titles[1], loc="left")
-        ax_b.legend(loc="upper left")
+        if curve_difference:
+            fig.legend(*ax_b.get_legend_handles_labels(), loc="outside lower center", ncols=3)
+        else:
+            ax_b.legend(loc="upper left")
         return fig
 
 

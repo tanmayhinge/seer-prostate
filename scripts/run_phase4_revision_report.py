@@ -183,6 +183,21 @@ def main() -> None:
                 "clinical need added, prostatectomy without radiotherapy only": _interval(lookup(sensitivity, scenario="surgery_only", stratum=stratum, model=model, comparison=CLINICAL)),
             })
 
+    # ---- share of crude excess days from top-coded intervals, by rurality (all men); tabulated after round-2 review
+    excess = pd.read_csv(t / "excess_days_crude.csv")
+    excess = excess[(excess["stratum"] == "all") & (excess["variable"] == "rurality")]
+    top_by_group = long_intervals[long_intervals["variable"] == "rurality"].set_index("group")
+    cap_excess = acfg.interval.top_code_days - acfg.interval.primary_threshold_days
+    top_rows = []
+    for _, row in excess.iterrows():
+        count = top_by_group.loc[row["group"], "n_top_coded"]
+        per_1000 = row["excess days per 1,000 men (crude)"]
+        if pd.isna(per_1000) or _small(row["n"], threshold) or _small(count, threshold):
+            share = mask
+        else:
+            share = f"{100.0 * count * cap_excess / (per_1000 * row['n'] / 1000.0):.1f}"
+        top_rows.append({"rurality": row["group"], "% of crude excess waiting days from top-coded intervals": share})
+
     # ---- inverse probability weighting precision, over published rows only
     published = publishable_summary(
         ipw.rename(columns={"weighted_pct_delayed": "median_days"}).assign(p90_days=np.nan), threshold, mask, rcfg.cross_tab_count_rounding
@@ -249,6 +264,11 @@ def main() -> None:
         "The interval ends at the first treatment of any kind, which for men having radiotherapy can be hormone therapy. This "
         "compares the clinical need increment in the primary cohort with the prostatectomy-without-radiotherapy scenario (A8).",
         md_table(pd.DataFrame(surgery_rows)),
+        "## (i) Share of crude excess waiting days from top-coded intervals",
+        "Tabulated after the second internal review from existing tables (not part of amendment 1.9). Each top-coded interval "
+        f"counts as {acfg.interval.top_code_days} days, contributing {cap_excess} days beyond the "
+        f"{acfg.interval.primary_threshold_days}-day threshold; the share is of all crude excess waiting days in the group. All men.",
+        md_table(pd.DataFrame(top_rows)),
     ]
     text = "\n\n".join(lines) + "\n"
     assert_style(text)

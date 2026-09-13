@@ -1,6 +1,6 @@
 # Phase 4, part 6. Revision analyses after internal review (post-review)
 
-Generated 2026-09-13 15:52 UTC by `scripts/run_phase4_revision_report.py` at git revision `62d951c`. Definitions: `PROTOCOL.md` amendment 1.9. These analyses were specified after an internal review of the draft preprint and before they were run. All results are associations, not causal effects.
+Generated 2026-09-13 17:59 UTC by `scripts/run_phase4_revision_report.py` at git revision `a22bbfc`. Definitions: `PROTOCOL.md` amendment 1.9. These analyses were specified after an internal review of the draft preprint and before they were run. All results are associations, not causal effects.
 
 ## Summary
 
@@ -305,3 +305,16 @@ The interval ends at the first treatment of any kind, which for men having radio
 | high risk | LightGBM | 3.72 (3.34 to 4.06) | 2.13 (1.88 to 2.32) |
 | unknown risk | penalised logistic regression | 0.65 (0.41 to 0.89) | 0.91 (0.57 to 1.25) |
 | unknown risk | LightGBM | 0.59 (0.27 to 0.95) | 0.62 (0.12 to 1.16) |
+
+## (i) Share of crude excess waiting days from top-coded intervals
+
+Tabulated after the second internal review from existing tables (not part of amendment 1.9). Each top-coded interval counts as 731 days, contributing 641 days beyond the 90-day threshold; the share is of all crude excess waiting days in the group. All men.
+
+| rurality | % of crude excess waiting days from top-coded intervals |
+|---|---|
+| Metro, 1 million or more | 8.4 |
+| Metro, 250,000 to 1 million | 8.6 |
+| Metro, under 250,000 | 10.9 |
+| Nonmetro, adjacent to metro | 6.8 |
+| Nonmetro, not adjacent to metro | 7.1 |
+| Unknown | <5 |

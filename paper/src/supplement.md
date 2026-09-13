@@ -5,7 +5,7 @@
 How to read this supplement:
 - **Source of tables:** every table is copied by script from the generated analysis reports in the public repository (https://github.com/tanmayhinge/seer-prostate), so the tables match the analysis outputs exactly.
 - **Labels:** tables generated before revision 1 call the area and marital block "social position".
-- **Post-review analyses:** Supplementary Tables S7, S11 to S15, S17, S18, S21, S22 and S35 come from analyses specified after an internal review (protocol amendment 1.9); S17 and S18 publish results computed under amendment 1.7.
+- **Post-review analyses:** Supplementary Tables S7, S11 to S15, S21 and S22 come from analyses specified after an internal review (protocol amendment 1.9). S17 and S18 publish results computed under amendment 1.7, S35 re-tabulates sensitivity results computed under amendment 1.8, and S19a was tabulated after the second internal review from existing tables.
 - **Numbers of men:** in cross-tabulations they are rounded to the nearest 10, and statistics resting on 1 to 4 men are shown as <5.
 - **References:** numbered as in the main text.
 
@@ -97,6 +97,11 @@ These profiles change rurality or county income alone, holding the other at the 
 ## Supplementary Table S19. Crude excess waiting days beyond 90 days per 1,000 men
 
 <!-- table: reports/phase4_equity_selection.md | ### Crude excess waiting days -->
+
+## Supplementary Table S19a. Share of crude excess waiting days from top-coded intervals
+Tabulated after the second internal review from existing tables; all men.
+
+<!-- table: reports/phase4_revision.md | ## (i) Share of crude excess waiting days from top-coded intervals -->
 
 ## Supplementary Table S20. Erreygers concentration index by risk group
 Crude within each stratum; it does not separate income from rurality.
@@ -292,9 +297,9 @@ Item wording is abbreviated from the TRIPOD+AI checklist [15]. Development and i
 | 20a | Participant flow and outcome counts | Results, Cohort and Waiting beyond 90 days; Figure 1 |
 | 20b | Participant characteristics | Table 1 |
 | 20c | Comparison with development data | Not applicable |
-| 21 | Participants and events per analysis | Table 2; Tables S2, S8 and S10 |
+| 21 | Participants and events per analysis | Table 1 (men waiting more than 90 days); Table 2 and Supplementary Table S2 (men and percentage delayed per stratum); Methods, Models and validation (tuning on up to 50,000 men) |
 | 22 | Full model specification | Not released as a clinical model; code that refits every model is in the repository |
-| 23a | Performance with confidence intervals, including subgroups | Table 2 and Table S8 by risk group (skill increments with intervals; AUC and calibration without intervals) |
+| 23a | Performance with confidence intervals, including subgroups | Table 2 and Table S8 by risk group (skill increments with intervals; AUC and calibration without intervals); performance by area or marital subgroup not reported |
 | 23b | Heterogeneity across clusters | Not examined |
 | 24 | Model updating results | Not applicable |
 | 25 | Interpretation | Discussion |

@@ -103,7 +103,9 @@ def main() -> None:
         profiles, area_profiles, curves, strata, spec,
         titles=("a. Area profiles, all men", "b. Concentration curves"),
         value_label=f"Standardised % waiting more than {threshold} days",
-        curve_labels=("Cumulative share of men,\npoorest county income first", f"Cumulative share of men\nwaiting more than {threshold} days"),
+        curve_labels=("Cumulative share of men,\npoorest county income first",
+                      f"Share of men waiting more than {threshold} days\nminus share of all men (cumulative)"),
+        curve_difference=True,
     )
     written += save_figure(fig, "figure4_area_and_income", args.out_dir, spec)
     captions.append(
@@ -111,8 +113,9 @@ def main() -> None:
         "and county income are set together to each type of area, at the median county income band of men living there, "
         "with his own clinical features and year of diagnosis, and marital status set to married. Points show both model "
         "types; the x-axis does not start at 0. **(b)** Concentration curves of waiting more than "
-        f"{threshold} days by county median household income rank, by risk group. A curve below the line of equality means "
-        "delay is concentrated among men in higher-income counties. Associations, not causal effects."
+        f"{threshold} days by county median household income rank, by risk group, shown as the difference from the line of "
+        "equality (cumulative share of delayed men minus cumulative share of men). Values below 0 mean delay is concentrated "
+        "among men in higher-income counties; the curves do not separate income from rurality. Associations, not causal effects."
     )
 
     # Supplementary Figure S1: calibration at step 2

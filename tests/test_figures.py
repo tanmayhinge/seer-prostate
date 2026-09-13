@@ -111,6 +111,14 @@ def test_dollar_signs_in_labels_are_literal_not_mathtext(spec):
     assert labels == [r"Metro (\$90,000 - \$94,999)"]
 
 
+def test_concentration_panel_can_show_difference_from_equality(spec):
+    profiles = pd.DataFrame([{"stratum": "all", "model": m, "profile": "area a", "standardised %": 40.0} for m in MODELS])
+    curves = pd.DataFrame({"stratum": ["all"] * 3, "population_share": [0.0, 0.5, 1.0], "outcome_share": [0.0, 0.4, 1.0]})
+    fig = area_and_concentration_figure(profiles, {"area a": "A"}, curves, {"all": "All men"}, spec, curve_difference=True)
+    ydata = visible_axes(fig)[1].get_lines()[0].get_ydata()
+    assert list(np.round(ydata, 6)) == [0.0, -0.1, 0.0]
+
+
 def test_first_model_in_legend_is_plotted_highest(spec):
     fig = increments_figure(_increments(), {"social": "Social position"}, {"all": "All men"}, spec)
     ax = visible_axes(fig)[0]

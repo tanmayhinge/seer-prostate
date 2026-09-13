@@ -1,0 +1,21 @@
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\caption{Secondary outcome: recorded radical prostatectomy or radiotherapy}
+\label{tab:s9}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+\makecell[l]{Stratum} & \makecell[l]{Model} & \makecell[r]{Skill at\\step 2 (\%)} & \makecell[r]{Clinical need\\added (95\% interval)} & \makecell[r]{Area and marital\\added (95\% interval)} & \makecell[r]{AUC at\\step 2} & \makecell[r]{Area\\contrast} & \makecell[r]{Never married\\contrast} \\
+\midrule
+Intermediate and high risk & Logistic & 17.18 & 15.22 (14.85 to 15.65) & 1.96 (1.72 to 2.31) & 0.771 & $-$2.9 & $-$6.5 \\
+ & LightGBM & 20.49 & 18.32 (17.92 to 18.77) & 2.16 (1.92 to 2.54) & 0.791 & $-$1.4 & $-$5.9 \\
+Intermediate risk & Logistic & 8.79 & 6.81 (6.38 to 7.21) & 1.97 (1.65 to 2.42) & 0.692 & $-$2.2 & $-$7.2 \\
+ & LightGBM & 10.14 & 7.83 (7.42 to 8.20) & 2.31 (1.99 to 2.82) & 0.703 & $-$0.3 & $-$6.4 \\
+High risk & Logistic & 29.29 & 27.25 (26.63 to 27.96) & 2.04 (1.84 to 2.33) & 0.854 & $-$3.3 & $-$5.8 \\
+ & LightGBM & 31.76 & 29.54 (28.94 to 30.17) & 2.22 (2.00 to 2.53) & 0.865 & $-$2.5 & $-$5.1 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}\scriptsize Outcome: a record of radical prostatectomy or radiotherapy in the first course, among intermediate- and high-risk men meeting every cohort step before treatment. No record can mean active surveillance, watchful waiting, hormone therapy only, refusal or uncaptured treatment, so a lower percentage cannot be read as under-treatment. Contrasts are standardised percentage points, defined as in Table S6.\end{minipage}
+\end{table}

@@ -1,0 +1,25 @@
+\begin{table}[tbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\caption{Predictive performance and skill added by clinical need and by area and marital characteristics, by risk group and model}
+\label{tab:models}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+\makecell[l]{Risk group} & \makecell[l]{Model} & \makecell[r]{Men} & \makecell[r]{Skill at\\step 2 (\%)} & \makecell[r]{AUC at\\step 2} & \makecell[r]{Clinical need\\added (95\% interval)} & \makecell[r]{Area and marital\\added (95\% interval)} & \makecell[r]{Fold-seed\\range\textsuperscript{a}} \\
+\midrule
+All men & Logistic & 330,827 & 3.63 & 0.638 & 3.01 (2.69 to 3.38) & 0.62 (0.39 to 0.87) & 0.61 to 0.62 \\
+ & LightGBM & 330,827 & 4.17 & 0.648 & 3.18 (2.85 to 3.54) & 0.99 (0.73 to 1.30) & 0.98 to 0.99 \\
+Low & Logistic & 57,495 & 0.76 & 0.592 & 0.14 (0.08 to 0.20) & 0.62 (0.32 to 0.94) & 0.59 to 0.63 \\
+ & LightGBM & 57,495 & 0.99 & 0.604 & 0.02 ($-$0.09 to 0.13) & 0.96 (0.67 to 1.28) & 0.95 to 1.01 \\
+Intermediate & Logistic & 127,622 & 1.06 & 0.605 & 0.49 (0.41 to 0.56) & 0.56 (0.35 to 0.83) & 0.54 to 0.56 \\
+ & LightGBM & 127,622 & 1.48 & 0.615 & 0.55 (0.44 to 0.65) & 0.93 (0.65 to 1.27) & 0.91 to 0.97 \\
+High & Logistic & 130,893 & 4.39 & 0.654 & 3.53 (3.16 to 3.86) & 0.86 (0.60 to 1.15) & 0.85 to 0.86 \\
+ & LightGBM & 130,893 & 4.90 & 0.663 & 3.72 (3.34 to 4.06) & 1.18 (0.90 to 1.56) & 1.16 to 1.20 \\
+Unknown & Logistic & 14,817 & 1.07 & 0.610 & 0.65 (0.41 to 0.89) & 0.42 (0.08 to 0.80) & 0.32 to 0.48 \\
+ & LightGBM & 14,817 & 1.96 & 0.629 & 0.59 (0.27 to 0.95) & 1.37 (0.80 to 2.19) & 1.22 to 1.43 \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}\scriptsize Skill is the percentage reduction in out-of-fold log-loss against the step 0 model (year of diagnosis only); added values are in percentage points. Intervals are 95\% cluster bootstrap intervals over 79 rurality by county income cells (500 resamples of out-of-fold predictions, no refitting), so they exclude model-fitting variability. \textsuperscript{a}Range of the area and marital increment over 10 fold assignments, from the post-review analysis with per-step tuning (protocol amendment 1.9). AUC: 0.5 is chance.\end{minipage}
+\end{table}

@@ -61,11 +61,11 @@ Each phase has one script, run from the project root:
 `reports/phase4.md` summarises the Phase 4 reports.
 
 ```
-.venv/bin/python scripts/make_figures.py   # figures and captions in paper/figures/ (after all Phase 4 scripts)
-.venv/bin/python scripts/build_preprint.py # paper/preprint.md and paper/supplement.md from paper/src/, with tables copied from reports
+.venv/bin/python scripts/make_figures.py # figures and captions in paper/figures/ (after all Phase 4 scripts)
+.venv/bin/python scripts/build_paper.py  # paper/paper.pdf and paper/supplement.pdf from paper/tex/ (needs tectonic)
 ```
 
-`scripts/build_preprint.py` also writes `paper/number_audit.txt`, listing any number in the manuscript text that appears in no report, protocol or configuration file.
+`scripts/build_paper.py` generates the paper's tables and flow diagram from the reports into `paper/tex/tables/`, so they cannot drift from the analysis outputs. It checks the writing style, citation order and word counts, and writes `paper/number_audit.txt`, listing any number in the running text that appears in no report, protocol or configuration file. It then compiles both PDFs with tectonic.
 
 ## Data
 

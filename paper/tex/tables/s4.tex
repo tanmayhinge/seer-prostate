@@ -1,0 +1,30 @@
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Stage-free clinical block and year of diagnosis as categories}
+\label{tab:s4}
+\begin{tabular}{@{}lllrr@{}}
+\toprule
+\makecell[l]{Analysis} & \makecell[l]{Stratum} & \makecell[l]{Model} & \makecell[r]{Clinical need added\\(95\% interval)} & \makecell[r]{Area and marital added\\(95\% interval)} \\
+\midrule
+Stage-free clinical block & All men & Logistic & 2.97 (2.64 to 3.34) & 0.62 (0.39 to 0.87) \\
+ &  & LightGBM & 3.13 (2.80 to 3.48) & 1.02 (0.75 to 1.33) \\
+ & Low risk & Logistic & 0.14 (0.08 to 0.20) & 0.62 (0.32 to 0.94) \\
+ &  & LightGBM & 0.02 ($-$0.09 to 0.13) & 0.96 (0.67 to 1.28) \\
+ & Intermediate risk & Logistic & 0.49 (0.41 to 0.57) & 0.56 (0.34 to 0.83) \\
+ &  & LightGBM & 0.55 (0.44 to 0.65) & 0.93 (0.65 to 1.27) \\
+ & High risk & Logistic & 3.42 (3.07 to 3.76) & 0.85 (0.59 to 1.14) \\
+ &  & LightGBM & 3.64 (3.27 to 3.99) & 1.19 (0.91 to 1.57) \\
+ & Unknown risk & Logistic & 0.66 (0.41 to 0.92) & 0.40 (0.06 to 0.80) \\
+ &  & LightGBM & 0.59 (0.27 to 0.95) & 1.37 (0.80 to 2.19) \\
+Year as categories & All men & Logistic & 2.98 (2.66 to 3.34) & 0.62 (0.39 to 0.86) \\
+ & Low risk & Logistic & 0.15 (0.09 to 0.21) & 0.60 (0.31 to 0.92) \\
+ & Intermediate risk & Logistic & 0.50 (0.42 to 0.58) & 0.56 (0.34 to 0.83) \\
+ & High risk & Logistic & 3.48 (3.12 to 3.82) & 0.87 (0.61 to 1.16) \\
+ & Unknown risk & Logistic & 0.65 (0.41 to 0.90) & 0.47 (0.11 to 0.89) \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}\scriptsize Stage-free: summary stage removed from the clinical block, risk strata unchanged. Year as categories: logistic regression only, one indicator per year replacing linear year and the 2020 indicator. Both use per-step tuning and the first fold seed. Primary estimates are in Table 2 of the main text. Specified after an internal review (protocol amendment 1.9).\end{minipage}
+\end{table}

@@ -1,6 +1,56 @@
 import pytest
 
-from seer_study.manuscript import extract_table, numbers_in, protocol_version, render_includes, unsupported_numbers
+from seer_study.manuscript import (
+    bibitem_order,
+    cite_order,
+    extract_table,
+    latex_escape,
+    latex_tabular,
+    markdown_rows,
+    numbers_in,
+    protocol_version,
+    render_includes,
+    tex_prose,
+    unsupported_numbers,
+)
+
+
+def test_latex_escape_special_characters():
+    assert latex_escape("A & B 50% $5 #1 a_b {x} ~ ^ \\") == (
+        r"A \& B 50\% \$5 \#1 a\_b \{x\} \textasciitilde{} \textasciicircum{} \textbackslash{}"
+    )
+
+
+def test_markdown_rows_parses_header_body_and_escaped_pipes():
+    header, rows = markdown_rows("| a | b |\n|---|---|\n| 1 | x\\|y |\n| 2 | z |")
+    assert header == ["a", "b"]
+    assert rows == [["1", "x|y"], ["2", "z"]]
+
+
+def test_latex_tabular_escapes_cells_by_default():
+    out = latex_tabular(["n", "%"], [["1,200", "50%"]], "rr")
+    assert out == "\\begin{tabular}{rr}\n\\toprule\nn & \\% \\\\\n\\midrule\n1,200 & 50\\% \\\\\n\\bottomrule\n\\end{tabular}"
+
+
+def test_latex_tabular_can_keep_latex_cells():
+    out = latex_tabular(["a"], [["\\textbf{x}"]], "l", escape=False)
+    assert "\\textbf{x} \\\\" in out
+
+
+def test_tex_prose_keeps_running_text_and_drops_floats_citations_and_comments():
+    tex = (
+        "Intro % a comment\n\\section{Methods} We had 330,827 men~\\cite{a,b}. "
+        "\\begin{table}\\caption{Hidden 99}\\end{table} \\textbf{Bold} 50\\% done."
+        "\\begin{thebibliography}{9}\\bibitem{a} Ref 2024.\\end{thebibliography}"
+    )
+    prose = tex_prose(tex)
+    assert "330,827" in prose and "Methods" in prose and "Bold" in prose and "50% done" in prose
+    assert "comment" not in prose and "99" not in prose and "2024" not in prose and "cite" not in prose
+
+
+def test_cite_order_and_bibitem_order():
+    assert cite_order("x \\cite{b,a} y \\cite{a} z \\cite{c}") == ["b", "a", "c"]
+    assert bibitem_order("\\bibitem{b} one \\bibitem{a} two") == ["b", "a"]
 
 
 def test_protocol_version_reads_the_version_line():

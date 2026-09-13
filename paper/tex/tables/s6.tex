@@ -1,0 +1,30 @@
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{Standardised contrasts in waiting more than 90 days, by risk group}
+\label{tab:s6}
+\begin{tabular}{@{}llrrl@{}}
+\toprule
+\makecell[l]{Stratum} & \makecell[l]{Contrast} & \makecell[r]{Logistic} & \makecell[r]{LightGBM} & \makecell[l]{Two-model\\rule met} \\
+\midrule
+All men & Observed minus reference profile & $-$1.1 & $-$1.6 & no, both under 3 \\
+ & Nonmetro not adjacent minus metro 1 million or more & $-$9.2 & $-$8.8 & yes \\
+ & Never married minus married & 6.7 & 5.9 & yes \\
+Low risk & Observed minus reference profile & $-$3.4 & $-$4.7 & yes \\
+ & Nonmetro not adjacent minus metro 1 million or more & $-$11.3 & $-$13.5 & yes \\
+ & Never married minus married & 3.6 & 2.4 & no, one model only \\
+Intermediate risk & Observed minus reference profile & $-$1.4 & $-$1.6 & no, both under 3 \\
+ & Nonmetro not adjacent minus metro 1 million or more & $-$8.7 & $-$9.5 & yes \\
+ & Never married minus married & 6.4 & 5.5 & yes \\
+High risk & Observed minus reference profile & 0.1 & $-$0.1 & no, both under 3 \\
+ & Nonmetro not adjacent minus metro 1 million or more & $-$8.4 & $-$7.2 & yes \\
+ & Never married minus married & 8.3 & 7.6 & yes \\
+Unknown risk & Observed minus reference profile & $-$0.1 & 0.0 & no, both under 3 \\
+ & Nonmetro not adjacent minus metro 1 million or more & $-$12.1 & $-$14.2 & yes \\
+ & Never married minus married & 6.0 & 6.2 & yes \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}\scriptsize Standardised percentage points waiting more than 90 days (g-computation with the step 2 model; each man keeps his own clinical features and year). Reference profile: married, metro area of 1 million or more, county income rank at the 83.33\% quantile. Area profiles set rurality and county income together at the median income band of men living in that type of area. Rule (post hoc, amendment 1.7): both models 3 points or more in the same direction. No intervals are reported.\end{minipage}
+\end{table}

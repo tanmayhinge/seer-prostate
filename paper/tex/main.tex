@@ -1,0 +1,161 @@
+\input{preamble}
+\rhead{\small Preprint}
+
+\begin{document}
+
+\thispagestyle{plain}
+{\raggedright
+{\LARGE\bfseries How much do area and marital characteristics add to clinical need in predicting delayed prostate cancer treatment? A machine learning analysis of US SEER data, 2010 to 2022\par}
+\vspace{1em}
+{\large Tanmay Hinge\par}
+\vspace{0.3em}
+{\small Correspondence: \href{mailto:hingetanmay@gmail.com}{hingetanmay@gmail.com}\par}
+{\small Preprint, not peer reviewed. Code and protocol: \url{https://github.com/tanmayhinge/seer-prostate}\par}
+}
+\vspace{1em}
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\textbf{Background.} It is unclear how much area and marital characteristics add to recorded clinical need in predicting delayed prostate cancer treatment.
+
+\textbf{Methods.} In this retrospective cohort study of US SEER 17 registry data, we included men aged 40 or over diagnosed 2010 to 2022 with localised or regional prostate cancer and recorded radical prostatectomy or radiotherapy. The outcome was first recorded treatment over 90 days after diagnosis. Penalised logistic regression and LightGBM were cross-fitted in ordered steps (year; clinical need; county rurality, county income and marital status; treatment type) within risk groups. The primary estimand was the out-of-fold log-loss skill added by the area and marital block.
+
+\textbf{Results.} Of 330,827 men, 39.7\% waited more than 90 days, rising from 36.0\% in 2010 to 52.3\% in 2022. Prediction was weak (AUC 0.592 to 0.663). The area and marital block added 0.62 percentage points of skill (95\% interval 0.39 to 0.87) under logistic regression and 0.99 (0.73 to 1.30) under LightGBM, and was stable under tuning, fold-assignment and clustering checks. Standardised delay was 9.2 and 8.8 points lower in non-metropolitan counties not adjacent to a metropolitan area than in large metropolitan counties, and 6.7 and 5.9 points higher for never-married than married men (post hoc two-model rule; no intervals).
+
+\textbf{Conclusions.} Recorded information predicts little of who waits beyond 90 days. Area and marital characteristics add a small, repeatable increment. Delay was more common in large metropolitan, higher-income counties, which is not evidence of better care elsewhere because recorded treatment also differs by area.
+
+\textbf{Keywords:} prostate cancer; time to treatment; health services research; machine learning; health equity
+
+\noindent\rule{\textwidth}{0.4pt}
+
+\section{Introduction}
+
+Time from diagnosis to first treatment is a widely used measure of the timeliness of cancer care. In the US National Cancer Database, the median time to first treatment for six early-stage cancers rose from 21 to 29 days between 2004 and 2013, and care at an academic centre was among the factors associated with longer intervals~\cite{khorana2019}. Intervals are longer for prostate cancer: the median was 79 days (interquartile range 55 to 117) in the same database for 2004 to 2015~\cite{cone2020}, and the mean in SEER was 82.75 days in 2021~\cite{abdelrahman2026}.
+
+Multivariable studies describe who waits longer. In SEER-Medicare data, time to definitive treatment was longer for African American than for White men with localised prostate cancer, and longer in high-risk than in low-risk disease~\cite{stokes2013}. Across four cancers in SEER, lower-income and non-metropolitan patients had shorter intervals~\cite{divanna2025}, and in the Tennessee cancer registry residence in rural Appalachian counties was associated with lower odds of waiting more than 90 days for prostate cancer treatment (odds ratio 0.83, 95\% CI 0.78 to 0.89)~\cite{montielishino2021}. Care at an accredited hospital was associated with a longer median interval in low-income but not high-income counties~\cite{semprini2026}. Unadjusted comparisons can mislead: in SEER, unadjusted all-cause mortality was lower among patients with longer intervals~\cite{ang2025}, a pattern we read as consistent with faster treatment of more aggressive disease.
+
+These studies estimate how individual factors are associated with waiting after adjustment. They do not show how much of the variation in waiting can be predicted from recorded clinical need, or how much area and marital characteristics add beyond it. That added predictive value has been measured for other prostate cancer outcomes~\cite{tagai2025,ajjawi2026}, but in a PubMed search screened by one reviewer we found no study that applied it to time to treatment within prostate cancer risk groups. An out-of-sample increment describes the size of the signal without assuming its direction, and fitting a flexible model such as gradient boosting~\cite{ke2017} alongside penalised regression shows whether an increment merely reflects an under-fitted clinical model.
+
+We therefore measured, within clinical risk groups of men treated with radical prostatectomy or radiotherapy, how much county rurality, county income and marital status add to recorded clinical need in predicting a wait of more than 90 days, and expressed that contribution as standardised percentages and an income concentration index.
+
+\section{Methods}
+
+\subsection{Data and cohort}
+We used the SEER Research Data, 17 registries, November 2025 submission, linked to county attributes~\cite{seer2025}. A case listing selected by site (prostate) and year of diagnosis gave 793,214 tumour records. Exclusions were applied in a pre-specified order (Figure~\ref{fig:flow}): first primary cancer; localised or regional Combined Summary Stage; not a death certificate or autopsy case; aged 40 or over; diagnosed 2010 to 2022; first course including radical prostatectomy (surgery codes 50, 70 or 80, or A500, A700 or A800 from 2023) or radiotherapy~\cite{seermanual}; a recorded or top-coded interval; and an interval above 0 days. The SEER coding manual instructs that treatment is coded as not done when the physician opts for active surveillance or watchful waiting, so men managed this way are not in the cohort~\cite{seermanual}.
+
+\subsection{Outcome and risk groups}
+The outcome used SEER's time from diagnosis to treatment in days, which ends at the first treatment of any kind; hormone therapy, not recorded in this export, can therefore end the interval before surgery or radiotherapy. The primary outcome was a wait of more than 90 days, a threshold used in US registry research~\cite{montielishino2021} that matches the Australian optimal care pathway recommendation that surgery or radiotherapy begin within 3 months of diagnosis~\cite{ocp2021}. Intervals top-coded at 731 days or more counted as delayed; thresholds of 60, 120 and 180 days were sensitivity analyses. Risk groups were high (regional stage, clinical Gleason score 8 to 10, or PSA above 20 ng/ml), unknown (otherwise, Gleason score or PSA missing), intermediate (Gleason score 7 or PSA 10 to 20 ng/ml) and low (Gleason score 6 or lower and PSA below 10 ng/ml). Summary stage can incorporate pathology for surgically treated men.
+
+\subsection{Ordered feature steps}
+Step 0 contained year of diagnosis and a 2020 indicator. Step 1 added clinical need: stage category, clinical Gleason score, log PSA (with missing and top-code indicators) and age band. Step 2 added the area and marital block: marital status (7 categories), county Rural-Urban Continuum Code (5 levels plus unknown) and county median household income (16 bands, entered as a rank). Two of these three variables describe the county rather than the man, and because the export has no registry identifier the block can also carry differences in registry practice. Step 3 added treatment type, entered last because area and marital characteristics can influence the choice of treatment.
+
+\subsection{Models and validation}
+Penalised logistic regression used an L2 penalty, median imputation, standardisation and pairwise products of the clinical features~\cite{pedregosa2011}; LightGBM handled missing values internally~\cite{ke2017}. All performance measures used out-of-fold predictions from 5-fold stratified cross-fitting within each risk group and in all men. Hyperparameters were tuned by 3-fold cross-validated log-loss on up to 50,000 men at step 3 and reused at every step. Log-loss skill is 1 minus a step's log-loss divided by that of the step 0 model; the primary estimand was the skill added from step 1 to step 2. We also report AUC and calibration slope. Because rurality and income are county measures and the export has no county identifier, intervals came from a cluster bootstrap over the 79 cells formed by rurality and income band (500 resamples of out-of-fold predictions, no refitting); they therefore do not include model-fitting variability.
+
+\subsection{Standardised percentages and income concentration}
+Standardised percentages came from g-computation with a step 2 model: each man kept his own clinical features and year while his area and marital features were set to a profile. The reference profile was married and living in a county in a metropolitan area of 1 million or more, at the 83.33\% quantile of county income rank. Because rurality and income are strongly correlated, area profiles set both together, at the median income band of men living in each type of area. After a development run showed the two model types disagreeing, we adopted a post hoc rule that a contrast is meaningful only when both models agree on 3 percentage points or more in the same direction, and, also post hoc, dropped the planned intervals for these contrasts. Income inequality in delay was summarised with the Erreygers-corrected concentration index~\cite{erreygers2009}, ranking men by county income with tied men sharing the average rank; the index is crude and does not separate income from rurality.
+
+\subsection{Robustness, selection and secondary outcome}
+Ten sensitivity scenarios each changed one setting (thresholds of 60, 120 and 180 days; risk groups from Gleason score and PSA only; prostatectomy without radiotherapy; excluding 2020; including 2023; including 0-day intervals; one primary only; excluding prostatectomy not otherwise specified). After an internal review we added, before running them, per-step tuning, 10 fold-assignment seeds, clustering by county income band alone, a stage-free clinical block, year as categories, and the concentration index by diagnosis period. For treated men without a recorded interval, the percentage delayed was bounded under extreme assumptions and reweighted by the inverse probability of having an interval. A secondary outcome was a record of radical prostatectomy or radiotherapy among intermediate- and high-risk men; SEER captures treatment incompletely (radiation therapy sensitivity 80\% against Medicare claims, pooled across cancer sites)~\cite{noone2016}, so no record does not mean no treatment.
+
+\subsection{Protocol, reporting and disclosure}
+The protocol was committed to version control before the cohort was built and before any outcome model was fitted; 13 amendments are logged with reasons, and 3 made after seeing results are labelled as such. Commit times are recorded by the author's computer and the repository became public on 13 September 2026, after the analyses, so their order can be inspected but is not independently timestamped. The study was not registered. The analyses reported here are fixed at commit c1b6fd7 of the public repository. Reporting follows STROBE~\cite{strobe2007}, RECORD~\cite{record2015} and TRIPOD+AI~\cite{tripodai2024} (Supplementary Tables S10 and S11). The models are measurement tools and are not proposed for clinical use. As the SEER Research Data Use Agreement requires, statistics based on 1 to 4 men are suppressed. Analyses used Python 3.13, scikit-learn 1.9.1 and LightGBM 4.7.0 with seed 20260913.
+
+\section{Results}
+
+\subsection{Cohort and delay}
+Of 793,214 records, 330,827 men met all criteria (Figure~\ref{fig:flow}; Table~\ref{tab:cohort}). Rurality and county income overlapped heavily: 45.6\% of men in non-metropolitan counties not adjacent to a metropolitan area lived in the lowest county income quartile, against 1.1\% of men in the largest metropolitan areas. The median wait was 77 days (interquartile range 52 to 116), and 131,326 men (39.7\%) waited more than 90 days. Delay was more common in low-risk (47.9\%) than intermediate-risk (42.8\%) and high-risk men (32.8\%), and rose from 36.0\% in 2010 to 52.3\% in 2022. Within every risk group, delay was more common in large metropolitan than in non-metropolitan counties not adjacent to a metropolitan area (low risk 50.7\% against 39.0\%; high risk 35.7\% against 26.0\%) and among never-married than married men (high risk 40.0\% against 30.9\%) (Supplementary Figure S1). For low-risk men, a longer wait is not necessarily worse care.
+
+\begin{figure}[t]
+\centering
+\input{tables/figure1_flow}
+\caption{Inclusion flow for the primary cohort. Boxes give the number of records remaining after each step, in protocol order; side boxes give the number excluded at that step.}
+\label{fig:flow}
+\end{figure}
+
+\input{tables/table1}
+
+\subsection{How much area and marital characteristics add}
+Prediction was weak: at step 2, AUC ranged from 0.592 to 0.663 across strata and models, and log-loss skill from 0.76\% to 4.90\% (Table~\ref{tab:models}). Clinical need added 3.01 percentage points of skill in all men under logistic regression (95\% interval 2.69 to 3.38) and 3.53 in high-risk men, but only 0.14 (0.08 to 0.20) in low-risk men, whose clinical variables vary little by definition. The area and marital block added 0.62 points (0.39 to 0.87) under logistic regression and 0.99 (0.73 to 1.30) under LightGBM in all men, with every interval above 0 (Figure~\ref{fig:skill}). In low-risk men it made up 82\% and 98\% of a small step 2 skill of 0.76 and 0.99 points. LightGBM had higher step 2 skill than logistic regression in every stratum, by 0.23 to 0.90 points (no interval computed), and calibration slopes were 0.98 to 1.00 for logistic regression and 0.88 to 1.03 for LightGBM.
+
+\input{tables/table2}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{../figures/figure3_skill_added.pdf}
+\caption{Out-of-fold log-loss skill added by each block of features, in percentage points, by risk group and model type, with 95\% cluster bootstrap intervals (500 resamples, no refitting). ``Social position added'' is the area and marital block. The dashed line marks no added skill, and the x-axis scale differs between panels.}
+\label{fig:skill}
+\end{figure}
+
+\subsection{Standardised differences and income concentration}
+Standardised delay was lower in non-metropolitan counties not adjacent to a metropolitan area than in large metropolitan counties, each at its typical county income: by 9.2 points under logistic regression and 8.8 under LightGBM in all men, and by 7.2 to 14.2 points across risk groups (Figure~\ref{fig:area}a). This contrast moves rurality and income together; changing rurality alone gave $-$8.7 and $+$1.7 points and changing income alone $-$0.9 and $-$8.7 points, so their separate contributions cannot be identified. Never-married men had standardised delay 6.7 and 5.9 points higher than married men, with agreement in every stratum except low risk (3.6 and 2.4; Supplementary Table S6). Setting all men to the reference profile changed the pooled percentage by only 1.1 and 1.6 points. Crude delay was concentrated in higher-income counties (Erreygers index 0.062, 95\% interval 0.039 to 0.083; Figure~\ref{fig:area}b), but less so within diagnosis periods (0.059, 0.037 and 0.027 for 2010 to 2014, 2015 to 2019 and 2020 to 2022; Supplementary Table S7), while the share of men in the highest income quartile rose from 26.2\% to 41.0\%.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{../figures/figure4_area_and_income.pdf}
+\caption{(a) Standardised percentage of all men waiting more than 90 days, with rurality and county income set together to each type of area at the median income band of men living there; each man keeps his own clinical features and year, and marital status is set to married. (b) Crude concentration curves of waiting more than 90 days by county income rank, shown as the difference from the line of equality; values below 0 mean delay is concentrated among men in higher-income counties. Neither panel separates income from rurality.}
+\label{fig:area}
+\end{figure}
+
+\subsection{Robustness, selection and secondary outcome}
+Supplementary Tables S3 to S5, S8 and S9 give the full results summarised here. Tuning at each step left the increment unchanged, and across 10 fold assignments it ranged from 0.61 to 0.62 under logistic regression and 0.98 to 0.99 under LightGBM in all men; the smallest value was above 0 in every stratum and model, as was every interval with county income band clusters. The LightGBM clinical model was weaker than the logistic one in low-risk (0.05 against 0.14 points) and unknown-risk men (0.55 against 0.64), so its larger increment there may partly reflect a weaker reference. Under per-step tuning, logistic regression chose C at the edge of the grid in 8 of 15 stratum and step combinations. Across the ten scenarios the interval for the increment lay above 0 in 98 of 100 combinations, the area rule was met in 9 of 10 scenarios (at 180 days the contrasts were $-$2.96 and $-$3.20), and the marital rule in all 10. Between 2.7\% and 5.5\% of treated men had no recorded interval, depending on rurality; the rurality gap held under extreme bounds (40.2\% to 45.7\% against 31.3\% to 34.0\%), and weighting changed group percentages by at most 0.36 points. Among 352,644 intermediate- and high-risk men, 75.4\% and 81.1\% had a recorded radical prostatectomy or radiotherapy; the area and marital block added 1.96 (1.72 to 2.31) and 2.16 (1.92 to 2.54) points of skill, and never-married men were 6.5 and 5.9 points less likely than married men to have a record.
+
+\section{Discussion}
+
+In 330,827 US men with recorded radical prostatectomy or radiotherapy, whether a man waited more than 90 days was only weakly predictable from registry information. Clinical need predicted delay mainly in high-risk men. County rurality, county income and marital status added a small but repeatable increment, stable across tuning, fold assignment, clustering and ten sensitivity analyses. Delay was more common in large metropolitan, higher-income counties and among never-married men, and it rose over time, in the same direction as national evidence of lengthening intervals~\cite{khorana2019}.
+
+An increment below 1.4 points of log-loss skill improves the average accuracy of individual predictions only slightly, because most variation in waiting is not captured by registry variables. It is nonetheless compatible with standardised differences of 6 to 9 percentage points between specific profiles, because few men sit in the most different profiles; for the cohort as a whole the observed profile differed from the reference by only 1.1 to 1.6 points. The lower delay in high-risk men fits triage, but also hormone therapy ending the interval before radiotherapy: when radiotherapy patients were excluded, high-risk delay was 38.4\% rather than 32.8\%, and clinical need added 1.66 points in all men rather than 3.01 and 3.18.
+
+The area direction applies to the joint contrast of rurality and income only. It agrees with US studies reporting shorter intervals for non-metropolitan or rural patients~\cite{divanna2025,montielishino2021}, but it is not evidence of better rural care. Among high-risk men, recorded curative treatment was less common in non-metropolitan counties not adjacent to a metropolitan area than in large metropolitan counties (75.3\% against 81.9\%), consistent with a national SEER study of guideline-concordant management~\cite{dirican2026}; if rural men who would have waited longer are more often managed without recorded treatment, the direction would be exaggerated. Urban men with low-risk disease were less likely than rural men to be managed with surveillance or watchful waiting in an earlier SEER study~\cite{huang2023}. Never-married men were both more often delayed and less often recorded as treated; without data on social support or comorbidity the reason cannot be identified, and comorbidity explained only part of a racial gap in definitive treatment in SEER-Medicare~\cite{hammarlund2024}. Gradient boosting improved on penalised regression by less than 1 point of skill, and the inference that flexible clinical adjustment did not absorb the signal rests on all men and on intermediate- and high-risk men.
+
+No Australian data were analysed, and the results cannot be compared directly with Australian findings. In Tasmania, men from outer regional and remote areas took a median of 82 days to start active treatment against 75 days in inner regional areas (age-adjusted difference 9.25 days, 95\% CI 1.72 to 16.79)~\cite{foley2022}, and among men not treated with external beam radiotherapy those treated in public facilities started 42 to 59 days later than those treated privately~\cite{foley2025}. In Queensland the median treatment interval was 65 days~\cite{baade2012}, and Tasmanian lung cancer benchmarking found that on average 7\% of patients met pathway treatment-time standards~\cite{leong2025}. The approach used here, a benchmark outcome with risk-stratified out-of-sample increments and joint area profiles, could be applied to a registry that records remoteness, area disadvantage, treating sector and referral dates; comparing survival between treated and untreated men would additionally require designs that avoid immortal time bias~\cite{zheng2023}.
+
+The limitations are substantial. The export lacked race, insurance, registry and comorbidity, so part of the increment may reflect unmeasured health, insurance or registry practice, and two of the three area and marital variables are county measures. The interval ends at the first treatment of any kind, and diagnosis dates may be recorded inconsistently across registries, settings or years. SEER under-captures treatment~\cite{noone2016}, summary stage partly uses pathology, and the cohort is conditioned on recorded curative treatment. The main intervals exclude model-fitting variability, standardised contrasts have no intervals, and three amendments were made after seeing results. The analysis was done by one person with AI assistance, and the internal review was simulated by AI reviewers rather than by a clinician or biostatistician.
+
+In conclusion, whether a US man with recorded prostatectomy or radiotherapy waits beyond 90 days is mostly unpredictable from registry data. Area and marital characteristics add a small, repeatable increment beyond recorded clinical need, and delay is more common in large metropolitan, higher-income counties among treated men. Registries with referral dates, treating sector and comorbidity could show what this signal represents.
+
+\section*{Declarations}
+{\small
+\textbf{Data availability.} SEER data are available from the National Cancer Institute under a Research Data Use Agreement and cannot be shared by the author; aggregate results, code and the protocol are at \url{https://github.com/tanmayhinge/seer-prostate}.\par
+\textbf{Ethics.} De-identified data released under the SEER Research Data Use Agreement; no ethics committee approval was sought; no patient or public involvement.\par
+\textbf{Author contributions (CRediT).} Tanmay Hinge: conceptualisation, methodology, software, formal analysis, data curation, visualisation, writing (original draft, review and editing).\par
+\textbf{Competing interests.} None.
+\textbf{Funding.} None.\par
+\textbf{Use of AI tools.} Code, analyses and manuscript text were developed with assistance from Claude (Anthropic), and an internal pre-submission review was simulated with AI reviewer agents; the author is responsible for the design, checks and interpretation.
+\par}
+
+{\small
+\begin{thebibliography}{99}
+\setlength{\itemsep}{0.1em}
+\bibitem{khorana2019} Khorana AA, Tullio K, Elson P, et al. Time to initial cancer treatment in the United States and association with survival over time: an observational study. PLoS One. 2019;14(3):e0213209.
+\bibitem{cone2020} Cone EB, Marchese M, Paciotti M, et al. Assessment of time-to-treatment initiation and survival in a cohort of patients with common cancers. JAMA Netw Open. 2020;3(12):e2030072.
+\bibitem{abdelrahman2026} Abdel-Rahman O, Ghosh S. Disparities in time to treatment initiation among patients with major types of cancer in the United States. J Racial Ethn Health Disparities. 2026. doi:10.1007/s40615-026-02847-w.
+\bibitem{stokes2013} Stokes WA, Hendrix LH, Royce TJ, et al. Racial differences in time from prostate cancer diagnosis to treatment initiation: a population-based study. Cancer. 2013;119(13):2486-93.
+\bibitem{divanna2025} Di Vanna M, Shambhavi S, Khikmatov M, et al. Time to treatment initiation of lung, breast, colorectal, and prostate cancers and contributing factors from 2015 to 2020 utilizing Surveillance, Epidemiology, and End Results Program database. World J Oncol. 2025;16(2):152-60.
+\bibitem{montielishino2021} Montiel Ishino FA, Odame EA, Villalobos K, et al. Sociodemographic and geographic disparities of prostate cancer treatment delay in Tennessee: a population-based study. Am J Mens Health. 2021;15(6):15579883211057990.
+\bibitem{semprini2026} Semprini JT, Devine JW, Lizarraga IM, et al. Hospital accreditation and geographic disparities in timely cancer care. Health Serv Res. 2026;61(2):e14655.
+\bibitem{ang2025} Ang SP, Lee E, Chia JE, et al. Time-to-treatment initiation and its effect on all-cause mortality: insights from the Surveillance, Epidemiology, and End Results database. World J Oncol. 2025;16(3):286-94.
+\bibitem{tagai2025} Tagai EK, Handorf EA, Sorice KA, et al. Does inclusion of neighborhood variables improve clinical risk prediction for advanced prostate cancer in Black and White men? Urol Oncol. 2025;43(5):334.e17-334.e24.
+\bibitem{ajjawi2026} Ajjawi I, Kim IE Jr, Smani S, et al. Machine learning approaches to optimize the integration of sociodemographic factors for predicting cancer-specific survival among patients with high-risk prostate cancer. Curr Urol. 2026;20(3):141-7.
+\bibitem{ke2017} Ke G, Meng Q, Finley T, Wang T, et al. LightGBM: a highly efficient gradient boosting decision tree. In: Advances in Neural Information Processing Systems 30 (NIPS 2017). 2017.
+\bibitem{seer2025} Surveillance, Epidemiology, and End Results (SEER) Program. SEER*Stat Database: Incidence, SEER Research Data, 17 Registries, Nov 2025 Sub (2000-2023), linked to county attributes. National Cancer Institute, DCCPS, Surveillance Research Program; released April 2026.
+\bibitem{seermanual} National Cancer Institute. SEER Program Coding and Staging Manual 2023: First Course of Therapy, and Appendix C: Surgery Codes, Prostate. Bethesda (MD): National Cancer Institute; 2023.
+\bibitem{ocp2021} Cancer Australia, Cancer Council. Optimal care pathway for men with prostate cancer. 2nd ed. Quick reference guide. 2021.
+\bibitem{pedregosa2011} Pedregosa F, Varoquaux G, Gramfort A, et al. Scikit-learn: machine learning in Python. J Mach Learn Res. 2011;12:2825-30.
+\bibitem{erreygers2009} Erreygers G. Correcting the concentration index. J Health Econ. 2009;28(2):504-15.
+\bibitem{noone2016} Noone AM, Lund JL, Mariotto A, et al. Comparison of SEER treatment data with Medicare claims. Med Care. 2016;54(9):e55-64.
+\bibitem{strobe2007} von Elm E, Altman DG, Egger M, et al. The Strengthening the Reporting of Observational Studies in Epidemiology (STROBE) statement: guidelines for reporting observational studies. Lancet. 2007;370:1453-7.
+\bibitem{record2015} Benchimol EI, Smeeth L, Guttmann A, et al. The REporting of studies Conducted using Observational Routinely-collected health Data (RECORD) statement. PLoS Med. 2015;12(10):e1001885.
+\bibitem{tripodai2024} Collins GS, Moons KGM, Dhiman P, et al. TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods. BMJ. 2024;385:e078378.
+\bibitem{dirican2026} Dirican CD, Jumean S, Al Mardini A, et al. Rural-urban variation in guideline-concordant management of early-stage kidney, prostate, and testicular cancer in the United States (2010-2022). Urol Oncol. 2026;44(6):189-96.
+\bibitem{huang2023} Huang D, Ruan X, Huang J, et al. Socioeconomic determinants are associated with the utilization and outcomes of active surveillance or watchful waiting in favorable-risk prostate cancer. Cancer Med. 2023;12(8):9868-78.
+\bibitem{hammarlund2024} Hammarlund N, Holt SK, Basu A, et al. Isolating the drivers of racial inequities in prostate cancer treatment. Cancer Epidemiol Biomarkers Prev. 2024;33(3):435-41.
+\bibitem{foley2022} Foley GR, Blizzard CL, Stokes B, et al. Urban-rural prostate cancer disparities in a regional state of Australia. Sci Rep. 2022;12(1):3022.
+\bibitem{foley2025} Foley GR, Blizzard CL, Skala M, et al. Prostate cancer disparities between public and private healthcare patients in Tasmania, a regional state of Australia. Cancers (Basel). 2025;18(1):79.
+\bibitem{baade2012} Baade PD, Gardiner RA, Ferguson M, et al. Factors associated with diagnostic and treatment intervals for prostate cancer in Queensland, Australia: a large cohort study. Cancer Causes Control. 2012;23(4):625-34.
+\bibitem{leong2025} Leong CL, Cox I, Grundy R, et al. Optimal lung cancer care pathways: a Tasmanian perspective. Aust Health Rev. 2025;49:AH24249.
+\bibitem{zheng2023} Zheng Q, Otahal P, Cox IA, et al. The influence of immortal time bias in observational studies examining associations of antifibrotic therapy with survival in idiopathic pulmonary fibrosis: a simulation study. Front Med (Lausanne). 2023;10:1157706.
+\end{thebibliography}
+}
+
+\end{document}

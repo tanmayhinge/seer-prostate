@@ -1,7 +1,7 @@
-"""Manuscript assembly: tables copied from generated reports, and an audit of numbers in the text.
+"""Manuscript assembly: LaTeX tables built from generated reports, and checks on the manuscript text.
 
-Tables enter the preprint only through include directives, so they cannot drift from the reports. The number audit
-lists every number in the text that appears in none of the source documents, for a person to check by hand.
+Tables enter the paper only by being generated from the reports, so they cannot drift from them. The number audit
+lists every number in the running text that appears in none of the source documents, for a person to check by hand.
 """
 
 from __future__ import annotations
@@ -53,6 +53,68 @@ def protocol_version(text: str) -> str | None:
     """The protocol version from its 'Version X.Y, dated ...' line, or None if the line is absent."""
     match = VERSION_LINE.search(text)
     return match.group(1) if match else None
+
+
+LATEX_SPECIAL = {
+    "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#", "_": r"\_", "{": r"\{", "}": r"\}",
+    "~": r"\textasciitilde{}", "^": r"\textasciicircum{}", "\\": r"\textbackslash{}",
+}
+
+
+def latex_escape(text: str) -> str:
+    """Escape the characters LaTeX treats as special."""
+    return "".join(LATEX_SPECIAL.get(char, char) for char in text)
+
+
+def markdown_rows(table_md: str) -> tuple[list[str], list[list[str]]]:
+    """Header and body rows of a markdown table; the separator row is dropped and ``\\|`` becomes ``|``."""
+    parsed = []
+    for line in table_md.strip().splitlines():
+        cells = [cell.strip().replace("\\|", "|") for cell in re.split(r"(?<!\\)\|", line.strip())[1:-1]]
+        if cells and all(re.fullmatch(r":?-+:?", cell) for cell in cells):
+            continue
+        parsed.append(cells)
+    return parsed[0], parsed[1:]
+
+
+def latex_tabular(header: list[str], rows: list[list[str]], column_spec: str, escape: bool = True) -> str:
+    """A booktabs tabular; cells are escaped unless ``escape`` is False (cells already written in LaTeX)."""
+    fix = latex_escape if escape else (lambda cell: cell)
+    line = lambda cells: " & ".join(fix(cell) for cell in cells) + " \\\\"  # noqa: E731
+    return "\n".join(
+        [f"\\begin{{tabular}}{{{column_spec}}}", "\\toprule", line(header), "\\midrule"]
+        + [line(row) for row in rows]
+        + ["\\bottomrule", "\\end{tabular}"]
+    )
+
+
+def tex_prose(tex: str) -> str:
+    """Running text of a LaTeX document, for word counts and number audits.
+
+    Comments, floats (tables and figures, whose content comes from the reports), the bibliography, citations,
+    cross-references and URLs are removed; formatting commands are dropped but their text is kept.
+    """
+    text = re.sub(r"(?<!\\)%.*", "", tex)
+    text = re.sub(r"\\begin\{(thebibliography|figure|table)(\*?)\}.*?\\end\{\1\2\}", " ", text, flags=re.S)
+    text = re.sub(r"\\(?:cite[pt]?|label|ref|input|includegraphics|url|href)(?:\[[^\]]*\])*\{[^}]*\}", " ", text)
+    text = re.sub(r"\\(?:begin|end)\{[^}]*\}", " ", text)
+    text = re.sub(r"\\[A-Za-z]+\*?(?:\[[^\]]*\])?", " ", text)
+    text = re.sub(r"\\([%&$#_{}])", r"\1", text)
+    text = text.replace("~", " ").replace("{", "").replace("}", "").replace("\\\\", " ")
+    return re.sub(r"[ \t]+", " ", text)
+
+
+def cite_order(tex: str) -> list[str]:
+    """Citation keys in order of first use."""
+    keys: list[str] = []
+    for group in re.findall(r"\\cite[pt]?\{([^}]*)\}", tex):
+        keys += [key.strip() for key in group.split(",") if key.strip() not in keys]
+    return keys
+
+
+def bibitem_order(tex: str) -> list[str]:
+    """Bibliography keys in the order they are listed."""
+    return re.findall(r"\\bibitem(?:\[[^\]]*\])?\{([^}]*)\}", tex)
 
 
 def _value(token: str) -> float:

@@ -1,0 +1,37 @@
+\begin{tikzpicture}[>=latex, font=\footnotesize,
+  cohortbox/.style={draw, align=center, text width=6.2cm, inner sep=3pt},
+  exclusionbox/.style={draw, align=left, text width=6.0cm, inner sep=3pt, fill=black!4}]
+\node[cohortbox] (s0) {All prostate cancer records\\n = 793,214};
+\node[cohortbox, below=6mm of s0] (s1) {First primary cancer\\n = 710,343};
+\draw[->] (s0) -- (s1);
+\node[exclusionbox, anchor=west] (e1) at ($(s0.south)!0.5!(s1.north) + (3.9cm,0)$) {Not the first primary cancer\\n = 82,871};
+\draw[->] ($(s0.south)!0.5!(s1.north)$) -- (e1.west);
+\node[cohortbox, below=6mm of s1] (s2) {Localised or regional stage\\n = 608,441};
+\draw[->] (s1) -- (s2);
+\node[exclusionbox, anchor=west] (e2) at ($(s1.south)!0.5!(s2.north) + (3.9cm,0)$) {Not localised or regional stage\\n = 101,902};
+\draw[->] ($(s1.south)!0.5!(s2.north)$) -- (e2.west);
+\node[cohortbox, below=6mm of s2] (s3) {Not death certificate or autopsy only\\n = 608,375};
+\draw[->] (s2) -- (s3);
+\node[exclusionbox, anchor=west] (e3) at ($(s2.south)!0.5!(s3.north) + (3.9cm,0)$) {Death certificate or autopsy only\\n = 66};
+\draw[->] ($(s2.south)!0.5!(s3.north)$) -- (e3.west);
+\node[cohortbox, below=6mm of s3] (s4) {Aged 40 or over\\n = 608,133};
+\draw[->] (s3) -- (s4);
+\node[exclusionbox, anchor=west] (e4) at ($(s3.south)!0.5!(s4.north) + (3.9cm,0)$) {Not aged 40 or over\\n = 242};
+\draw[->] ($(s3.south)!0.5!(s4.north)$) -- (e4.west);
+\node[cohortbox, below=6mm of s4] (s5) {Diagnosed 2010 to 2022\\n = 557,683};
+\draw[->] (s4) -- (s5);
+\node[exclusionbox, anchor=west] (e5) at ($(s4.south)!0.5!(s5.north) + (3.9cm,0)$) {Not diagnosed 2010 to 2022\\n = 50,450};
+\draw[->] ($(s4.south)!0.5!(s5.north)$) -- (e5.west);
+\node[cohortbox, below=6mm of s5] (s6) {Radical prostatectomy or radiotherapy recorded\\n = 355,581};
+\draw[->] (s5) -- (s6);
+\node[exclusionbox, anchor=west] (e6) at ($(s5.south)!0.5!(s6.north) + (3.9cm,0)$) {No radical prostatectomy or radiotherapy\\n = 202,102};
+\draw[->] ($(s5.south)!0.5!(s6.north)$) -- (e6.west);
+\node[cohortbox, below=6mm of s6] (s7) {Interval recorded or top-coded\\n = 338,580};
+\draw[->] (s6) -- (s7);
+\node[exclusionbox, anchor=west] (e7) at ($(s6.south)!0.5!(s7.north) + (3.9cm,0)$) {No recorded interval\\n = 17,001};
+\draw[->] ($(s6.south)!0.5!(s7.north)$) -- (e7.west);
+\node[cohortbox, below=6mm of s7] (s8) {\textbf{Primary cohort: interval above 0 days}\\n = 330,827};
+\draw[->] (s7) -- (s8);
+\node[exclusionbox, anchor=west] (e8) at ($(s7.south)!0.5!(s8.north) + (3.9cm,0)$) {Interval of 0 days\\n = 7,753};
+\draw[->] ($(s7.south)!0.5!(s8.north)$) -- (e8.west);
+\end{tikzpicture}

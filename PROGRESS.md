@@ -58,7 +58,7 @@ The same question is answered step by step, each time adding one group of inform
 | Protocol | Wrote down the full study plan and every definition before looking at any results | Done, saved in git on 13 September 2026 |
 | Phase 3: study group | Built the group of men to analyse, with a record of every exclusion | Done |
 | Phase 4: results | Descriptive results, the step-by-step models, results in patient terms, income inequality, and checks on men with no recorded waiting time | Done, including the checks and the second question |
-| Write-up | A short research paper (preprint) and a web article | Planned |
+| Write-up | A short research paper (preprint) and a web article | Short paper and supplement typeset; web article planned |
 
 ### Phase 0: data check
 - **Structure:** 793,214 records with 41 columns, and every line has the correct structure.
@@ -131,10 +131,10 @@ The full summary is in `reports/phase4.md`. All of these are associations, not p
 
 ## What comes next
 
-1. **Preprint:** revision 1 is in `paper/preprint.md`, with the supplement and figures.
-   - **What happened so far:** a simulated five-reviewer check (the research-skills plugin) asked for major revision. Its reports are in `paper/review/round1/`.
-   - **What revision 1 fixes:** factual slips; overstated claims; missing citations, tables and checklists; and it adds robustness checks.
-   - **Still to do:** a re-review of revision 1, and a PDF.
+1. **Preprint:** a short typeset paper (`paper/paper.pdf`: about 2,900 words, 3 figures, 2 tables) with a supplement (`paper/supplement.pdf`), built from `paper/tex/` by `scripts/build_paper.py`.
+   - **Internal review:** a simulated five-reviewer check (the research-skills plugin) asked for major revision; its reports are in `paper/review/round1/`. Revision 1 fixed factual slips, overstated claims and missing citations, tables and checklists, and added robustness checks. A re-review of revision 1 gave minor revision (`paper/review/round2/`), and its remaining points were fixed.
+   - **Short paper:** condenses the reviewed revision into journal format. It adds no new analyses or claims.
+   - **Still to do:** a final read-through before posting to medRxiv.
 2. **Two-page summary** for the application.
 3. **Web article,** built last from the preprint.
 

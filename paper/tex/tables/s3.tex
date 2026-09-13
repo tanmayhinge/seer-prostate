@@ -1,0 +1,25 @@
+\begin{table}[H]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\caption{Robustness of the area and marital increment to tuning, fold assignment and clustering}
+\label{tab:s3}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+\makecell[l]{Stratum} & \makecell[l]{Model} & \makecell[r]{Primary analysis\\(tuned at step 3)} & \makecell[r]{Tuned at\\each step} & \makecell[r]{Mean (range) over\\10 fold seeds} & \makecell[r]{Clustered by county\\income band only} \\
+\midrule
+All men & Logistic & 0.62 (0.39 to 0.87) & 0.62 (0.39 to 0.87) & 0.62 (0.61 to 0.62) & 0.62 (0.38 to 0.90) \\
+ & LightGBM & 0.99 (0.73 to 1.30) & 0.99 (0.73 to 1.30) & 0.99 (0.98 to 0.99) & 0.99 (0.72 to 1.35) \\
+Low risk & Logistic & 0.62 (0.32 to 0.94) & 0.62 (0.32 to 0.94) & 0.62 (0.59 to 0.63) & 0.62 (0.28 to 1.07) \\
+ & LightGBM & 0.96 (0.67 to 1.28) & 0.96 (0.67 to 1.28) & 0.98 (0.95 to 1.01) & 0.96 (0.64 to 1.36) \\
+Intermediate risk & Logistic & 0.56 (0.35 to 0.83) & 0.56 (0.34 to 0.83) & 0.56 (0.54 to 0.56) & 0.56 (0.33 to 0.89) \\
+ & LightGBM & 0.93 (0.65 to 1.27) & 0.93 (0.65 to 1.27) & 0.93 (0.91 to 0.97) & 0.93 (0.63 to 1.31) \\
+High risk & Logistic & 0.86 (0.60 to 1.15) & 0.86 (0.60 to 1.15) & 0.85 (0.85 to 0.86) & 0.86 (0.58 to 1.15) \\
+ & LightGBM & 1.18 (0.90 to 1.56) & 1.18 (0.90 to 1.54) & 1.18 (1.16 to 1.20) & 1.18 (0.87 to 1.55) \\
+Unknown risk & Logistic & 0.42 (0.08 to 0.80) & 0.40 (0.07 to 0.80) & 0.41 (0.32 to 0.48) & 0.40 (0.07 to 0.78) \\
+ & LightGBM & 1.37 (0.80 to 2.19) & 1.37 (0.80 to 2.19) & 1.29 (1.22 to 1.43) & 1.37 (0.78 to 2.09) \\
+\bottomrule
+\end{tabular}
+\par\smallskip
+\begin{minipage}{\linewidth}\scriptsize Percentage points of out-of-fold log-loss skill added by area and marital characteristics (step 1 to 2), with 95\% cluster bootstrap intervals (first fold seed, 500 resamples, no refitting). Tuning was not repeated per seed. Specified after an internal review (protocol amendment 1.9).\end{minipage}
+\end{table}

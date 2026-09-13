@@ -34,5 +34,5 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 
-# Intermediate HTML from scripts/render_pdf.py
-paper/*.html
+# LaTeX build intermediates from scripts/build_paper.py
+paper/tex/build/

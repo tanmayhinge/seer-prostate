@@ -33,3 +33,6 @@ reports/**/*_sample*
 __pycache__/
 .pytest_cache/
 .DS_Store
+
+# Intermediate HTML from scripts/render_pdf.py
+paper/*.html

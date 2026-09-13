@@ -15,6 +15,8 @@ config/           All analysis settings (no constants in code)
   analysis.yaml     Cohort, treatment codes, risk groups, outcome, feature blocks
   reporting.yaml    Display names, bands and small-count suppression
   literature.yaml   PubMed search terms
+  figures.yaml      Figure size, formats and colours
+paper/figures/    Preprint figures (PNG and PDF) and captions, drawn from aggregate tables
 data/raw/         SEER export and session files (not in git; see Data below)
 reports/          Phase reports (phase1.md, phase3.md, phase4*.md), aggregate result tables and PubMed search record
 scripts/          One entry point per phase
@@ -54,6 +56,10 @@ Each phase has one script, run from the project root:
 ```
 
 `reports/phase4.md` summarises the Phase 4 reports.
+
+```
+.venv/bin/python scripts/make_figures.py   # figures and captions in paper/figures/ (after all Phase 4 scripts)
+```
 
 ## Data
 

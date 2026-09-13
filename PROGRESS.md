@@ -131,9 +131,8 @@ The full summary is in `reports/phase4.md`. All of these are associations, not p
 
 ## What comes next
 
-1. **Figures.**
-2. **Write-up:** a short preprint (medRxiv) and a two-page summary.
-3. **Web article,** built last from the preprint.
+1. **Write-up:** a short preprint (medRxiv) and a two-page summary. The four main figures and two supplementary figures are done, in `paper/figures/`.
+2. **Web article,** built last from the preprint.
 
 ## Known limits
 

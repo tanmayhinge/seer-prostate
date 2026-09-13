@@ -1,0 +1,19 @@
+# Figure settings. Nothing here changes an analysis result.
+
+dpi: 300
+formats: ["png", "pdf"]
+width_inches: 7.0
+font_size: 8.0
+calibration_bins: 10          # equal-count bins of predicted probability (out-of-fold, step 2)
+model_colors:                 # colour-blind-safe pair
+  logistic: "#1b6ca8"
+  lightgbm: "#d95f02"
+model_labels:
+  logistic: "Penalised logistic regression"
+  lightgbm: "LightGBM"
+stratum_labels:
+  all: "All men"
+  low: "Low risk"
+  intermediate: "Intermediate risk"
+  high: "High risk"
+  unknown: "Unknown risk"

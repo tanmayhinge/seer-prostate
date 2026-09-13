@@ -57,7 +57,7 @@ The same question is answered step by step, each time adding one group of inform
 | Phase 1: literature check | Searched PubMed to see whether this study already exists | Done |
 | Protocol | Wrote down the full study plan and every definition before looking at any results | Done, saved in git on 13 September 2026 |
 | Phase 3: study group | Built the group of men to analyse, with a record of every exclusion | Done |
-| Phase 4: results | Descriptive results, then the step-by-step models | Next |
+| Phase 4: results | Descriptive results, the step-by-step models, results in patient terms, income inequality, and checks on men with no recorded waiting time | Main results done; sensitivity checks and the second question still to do |
 | Write-up | A short research paper (preprint) and a web article | Planned |
 
 ### Phase 0: data check
@@ -75,7 +75,7 @@ The same question is answered step by step, each time adding one group of inform
 ### Protocol
 - **Written before results:** the cohort, treatment codes, risk groups, outcome, models and checks were all fixed in `PROTOCOL.md` before any results.
 - **Why 90 days:** the threshold comes from the Australian optimal care pathway.
-- **Changes are logged:** any change must be recorded in the protocol's amendment log. Eight changes are logged so far, each with its reason. Recent ones renamed the study to name the machine learning approach, made clear that no Australian data are analysed, added published Tasmanian and methods work as citations, and corrected those citations after reading the full papers.
+- **Changes are logged:** any change must be recorded in the protocol's amendment log. Eleven changes are logged so far (the protocol is at version 1.7), each with its reason. Earlier ones renamed the study to name the machine learning approach, made clear that no Australian data are analysed, and added and checked citations. The three most recent, made during Phase 4, wrote down the model tuning details before the full models were run, reported extra waiting days as plain counts rather than adjusted figures, and changed how rurality and income are compared because the two are too closely linked to change one at a time.
 
 ### Phase 3: study group
 
@@ -96,13 +96,31 @@ The same question is answered step by step, each time adding one group of inform
   - Rural counties in this data are also much poorer, so rurality and income are hard to separate.
   - Men without a recorded waiting time are more often from big cities and from earlier years; the analysis will test how much this could change the results.
 
+### Phase 4: results
+The full summary is in `reports/phase4.md`. All of these are associations, not proof of cause.
+
+- **Waiting has got longer:** the share of men waiting more than 90 days rose from 36.0% in 2010 to 52.3% in 2022 (lower is better).
+- **Waiting is hard to predict:** even the best models were only modestly better than chance at telling who would wait more than 90 days (AUC 0.59 to 0.66, where 0.5 is chance and 1 is perfect).
+- **Social position adds a little, but reliably:**
+  - Adding marital status, rurality and county income improved prediction in every risk group, under both models. The uncertainty range stayed above zero every time.
+  - For all men, the gain was 0.62 points under logistic regression and 0.99 points under gradient boosting.
+  - For low-risk men, social position added more than medical need did.
+- **Which model did better:** gradient boosting (LightGBM) predicted better than penalised logistic regression in every risk group. The logistic model chose the strongest penalty on offer, so it might have done a little better with a wider search. This is recorded as a limitation.
+- **In patient terms, after accounting for medical need:**
+  - Men in the most remote type of county were about 9 percentage points less likely to wait more than 90 days than men in large cities, when each area is taken at its typical income. Both models agreed.
+  - Never-married men were about 6 to 7 points more likely to wait than married men.
+- **Income:** longer waits were concentrated among men in richer counties (concentration index 0.062, range 0.039 to 0.083). Richer counties are mostly big-city counties, so this cannot be separated from rurality.
+- **Men with no recorded waiting time (2.7% to 5.5% by area):**
+  - The unadjusted differences by area, income and marital status held even under the most extreme assumptions about these men.
+  - Reweighting for them changed percentages by 0.2 points or less.
+- **How this sits next to Tasmania:** in these US data, city men waited more often. In Tasmania, men from outer regional and remote areas started treatment later (Foley et al. 2022). The two studies measure areas and waiting times differently, so this is not a direct comparison.
+
 ## What comes next
 
-1. **Descriptive results:** waiting times by risk group, rurality and income.
-2. **Models:** the step-by-step models, with uncertainty ranges.
-3. **Human terms:** results turned into extra waiting days and an income inequality measure.
-4. **Checks:** different thresholds (60, 120 and 180 days), surgery only, excluding 2020, and bounds for men without a recorded waiting time.
-5. **Write-up:** a short preprint and a web article.
+1. **Checks:** different thresholds (60, 120 and 180 days), risk groups from Gleason and PSA only, surgery only, excluding 2020, including 2023, including 0-day waits, a stricter first-cancer rule, and excluding unspecified prostatectomy.
+2. **Second question:** whether men receive surgery or radiotherapy at all.
+3. **Figures.**
+4. **Write-up:** a short preprint, then a web article.
 
 ## Known limits
 
@@ -115,7 +133,7 @@ The same question is answered step by step, each time adding one group of inform
 ## How the project is kept tidy
 
 - **Settings in one place:** every setting lives in `config/`, not in the code.
-- **Tests first:** tests were written before each piece of code, and 173 tests currently pass.
+- **Tests first:** tests were written before each piece of code, and 258 tests currently pass.
 - **Private data stays local:** raw data and outputs with individual-level detail are kept out of git.
 - **A report per phase:** each phase writes a report to `reports/`. `README.md` has the folder map and the commands to run everything.
 

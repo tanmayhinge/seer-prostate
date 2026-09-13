@@ -87,9 +87,19 @@ class FeatureSpec:
 class ModellingSpec:
     cv_folds: int
     bootstrap_resamples: int
+    interval_level: float
     tuning_rows: int
+    tuning_folds: int
+    probability_clip: float
     min_meaningful_percentage_points: float
     min_meaningful_days: float
+    logistic_c_grid: tuple[float, ...]
+    logistic_max_iter: int
+    lightgbm_learning_rate: float
+    lightgbm_grid: dict[str, tuple[int, ...]]
+    reference_marital: str
+    reference_rurality: str
+    reference_income_quantile: float
 
 
 @dataclass(frozen=True)

@@ -1,0 +1,77 @@
+17:14:40 cohort 330,827 men, 0.3970 delayed; 79 bootstrap clusters
+17:14:40 stratum all: 330,827 men, 0.3970 delayed
+17:14:41   logistic: tuned {'max_iter': 2000, 'C': 0.01}
+17:14:42   logistic: step 0 cross-fitted (2 features)
+17:14:48   logistic: step 1 cross-fitted (11 features)
+17:14:56   logistic: step 2 cross-fitted (26 features)
+17:15:04   logistic: step 3 cross-fitted (29 features)
+17:15:06   logistic: bootstrap done (500 resamples)
+17:15:29   logistic: leave-one-variable-out done (49s for this model)
+17:16:10   lightgbm: tuned {'learning_rate': 0.05, 'n_estimators': 200, 'num_leaves': 15, 'min_child_samples': 200}
+17:16:15   lightgbm: step 0 cross-fitted (2 features)
+17:16:19   lightgbm: step 1 cross-fitted (11 features)
+17:16:25   lightgbm: step 2 cross-fitted (26 features)
+17:16:30   lightgbm: step 3 cross-fitted (29 features)
+17:16:32   lightgbm: bootstrap done (500 resamples)
+17:16:47   lightgbm: leave-one-variable-out done (78s for this model)
+17:16:47 stratum low: 57,495 men, 0.4791 delayed
+17:16:49   logistic: tuned {'max_iter': 2000, 'C': 0.01}
+17:16:49   logistic: step 0 cross-fitted (2 features)
+17:16:49   logistic: step 1 cross-fitted (11 features)
+17:16:50   logistic: step 2 cross-fitted (26 features)
+17:16:51   logistic: step 3 cross-fitted (29 features)
+17:16:51   logistic: bootstrap done (500 resamples)
+17:16:53   logistic: leave-one-variable-out done (6s for this model)
+17:17:34   lightgbm: tuned {'learning_rate': 0.05, 'n_estimators': 200, 'num_leaves': 15, 'min_child_samples': 200}
+17:17:36   lightgbm: step 0 cross-fitted (2 features)
+17:17:38   lightgbm: step 1 cross-fitted (11 features)
+17:17:40   lightgbm: step 2 cross-fitted (26 features)
+17:17:43   lightgbm: step 3 cross-fitted (29 features)
+17:17:43   lightgbm: bootstrap done (500 resamples)
+17:17:50   lightgbm: leave-one-variable-out done (57s for this model)
+17:17:50 stratum intermediate: 127,622 men, 0.4277 delayed
+17:17:52   logistic: tuned {'max_iter': 2000, 'C': 0.01}
+17:17:52   logistic: step 0 cross-fitted (2 features)
+17:17:54   logistic: step 1 cross-fitted (11 features)
+17:17:56   logistic: step 2 cross-fitted (26 features)
+17:17:58   logistic: step 3 cross-fitted (29 features)
+17:17:59   logistic: bootstrap done (500 resamples)
+17:18:05   logistic: leave-one-variable-out done (14s for this model)
+17:18:45   lightgbm: tuned {'learning_rate': 0.05, 'n_estimators': 200, 'num_leaves': 15, 'min_child_samples': 200}
+17:18:48   lightgbm: step 0 cross-fitted (2 features)
+17:18:51   lightgbm: step 1 cross-fitted (11 features)
+17:18:54   lightgbm: step 2 cross-fitted (26 features)
+17:18:57   lightgbm: step 3 cross-fitted (29 features)
+17:18:58   lightgbm: bootstrap done (500 resamples)
+17:19:06   lightgbm: leave-one-variable-out done (62s for this model)
+17:19:07 stratum high: 130,893 men, 0.3281 delayed
+17:19:08   logistic: tuned {'max_iter': 2000, 'C': 0.01}
+17:19:09   logistic: step 0 cross-fitted (2 features)
+17:19:11   logistic: step 1 cross-fitted (11 features)
+17:19:14   logistic: step 2 cross-fitted (26 features)
+17:19:16   logistic: step 3 cross-fitted (29 features)
+17:19:17   logistic: bootstrap done (500 resamples)
+17:19:24   logistic: leave-one-variable-out done (17s for this model)
+17:20:06   lightgbm: tuned {'learning_rate': 0.05, 'n_estimators': 200, 'num_leaves': 15, 'min_child_samples': 200}
+17:20:09   lightgbm: step 0 cross-fitted (2 features)
+17:20:12   lightgbm: step 1 cross-fitted (11 features)
+17:20:15   lightgbm: step 2 cross-fitted (26 features)
+17:20:18   lightgbm: step 3 cross-fitted (29 features)
+17:20:19   lightgbm: bootstrap done (500 resamples)
+17:20:28   lightgbm: leave-one-variable-out done (64s for this model)
+17:20:28 stratum unknown: 14,817 men, 0.4215 delayed
+17:20:29   logistic: tuned {'max_iter': 2000, 'C': 0.01}
+17:20:29   logistic: step 0 cross-fitted (2 features)
+17:20:29   logistic: step 1 cross-fitted (11 features)
+17:20:29   logistic: step 2 cross-fitted (26 features)
+17:20:29   logistic: step 3 cross-fitted (29 features)
+17:20:29   logistic: bootstrap done (500 resamples)
+17:20:30   logistic: leave-one-variable-out done (2s for this model)
+17:21:01   lightgbm: tuned {'learning_rate': 0.05, 'n_estimators': 200, 'num_leaves': 15, 'min_child_samples': 200}
+17:21:02   lightgbm: step 0 cross-fitted (2 features)
+17:21:04   lightgbm: step 1 cross-fitted (11 features)
+17:21:06   lightgbm: step 2 cross-fitted (26 features)
+17:21:08   lightgbm: step 3 cross-fitted (29 features)
+17:21:08   lightgbm: bootstrap done (500 resamples)
+17:21:14   lightgbm: leave-one-variable-out done (44s for this model)
+17:21:14 finished

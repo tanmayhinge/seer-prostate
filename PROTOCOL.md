@@ -2,7 +2,7 @@
 
 **Waiting for prostate cancer treatment: how much is clinical need? A machine learning analysis of social position and time to treatment against the Australian optimal care pathway benchmark, US SEER 2010 to 2022**
 
-Version 1.4, dated 2026-09-13 (see the amendment log). Written before any outcome modelling. Every constant below lives in `config/analysis.yaml`; this document states the rationale. Nothing later deviates from it without an entry in the amendment log at the end.
+Version 1.7, dated 2026-09-13 (see the amendment log). Written before any outcome modelling. Every constant below lives in `config/analysis.yaml`; this document states the rationale. Nothing later deviates from it without an entry in the amendment log at the end.
 
 ## 1. Background and aim
 
@@ -88,7 +88,8 @@ A difference is pre-specified as meaningful when it reaches 3 percentage points 
 ## 7. Models and validation
 
 - Penalised logistic regression (L2, with clinical interaction terms) and LightGBM gradient boosting at each step.
-- Five-fold cross-fitting within each risk group; hyperparameters tuned by inner cross-validation on a subsample.
+- Five-fold cross-fitting within each risk group and pooled.
+- Hyperparameters are tuned once per model and stratum, by 3-fold cross-validated log-loss on a random subsample of 50,000 men, using the full-feature step (step 3). They are then reused for every step. The grids are in `config/analysis.yaml`. Tuning is not nested inside the evaluation folds, a small source of optimism given the small grids.
 - Metrics, all computed on out-of-fold predictions:
   - log-loss skill and Brier skill (higher is better; 0 is the base model);
   - AUC (0.5 is chance; higher is better);
@@ -106,7 +107,7 @@ A difference is pre-specified as meaningful when it reaches 3 percentage points 
 - **A2 and A3. Primary analysis.** Ordered-step model performance with cluster-bootstrap intervals, for both model types.
 - **A4. Which social variables.** Leave-one-variable-out refits within the social block (marital status, rurality, income).
 - **A5. Size in patient terms.** Associational g-computation from the step 2 model.
-  - Standardised percentage delayed under each observed social profile compared with a reference profile (county in a metropolitan area of 1 million or more, top income tertile, married).
+  - Standardised percentage delayed under each observed social profile compared with a reference profile: county in a metropolitan area of 1 million or more, married, and county income rank set to the cohort's 83.33rd percentile (the midpoint of the top income tertile).
   - Excess waiting person-days beyond 90 days per 1,000 men, by rurality and income.
   - A rurality by income grid of standardised percentage delayed.
 - **A6. Equity.** Erreygers-corrected concentration index of delay by county income rank, with the concentration curve, per risk group. A negative index means delay concentrates among men in lower-income counties.
@@ -184,3 +185,6 @@ The literature reviewed for novelty is listed with PubMed identifiers in reports
 | 2026-09-13 | Wording clarified: no Australian data are analysed; Tasmanian findings are cited as background only; Australian registry variables are candidate equivalents to be confirmed (version 1.2) | Avoid implying a cross-country comparison or unverified registry contents; no change to the cohort, definitions, estimand or analyses |
 | 2026-09-13 | Survival methods box (A10) now prefers a time-dependent treatment exposure, with the 12-month landmark as a sensitivity analysis only; citations added for Leong 2025, Usman 2026 and Zheng 2023; references section added (version 1.3) | Simulation evidence that landmark methods only partly remove immortal time bias (Zheng et al. 2023). A10 is not estimated, so no result changes |
 | 2026-09-13 | Citations checked against full texts where available: Tasmanian findings restated with the published medians, mean differences and confidence intervals; the radiotherapy exclusion in Foley et al. 2025 stated; A11 updated with the area measures and data gaps reported in published PCOR-TAS analyses; references note records which papers were read in full (version 1.4) | Earlier wording was based on abstracts and was less precise; no change to the cohort, definitions, estimand or analyses |
+| 2026-09-13 | Modelling implementation details specified before any full-cohort model was run: hyperparameter grids, probability clipping, tuning procedure (once per model and stratum on the full-feature step, reused across steps, not nested), and the numeric definition of the top income tertile in the reference profile (version 1.5) | The protocol previously described these only in general terms; no change to the cohort, definitions, estimand or analyses |
+| 2026-09-13 | Deviation in A5: excess waiting days beyond 90 per 1,000 men are reported as crude observed values by rurality and county income quartile, not standardised, because no model for the number of days was built. Standardised contrasts are reported for the percentage delayed only, with intervals that hold the fitted model fixed (version 1.6) | Time available before the write-up; the primary estimand and the percentage-delayed contrasts are unaffected |
+| 2026-09-13 | A5 revised after a development run (5 bootstrap resamples). One-at-a-time rurality and county income profiles are no longer interpreted. The two variables are strongly correlated, so holding one fixed creates combinations rarely observed (for example remote counties in the top income tertile), and the two model types gave conflicting estimates for them. Joint area profiles (each rurality level at the median county income band of men living there) are reported instead, with the one-at-a-time results kept in a supplementary table. Bootstrap intervals that hold the fitted model fixed are not reported for standardised contrasts, because they ignore model-fitting uncertainty; a contrast is described as meaningful only when both model types agree on 3 percentage points or more in the same direction (version 1.7) | Prompted by the model disagreement seen in the development run; the rurality and income collinearity had been noted in Phase 3. The primary estimand (A2 to A4) is unaffected |

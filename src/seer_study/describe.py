@@ -21,6 +21,7 @@ UNKNOWN = "Unknown"
 class ReportingSpec:
     small_count_threshold: int
     suppression_mask: str
+    cross_tab_count_rounding: int
     income_groups: int
     year_period_width: int
     gleason_max_display: int

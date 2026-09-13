@@ -1,0 +1,51 @@
+stratum,model,contrast,estimate
+all,logistic,all social features as observed minus reference profile,-1.0973757171759284
+all,logistic,"area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income",-9.200927918852264
+all,logistic,marital status: Single (never married) minus Married (including common law),6.7356025867843785
+all,logistic,_rurality only,-8.74121361143222
+all,logistic,_income only,-0.8975094964307196
+all,lightgbm,all social features as observed minus reference profile,-1.578581699014716
+all,lightgbm,"area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income",-8.770927714535485
+all,lightgbm,marital status: Single (never married) minus Married (including common law),5.923983805734481
+all,lightgbm,_rurality only,1.7172654323985488
+all,lightgbm,_income only,-8.652670676815637
+low,logistic,all social features as observed minus reference profile,-3.3997445535782633
+low,logistic,"area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income",-11.253556589613328
+low,logistic,marital status: Single (never married) minus Married (including common law),3.557121452053196
+low,logistic,_rurality only,-7.305336132150342
+low,logistic,_income only,-7.0190337755600005
+low,lightgbm,all social features as observed minus reference profile,-4.69346573918006
+low,lightgbm,"area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income",-13.47691549491206
+low,lightgbm,marital status: Single (never married) minus Married (including common law),2.407051353675034
+low,lightgbm,_rurality only,-4.87812570326723
+low,lightgbm,_income only,-14.78621661351667
+intermediate,logistic,all social features as observed minus reference profile,-1.4422485553634317
+intermediate,logistic,"area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income",-8.708697101193817
+intermediate,logistic,marital status: Single (never married) minus Married (including common law),6.437425520280426
+intermediate,logistic,_rurality only,-7.65217018769241
+intermediate,logistic,_income only,-1.9693385909531649
+intermediate,lightgbm,all social features as observed minus reference profile,-1.637112623466858
+intermediate,lightgbm,"area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income",-9.548451021699059
+intermediate,lightgbm,marital status: Single (never married) minus Married (including common law),5.496046592694648
+intermediate,lightgbm,_rurality only,-2.46482928339356
+intermediate,lightgbm,_income only,-10.871504129219657
+high,logistic,all social features as observed minus reference profile,0.09513987842709938
+high,logistic,"area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income",-8.357485596971847
+high,logistic,marital status: Single (never married) minus Married (including common law),8.296015618680434
+high,logistic,_rurality only,-9.863230100943907
+high,logistic,_income only,3.3593183147259293
+high,lightgbm,all social features as observed minus reference profile,-0.05496912990240572
+high,lightgbm,"area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income",-7.2398090910185005
+high,lightgbm,marital status: Single (never married) minus Married (including common law),7.587196847702768
+high,lightgbm,_rurality only,-3.2765609864299448
+high,lightgbm,_income only,-4.800320695228033
+unknown,logistic,all social features as observed minus reference profile,-0.1311596677570621
+unknown,logistic,"area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income",-12.148612266829122
+unknown,logistic,marital status: Single (never married) minus Married (including common law),6.036520467624667
+unknown,logistic,_rurality only,-11.43940867770781
+unknown,logistic,_income only,-1.4535732308037852
+unknown,lightgbm,all social features as observed minus reference profile,0.018338582218351458
+unknown,lightgbm,"area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income",-14.180855582878493
+unknown,lightgbm,marital status: Single (never married) minus Married (including common law),6.200487377820563
+unknown,lightgbm,_rurality only,-6.17786352356811
+unknown,lightgbm,_income only,-9.649970547599578

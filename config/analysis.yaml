@@ -175,6 +175,20 @@ features:
 modelling:
   cv_folds: 5
   bootstrap_resamples: 500
+  interval_level: 0.95
   tuning_rows: 50000
+  tuning_folds: 3
+  probability_clip: 1.0e-6          # predictions are clipped to [clip, 1 - clip] before log-loss
   min_meaningful_percentage_points: 3.0
   min_meaningful_days: 7.0
+  logistic_c_grid: [0.01, 0.1, 1.0, 10.0]
+  logistic_max_iter: 2000
+  lightgbm_learning_rate: 0.05
+  lightgbm_grid:
+    n_estimators: [200, 500]
+    num_leaves: [15, 63]
+    min_child_samples: [50, 200]
+  # Reference social profile for standardisation (PROTOCOL.md A5)
+  reference_marital: "Married (including common law)"
+  reference_rurality: "Counties in metropolitan areas ge 1 million pop"
+  reference_income_quantile: 0.8333  # midpoint of the top income tertile of the cohort's county income rank

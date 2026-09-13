@@ -27,9 +27,14 @@ def _slug(label: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", label.lower()).strip("_")
 
 
+def one_hot_column(prefix: str, label: str) -> str:
+    """Name of the indicator column for ``label`` in a one-hot encoded variable."""
+    return f"{prefix}_{_slug(label)}"
+
+
 def _one_hot(series: pd.Series, labels: tuple[str, ...], prefix: str) -> pd.DataFrame:
     return pd.DataFrame(
-        {f"{prefix}_{_slug(label)}": series.eq(label).astype("int64") for label in labels}, index=series.index
+        {one_hot_column(prefix, label): series.eq(label).astype("int64") for label in labels}, index=series.index
     )
 
 

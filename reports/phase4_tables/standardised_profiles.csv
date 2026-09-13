@@ -1,0 +1,141 @@
+stratum,model,profile,standardised %
+all,logistic,as observed,39.69686506265842
+all,logistic,reference profile,40.79424077983434
+all,logistic,"area: Metro, 1 million or more, typical county income ($90,000 - $94,999)",40.64428643158678
+all,logistic,"area: Metro, 250,000 to 1 million, typical county income ($80,000 - $84,999)",36.27475026956783
+all,logistic,"area: Metro, under 250,000, typical county income ($65,000 - $69,999)",32.84356905655065
+all,logistic,"area: Nonmetro, adjacent to metro, typical county income ($55,000 - $59,999)",31.8322479718162
+all,logistic,"area: Nonmetro, not adjacent to metro, typical county income ($55,000 - $59,999)",31.443358512734516
+all,logistic,marital status: Married (including common law),40.79424077983434
+all,logistic,marital status: Single (never married),47.52984336661873
+all,logistic,marital status: Divorced,46.909395950853025
+all,logistic,marital status: Separated,49.366355669103925
+all,logistic,marital status: Widowed,42.65544731261956
+all,logistic,marital status: Unmarried or Domestic Partner,46.66139558182206
+all,logistic,marital status: Unknown,45.58511566816681
+all,lightgbm,as observed,39.69644668314761
+all,lightgbm,reference profile,41.27502838216232
+all,lightgbm,"area: Metro, 1 million or more, typical county income ($90,000 - $94,999)",41.141432334687536
+all,lightgbm,"area: Metro, 250,000 to 1 million, typical county income ($80,000 - $84,999)",36.91267861114217
+all,lightgbm,"area: Metro, under 250,000, typical county income ($65,000 - $69,999)",32.40493696874923
+all,lightgbm,"area: Nonmetro, adjacent to metro, typical county income ($55,000 - $59,999)",31.94698270451723
+all,lightgbm,"area: Nonmetro, not adjacent to metro, typical county income ($55,000 - $59,999)",32.37050462015205
+all,lightgbm,marital status: Married (including common law),41.27502838216232
+all,lightgbm,marital status: Single (never married),47.199012187896805
+all,lightgbm,marital status: Divorced,46.704870607087265
+all,lightgbm,marital status: Separated,46.91592966125426
+all,lightgbm,marital status: Widowed,43.9910674976025
+all,lightgbm,marital status: Unmarried or Domestic Partner,45.9332833525754
+all,lightgbm,marital status: Unknown,45.69771818157532
+low,logistic,as observed,47.90583775657028
+low,logistic,reference profile,51.305582310148544
+low,logistic,"area: Metro, 1 million or more, typical county income ($90,000 - $94,999)",50.132291835505185
+low,logistic,"area: Metro, 250,000 to 1 million, typical county income ($80,000 - $84,999)",46.54011415682175
+low,logistic,"area: Metro, under 250,000, typical county income ($65,000 - $69,999)",42.043985667647576
+low,logistic,"area: Nonmetro, adjacent to metro, typical county income ($55,000 - $59,999)",37.735548292338606
+low,logistic,"area: Nonmetro, not adjacent to metro, typical county income ($55,000 - $59,999)",38.878735245891846
+low,logistic,marital status: Married (including common law),51.305582310148544
+low,logistic,marital status: Single (never married),54.86270376220174
+low,logistic,marital status: Divorced,54.771450533319936
+low,logistic,marital status: Separated,55.45765309442883
+low,logistic,marital status: Widowed,49.06095014319462
+low,logistic,marital status: Unmarried or Domestic Partner,59.10456453910381
+low,logistic,marital status: Unknown,54.44010133009496
+low,lightgbm,as observed,47.91035367459537
+low,lightgbm,reference profile,52.60381941377543
+low,lightgbm,"area: Metro, 1 million or more, typical county income ($90,000 - $94,999)",51.45328126488712
+low,lightgbm,"area: Metro, 250,000 to 1 million, typical county income ($80,000 - $84,999)",47.49406573913858
+low,lightgbm,"area: Metro, under 250,000, typical county income ($65,000 - $69,999)",41.919607500124876
+low,lightgbm,"area: Nonmetro, adjacent to metro, typical county income ($55,000 - $59,999)",36.90400368033692
+low,lightgbm,"area: Nonmetro, not adjacent to metro, typical county income ($55,000 - $59,999)",37.976365769975054
+low,lightgbm,marital status: Married (including common law),52.60381941377543
+low,lightgbm,marital status: Single (never married),55.01087076745047
+low,lightgbm,marital status: Divorced,55.06401037764471
+low,lightgbm,marital status: Separated,54.96722982451225
+low,lightgbm,marital status: Widowed,52.358180446592996
+low,lightgbm,marital status: Unmarried or Domestic Partner,54.613825808582696
+low,lightgbm,marital status: Unknown,54.01775025031363
+intermediate,logistic,as observed,42.77204692070169
+intermediate,logistic,reference profile,44.21429547606511
+intermediate,logistic,"area: Metro, 1 million or more, typical county income ($90,000 - $94,999)",43.88481379915304
+intermediate,logistic,"area: Metro, 250,000 to 1 million, typical county income ($80,000 - $84,999)",39.5576681495514
+intermediate,logistic,"area: Metro, under 250,000, typical county income ($65,000 - $69,999)",35.617169581905856
+intermediate,logistic,"area: Nonmetro, adjacent to metro, typical county income ($55,000 - $59,999)",34.6033804175323
+intermediate,logistic,"area: Nonmetro, not adjacent to metro, typical county income ($55,000 - $59,999)",35.176116697959216
+intermediate,logistic,marital status: Married (including common law),44.21429547606511
+intermediate,logistic,marital status: Single (never married),50.65172099634554
+intermediate,logistic,marital status: Divorced,50.621858449388256
+intermediate,logistic,marital status: Separated,52.28527064156431
+intermediate,logistic,marital status: Widowed,45.493452839792255
+intermediate,logistic,marital status: Unmarried or Domestic Partner,48.93501547755059
+intermediate,logistic,marital status: Unknown,47.24406296379035
+intermediate,lightgbm,as observed,42.77175963407905
+intermediate,lightgbm,reference profile,44.40887225754591
+intermediate,lightgbm,"area: Metro, 1 million or more, typical county income ($90,000 - $94,999)",44.611336049417226
+intermediate,lightgbm,"area: Metro, 250,000 to 1 million, typical county income ($80,000 - $84,999)",40.77178557562796
+intermediate,lightgbm,"area: Metro, under 250,000, typical county income ($65,000 - $69,999)",34.28637172578269
+intermediate,lightgbm,"area: Nonmetro, adjacent to metro, typical county income ($55,000 - $59,999)",34.643203653125994
+intermediate,lightgbm,"area: Nonmetro, not adjacent to metro, typical county income ($55,000 - $59,999)",35.06288502771817
+intermediate,lightgbm,marital status: Married (including common law),44.40887225754591
+intermediate,lightgbm,marital status: Single (never married),49.904918850240556
+intermediate,lightgbm,marital status: Divorced,50.14555566949247
+intermediate,lightgbm,marital status: Separated,51.0026916814778
+intermediate,lightgbm,marital status: Widowed,46.917499067973196
+intermediate,lightgbm,marital status: Unmarried or Domestic Partner,48.01803200031677
+intermediate,lightgbm,marital status: Unknown,46.87743513780005
+high,logistic,as observed,32.808685712907426
+high,logistic,reference profile,32.71354583448032
+high,logistic,"area: Metro, 1 million or more, typical county income ($90,000 - $94,999)",33.26400977130521
+high,logistic,"area: Metro, 250,000 to 1 million, typical county income ($80,000 - $84,999)",28.25135615458729
+high,logistic,"area: Metro, under 250,000, typical county income ($65,000 - $69,999)",26.210143735759296
+high,logistic,"area: Nonmetro, adjacent to metro, typical county income ($55,000 - $59,999)",26.359789056660222
+high,logistic,"area: Nonmetro, not adjacent to metro, typical county income ($55,000 - $59,999)",24.906524174333363
+high,logistic,marital status: Married (including common law),32.71354583448032
+high,logistic,marital status: Single (never married),41.00956145316076
+high,logistic,marital status: Divorced,39.50116196390641
+high,logistic,marital status: Separated,43.48732256895374
+high,logistic,marital status: Widowed,36.71389483376258
+high,logistic,marital status: Unmarried or Domestic Partner,39.30706640154959
+high,logistic,marital status: Unknown,40.67019069294739
+high,lightgbm,as observed,32.812716306090756
+high,lightgbm,reference profile,32.86768543599317
+high,lightgbm,"area: Metro, 1 million or more, typical county income ($90,000 - $94,999)",33.4422895879594
+high,lightgbm,"area: Metro, 250,000 to 1 million, typical county income ($80,000 - $84,999)",28.143715913267357
+high,lightgbm,"area: Metro, under 250,000, typical county income ($65,000 - $69,999)",25.67830495959566
+high,lightgbm,"area: Nonmetro, adjacent to metro, typical county income ($55,000 - $59,999)",26.99867231212129
+high,lightgbm,"area: Nonmetro, not adjacent to metro, typical county income ($55,000 - $59,999)",26.2024804969409
+high,lightgbm,marital status: Married (including common law),32.86768543599317
+high,lightgbm,marital status: Single (never married),40.45488228369592
+high,lightgbm,marital status: Divorced,39.29525877797091
+high,lightgbm,marital status: Separated,39.747622491722844
+high,lightgbm,marital status: Widowed,38.1388498115528
+high,lightgbm,marital status: Unmarried or Domestic Partner,39.54596254412818
+high,lightgbm,marital status: Unknown,39.6326040750519
+unknown,logistic,as observed,42.148508264350134
+unknown,logistic,reference profile,42.279667932107195
+unknown,logistic,"area: Metro, 1 million or more, typical county income ($90,000 - $94,999)",42.03653320963654
+unknown,logistic,"area: Metro, 250,000 to 1 million, typical county income ($80,000 - $84,999)",40.66826180206156
+unknown,logistic,"area: Metro, under 250,000, typical county income ($65,000 - $69,999)",33.65702971278807
+unknown,logistic,"area: Nonmetro, adjacent to metro, typical county income ($55,000 - $59,999)",35.17468353090415
+unknown,logistic,"area: Nonmetro, not adjacent to metro, typical county income ($55,000 - $59,999)",29.887920942807416
+unknown,logistic,marital status: Married (including common law),42.279667932107195
+unknown,logistic,marital status: Single (never married),48.31618839973187
+unknown,logistic,marital status: Divorced,48.33134296620632
+unknown,logistic,marital status: Separated,50.27063124737562
+unknown,logistic,marital status: Widowed,41.20811238251082
+unknown,logistic,marital status: Unmarried or Domestic Partner,47.62858904117857
+unknown,logistic,marital status: Unknown,47.27849673972717
+unknown,lightgbm,as observed,42.148031932031905
+unknown,lightgbm,reference profile,42.12969334981356
+unknown,lightgbm,"area: Metro, 1 million or more, typical county income ($90,000 - $94,999)",41.71284549186552
+unknown,lightgbm,"area: Metro, 250,000 to 1 million, typical county income ($80,000 - $84,999)",41.24403670230876
+unknown,lightgbm,"area: Metro, under 250,000, typical county income ($65,000 - $69,999)",33.6727804783005
+unknown,lightgbm,"area: Nonmetro, adjacent to metro, typical county income ($55,000 - $59,999)",33.05886855502883
+unknown,lightgbm,"area: Nonmetro, not adjacent to metro, typical county income ($55,000 - $59,999)",27.531989908987025
+unknown,lightgbm,marital status: Married (including common law),42.12969334981356
+unknown,lightgbm,marital status: Single (never married),48.330180727634115
+unknown,lightgbm,marital status: Divorced,50.579842730456036
+unknown,lightgbm,marital status: Separated,46.45330592978057
+unknown,lightgbm,marital status: Widowed,42.2640353025586
+unknown,lightgbm,marital status: Unmarried or Domestic Partner,46.45330592978057
+unknown,lightgbm,marital status: Unknown,49.06038612933864

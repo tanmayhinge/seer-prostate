@@ -1,0 +1,91 @@
+stratum,model,profile,standardised %
+all,logistic,"rurality only: Metro, 1 million or more (county income held at reference)",40.79424077983434
+all,logistic,"rurality only: Metro, 250,000 to 1 million (county income held at reference)",36.563251626759765
+all,logistic,"rurality only: Metro, under 250,000 (county income held at reference)",33.32751130817983
+all,logistic,"rurality only: Nonmetro, adjacent to metro (county income held at reference)",32.44568377262144
+all,logistic,"rurality only: Nonmetro, not adjacent to metro (county income held at reference)",32.05302716840212
+all,logistic,county income only: Q1 (lowest) (rurality held at reference),39.93424472273414
+all,logistic,county income only: Q2 (rurality held at reference),40.23274959317926
+all,logistic,county income only: Q3 (rurality held at reference),40.53192616547981
+all,logistic,county income only: Q4 (highest) (rurality held at reference),40.83175421916486
+all,lightgbm,"rurality only: Metro, 1 million or more (county income held at reference)",41.27502838216232
+all,lightgbm,"rurality only: Metro, 250,000 to 1 million (county income held at reference)",37.37973762335622
+all,lightgbm,"rurality only: Metro, under 250,000 (county income held at reference)",37.424972738291075
+all,lightgbm,"rurality only: Nonmetro, adjacent to metro (county income held at reference)",38.02393540057599
+all,lightgbm,"rurality only: Nonmetro, not adjacent to metro (county income held at reference)",42.992293814560874
+all,lightgbm,county income only: Q1 (lowest) (rurality held at reference),32.62235770534668
+all,lightgbm,county income only: Q2 (rurality held at reference),34.6303134246232
+all,lightgbm,county income only: Q3 (rurality held at reference),40.3584534252919
+all,lightgbm,county income only: Q4 (highest) (rurality held at reference),41.27502838216232
+low,logistic,"rurality only: Metro, 1 million or more (county income held at reference)",51.305582310148544
+low,logistic,"rurality only: Metro, 250,000 to 1 million (county income held at reference)",48.881673437306574
+low,logistic,"rurality only: Metro, under 250,000 (county income held at reference)",46.09103544642707
+low,logistic,"rurality only: Nonmetro, adjacent to metro (county income held at reference)",42.81243337847063
+low,logistic,"rurality only: Nonmetro, not adjacent to metro (county income held at reference)",44.00024617799821
+low,logistic,county income only: Q1 (lowest) (rurality held at reference),44.579710376731306
+low,logistic,county income only: Q2 (rurality held at reference),46.909166479623316
+low,logistic,county income only: Q3 (rurality held at reference),49.25220452374484
+low,logistic,county income only: Q4 (highest) (rurality held at reference),51.598744152291296
+low,lightgbm,"rurality only: Metro, 1 million or more (county income held at reference)",52.60381941377543
+low,lightgbm,"rurality only: Metro, 250,000 to 1 million (county income held at reference)",49.965035753871575
+low,lightgbm,"rurality only: Metro, under 250,000 (county income held at reference)",50.04606287826452
+low,lightgbm,"rurality only: Nonmetro, adjacent to metro (county income held at reference)",48.67652673198199
+low,lightgbm,"rurality only: Nonmetro, not adjacent to metro (county income held at reference)",47.725693710508196
+low,lightgbm,county income only: Q1 (lowest) (rurality held at reference),37.81760280025877
+low,lightgbm,county income only: Q2 (rurality held at reference),41.463921491955794
+low,lightgbm,county income only: Q3 (rurality held at reference),47.658202342712244
+low,lightgbm,county income only: Q4 (highest) (rurality held at reference),52.60381941377543
+intermediate,logistic,"rurality only: Metro, 1 million or more (county income held at reference)",44.21429547606511
+intermediate,logistic,"rurality only: Metro, 250,000 to 1 million (county income held at reference)",40.19913551295177
+intermediate,logistic,"rurality only: Metro, under 250,000 (county income held at reference)",36.69891640394542
+intermediate,logistic,"rurality only: Nonmetro, adjacent to metro (county income held at reference)",35.97957742692497
+intermediate,logistic,"rurality only: Nonmetro, not adjacent to metro (county income held at reference)",36.562125288372705
+intermediate,logistic,county income only: Q1 (lowest) (rurality held at reference),42.32740604887887
+intermediate,logistic,county income only: Q2 (rurality held at reference),42.98152664996921
+intermediate,logistic,county income only: Q3 (rurality held at reference),43.63804532712962
+intermediate,logistic,county income only: Q4 (highest) (rurality held at reference),44.29674463983203
+intermediate,lightgbm,"rurality only: Metro, 1 million or more (county income held at reference)",44.40887225754591
+intermediate,lightgbm,"rurality only: Metro, 250,000 to 1 million (county income held at reference)",40.93116732717453
+intermediate,lightgbm,"rurality only: Metro, under 250,000 (county income held at reference)",42.95773520300649
+intermediate,lightgbm,"rurality only: Nonmetro, adjacent to metro (county income held at reference)",40.878920809502894
+intermediate,lightgbm,"rurality only: Nonmetro, not adjacent to metro (county income held at reference)",41.944042974152346
+intermediate,lightgbm,county income only: Q1 (lowest) (rurality held at reference),33.53736812832625
+intermediate,lightgbm,county income only: Q2 (rurality held at reference),36.99167724837789
+intermediate,lightgbm,county income only: Q3 (rurality held at reference),43.51010433022398
+intermediate,lightgbm,county income only: Q4 (highest) (rurality held at reference),44.40887225754591
+high,logistic,"rurality only: Metro, 1 million or more (county income held at reference)",32.71354583448032
+high,logistic,"rurality only: Metro, 250,000 to 1 million (county income held at reference)",27.247683165586345
+high,logistic,"rurality only: Metro, under 250,000 (county income held at reference)",24.546744139157774
+high,logistic,"rurality only: Nonmetro, adjacent to metro (county income held at reference)",24.22604342524562
+high,logistic,"rurality only: Nonmetro, not adjacent to metro (county income held at reference)",22.850315733536423
+high,logistic,county income only: Q1 (lowest) (rurality held at reference),35.93593951471335
+high,logistic,county income only: Q2 (rurality held at reference),34.79980871790865
+high,logistic,county income only: Q3 (rurality held at reference),33.67971190529591
+high,logistic,county income only: Q4 (highest) (rurality held at reference),32.57662119998741
+high,lightgbm,"rurality only: Metro, 1 million or more (county income held at reference)",32.86768543599317
+high,lightgbm,"rurality only: Metro, 250,000 to 1 million (county income held at reference)",27.770667339747153
+high,lightgbm,"rurality only: Metro, under 250,000 (county income held at reference)",27.99564067636159
+high,lightgbm,"rurality only: Nonmetro, adjacent to metro (county income held at reference)",29.027712966918394
+high,lightgbm,"rurality only: Nonmetro, not adjacent to metro (county income held at reference)",29.59112444956322
+high,lightgbm,county income only: Q1 (lowest) (rurality held at reference),28.06736474076513
+high,lightgbm,county income only: Q2 (rurality held at reference),29.205549277014708
+high,lightgbm,county income only: Q3 (rurality held at reference),33.739494516124765
+high,lightgbm,county income only: Q4 (highest) (rurality held at reference),32.86768543599317
+unknown,logistic,"rurality only: Metro, 1 million or more (county income held at reference)",42.279667932107195
+unknown,logistic,"rurality only: Metro, 250,000 to 1 million (county income held at reference)",41.150438809990035
+unknown,logistic,"rurality only: Metro, under 250,000 (county income held at reference)",34.44248767912988
+unknown,logistic,"rurality only: Nonmetro, adjacent to metro (county income held at reference)",36.20625593095535
+unknown,logistic,"rurality only: Nonmetro, not adjacent to metro (county income held at reference)",30.840259254399392
+unknown,logistic,county income only: Q1 (lowest) (rurality held at reference),40.886935537471615
+unknown,logistic,county income only: Q2 (rurality held at reference),41.369873817321256
+unknown,logistic,county income only: Q3 (rurality held at reference),41.8544270060461
+unknown,logistic,county income only: Q4 (highest) (rurality held at reference),42.340508768275406
+unknown,lightgbm,"rurality only: Metro, 1 million or more (county income held at reference)",42.12969334981356
+unknown,lightgbm,"rurality only: Metro, 250,000 to 1 million (county income held at reference)",42.00414641830968
+unknown,lightgbm,"rurality only: Metro, under 250,000 (county income held at reference)",35.04673859604001
+unknown,lightgbm,"rurality only: Nonmetro, adjacent to metro (county income held at reference)",41.48696118760073
+unknown,lightgbm,"rurality only: Nonmetro, not adjacent to metro (county income held at reference)",35.951829826245444
+unknown,lightgbm,county income only: Q1 (lowest) (rurality held at reference),32.47972280221397
+unknown,lightgbm,county income only: Q2 (rurality held at reference),32.65393257874318
+unknown,lightgbm,county income only: Q3 (rurality held at reference),42.52321777046959
+unknown,lightgbm,county income only: Q4 (highest) (rurality held at reference),42.12969334981356

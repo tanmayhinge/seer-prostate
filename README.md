@@ -16,7 +16,7 @@ config/           All analysis settings (no constants in code)
   reporting.yaml    Display names, bands and small-count suppression
   literature.yaml   PubMed search terms
 data/raw/         SEER export and session files (not in git; see Data below)
-reports/          Phase reports (phase1.md, phase3.md) and PubMed search record
+reports/          Phase reports (phase1.md, phase3.md, phase4*.md), aggregate result tables and PubMed search record
 scripts/          One entry point per phase
 src/seer_study/   Library code, one module per concern
 tests/            Unit tests, written before each module, with synthetic fixtures
@@ -43,12 +43,18 @@ Each phase has one script, run from the project root:
 .venv/bin/python scripts/run_phase0.py           # inventory of the raw export (internal report)
 .venv/bin/python scripts/run_phase1_search.py    # PubMed literature search
 .venv/bin/python scripts/run_phase3_cohort.py    # cohort, inclusion flow and Table 1
+.venv/bin/python scripts/run_phase4_descriptive.py        # A1 crude timeliness tables
+.venv/bin/python scripts/run_phase4_models.py             # A2 to A4 cross-fitted models and bootstrap (long run)
+.venv/bin/python scripts/run_phase4_models_report.py      # A2 to A4 report from the saved model tables
+.venv/bin/python scripts/run_phase4_equity_selection.py   # A5 to A7 standardisation, equity index, selection
 ```
+
+`reports/phase4.md` summarises the three Phase 4 reports.
 
 ## Data
 
 The data are the SEER Research Data (17 registries, November 2025 submission). They are not included and cannot be shared. Access requires a SEER Research Data Use Agreement. Place the SEER*Stat case listing export (`export.txt`, `export.dic`) and session files in `data/raw/`.
 
-Under that agreement, published tables suppress counts of 1 to 4 (`src/seer_study/disclosure.py`). Outputs that list individual label frequencies from the case listing (`reports/phase0.md`, `reports/*_tables/`) stay local and are excluded from git.
+Under that agreement, published tables suppress counts of 1 to 4 (`src/seer_study/disclosure.py`). Outputs that list individual label frequencies from the case listing (`reports/phase0.md`, `reports/phase0_tables/`, `reports/phase3_tables/`), and Phase 4 tables holding exact group counts, stay local and are excluded from git (see `.gitignore`). Row-level model predictions are written to `data/derived/`, which is also excluded.
 
 Citation: Surveillance, Epidemiology, and End Results (SEER) Program, SEER*Stat Database: Incidence - SEER Research Data, 17 Registries, Nov 2025 Sub (2000-2023) - Linked To County Attributes - Time Dependent (1990-2024) Income/Rurality, 1969-2024 Counties, National Cancer Institute, DCCPS, Surveillance Research Program, released April 2026, based on the November 2025 submission.

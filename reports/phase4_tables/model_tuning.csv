@@ -1,0 +1,11 @@
+stratum,model,max_iter,C,seconds,learning_rate,n_estimators,num_leaves,min_child_samples
+all,logistic,2000.0,0.01,1.9,,,,
+all,lightgbm,,,41.6,0.05,200.0,15.0,200.0
+low,logistic,2000.0,0.01,1.3,,,,
+low,lightgbm,,,40.7,0.05,200.0,15.0,200.0
+intermediate,logistic,2000.0,0.01,1.4,,,,
+intermediate,lightgbm,,,40.5,0.05,200.0,15.0,200.0
+high,logistic,2000.0,0.01,1.9,,,,
+high,lightgbm,,,42.4,0.05,200.0,15.0,200.0
+unknown,logistic,2000.0,0.01,0.4,,,,
+unknown,lightgbm,,,30.7,0.05,200.0,15.0,200.0

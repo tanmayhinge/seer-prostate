@@ -11,6 +11,18 @@ reports/phase0.md
 reports/phase0_tables/
 reports/phase3_tables/
 
+reports/phase4_tables/descriptive_*
+reports/phase4_tables/models_stdout.txt
+reports/phase4_tables/equity_selection_stdout.txt
+# Exact group counts (can include 1 to 4 men); published reports show rounded, suppressed versions
+reports/phase4_tables/selection_bounds_*.csv
+reports/phase4_tables/selection_ipw.csv
+reports/phase4_tables/excess_days_crude.csv
+reports/phase4_tables/equity_concentration_curves.csv
+
+# Development runs on subsamples (scripts --sample)
+reports/**/*_sample*
+
 # Environment and caches
 .venv/
 __pycache__/

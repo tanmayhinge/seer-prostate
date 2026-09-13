@@ -1,6 +1,6 @@
 # Phase 4, part 3. Standardised differences, income inequality and selection
 
-Generated 2026-09-13 12:05 UTC by `scripts/run_phase4_equity_selection.py` at git revision `66a99f1`. Definitions: `PROTOCOL.md` A5 to A7 with amendments 1.6 and 1.7. All results are associations, not causal effects.
+Generated 2026-09-13 15:52 UTC by `scripts/run_phase4_equity_selection.py` at git revision `62d951c`. Definitions: `PROTOCOL.md` A5 to A7 with amendments 1.6 and 1.7. All results are associations, not causal effects.
 
 ## A5. Standardised percentage waiting more than 90 days
 
@@ -28,7 +28,7 @@ Each man keeps his own clinical features and year of diagnosis while his social 
 | all men (pooled) | marital status: Single (never married) minus Married (including common law) | 6.7 | 5.9 | both models 3 points or more, same direction |
 | low risk | all social features as observed minus reference profile | -3.4 | -4.7 | both models 3 points or more, same direction |
 | low risk | area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income | -11.3 | -13.5 | both models 3 points or more, same direction |
-| low risk | marital status: Single (never married) minus Married (including common law) | 3.6 | 2.4 | models disagree |
+| low risk | marital status: Single (never married) minus Married (including common law) | 3.6 | 2.4 | same direction, only one model 3 points or more |
 | intermediate risk | all social features as observed minus reference profile | -1.4 | -1.6 | both models under 3 points |
 | intermediate risk | area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income | -8.7 | -9.5 | both models 3 points or more, same direction |
 | intermediate risk | marital status: Single (never married) minus Married (including common law) | 6.4 | 5.5 | both models 3 points or more, same direction |

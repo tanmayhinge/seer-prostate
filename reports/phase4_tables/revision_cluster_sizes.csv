@@ -1,0 +1,11 @@
+stratum,clustering,clusters,smallest,median,largest,largest_share_pct
+all,rurality by income cells,79,23,1870.0,28195,8.522581288709809
+all,county income band only,17,28,22703.0,36147,10.926254507642968
+low,rurality by income cells,78,<5,310.0,5288,9.197321506217932
+low,county income band only,17,<5,3342.0,6807,11.83929037307592
+intermediate,rurality by income cells,79,7,659.0,11724,9.186503894312892
+intermediate,county income band only,17,7,8879.0,14291,11.197912585604364
+high,rurality by income cells,79,12,717.0,11366,8.683428449191323
+high,county income band only,17,13,9352.0,14824,11.3252809546729
+unknown,rurality by income cells,77,<5,70.0,1226,8.274279543767294
+unknown,county income band only,17,<5,967.0,1644,11.095363433893501

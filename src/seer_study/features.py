@@ -105,9 +105,27 @@ def build_feature_blocks(cohort: pd.DataFrame, config: AnalysisConfig, include_p
     )
 
 
-def design_matrix(blocks: FeatureBlocks, step: int) -> pd.DataFrame:
+def design_matrix(blocks: FeatureBlocks, step: int, exclude_prefixes: tuple[str, ...] = ()) -> pd.DataFrame:
+    """Columns for an ordered step; ``exclude_prefixes`` drops matching columns (e.g. stage, amendment 1.9)."""
     empty = [name for name in STEPS[step] if not blocks.columns_by_block[name]]
     if empty:
         raise ValueError(f"step {step} needs the {', '.join(empty)} block, which was not built")
-    columns =[column for name in STEPS[step] for column in blocks.columns_by_block[name]]
+    columns = [
+        column
+        for name in STEPS[step]
+        for column in blocks.columns_by_block[name]
+        if not (exclude_prefixes and column.startswith(tuple(exclude_prefixes)))
+    ]
     return blocks.frame[columns]
+
+
+def year_as_categories(X: pd.DataFrame, years) -> pd.DataFrame:
+    """Replace the linear year and the 2020 indicator with year indicators; the first listed year is the reference."""
+    years = [int(year) for year in years]
+    unlisted = sorted(set(X["year"].astype(int)) - set(years))
+    if unlisted:
+        raise ValueError(f"years not in the category list: {unlisted}")
+    out = X.drop(columns=["year", "covid_2020"])
+    for year in years[1:]:
+        out[f"year_{year}"] = X["year"].astype(int).eq(year).astype("int64")
+    return out

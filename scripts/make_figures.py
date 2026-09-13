@@ -90,7 +90,8 @@ def main() -> None:
         "**Figure 3. Out-of-fold log-loss skill added by each block of features,** in percentage points, by risk group and "
         f"model type. Blocks are added in order: clinical need, then social position, then treatment type. Bars are "
         f"{modelling.interval_level:.0%} cluster bootstrap intervals ({modelling.bootstrap_resamples} resamples over rurality "
-        "by county income cells). The dashed line marks no added skill. Associations, not causal effects."
+        "by county income cells). The dashed line marks no added skill. The x-axis scale differs between panels. "
+        "Associations, not causal effects."
     )
 
     # Figure 4: standardised area profiles and concentration curves
@@ -109,7 +110,7 @@ def main() -> None:
         f"**Figure 4. (a)** Standardised percentage of all men waiting more than {threshold} days when each man's rurality "
         "and county income are set together to each type of area, at the median county income band of men living there, "
         "with his own clinical features and year of diagnosis, and marital status set to married. Points show both model "
-        "types. **(b)** Concentration curves of waiting more than "
+        "types; the x-axis does not start at 0. **(b)** Concentration curves of waiting more than "
         f"{threshold} days by county median household income rank, by risk group. A curve below the line of equality means "
         "delay is concentrated among men in higher-income counties. Associations, not causal effects."
     )

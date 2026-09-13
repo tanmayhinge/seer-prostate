@@ -232,3 +232,10 @@ sensitivity:
 # Secondary question (PROTOCOL.md A9, amendment 1.8): record of radical prostatectomy or radiotherapy.
 receipt:
   risk_groups: ["intermediate", "high"]
+
+# Revision analyses after internal review (PROTOCOL.md amendment 1.9), all labelled post-review.
+revision:
+  fold_seed_repeats: 10                 # fold-assignment seeds per model and stratum, under per-step tuning
+  alternative_cluster_column: "income"  # coarser bootstrap clustering: county income band alone
+  stage_free_prefix: "stage_"           # clinical-block columns removed in the stage-free sensitivity analysis
+  long_interval_days: 365

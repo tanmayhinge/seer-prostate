@@ -1,14 +1,15 @@
 # Phase 4. Results overview
 
-Written 2026-09-13 from five generated reports. Every number below is copied from them, and each section names its source:
+Written 2026-09-13 from six generated reports. Every number below is copied from them, and each section names its source:
 
 - `reports/phase4_descriptive.md` (A1)
 - `reports/phase4_models.md` (A2 to A4)
 - `reports/phase4_equity_selection.md` (A5 to A7)
 - `reports/phase4_sensitivity.md` (A8)
 - `reports/phase4_receipt.md` (A9)
+- `reports/phase4_revision.md` (post-review robustness analyses, amendment 1.9)
 
-Definitions are in `PROTOCOL.md` version 1.8. All results are associations in observational registry data. None is a causal effect.
+Definitions are in `PROTOCOL.md` version 1.9. All results are associations in observational registry data. None is a causal effect.
 
 ## Cohort and outcome
 
@@ -57,7 +58,7 @@ The table shows skill added in percentage points of log-loss reduction, with 95%
   - LightGBM: 0.88 to 1.03, where values below 1 mean predictions are more extreme than observed.
 
 ### Which social variable (A4)
-- **Marital status and rurality:** removing either one lost 0.22 to 0.45 points of skill in the pooled, intermediate and high-risk strata under both models.
+- **Marital status and rurality:** removing either one lost 0.18 to 0.45 points of skill in the pooled, intermediate and high-risk strata under both models.
 - **County income:**
   - under logistic regression, removing it lost 0.00 to 0.02 points in those strata;
   - under LightGBM, it lost 0.26 to 0.29.
@@ -188,9 +189,26 @@ The Erreygers concentration index ranks men by county median household income. A
   - The crude differences by rurality shrink below the 3-point rule when each man's clinical features and year are kept as observed and marital status is set to married.
 - **All social features as observed against the reference profile:** -4.3 and -3.5 points.
 
+## 8. Post-review robustness analyses (amendment 1.9)
+
+These analyses were specified after an internal review of the draft preprint and before they were run.
+
+**Primary estimand**
+- **Per-step tuning:** in all men, the area and marital (social position) increment was 0.62 (0.39 to 0.87) under logistic regression and 0.99 (0.73 to 1.30) under LightGBM, the same as the primary analysis.
+- **Fold assignment:** across 10 fold assignments it ranged from 0.61 to 0.62 and 0.98 to 0.99 in all men. The smallest value was above 0 in all 10 stratum and model combinations.
+- **Clustering:** the interval lay above 0 in 10 of 10 combinations with rurality by income cells and in 10 of 10 with county income band alone. In all men there were 79 cells; the smallest held 23 men and the largest 8.5% of men.
+- **Clinical model comparison:** the LightGBM clinical model was at least as good as the logistic one in all men and in intermediate- and high-risk men, but not in low-risk (0.05 against 0.14 points) or unknown-risk men (0.55 against 0.64).
+- **Stage-free clinical block:** 0.62 and 1.02 (0.75 to 1.33) in all men.
+- **Year as categories (logistic regression):** 0.62 (0.39 to 0.86) in all men.
+
+**Other**
+- **Concentration index by period:** 0.059 (0.025 to 0.092) in 2010 to 2014, 0.037 (0.011 to 0.065) in 2015 to 2019 and 0.027 (0.003 to 0.061) in 2020 to 2022 in all men; every high-risk interval included 0. The share of men in the highest income quartile rose from 26.2% to 41.0% over these periods.
+- **Long intervals:** 3.0% of low-risk and 0.8% of high-risk men waited more than 365 days; 0.80% and 0.17% were top-coded.
+- **Inverse probability weighting:** changed published percentages by at most 0.36 points (0.21 in groups of 1,000 men or more).
+- **Correction:** amendment 1.7 said the one-at-a-time profiles were kept in a supplementary table; they are now published in `reports/phase4_revision.md`.
+
 ## Not yet done
 
-- **Figures.**
-- **medRxiv preprint** and supplement.
+- **Revised preprint** (`paper/preprint.md`): re-review of revision 1.
 - **Two-page application summary.**
 - **Web article** (last).

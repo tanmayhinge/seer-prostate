@@ -1,0 +1,71 @@
+analysis,stratum,model,clustering,comparison,estimate,lower,upper
+per-step tuning,all,logistic,rurality by income cells,clinical need (step 0 to 1),0.030144787765437497,0.026899379977267466,0.03375232523139575
+per-step tuning,all,logistic,rurality by income cells,social position (step 1 to 2),0.0061666843568282115,0.003919481779430837,0.008674070158965102
+per-step tuning,all,logistic,county income band only,clinical need (step 0 to 1),0.030144787765437497,0.02597014388395289,0.03341730837044714
+per-step tuning,all,logistic,county income band only,social position (step 1 to 2),0.0061666843568282115,0.0038373431749047673,0.009013729272203197
+stage-free clinical block,all,logistic,rurality by income cells,clinical need (step 0 to 1),0.029717510550305692,0.026379439647069843,0.03335106179282893
+stage-free clinical block,all,logistic,rurality by income cells,social position (step 1 to 2),0.006177641018414115,0.0039024547232372965,0.008655314461647067
+year as categories,all,logistic,rurality by income cells,clinical need (step 0 to 1),0.029806607263597296,0.026572680231133586,0.033363140944912356
+year as categories,all,logistic,rurality by income cells,social position (step 1 to 2),0.006178714573730426,0.0038967525160757085,0.008613908619942745
+per-step tuning,all,lightgbm,rurality by income cells,clinical need (step 0 to 1),0.03178625104777277,0.028524992881658662,0.03539766416004923
+per-step tuning,all,lightgbm,rurality by income cells,social position (step 1 to 2),0.009924835354969685,0.007301665365676802,0.013007548531949652
+per-step tuning,all,lightgbm,county income band only,clinical need (step 0 to 1),0.03178625104777277,0.027424406057204677,0.03506564135093157
+per-step tuning,all,lightgbm,county income band only,social position (step 1 to 2),0.009924835354969685,0.007181197872309511,0.013491842792623065
+stage-free clinical block,all,lightgbm,rurality by income cells,clinical need (step 0 to 1),0.03127389516541168,0.028027986855915586,0.034790249873124124
+stage-free clinical block,all,lightgbm,rurality by income cells,social position (step 1 to 2),0.010208605711179208,0.0075208016641537005,0.013334194417621792
+per-step tuning,low,logistic,rurality by income cells,clinical need (step 0 to 1),0.0013829330486431202,0.0007889136719134633,0.001973508499493195
+per-step tuning,low,logistic,rurality by income cells,social position (step 1 to 2),0.006197044030431087,0.003184956528736491,0.009446749242905542
+per-step tuning,low,logistic,county income band only,clinical need (step 0 to 1),0.0013829330486431202,0.0007920137436355835,0.002000035023010479
+per-step tuning,low,logistic,county income band only,social position (step 1 to 2),0.006197044030431087,0.002796482574275079,0.010687884807808837
+stage-free clinical block,low,logistic,rurality by income cells,clinical need (step 0 to 1),0.0013832450478503677,0.0007880749821863293,0.0019726490823590037
+stage-free clinical block,low,logistic,rurality by income cells,social position (step 1 to 2),0.00619695933592479,0.003185239950733715,0.00944666603217466
+year as categories,low,logistic,rurality by income cells,clinical need (step 0 to 1),0.0015069182615610188,0.0008611665257409501,0.002096582816344961
+year as categories,low,logistic,rurality by income cells,social position (step 1 to 2),0.005977215513300882,0.0030579580797016016,0.009197994259083938
+per-step tuning,low,lightgbm,rurality by income cells,clinical need (step 0 to 1),0.00024004204368344162,-0.000861865306734743,0.0012587332817864227
+per-step tuning,low,lightgbm,rurality by income cells,social position (step 1 to 2),0.009642009172960764,0.006655701507375706,0.012764145283119269
+per-step tuning,low,lightgbm,county income band only,clinical need (step 0 to 1),0.00024004204368344162,-0.0008543964961785222,0.001280634186275811
+per-step tuning,low,lightgbm,county income band only,social position (step 1 to 2),0.009642009172960764,0.006405657019806738,0.013646837465088456
+stage-free clinical block,low,lightgbm,rurality by income cells,clinical need (step 0 to 1),0.00024004204368344162,-0.000861865306734743,0.0012587332817864227
+stage-free clinical block,low,lightgbm,rurality by income cells,social position (step 1 to 2),0.009642009172960764,0.006655701507375706,0.012764145283119269
+per-step tuning,intermediate,logistic,rurality by income cells,clinical need (step 0 to 1),0.004936026327597931,0.004106637406240965,0.005689630858470854
+per-step tuning,intermediate,logistic,rurality by income cells,social position (step 1 to 2),0.005613882366073408,0.003438984185491519,0.008282406317051436
+per-step tuning,intermediate,logistic,county income band only,clinical need (step 0 to 1),0.004936026327597931,0.004094859102449555,0.005734540321539391
+per-step tuning,intermediate,logistic,county income band only,social position (step 1 to 2),0.005613882366073408,0.003349872941114485,0.008897523685000177
+stage-free clinical block,intermediate,logistic,rurality by income cells,clinical need (step 0 to 1),0.00494293323541839,0.004129763815826593,0.005690950669967545
+stage-free clinical block,intermediate,logistic,rurality by income cells,social position (step 1 to 2),0.00559968882854911,0.003440689916369434,0.008266422529462601
+year as categories,intermediate,logistic,rurality by income cells,clinical need (step 0 to 1),0.00502148588777418,0.004208736722699763,0.005792982434760438
+year as categories,intermediate,logistic,rurality by income cells,social position (step 1 to 2),0.005597592490174219,0.0034448532231187282,0.00827311338181977
+per-step tuning,intermediate,lightgbm,rurality by income cells,clinical need (step 0 to 1),0.0054841794777891195,0.004350876693650354,0.006545881073153081
+per-step tuning,intermediate,lightgbm,rurality by income cells,social position (step 1 to 2),0.009306521591469274,0.00648159022298589,0.01265576524802098
+per-step tuning,intermediate,lightgbm,county income band only,clinical need (step 0 to 1),0.0054841794777891195,0.003989216952477348,0.006746015960111756
+per-step tuning,intermediate,lightgbm,county income band only,social position (step 1 to 2),0.009306521591469274,0.0063049686804149355,0.01312511729064633
+stage-free clinical block,intermediate,lightgbm,rurality by income cells,clinical need (step 0 to 1),0.0054841794777891195,0.004350876693650354,0.006545881073153081
+stage-free clinical block,intermediate,lightgbm,rurality by income cells,social position (step 1 to 2),0.009306521591469274,0.00648159022298589,0.01265576524802098
+per-step tuning,high,logistic,rurality by income cells,clinical need (step 0 to 1),0.03529826421587412,0.03160028213267764,0.038651831589868936
+per-step tuning,high,logistic,rurality by income cells,social position (step 1 to 2),0.00858846252126777,0.005989953466699436,0.011469634309180712
+per-step tuning,high,logistic,county income band only,clinical need (step 0 to 1),0.03529826421587412,0.030948788189392184,0.0388265572504943
+per-step tuning,high,logistic,county income band only,social position (step 1 to 2),0.00858846252126777,0.005825018547033292,0.011485995967989295
+stage-free clinical block,high,logistic,rurality by income cells,clinical need (step 0 to 1),0.03424350139006249,0.03069832887612528,0.037606386646371816
+stage-free clinical block,high,logistic,rurality by income cells,social position (step 1 to 2),0.008522456127428968,0.005888473162538582,0.01144858053350335
+year as categories,high,logistic,rurality by income cells,clinical need (step 0 to 1),0.034839054404736114,0.0311879024939423,0.03819677856933891
+year as categories,high,logistic,rurality by income cells,social position (step 1 to 2),0.008651831799273979,0.00605338491518665,0.011592830982815277
+per-step tuning,high,lightgbm,rurality by income cells,clinical need (step 0 to 1),0.03725373410402588,0.03351254824400607,0.04070897633234287
+per-step tuning,high,lightgbm,rurality by income cells,social position (step 1 to 2),0.01177073576502552,0.00903462122065563,0.015433948512016916
+per-step tuning,high,lightgbm,county income band only,clinical need (step 0 to 1),0.03725373410402588,0.03285990642243677,0.0409298419261965
+per-step tuning,high,lightgbm,county income band only,social position (step 1 to 2),0.01177073576502552,0.008673391207365039,0.015472259055897658
+stage-free clinical block,high,lightgbm,rurality by income cells,clinical need (step 0 to 1),0.03641199317048904,0.03265343625361404,0.03986408128591484
+stage-free clinical block,high,lightgbm,rurality by income cells,social position (step 1 to 2),0.011912003011278927,0.00911463967082682,0.01568703534925176
+per-step tuning,unknown,logistic,rurality by income cells,clinical need (step 0 to 1),0.00660774551292842,0.004117130938818223,0.009145632582052312
+per-step tuning,unknown,logistic,rurality by income cells,social position (step 1 to 2),0.004042389217373543,0.0006661949723152185,0.008037298866404282
+per-step tuning,unknown,logistic,county income band only,clinical need (step 0 to 1),0.00660774551292842,0.004390384094557115,0.00921280790887132
+per-step tuning,unknown,logistic,county income band only,social position (step 1 to 2),0.004042389217373543,0.0006691932383339667,0.007761818342115499
+stage-free clinical block,unknown,logistic,rurality by income cells,clinical need (step 0 to 1),0.00662618987867325,0.004128720795391516,0.009169236115951168
+stage-free clinical block,unknown,logistic,rurality by income cells,social position (step 1 to 2),0.004013035319280878,0.0006287915559725249,0.007995595394993222
+year as categories,unknown,logistic,rurality by income cells,clinical need (step 0 to 1),0.006521764975051414,0.00410859297642788,0.009009278127035107
+year as categories,unknown,logistic,rurality by income cells,social position (step 1 to 2),0.00468382354840724,0.0010525472568014647,0.008911416741606736
+per-step tuning,unknown,lightgbm,rurality by income cells,clinical need (step 0 to 1),0.005873199141206542,0.002664637923155247,0.00947001066757817
+per-step tuning,unknown,lightgbm,rurality by income cells,social position (step 1 to 2),0.013738876296901847,0.007953350946794136,0.021864261204914155
+per-step tuning,unknown,lightgbm,county income band only,clinical need (step 0 to 1),0.005873199141206542,0.0031694494011079216,0.008959382144664903
+per-step tuning,unknown,lightgbm,county income band only,social position (step 1 to 2),0.013738876296901847,0.007780281781317866,0.02087452972958621
+stage-free clinical block,unknown,lightgbm,rurality by income cells,clinical need (step 0 to 1),0.005873199141206542,0.002664637923155247,0.00947001066757817
+stage-free clinical block,unknown,lightgbm,rurality by income cells,social position (step 1 to 2),0.013738876296901847,0.007953350946794136,0.021864261204914155

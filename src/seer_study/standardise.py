@@ -72,11 +72,13 @@ def area_income_ranks(income_rank: pd.Series, rurality: pd.Series, labels) -> di
 
 def agreement_label(logistic: float, lightgbm: float, minimum: float) -> str:
     """Agreement rule for standardised contrasts (PROTOCOL.md amendment 1.7)."""
-    if abs(logistic) >= minimum and abs(lightgbm) >= minimum and np.sign(logistic) == np.sign(lightgbm):
-        return f"both models {minimum:g} points or more, same direction"
     if abs(logistic) < minimum and abs(lightgbm) < minimum:
         return f"both models under {minimum:g} points"
-    return "models disagree"
+    if np.sign(logistic) != np.sign(lightgbm):
+        return f"opposite directions, at least one model {minimum:g} points or more"
+    if abs(logistic) >= minimum and abs(lightgbm) >= minimum:
+        return f"both models {minimum:g} points or more, same direction"
+    return f"same direction, only one model {minimum:g} points or more"
 
 
 def excess_days_per_1000(days: np.ndarray, threshold: float) -> float:

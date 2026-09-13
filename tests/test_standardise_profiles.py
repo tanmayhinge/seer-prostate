@@ -68,8 +68,10 @@ def test_area_income_ranks_uses_median_rank_of_men_in_each_area():
         (-9.2, -8.8, "both models 3 points or more, same direction"),
         (3.0, 4.5, "both models 3 points or more, same direction"),
         (-1.1, -1.6, "both models under 3 points"),
-        (3.6, 2.4, "models disagree"),
-        (4.0, -4.0, "models disagree"),
+        (3.6, 2.4, "same direction, only one model 3 points or more"),
+        (-2.96, -3.20, "same direction, only one model 3 points or more"),
+        (4.0, -4.0, "opposite directions, at least one model 3 points or more"),
+        (2.0, -3.5, "opposite directions, at least one model 3 points or more"),
     ],
 )
 def test_agreement_label(logistic, lightgbm, expected):

@@ -75,7 +75,7 @@ The same question is answered step by step, each time adding one group of inform
 ### Protocol
 - **Written before results:** the cohort, treatment codes, risk groups, outcome, models and checks were all fixed in `PROTOCOL.md` before any results.
 - **Why 90 days:** the threshold comes from the Australian optimal care pathway.
-- **Changes are logged:** any change must be recorded in the protocol's amendment log. Twelve changes are logged so far (the protocol is at version 1.8), each with its reason. Earlier ones renamed the study to name the machine learning approach, made clear that no Australian data are analysed, and added and checked citations. The four most recent were made during Phase 4:
+- **Changes are logged:** any change must be recorded in the protocol's amendment log. Thirteen changes are logged so far (the protocol is at version 1.9), each with its reason. The newest, made after an internal review of the draft paper, adds robustness checks and is labelled as coming after the review. Earlier ones renamed the study to name the machine learning approach, made clear that no Australian data are analysed, and added and checked citations. The four most recent were made during Phase 4:
   - the model tuning details were written down before the full models were run;
   - extra waiting days are reported as plain counts rather than adjusted figures;
   - rurality and income are compared together, because the two are too closely linked to change one at a time;
@@ -131,8 +131,14 @@ The full summary is in `reports/phase4.md`. All of these are associations, not p
 
 ## What comes next
 
-1. **Write-up:** a short preprint (medRxiv) and a two-page summary. The four main figures and two supplementary figures are done, in `paper/figures/`.
-2. **Web article,** built last from the preprint.
+1. **Preprint:** revision 1 is in `paper/preprint.md`, with the supplement and figures.
+   - **What happened so far:** a simulated five-reviewer check (the research-skills plugin) asked for major revision. Its reports are in `paper/review/round1/`.
+   - **What revision 1 fixes:** factual slips; overstated claims; missing citations, tables and checklists; and it adds robustness checks.
+   - **Still to do:** a re-review of revision 1, and a PDF.
+2. **Two-page summary** for the application.
+3. **Web article,** built last from the preprint.
+
+**The robustness checks, in plain words:** re-tuning the models at each step, reshuffling which men go into each cross-validation fold, and grouping men more coarsely for the uncertainty ranges all left the main result essentially the same. One caveat was found: in the low-risk and unknown-risk groups, the machine learning model's clinical part is weaker, so its larger social signal there should not be over-read.
 
 ## Known limits
 
@@ -145,7 +151,7 @@ The full summary is in `reports/phase4.md`. All of these are associations, not p
 ## How the project is kept tidy
 
 - **Settings in one place:** every setting lives in `config/`, not in the code.
-- **Tests first:** tests were written before each piece of code, and 284 tests currently pass.
+- **Tests first:** tests were written before each piece of code, and 318 tests currently pass. The code and history are public at https://github.com/tanmayhinge/seer-prostate.
 - **Private data stays local:** raw data and outputs with individual-level detail are kept out of git.
 - **A report per phase:** each phase writes a report to `reports/`. `README.md` has the folder map and the commands to run everything.
 

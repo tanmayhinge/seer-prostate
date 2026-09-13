@@ -21,6 +21,8 @@ reports/phase4_tables/excess_days_crude.csv
 reports/phase4_tables/equity_concentration_curves.csv
 reports/phase4_tables/sensitivity_delay_summary.csv
 reports/phase4_tables/receipt_crude_*.csv
+reports/phase4_tables/revision_long_intervals.csv
+reports/phase4_tables/revision_income_by_period.csv
 reports/phase4_tables/*_stdout.txt
 
 # Development runs on subsamples (scripts --sample)

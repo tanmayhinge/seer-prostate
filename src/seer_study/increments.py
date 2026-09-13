@@ -15,6 +15,19 @@ from seer_study.metrics import auc, brier_score, calibration_intercept_slope, lo
 COMPARISONS = {1: "clinical need (step 0 to 1)", 2: "social position (step 1 to 2)", 3: "pathway (step 2 to 3)"}
 
 
+def cluster_size_summary(clusters: np.ndarray, threshold: int, mask: str) -> dict:
+    """Number of bootstrap clusters and their sizes; a smallest size of 1 to ``threshold - 1`` men is masked."""
+    _, sizes = np.unique(np.asarray(clusters), return_counts=True)
+    smallest = int(sizes.min())
+    return {
+        "clusters": int(len(sizes)),
+        "smallest": mask if 1 <= smallest < threshold else smallest,
+        "median": float(np.median(sizes)),
+        "largest": int(sizes.max()),
+        "largest_share_pct": 100.0 * float(sizes.max()) / float(sizes.sum()),
+    }
+
+
 def step_metrics(y: np.ndarray, predictions: dict[int, np.ndarray], clip: float) -> pd.DataFrame:
     steps = sorted(predictions)
     reference_log_loss = log_loss(y, predictions[steps[0]], clip)

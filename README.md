@@ -53,13 +53,19 @@ Each phase has one script, run from the project root:
 .venv/bin/python scripts/run_phase4_receipt_report.py     # A9 report
 .venv/bin/python scripts/run_phase4_sensitivity.py        # A8 sensitivity scenarios (long run; needs model_tuning.csv)
 .venv/bin/python scripts/run_phase4_sensitivity_report.py # A8 report
+.venv/bin/python scripts/run_phase4_revision.py           # post-review robustness analyses (amendment 1.9; long run)
+.venv/bin/python scripts/run_phase4_revision_report.py    # post-review report
+.venv/bin/python scripts/protocol_history.py              # protocol versions by commit, from git history
 ```
 
 `reports/phase4.md` summarises the Phase 4 reports.
 
 ```
 .venv/bin/python scripts/make_figures.py   # figures and captions in paper/figures/ (after all Phase 4 scripts)
+.venv/bin/python scripts/build_preprint.py # paper/preprint.md and paper/supplement.md from paper/src/, with tables copied from reports
 ```
+
+`scripts/build_preprint.py` also writes `paper/number_audit.txt`, listing any number in the manuscript text that appears in no report, protocol or configuration file.
 
 ## Data
 

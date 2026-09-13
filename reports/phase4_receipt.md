@@ -1,6 +1,6 @@
 # Phase 4, part 5. Secondary question: recorded curative treatment
 
-Generated 2026-09-13 12:54 UTC by `scripts/run_phase4_receipt_report.py` at git revision `52982e0`. Definitions: `PROTOCOL.md` A9 with amendment 1.8. All results are associations, not causal effects.
+Generated 2026-09-13 15:40 UTC by `scripts/run_phase4_receipt_report.py` at git revision `62d951c`. Definitions: `PROTOCOL.md` A9 with amendment 1.8. All results are associations, not causal effects.
 
 ## What is measured
 
@@ -123,7 +123,7 @@ A difference is described as meaningful only when both model types agree on 3 pe
 | intermediate risk | area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income | -2.2 | -0.3 | both models under 3 points |
 | intermediate risk | marital status: Single (never married) minus Married (including common law) | -7.2 | -6.4 | both models 3 points or more, same direction |
 | high risk | all social features as observed minus reference profile | -4.3 | -3.8 | both models 3 points or more, same direction |
-| high risk | area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income | -3.3 | -2.5 | models disagree |
+| high risk | area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income | -3.3 | -2.5 | same direction, only one model 3 points or more |
 | high risk | marital status: Single (never married) minus Married (including common law) | -5.8 | -5.1 | both models 3 points or more, same direction |
 
 ### Standardised percentages by profile, intermediate and high risk (pooled)

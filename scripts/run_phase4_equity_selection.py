@@ -25,7 +25,7 @@ from seer_study.models import cross_fit_predictions, fit_full_model
 from seer_study.report import assert_style, md_table
 from seer_study.risk import RISK_GROUPS
 from seer_study.selection import delay_bounds, weighted_percentage
-from seer_study.standardise import excess_days_per_1000, set_social_profile
+from seer_study.standardise import agreement_label, excess_days_per_1000, set_social_profile
 
 STRATA = ["all", *RISK_GROUPS]
 STRATUM_LABEL = {"all": "all men (pooled)", **{group: f"{group} risk" for group in RISK_GROUPS}}
@@ -47,14 +47,6 @@ def _params(tuning: pd.DataFrame, stratum: str, kind: str) -> dict:
         "num_leaves": int(row["num_leaves"]),
         "min_child_samples": int(row["min_child_samples"]),
     }
-
-
-def _agreement(logistic: float, lightgbm: float, minimum: float) -> str:
-    if abs(logistic) >= minimum and abs(lightgbm) >= minimum and np.sign(logistic) == np.sign(lightgbm):
-        return f"both models {minimum:g} points or more, same direction"
-    if abs(logistic) < minimum and abs(lightgbm) < minimum:
-        return f"both models under {minimum:g} points"
-    return "models disagree"
 
 
 def _ordered(table: pd.DataFrame, column: str, levels) -> pd.DataFrame:
@@ -170,7 +162,7 @@ def main() -> None:
     contrasts_long.to_csv(args.tables_dir / "standardised_contrasts.csv", index=False)
 
     contrasts = contrasts_long.pivot_table(index=["stratum", "contrast"], columns="model", values="estimate").reset_index()
-    contrasts["agreement"] = [_agreement(r.logistic, r.lightgbm, minimum) for r in contrasts.itertuples()]
+    contrasts["agreement"] = [agreement_label(r.logistic, r.lightgbm, minimum) for r in contrasts.itertuples()]
     unstable = contrasts[(contrasts["stratum"] == "all") & contrasts["contrast"].str.startswith("_")].set_index("contrast")
     reported = contrasts[~contrasts["contrast"].str.startswith("_")].copy()
     reported = _ordered(_ordered(reported, "contrast", list(contrast_names.values())), "stratum", STRATA)

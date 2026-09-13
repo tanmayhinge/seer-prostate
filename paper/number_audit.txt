@@ -1,0 +1,4 @@
+Sources: PROTOCOL.md, config/analysis.yaml, config/figures.yaml, config/literature.yaml, config/reporting.yaml, config/study.yaml, paper/figures/captions.md, reports/phase0.md, reports/phase1.md, reports/phase3.md, reports/phase4.md, reports/phase4_descriptive.md, reports/phase4_equity_selection.md, reports/phase4_models.md, reports/phase4_receipt.md, reports/phase4_sensitivity.md, requirements.txt
+
+preprint.md: 0 number(s) not found in any source
+supplement.md: 0 number(s) not found in any source

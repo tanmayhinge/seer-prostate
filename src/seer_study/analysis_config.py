@@ -133,6 +133,16 @@ class ReceiptSpec:
 
 
 @dataclass(frozen=True)
+class RevisionSpec:
+    """Post-review robustness analyses (PROTOCOL.md amendment 1.9)."""
+
+    fold_seed_repeats: int
+    alternative_cluster_column: str
+    stage_free_prefix: str
+    long_interval_days: int
+
+
+@dataclass(frozen=True)
 class AnalysisConfig:
     seed: int
     columns: AnalysisColumns
@@ -144,6 +154,7 @@ class AnalysisConfig:
     modelling: ModellingSpec
     sensitivity: SensitivitySpec
     receipt: ReceiptSpec
+    revision: RevisionSpec
 
 
 def _validate_scenarios(config: AnalysisConfig) -> None:
@@ -163,9 +174,17 @@ def _validate_scenarios(config: AnalysisConfig) -> None:
         )
 
 
+def _validate_revision(config: AnalysisConfig) -> None:
+    if config.revision.fold_seed_repeats < 2:
+        raise ConfigError("revision: fold_seed_repeats must be at least 2")
+    if config.revision.alternative_cluster_column not in {f.name for f in fields(AnalysisColumns)}:
+        raise ConfigError("revision: alternative_cluster_column must name a key under columns")
+
+
 def load_analysis_config(path: str | Path) -> AnalysisConfig:
     config = load_typed_yaml(path, AnalysisConfig)
     _validate_scenarios(config)
+    _validate_revision(config)
     overlap = set(config.treatment.prostatectomy_codes) & set(config.treatment.surgery_other_codes)
     if overlap:
         raise ConfigError(f"treatment: codes listed as both prostatectomy and other: {sorted(overlap)}")

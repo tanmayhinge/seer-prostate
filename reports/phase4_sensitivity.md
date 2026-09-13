@@ -1,6 +1,6 @@
 # Phase 4, part 4. Sensitivity analyses
 
-Generated 2026-09-13 12:56 UTC by `scripts/run_phase4_sensitivity_report.py` at git revision `52982e0`. Definitions: `PROTOCOL.md` A8 with amendment 1.8. All results are associations, not causal effects.
+Generated 2026-09-13 15:40 UTC by `scripts/run_phase4_sensitivity_report.py` at git revision `62d951c`. Definitions: `PROTOCOL.md` A8 with amendment 1.8. All results are associations, not causal effects.
 
 ## How the checks were run
 
@@ -93,7 +93,7 @@ Percentage points. Contrasts for each risk group are in `reports/phase4_tables/s
 | primary analysis | -9.2 | -8.8 | both models 3 points or more, same direction |
 | threshold of 60 days | -10.6 | -10.3 | both models 3 points or more, same direction |
 | threshold of 120 days | -6.9 | -7.1 | both models 3 points or more, same direction |
-| threshold of 180 days | -3.0 | -3.2 | models disagree |
+| threshold of 180 days | -3.0 | -3.2 | same direction, only one model 3 points or more |
 | risk groups from Gleason score and PSA only | -9.2 | -8.8 | both models 3 points or more, same direction |
 | radical prostatectomy without radiotherapy only | -8.9 | -7.8 | both models 3 points or more, same direction |
 | excluding men diagnosed in 2020 | -9.4 | -8.9 | both models 3 points or more, same direction |

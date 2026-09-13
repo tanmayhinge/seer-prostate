@@ -2,11 +2,15 @@
 
 **Waiting for prostate cancer treatment: how much is clinical need? A machine learning analysis of social position and time to treatment against the Australian optimal care pathway benchmark, US SEER 2010 to 2022**
 
-Version 1.3, dated 2026-09-13 (see the amendment log). Written before any outcome modelling. Every constant below lives in `config/analysis.yaml`; this document states the rationale. Nothing later deviates from it without an entry in the amendment log at the end.
+Version 1.4, dated 2026-09-13 (see the amendment log). Written before any outcome modelling. Every constant below lives in `config/analysis.yaml`; this document states the rationale. Nothing later deviates from it without an entry in the amendment log at the end.
 
 ## 1. Background and aim
 
-Timely treatment is a core measure of cancer care quality. The Australian optimal care pathway (OCP) for prostate cancer sets the benchmark that surgery or radiation therapy should begin within 3 months of diagnosis, or within 4 weeks when local symptoms are pronounced (Cancer Australia and Cancer Council, second edition, June 2021). In Tasmania, men from outer regional and remote areas took longer to start active treatment (Foley et al., Sci Rep 2022), and public-hospital patients started 40 to 59 days later than private patients in most risk groups (Foley et al., Cancers 2025).
+Timely treatment is a core measure of cancer care quality. The Australian optimal care pathway (OCP) for prostate cancer sets the benchmark that surgery or radiation therapy should begin within 3 months of diagnosis, or within 4 weeks when local symptoms are pronounced (Cancer Australia and Cancer Council, second edition, June 2021). In Tasmania, men from outer regional and remote areas took a median of 82 days to start active treatment, against 75 days for men from inner regional areas. The mean difference was 9.25 days (95% CI 1.72 to 16.79) after adjustment for age, and 6.66 days (95% CI -1.05 to 14.38) before adjustment (Foley et al., Sci Rep 2022). Among Tasmanian men not treated with external beam radiotherapy, those treated in public facilities started active treatment later than those treated privately. After adjustment for age, SEIFA index, residence and method of diagnosis, the mean differences were:
+- 43.46 days (95% CI 12.19 to 74.73) in low-risk disease;
+- 59.22 days (47.82 to 70.62) in intermediate-risk disease;
+- 42.25 days (23.23 to 61.26) in high-risk disease;
+- no clear difference in very high-risk or metastatic disease (10.22 days, -2.43 to 22.87) (Foley et al., Cancers 2025).
 
 In Tasmanian lung cancer care, a hospital-based study benchmarked referral, diagnosis and treatment intervals against national quality indicators and the OCP, and on average 7% of patients (range 0 to 16%) met the treatment-time standards (Leong et al., Aust Health Rev 2025). Interviews with Tasmanian general practitioners described fragmented referral systems and limited rural specialist access as barriers to timely lung cancer care (Usman et al., Aust J Prim Health 2026). These studies concern lung cancer. They are cited as context for assessing timeliness against OCP benchmarks, not for comparison with this study's results.
 
@@ -124,12 +128,17 @@ A difference is pre-specified as meaningful when it reaches 3 percentage points 
   - **Preferred design:** treatment as a time-dependent exposure, with competing risks of prostate cancer death and other-cause death.
   - **Sensitivity analysis only:** a 12-month landmark analysis.
   - This design is described, not estimated, in this study.
-- **A11. Australian context (no Australian data are analysed).** List candidate Australian equivalents of the SEER variables, to be confirmed against an Australian registry's data dictionary before any use:
-  - Rural-Urban Continuum Code to Australian Statistical Geography Standard remoteness areas;
-  - county income to an area-level socioeconomic index such as IRSD;
-  - no insurance variable to public or private treating sector.
+- **A11. Australian context (no Australian data are analysed).** List candidate Australian equivalents of the SEER variables. Published PCOR-TAS analyses used all three (Foley et al. 2022 and 2025, full texts read); availability for any new study must be confirmed against the registry's data dictionary:
+  - Rural-Urban Continuum Code to Australian Statistical Geography Standard remoteness areas, assigned by residential postcode;
+  - county income to the SEIFA Index of Relative Socio-Economic Advantage and Disadvantage (IRSAD), assigned by postcode;
+  - no insurance variable to public or private treating facility.
 
-  Describe which additional data (for example referral, biopsy and multidisciplinary meeting dates, comorbidity and patient-reported outcomes) would strengthen the analysis, without assuming which of these any particular registry holds.
+  Describe which additional data would strengthen the analysis. Published PCOR-TAS analyses reported:
+  - no comorbidity data (Foley et al. 2022);
+  - consistent collection of patient-reported outcomes only from 2018 (Foley et al. 2025);
+  - no way to tell whether external beam radiotherapy was given in a public or private facility (Foley et al. 2025).
+
+  Referral, biopsy and multidisciplinary meeting dates are not assumed to be available.
 
 ## 9. Limitations stated in advance
 
@@ -147,7 +156,11 @@ A difference is pre-specified as meaningful when it reaches 3 percentage points 
 
 ## References
 
-The data source is cited in full in section 2. Details for the journal articles below were taken from their PubMed records. Only the abstracts have been read so far; the full texts must be read before any detail is quoted in the paper.
+The data source is cited in full in section 2. Bibliographic details for the journal articles come from their PubMed records.
+
+Reading status:
+- **Read in full:** references 1 and 2, and references 3, 4 and 7 (open-access full texts from Europe PMC).
+- **Abstract only:** references 5 and 6. Reference 5 is behind a paywall, and the full text of reference 6 could not be downloaded directly. Details quoted from references 5 and 6 come from their abstracts.
 
 1. Cancer Australia, Cancer Council. Optimal care pathway for men with prostate cancer, second edition: quick reference guide. June 2021. https://www.cancer.org.au/assets/pdf/ocp/prostate-cancer-quick-reference-guide
 2. National Cancer Institute. SEER Program Coding and Staging Manual 2021 and 2023, Appendix C: Surgery Codes, Prostate. https://seer.cancer.gov/manuals/2023/AppendixC/Surgery_Codes_Prostate_2023.pdf
@@ -170,3 +183,4 @@ The literature reviewed for novelty is listed with PubMed identifiers in reports
 | 2026-09-13 | Title changed to name the machine learning approach (version 1.1) | Clarity about methods; no change to the cohort, definitions, estimand or analyses |
 | 2026-09-13 | Wording clarified: no Australian data are analysed; Tasmanian findings are cited as background only; Australian registry variables are candidate equivalents to be confirmed (version 1.2) | Avoid implying a cross-country comparison or unverified registry contents; no change to the cohort, definitions, estimand or analyses |
 | 2026-09-13 | Survival methods box (A10) now prefers a time-dependent treatment exposure, with the 12-month landmark as a sensitivity analysis only; citations added for Leong 2025, Usman 2026 and Zheng 2023; references section added (version 1.3) | Simulation evidence that landmark methods only partly remove immortal time bias (Zheng et al. 2023). A10 is not estimated, so no result changes |
+| 2026-09-13 | Citations checked against full texts where available: Tasmanian findings restated with the published medians, mean differences and confidence intervals; the radiotherapy exclusion in Foley et al. 2025 stated; A11 updated with the area measures and data gaps reported in published PCOR-TAS analyses; references note records which papers were read in full (version 1.4) | Earlier wording was based on abstracts and was less precise; no change to the cohort, definitions, estimand or analyses |

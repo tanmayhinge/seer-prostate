@@ -11,7 +11,10 @@ After a man is diagnosed with prostate cancer and decides on surgery or radiothe
 ## Why it matters
 
 - **The Australian benchmark:** Australia's optimal care pathway for prostate cancer says surgery or radiotherapy should begin within 3 months of diagnosis.
-- **What has been reported in Tasmania:** published studies found that men from outer regional and remote areas took longer to start active treatment than men from inner regional areas (Foley et al., Sci Rep 2022), and that public-hospital patients started treatment 40 to 59 days later than private patients in most risk groups (Foley et al., Cancers 2025). These findings come from the published papers, not from this project's data.
+- **What has been reported in Tasmania:**
+  - Men from outer regional and remote areas took a median of 82 days to start active treatment, against 75 days for men from inner regional areas. The difference was about 9 days once age was taken into account (Foley et al., Sci Rep 2022).
+  - Among men not treated with external radiotherapy, men treated in public hospitals started active treatment about 42 to 59 days later on average than men treated privately, in low-, intermediate- and high-risk disease (Foley et al., Cancers 2025).
+  - These findings come from the published papers, not from this project's data.
 - **What this project adds:** it asks a related question in a large US population registry, using machine learning as a measuring tool. It analyses no Australian data. The Australian link is the benchmark (the 3-month pathway target), and the Tasmanian findings are cited as background only. All definitions live in configuration files, so the method could later be adapted to an Australian registry if that registry's data allow it.
 
 ## The questions in plain terms
@@ -72,7 +75,7 @@ The same question is answered step by step, each time adding one group of inform
 ### Protocol
 - **Written before results:** the cohort, treatment codes, risk groups, outcome, models and checks were all fixed in `PROTOCOL.md` before any results.
 - **Why 90 days:** the threshold comes from the Australian optimal care pathway.
-- **Changes are logged:** any change must be recorded in the protocol's amendment log. Seven changes are logged so far, each with its reason. Recent ones renamed the study to name the machine learning approach, made clear that no Australian data are analysed, and added published Tasmanian and methods work as citations.
+- **Changes are logged:** any change must be recorded in the protocol's amendment log. Eight changes are logged so far, each with its reason. Recent ones renamed the study to name the machine learning approach, made clear that no Australian data are analysed, added published Tasmanian and methods work as citations, and corrected those citations after reading the full papers.
 
 ### Phase 3: study group
 

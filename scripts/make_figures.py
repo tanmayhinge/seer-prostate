@@ -75,11 +75,11 @@ def main() -> None:
                             rcfg.cross_tab_count_rounding, rcfg.rurality_unknown_display)
     series = [level for level in rurality_levels(rcfg) if level != rcfg.rurality_unknown_display]
     fig = rates_figure(rates, "risk group", "rurality", list(RISK_GROUPS), series, spec,
-                       f"% waiting more than {threshold} days (lower is better)")
+                       f"% waiting more than {threshold} days")
     written += save_figure(fig, "figure2_delay_by_risk_and_rurality", args.out_dir, spec)
     captions.append(
         f"**Figure 2. Crude percentage of men waiting more than {threshold} days** from diagnosis to first recorded treatment, "
-        "by risk group and county rurality. Lower is better. Men with unknown rurality, and percentages resting on 1 to "
+        "by risk group and county rurality. Men with unknown rurality, and percentages resting on 1 to "
         f"{rcfg.small_count_threshold - 1} men, are not shown. Nothing is adjusted."
     )
 

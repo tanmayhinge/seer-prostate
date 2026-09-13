@@ -1,0 +1,938 @@
+{
+  "contract_version": "1.0",
+  "round_id": "seer-preprint-rereview-round2",
+  "input_manifest_hash": "85ab19e36ff076b7476a1f0acfa30698a48e586222c777baf76cca4c63e8e0d2",
+  "items": [
+    {
+      "item_id": "REV-1",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Give the skill increment an interpretive anchor and bridge it to the standardised and population-level percentage contrasts",
+        "letter_text": "The Discussion and Abstract explicitly relate the skill increment to at least one patient-scale or benchmark quantity reported in the paper.",
+        "letter_item_ref": "R1"
+      },
+      "operationalization": {
+        "fully_addressed": "The Discussion contains an interpretive passage, and the Abstract at least one sentence, that explicitly relate the size of the social-position log-loss skill increment (0.42 to 1.37 points in round 1, or the revised values) to patient-scale or benchmark quantities reported in the paper: the standardised area and marital percentage-point contrasts and the population-level 'all social features as observed' contrast (or, additionally, a benchmark increment such as the year or treatment-type increment), and explain how skill points and these percentage contrasts relate, so a health services reader can judge whether the increment is large or small. Calling the increment 'small but informative' without naming a reported comparator does not count.",
+        "partially_addressed": "A bridge exists in only one of Discussion and Abstract; or the quantities are placed next to each other without saying how they relate; or the increment is related to only one of the standardised and population-level contrasts.",
+        "made_worse_discriminator": "The revision describes the increment's practical importance more strongly (for example 'substantial', 'meaningful') without any stated comparator, introduces a bridge that misstates reported values, or removes comparisons that the round-1 text already made."
+      },
+      "expected_change_surface": "Discussion (interpretive paragraph, Principal findings) and an Abstract sentence (Results or Conclusions)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R3 (corroborated)",
+      "source_reviewer_labels": [
+        "EIC",
+        "R3"
+      ]
+    },
+    {
+      "item_id": "REV-2",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Replace the AUC 0.671 to 0.673 example with an argument that small gains are informative"
+      },
+      "operationalization": {
+        "fully_addressed": "The Introduction no longer rests the claim that small gains are informative on the one-US-health-system example in which adding neighbourhood variables to a clinical model for advanced prostate cancer moved the AUC from 0.671 to 0.673; in its place is a stated argument for why a small out-of-sample predictive gain can be informative for this question (for example, what a non-zero increment beyond clinical need indicates). Keeping the example only as an illustration that small gains occur, with the argument carried by other reasoning, is acceptable."
+      },
+      "expected_change_surface": "Introduction (sentence 'A small gain can still be informative' and the AUC 0.671 to 0.673 neighbourhood-variable example)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC (single); DA",
+      "source_reviewer_labels": [
+        "EIC",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-3",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Report the low-risk share (82%, 98%) alongside the absolute step 2 skill wherever it appears",
+        "letter_text": "Every occurrence of the low-risk share in Abstract, Results and Discussion is accompanied by the absolute step 2 skill values.",
+        "letter_item_ref": "R2"
+      },
+      "operationalization": {
+        "fully_addressed": "Every occurrence in the Abstract, Results and Discussion of the low-risk social-position share of step 2 skill (82% and 98% in round 1, or revised values) is accompanied, in the same sentence or an adjacent clause, by the absolute step 2 skill values for that stratum (0.76 and 0.99 points in round 1, or revised values). Sections from which the share has been removed have no occurrence to fix.",
+        "partially_addressed": "Some but not all occurrences of the low-risk share carry the absolute step 2 skill values (for example Results fixed, Abstract or Discussion not).",
+        "made_worse_discriminator": "The share appears in new places without its absolute denominator, is framed more strongly (for example 'most of' or 'nearly all' of what is predictable), or the absolute step 2 skill values are misreported."
+      },
+      "expected_change_surface": "Abstract Results; Results (model increments, Table 2 text); Discussion Principal findings",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R3 (corroborated); DA",
+      "source_reviewer_labels": [
+        "EIC",
+        "R3",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-4",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "State direction only for the joint area contrast; remove separate rural and lower-income directions from the Conclusions and Discussion",
+        "letter_text": "No sentence in Abstract, Discussion or Conclusions assigns a separate adjusted direction to rurality or to income.",
+        "letter_item_ref": "R3"
+      },
+      "operationalization": {
+        "fully_addressed": "No sentence in the Abstract, Discussion or Conclusions assigns a separate adjusted direction to rurality or to county income (for example 'less delay in rural and lower-income counties' read as two effects, or higher-income men more often delayed 'after clinical features were held as observed'). Direction is stated only for the joint area contrast (large metropolitan, higher-income counties against nonmetropolitan, lower-income counties, with rurality and income moved together), and 'after clinical features were held as observed' is not attached to any statement that relies on the concentration index. Crude single-variable percentages explicitly labelled crude or descriptive are not separate adjusted directions.",
+        "partially_addressed": "The Conclusions are fixed but a separate rurality or income direction remains in the Abstract or Discussion (for example The rural direction still reads the joint contrast as a rurality finding), or joint-contrast wording is used in some sentences while others keep a separate direction.",
+        "made_worse_discriminator": "The revision adds or strengthens separate adjusted rurality or income direction claims (including in the title or Abstract), or removes joint-contrast wording that was present in round 1 Results."
+      },
+      "expected_change_surface": "Conclusions; Discussion (Principal findings, The rural direction); Abstract Conclusions",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R1, R3 (CONSENSUS-3; R2 silent); DA",
+      "source_reviewer_labels": [
+        "EIC",
+        "R1",
+        "R3",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-5",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Restore the caveat that the income concentration index does not separate income from rurality and is not standardised for clinical features",
+        "letter_text": "Results, Discussion and Abstract state that the index is not standardised for clinical features and does not separate income from rurality.",
+        "letter_item_ref": "R4"
+      },
+      "operationalization": {
+        "fully_addressed": "Wherever the Erreygers income concentration index is reported or interpreted in the Results, Discussion and Abstract, the manuscript states both that (a) the index is not standardised for clinical features (it is computed on crude delay within risk groups) and (b) it does not separate county income from rurality (for example, by presenting it as an area-income and rurality gradient). If the index is dropped from the Abstract, the caveat is required where it remains.",
+        "partially_addressed": "The caveat appears in only some of Results, Discussion and Abstract, or only one of its two elements (not clinically standardised; not separable from rurality) is stated.",
+        "made_worse_discriminator": "The index is described more strongly as an independent income effect, as need- or clinically adjusted, or as evidence of inequity, or caveat wording present in round 1 is removed."
+      },
+      "expected_change_surface": "Results (Income inequality); Discussion; Abstract Results",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R1, R3 (CONSENSUS-3; R2 silent); DA",
+      "source_reviewer_labels": [
+        "EIC",
+        "R1",
+        "R3",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-6",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Retitle so the title names the social-position increment, and shorten it",
+        "letter_text": "The title names the primary estimand and no longer frames the question as clinical need.",
+        "letter_item_ref": "R5"
+      },
+      "operationalization": {
+        "fully_addressed": "The title names the primary estimand, the increment added by social position (or its renamed label, see REV-46) to predicting a wait beyond 90 days or time to treatment beyond recorded clinical need; it no longer asks 'how much is clinical need?' or otherwise frames the question as clinical need; and it is shorter than the round-1 title (about 34 words).",
+        "partially_addressed": "The title names the estimand but is not shorter, or it is shorter but still frames the question as clinical need or does not name the social-position (or renamed) increment.",
+        "made_worse_discriminator": "The title becomes longer, moves further from the estimand, or adds claims the analysis does not support (for example a direction or causal wording)."
+      },
+      "expected_change_surface": "Title",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC (single)",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-7",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Move Australian and Tasmanian material (including the two lung cancer studies) into a labelled context or transferability paragraph; resolve the \"different directions\" tension",
+        "letter_text": "The Introduction presents US evidence first, and no sentence sets US and Tasmanian findings against each other.",
+        "letter_item_ref": "R6"
+      },
+      "operationalization": {
+        "fully_addressed": "The Introduction presents US evidence on time to treatment first; the Australian and Tasmanian material, including the two lung cancer studies if retained, sits in a paragraph explicitly labelled as context or transferability (by heading or an explicit lead-in sentence); and no sentence sets US and Tasmanian findings against each other (for example as pointing 'in different directions').",
+        "partially_addressed": "The Australian material is moved but not labelled as context or transferability; or it is labelled but a US-versus-Tasmanian directional juxtaposition remains; or US evidence still does not come first.",
+        "made_worse_discriminator": "Australian material gains a larger role in the gap argument, or a new or stronger cross-country directional comparison, or implied comparison of US and Australian results, appears anywhere."
+      },
+      "expected_change_surface": "Introduction (opening and background paragraphs); secondarily Discussion, Relevance to Australian pathway research",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R2 (corroborated)",
+      "source_reviewer_labels": [
+        "EIC",
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-8",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Give a 90-day threshold rationale that stands on its own for US data (cite [8]) and state that the SEER interval is not the pathway's measure",
+        "letter_text": "Methods, Outcome contains a US-grounded threshold rationale citing [8] and a sentence on the interval definition difference.",
+        "letter_item_ref": "R7"
+      },
+      "operationalization": {
+        "fully_addressed": "Methods, Outcome contains (a) a rationale for the 90-day threshold that stands without relying on the Australian pathway, grounded in US practice or literature and citing the US study that the round-1 manuscript already cited for using the same 90-day threshold (identified by content, since references may be renumbered), and (b) a sentence stating that the SEER interval (diagnosis to first recorded treatment of any kind) is not the optimal care pathway's own measure, or that the two interval definitions differ.",
+        "partially_addressed": "Only one of (a) and (b) is present; or the US rationale lacks the US citation; or the elements appear only outside Methods, Outcome.",
+        "made_worse_discriminator": "The threshold is justified more heavily by the Australian benchmark, or the SEER percentage is presented as a measure of compliance with the Australian pathway."
+      },
+      "expected_change_surface": "Methods, Outcome",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R3 (SPLIT, Disagreement 1)",
+      "source_reviewer_labels": [
+        "EIC",
+        "R3"
+      ]
+    },
+    {
+      "item_id": "REV-9",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Make protocol timing verifiable: public timestamped protocol and commit identifiers or times in the amendment log (S32)",
+        "letter_text": "A public timestamped link resolves to the protocol, and each S32 amendment shows a commit identifier or time that can be ordered against model fitting.",
+        "letter_item_ref": "R8"
+      },
+      "operationalization": {
+        "fully_addressed": "The manuscript gives a public, timestamped link that resolves to the protocol (for example a tagged repository release, commit permalink or archived DOI), not a bare file name; and each amendment in the amendment log (Supplementary Table S32 or its renumbered successor) carries a commit identifier or time that lets a reader order it against model fitting (with the model-fitting commit or time also identifiable). Identical dates alone do not count.",
+        "partially_addressed": "A protocol link is given but amendments lack commit identifiers or times; or only some amendments carry them; or identifiers are given but no public timestamped protocol record exists.",
+        "made_worse_discriminator": "Pre-specification is claimed more strongly (for example 'pre-registered') without a verifiable public record, or amendment entries or post hoc labels are removed or altered so that the sequence against model fitting is less visible."
+      },
+      "expected_change_surface": "Methods, Protocol; Supplementary Table S32 (amendment log); Declarations or data and code availability",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC (single)",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-10",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Supply a public, timestamped code repository link",
+        "letter_text": "The Declarations contain a resolvable, versioned code repository link.",
+        "letter_item_ref": "R9"
+      },
+      "operationalization": {
+        "fully_addressed": "The Declarations contain an actual public code repository URL (no placeholder) that is versioned and timestamped: a tagged release, commit-specific link or archived DOI, in a form that can resolve.",
+        "partially_addressed": "A URL is given but it is unversioned (repository home page only), or it appears only outside the Declarations with no pointer, or code is described as available on request.",
+        "made_worse_discriminator": "Claims that code regenerates every table and figure are kept or strengthened while the link is removed, replaced by 'available on request', or remains a placeholder."
+      },
+      "expected_change_surface": "Declarations (code availability statement)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R1, R2 (SPLIT, Disagreement 2)",
+      "source_reviewer_labels": [
+        "EIC",
+        "R1",
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-11",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Complete STROBE, RECORD and TRIPOD+AI checklists with section references and address missing items",
+        "letter_text": "All three completed checklists are present with a section reference for every applicable item.",
+        "letter_item_ref": "R10"
+      },
+      "operationalization": {
+        "fully_addressed": "Completed STROBE, RECORD and TRIPOD+AI checklists are all present, each applicable item has a section reference (section names acceptable in place of page numbers), non-applicable items are marked as such, and items found missing are either now reported in the text or explicitly flagged as not reported. No 'IN PREPARATION' placeholder remains.",
+        "partially_addressed": "One or two of the three checklists are complete, or some applicable items lack a section reference, or the placeholder is replaced by a partial list.",
+        "made_worse_discriminator": "Guideline adherence claims are extended while checklists remain absent, or checklist entries cite sections that visibly do not contain the item."
+      },
+      "expected_change_surface": "Supplement, Reporting checklists (final supplement section); Methods, Reporting and ethics",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R1, R2 (CONSENSUS-3; R3 silent)",
+      "source_reviewer_labels": [
+        "EIC",
+        "R1",
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-12",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Complete all declarations (affiliation, ethics, funding, competing interests, AI-use disclosure)",
+        "letter_text": "No \"[TO BE COMPLETED\" placeholder remains in the Declarations.",
+        "letter_item_ref": "R11"
+      },
+      "operationalization": {
+        "fully_addressed": "No '[TO BE COMPLETED' placeholder, or equivalent placeholder, remains in the Declarations, and the affiliation, ethics statement, funding, competing interests and AI-use disclosure each contain a substantive statement.",
+        "partially_addressed": "Some declarations are completed but at least one placeholder remains.",
+        "made_worse_discriminator": "New placeholders appear, or the AI-use disclosure is removed or contradicts the manuscript's own statement that the analysis used AI coding assistance."
+      },
+      "expected_change_surface": "Declarations (affiliation, ethics, funding, competing interests, use of AI tools)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R2 (corroborated)",
+      "source_reviewer_labels": [
+        "EIC",
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-13",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Correct the leave-one-variable-out range to 0.18 to 0.45",
+        "letter_text": "The Results range matches the minimum and maximum of the corresponding S8 cells.",
+        "letter_item_ref": "R12"
+      },
+      "operationalization": {
+        "fully_addressed": "The Results range for losses from removing marital status or rurality in the pooled, intermediate- and high-risk strata equals the minimum and maximum of the corresponding cells of the leave-one-variable-out table (Supplementary Table S8 or successor): 0.18 to 0.45 if those cells are unchanged, or the matching range if re-analysis changed the table.",
+        "partially_addressed": "The range is changed but still does not match both the minimum and maximum of the table cells, or it is corrected in Results while the old 0.22 to 0.45 range persists elsewhere in the manuscript.",
+        "made_worse_discriminator": "A new or larger mismatch between text and table appears, or the table cells are altered to fit the text without a stated re-analysis."
+      },
+      "expected_change_surface": "Results, Which social variable (leave-one-variable-out sentence)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R1, R2 (CONSENSUS-3; R3 silent); DA",
+      "source_reviewer_labels": [
+        "EIC",
+        "R1",
+        "R2",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-14",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Correct the high-risk \"under 3 points\" statement (pooled contrast under 3 points; high-risk models disagreed)",
+        "letter_text": "The sentence refers to a stratum whose S30 values match the stated description.",
+        "letter_item_ref": "R13"
+      },
+      "operationalization": {
+        "fully_addressed": "The 'under 3 points' statement refers to a stratum whose secondary-outcome standardised contrasts (Supplementary Table S30 or successor) match it: either it is attributed to the pooled contrast (-2.9 and -1.4 in round 1), or, for high-risk men, the text says the models disagreed or did not both fall under 3 points (-3.3 and -2.5 in round 1).",
+        "partially_addressed": "The sentence is qualified but still leaves ambiguous which stratum 'under 3 points' describes, or it is fixed in one place while the same misattribution remains elsewhere.",
+        "made_worse_discriminator": "The revision misattributes the contrast further (for example stating no difference in high-risk men) or removes the stratum from the sentence while keeping the high-risk crude percentages next to a pooled result."
+      },
+      "expected_change_surface": "Discussion, The rural direction ('although the standardised difference was under 3 points')",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC (single); DA",
+      "source_reviewer_labels": [
+        "EIC",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-15",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Replace the \"models disagree\" label with one that describes same-direction, below-threshold cases"
+      },
+      "operationalization": {
+        "fully_addressed": "In Table 3 and Supplementary Tables S21 and S30 (or successors), contrasts where both models point the same way but one falls below 3 points are no longer labelled 'models disagree'; their label describes that pattern (for example 'same direction, below 3 points in one model'), and any opposite-direction cases are labelled distinctly."
+      },
+      "expected_change_surface": "Table 3 labels; Supplementary Tables S21 and S30 labels; Methods, Judging differences",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC (single)",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-16",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Report secondary-outcome C values and the grid-edge limitation"
+      },
+      "operationalization": {
+        "fully_addressed": "The manuscript reports the C values chosen by penalised logistic regression for the secondary outcome by stratum (in round 1, C = 0.01 in intermediate risk and C = 10 in high risk) and states that these lie at an edge of the tuning grid and were not re-tuned, as a limitation. Reporting a wider-grid re-tune for the secondary outcome with its results is an admissible equivalent to stating the limitation, provided the chosen C values are reported."
+      },
+      "expected_change_surface": "Results, Secondary outcome; Limitations; secondary-outcome supplementary tables (S25 to S31)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R1 (corroborated)",
+      "source_reviewer_labels": [
+        "EIC",
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-17",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Rewrite Introduction and Discussion as prose; shorten the abstract"
+      },
+      "operationalization": {
+        "fully_addressed": "The Introduction and Discussion are written mainly as connected prose paragraphs rather than nested bullet lists (a short list, for example of strengths, does not defeat this), and the abstract is shorter than the round-1 abstract of about 430 words."
+      },
+      "expected_change_surface": "Introduction; Discussion; Abstract",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC (single)",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-18",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Reword the Strengths claim about county-level uncertainty to describe the cell-level cluster bootstrap proxy",
+        "letter_text": "The Strengths list no longer claims county-level uncertainty and names the cell-level proxy.",
+        "letter_item_ref": "R14"
+      },
+      "operationalization": {
+        "fully_addressed": "The Strengths list no longer claims uncertainty that respects county-level exposures (or any county-level clustering) and instead names the actual design: a cluster bootstrap over rurality by income cells, used as a proxy because no county identifier is available.",
+        "partially_addressed": "The county-level claim is softened but the cell-level proxy is not named, or the proxy is named but a county-level uncertainty claim remains.",
+        "made_worse_discriminator": "The uncertainty strength is stated more broadly (for example as accounting for county or registry clustering), or the county-level claim spreads to the Abstract or Methods."
+      },
+      "expected_change_surface": "Discussion, Strengths",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R1 (SPLIT, Disagreement 3)",
+      "source_reviewer_labels": [
+        "EIC",
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-19",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Common or captioned x-axis scales in Figure 3; revise Figure 4b; note the truncated axis in Figure 4a"
+      },
+      "operationalization": {
+        "fully_addressed": "Figure 3 uses a common x-axis across panels or its caption states clearly that scales differ; Figure 4b is revised so the concentration curves can be told apart (for example shown as difference from the line of equality) or is dropped in favour of the table; and the Figure 4a caption notes that the axis does not start at 0 (or the axis starts at 0)."
+      },
+      "expected_change_surface": "Figure 3 and its caption; Figure 4a and 4b and their captions",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC (single); DA",
+      "source_reviewer_labels": [
+        "EIC",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-20",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Rename income \"quartile of 16 bands\" groups and give dollar ranges"
+      },
+      "operationalization": {
+        "fully_addressed": "The Table 1 income groups are no longer labelled 'quartile of 16 bands' quartiles but renamed to reflect that they are groups of bands (for example band groups 1 to 4), and a table note or equivalent gives the dollar range of each group."
+      },
+      "expected_change_surface": "Table 1 (county median household income rows and table note)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC (single)",
+      "source_reviewer_labels": [
+        "EIC"
+      ]
+    },
+    {
+      "item_id": "REV-21",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Describe prior models accurately (multivariable, not one factor at a time), describe how prior work was identified, and hedge the novelty claim to the search done",
+        "letter_text": "The gap sentence describes cited prior models as multivariable, and the novelty statement is scoped to the search that was performed.",
+        "letter_item_ref": "R15"
+      },
+      "operationalization": {
+        "fully_addressed": "(a) The gap sentence describes the cited prior studies of time to treatment (such as Di Vanna 2025 and Montiel Ishino 2021) as multivariable models fitting several factors together, not as 'one factor at a time'; (b) the manuscript says how prior work was identified (for example a PubMed search screened by title and abstract by one reviewer); and (c) the novelty statement in the Introduction and Abstract is scoped to that search (for example 'in our search we found no study that...') rather than stated flatly.",
+        "partially_addressed": "One or two of (a), (b) and (c) are met, or the novelty statement is hedged in the Introduction but still flat in the Abstract.",
+        "made_worse_discriminator": "The novelty claim is broadened (for example 'first study'), or a new inaccurate description of prior work appears."
+      },
+      "expected_change_surface": "Introduction (gap paragraph); Abstract (background or novelty sentence); Methods if the literature search is described there",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R2 (SPLIT, Disagreement 4)",
+      "source_reviewer_labels": [
+        "EIC",
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-22",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Cite and position the closest precedents (Stokes 2013, Ajjawi 2026, Semprini 2026, Baade 2012; [11] as incremental-value precedent)",
+        "letter_text": "The four named studies are cited in Introduction or Discussion with a stated point of difference, and [11] is described as prior incremental-value work.",
+        "letter_item_ref": "R16"
+      },
+      "operationalization": {
+        "fully_addressed": "Each of Stokes et al. 2013 (Cancer; SEER-Medicare time to definitive treatment by risk group), Ajjawi et al. 2026 (Curr Urol; machine learning with and without sociodemographic variables in SEER high-risk prostate cancer, cancer-specific survival), Semprini et al. 2026 (Health Serv Res; hospital accreditation and geographic disparities in timely cancer care) and Baade et al. 2012 (Cancer Causes Control; Queensland prostate cancer diagnostic and treatment intervals) is cited in the Introduction or Discussion with a stated point of difference from this paper; and the study in one US health system that added neighbourhood variables to a clinical model predicting advanced prostate cancer (AUC 0.671 to 0.673) is described as prior incremental-value work, not only as support.",
+        "partially_addressed": "Some of the four studies are cited, or they are cited without a stated point of difference, or the neighbourhood-variable study is not repositioned as incremental-value precedent.",
+        "made_worse_discriminator": "A precedent is misdescribed (for example Ajjawi presented as a time-to-treatment study), or the novelty claim is strengthened against these precedents."
+      },
+      "expected_change_surface": "Introduction (background and gap paragraphs); Discussion (comparison with prior work); reference list",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "EIC, R2 (SPLIT, Disagreement 4)",
+      "source_reviewer_labels": [
+        "EIC",
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-23",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Propagate model-fitting and cross-fitting uncertainty into the primary-estimand intervals (minimum: repeat cross-fitting over several fold seeds and report the spread)",
+        "letter_text": "The manuscript reports increment variability across fold seeds (or refit resamples) for every stratum and model, and the headline interval claims are consistent with it.",
+        "letter_item_ref": "R17"
+      },
+      "operationalization": {
+        "fully_addressed": "The manuscript reports the variability of the step 1 to step 2 social-position increment across repeated cross-fitting with several fold seeds (or across refitting resamples) for every risk stratum and for both penalised logistic regression and LightGBM (for example range or standard deviation across seeds), the Methods describe the procedure, and the headline interval claims (for example intervals above 0 in every risk group, 98 of 100, 'consistent') are consistent with that variability, being qualified or softened where the spread or refit intervals reach 0 or widen materially.",
+        "partially_addressed": "Seed-repeat or refit variability is reported for only some strata or one model; or it is reported but the headline interval claims are not reconciled with it; or the procedure is described without results.",
+        "made_worse_discriminator": "Headline uncertainty claims are strengthened (for example describing the no-refit intervals as capturing model-fitting uncertainty), or the disclosure that intervals use no refitting is removed without a replacement analysis."
+      },
+      "expected_change_surface": "Methods, Models and validation (Uncertainty); Table 2; Supplementary Table S20 or a new supplementary table; Abstract, Results and Discussion statements about intervals",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1 (single); DA",
+      "source_reviewer_labels": [
+        "R1",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-24",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Report bootstrap cell count and size distribution per stratum; justify cells as the dependence unit or add an alternative-clustering sensitivity analysis",
+        "letter_text": "The cell count and largest-cell share per stratum are reported, and either an alternative clustering result or an explicit justification is given.",
+        "letter_item_ref": "R18"
+      },
+      "operationalization": {
+        "fully_addressed": "For each stratum the manuscript reports the number of rurality by income bootstrap cells and their size distribution, including at least the largest cell's share of men; and it either reports an alternative-clustering sensitivity analysis (for example cells crossed with diagnosis period) with its effect on the intervals, or gives an explicit justification for treating cells as the dependence unit that addresses registry practice cutting across cells and counties moving between cells over time.",
+        "partially_addressed": "Cell counts are reported without size distribution or largest-cell share, or for only some strata; or sizes are reported but neither an alternative clustering nor a justification is given.",
+        "made_worse_discriminator": "Cells are described as equivalent to counties or registries, or the description of the clustering unit becomes less specific than in round 1."
+      },
+      "expected_change_surface": "Methods, Models and validation (Uncertainty); supplement (cluster table or sensitivity analysis)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1 (single)",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-25",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Tune hyperparameters separately at each step (at least steps 1 and 2); report resulting LightGBM increments and limit the model-comparison inference to strata where the flexible clinical model is at least as good",
+        "letter_text": "Per-step-tuned increments are reported, and the \"did not absorb the social signal\" inference is restricted to the strata that meet the stated condition.",
+        "letter_item_ref": "R19"
+      },
+      "operationalization": {
+        "fully_addressed": "The Methods state that hyperparameters were tuned separately at each step (at least steps 1 and 2); the resulting LightGBM step 1 to step 2 increments are reported for each stratum, with step 1 performance shown so readers can see where the flexible clinical model is at least as good as penalised logistic regression; and the inference that a more flexible clinical adjustment did not absorb the social signal is restricted, with the condition stated, to strata that meet it (in round 1 the pooled, intermediate-risk and high-risk strata).",
+        "partially_addressed": "Per-step tuning is done and increments reported but the model-comparison inference is not restricted; or the inference is restricted without per-step tuning; or tuned increments are reported for only some strata.",
+        "made_worse_discriminator": "The model-comparison inference is extended or stated more strongly (for example to all strata), or the step 1 performance values that show the condition are removed."
+      },
+      "expected_change_surface": "Methods, Models and validation (tuning); Table 2; Supplementary Table S7; Discussion, The machine learning comparison",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1 (single)",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-26",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Publish the one-at-a-time rurality and income profile table promised by amendment 1.7, with the model disagreement stated",
+        "letter_text": "The supplement contains the one-at-a-time rurality and income profiles for both models, and the amendment 1.7 text matches the supplement.",
+        "letter_item_ref": "R20"
+      },
+      "operationalization": {
+        "fully_addressed": "The supplement contains a table of one-at-a-time standardised profiles, rurality only (large metropolitan to the most rural category) and county income only (highest to lowest group), for both penalised logistic regression and LightGBM (in round 1 for all men: rurality -8.7 against +1.7 points; income -0.9 against -8.7 points), with text stating that the two models disagree; and the amendment 1.7 text matches the supplement (for example it points to that table).",
+        "partially_addressed": "The table is present but lacks one model or one variable, or it does not state the model disagreement, or the amendment 1.7 text still does not match; correcting the amendment text alone without the table is at most partial.",
+        "made_worse_discriminator": "The one-at-a-time results are reported selectively (one model only) or described as agreeing, or the post hoc label on amendment 1.7 is removed."
+      },
+      "expected_change_surface": "Supplement (new one-at-a-time profile table); Supplementary Table S32, amendment 1.7",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1, R3 (SPLIT, Disagreement 5); DA",
+      "source_reviewer_labels": [
+        "R1",
+        "R3",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-27",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Label the 3-point agreement rule and the dropped intervals as post hoc in Methods and the abstract; state that area and marital differences lack uncertainty measures",
+        "letter_text": "Methods and Abstract label the agreement rule and dropped intervals as post hoc.",
+        "letter_item_ref": "R21"
+      },
+      "operationalization": {
+        "fully_addressed": "The Methods and the Abstract label both the '3 points or more, same direction' agreement rule and the dropping of intervals for standardised contrasts as post hoc (decided after seeing development-run results), and the manuscript states that the area and marital standardised differences are reported without uncertainty measures, including where the Abstract gives them.",
+        "partially_addressed": "Labels appear in Methods but not the Abstract, or only one of the rule and the dropped intervals is labelled, or the missing-uncertainty statement is absent.",
+        "made_worse_discriminator": "The agreement rule or the dropped intervals are described as pre-specified, or uncertainty is implied for contrasts that have none."
+      },
+      "expected_change_surface": "Methods, Judging differences; Abstract (Methods or Results sentence on area and marital differences)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1 (single)",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-28",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Report county income rank distribution by diagnosis year and add a year-stratified or year-standardised concentration index",
+        "letter_text": "A year-stratified or year-standardised index and the income-band-by-year distribution are reported.",
+        "letter_item_ref": "R22"
+      },
+      "operationalization": {
+        "fully_addressed": "The manuscript reports the distribution of county income band (rank) by year of diagnosis (for example the share of men in each band group per year, or a summary of rank by year), and reports a concentration index stratified by year or period, or standardised for year, alongside the pooled index.",
+        "partially_addressed": "Only one of the two elements (income-band-by-year distribution; year-stratified or year-standardised index) is reported.",
+        "made_worse_discriminator": "The pooled index is described as unaffected by the time trend without either analysis, or existing text on the year-linked income variable is removed."
+      },
+      "expected_change_surface": "Methods and Results, Income inequality; Supplementary Table S12; Figure 4b legend",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1 (single)",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-29",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Report weighted and unweighted percentages at a precision that supports \"0.2 points or less\", or restate the claim"
+      },
+      "operationalization": {
+        "fully_addressed": "Either the weighted and unweighted percentages are shown at a precision (or with an explicit difference column) that shows every difference is 0.2 points or less, or the claim is restated to what the displayed values support (for example acknowledging the county income Unknown group, n = 30, at 39.3 unweighted against 39.6 weighted)."
+      },
+      "expected_change_surface": "Results (selection reweighting sentence); weighted against unweighted percentage table",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1 (single)",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-30",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Add TRIPOD+AI prediction-model items: LightGBM missing-value handling, interaction terms, model availability, subgroup performance, cluster count"
+      },
+      "operationalization": {
+        "fully_addressed": "The Methods or supplement (with checklist pointers acceptable) state all five items: how LightGBM handles missing Gleason score and PSA values; the exact interaction terms used; whether and where the fitted models are available; model performance by social subgroup; and the number (and size) of bootstrap clusters."
+      },
+      "expected_change_surface": "Methods, Models and validation; supplement (model details, TRIPOD+AI checklist entries)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1 (single)",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-31",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Add the caveat that no interval was computed for the LightGBM versus logistic difference"
+      },
+      "operationalization": {
+        "fully_addressed": "Wherever the Abstract and Results state that LightGBM had higher out-of-fold skill than penalised logistic regression, the manuscript states that no interval was computed for the difference between the two models; reporting an interval or other uncertainty measure for that difference is an admissible equivalent."
+      },
+      "expected_change_surface": "Abstract Results; Results, Model comparison",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1 (single); DA",
+      "source_reviewer_labels": [
+        "R1",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-32",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Enter year as categories or a spline in the logistic base model and report the logistic increment"
+      },
+      "operationalization": {
+        "fully_addressed": "The penalised logistic base model enters year of diagnosis as categories or a spline (stated in Methods), and the logistic social-position increment under that specification is reported."
+      },
+      "expected_change_surface": "Methods, Ordered feature steps (step 0 year specification); Table 2 or supplement (logistic increment)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1 (single)",
+      "source_reviewer_labels": [
+        "R1"
+      ]
+    },
+    {
+      "item_id": "REV-33",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "State the conditioning on recorded curative treatment in the abstract and Conclusions; carry \"not evidence of better care\" forward; say the bounds do not cover selection into the treated cohort and discuss bias direction for area measures",
+        "letter_text": "The Abstract Conclusions and Conclusions name the recorded-curative-treatment population, and the Discussion states the scope of the bounds.",
+        "letter_item_ref": "R23"
+      },
+      "operationalization": {
+        "fully_addressed": "(a) The Abstract Conclusions and the Conclusions section name the conditioning population, men with recorded curative treatment (radical prostatectomy or radiotherapy), in or next to the direction statement; (b) the Conclusions carry the qualifier that shorter recorded waits are not evidence of better care; (c) the Discussion states that the selection bounds cover only men without a recorded interval and not selection into the recorded-curative-treatment cohort; and (d) the Discussion discusses the likely direction of this selection bias for the area measures (rurality and income) as well as marital status, which may include stating that the direction cannot be identified and why.",
+        "partially_addressed": "Some but not all of (a) to (d) are met, for example the population is named in the Conclusions but not the Abstract, or the bounds' scope is stated but bias direction for area measures is not discussed.",
+        "made_worse_discriminator": "The direction statement is extended to all diagnosed men or to access in general, the bounds are described as covering treatment selection, or the 'not evidence of better care' qualifier is removed from the Discussion."
+      },
+      "expected_change_surface": "Abstract Conclusions; Conclusions; Discussion (The rural direction, Marital status, selection and limitations)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1, R3 (SPLIT, Disagreement 6); DA",
+      "source_reviewer_labels": [
+        "R1",
+        "R3",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-34",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "State that 98 of 100 refers to intervals, and note the 0.00 lower bound"
+      },
+      "operationalization": {
+        "fully_addressed": "The Abstract (and any repeat of the count) says that it is the 95% intervals that stayed above 0 in 98 of 100 scenario, stratum and model results (point estimates being above 0 in all), and notes that one of the counted lower bounds is 0.00 (180-day threshold, unknown risk, penalised logistic regression). If re-analysis changes the count, the revised count is stated with the same interval wording and any boundary lower bound is noted."
+      },
+      "expected_change_surface": "Abstract (Results sentence 'stayed above 0 in 98 of 100 results'); Results, Sensitivity analyses",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R1 (single); DA",
+      "source_reviewer_labels": [
+        "R1",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-35",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Qualify the \"triage\" reading: state that higher-risk radiotherapy patients often start hormone therapy first; bring the prostatectomy-only gradient into the main text; report the clinical-need increment for that scenario",
+        "letter_text": "The main text reports the prostatectomy-only gradient and clinical-need increment, and \"triage\" is presented as one possible explanation.",
+        "letter_item_ref": "R24"
+      },
+      "operationalization": {
+        "fully_addressed": "(a) The manuscript states, in Outcome or Interpretation, that men with higher-risk disease treated with radiotherapy often start androgen deprivation therapy before radiotherapy, so the recorded interval may end at hormone therapy; (b) the main text, not only the supplement, reports the prostatectomy-only risk gradient in delay (in round 1, low risk 45.8% and high risk 38.4% against 47.9% and 32.8% in the primary analysis, a gap of 7.4 against 15.1 points); (c) the main text reports the clinical-need increment for the prostatectomy-only scenario; and (d) 'triage' is presented as one possible explanation among several, not as the finding.",
+        "partially_addressed": "Some but not all of (a) to (d) are met, for example the hormone therapy caveat is added and triage hedged, but the prostatectomy-only gradient or its clinical-need increment is not in the main text.",
+        "made_worse_discriminator": "The triage reading is stated more strongly or spreads to new places (for example the Abstract), or the Methods statement that the interval ends at the first treatment of any kind is removed."
+      },
+      "expected_change_surface": "Methods, Outcome; Discussion, Interpretation and Principal findings; Conclusions; Results (sensitivity analyses, main text)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2 (single); DA",
+      "source_reviewer_labels": [
+        "R2",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-36",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Correct the \"clinical information only\" risk-group sentence; state that regional stage is often pathological for surgical men; consider a step 1 sensitivity analysis without stage",
+        "letter_text": "The Methods no longer describe risk groups as clinical-only, and the treatment of stage in step 1 is stated for the primary and Gleason-and-PSA-only analyses.",
+        "letter_item_ref": "R25"
+      },
+      "operationalization": {
+        "fully_addressed": "The Methods no longer say risk groups use clinical information only; they state that regional summary stage is often pathological for men treated surgically; and they state whether stage is included in step 1 for the primary analysis and for the Gleason-and-PSA-only analysis. A step 1 sensitivity analysis without stage is optional under this criterion ('consider'); its presence or absence does not change the verdict.",
+        "partially_addressed": "The 'clinical information only' sentence is corrected but the pathological nature of stage for surgical men, or the treatment of stage in step 1 for both analyses, is not stated.",
+        "made_worse_discriminator": "The revision newly asserts that risk groups or the step 1 block are purely pre-treatment clinical information, or removes the existing limitation that summary stage partly uses surgical pathology."
+      },
+      "expected_change_surface": "Methods, Clinical risk groups; Methods, Ordered feature steps; sensitivity analysis description (Gleason-and-PSA-only scenario)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2 (single)",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-37",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Remove or qualify \"lower is better\" labels, especially for low-risk men; state once that a longer wait is not necessarily worse care"
+      },
+      "operationalization": {
+        "fully_addressed": "The 'lower is better' (and similar 'fewer is better') labels in the Abstract, Results and figure legends are removed or qualified, and in any case are not applied to low-risk men without qualification; and the manuscript states at least once that a longer wait is not necessarily worse care."
+      },
+      "expected_change_surface": "Abstract Results; Results; figure legends and axes (for example Figure 2); Discussion, Interpretation",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2, R3 (corroborated); DA",
+      "source_reviewer_labels": [
+        "R2",
+        "R3",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-38",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Say \"recorded clinical variables, which vary little within this group by definition\" for the low-risk comparison"
+      },
+      "operationalization": {
+        "fully_addressed": "Wherever the low-risk comparison of social position with clinical need appears (Abstract, Discussion), clinical need is qualified as the recorded clinical variables, which vary little within the low-risk group by definition (this wording or equivalent meaning), or the comparison is removed."
+      },
+      "expected_change_surface": "Abstract Results; Discussion, Principal findings (low-risk comparison of social position with clinical need)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2 (single); DA",
+      "source_reviewer_labels": [
+        "R2",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-39",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Present the active-surveillance exclusion as an assumption; cite the coding rule; report the share of intervals over 365 days and top-coded, by risk group"
+      },
+      "operationalization": {
+        "fully_addressed": "The Methods present the exclusion of men on active surveillance as an assumption that depends on SEER first-course coding rather than a certainty, cite the SEER coding rule for first course of treatment, and report by risk group the share of intervals over 365 days and the share top-coded (731 days or more)."
+      },
+      "expected_change_surface": "Methods, Active surveillance; supplementary table of interval distribution by risk group",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2 (single)",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-40",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Restrict the Huang et al. [22] claim to favourable-risk disease; use its rural surveillance finding in the selection discussion"
+      },
+      "operationalization": {
+        "fully_addressed": "The citation of Huang et al. (SEER study of favourable-risk men, low and favourable intermediate risk) is restricted to favourable-risk disease rather than supporting findings pooled across intermediate and high risk, and its finding that rural low-risk men were more likely to be on surveillance or watchful waiting is used where the manuscript discusses selection into the treated cohort."
+      },
+      "expected_change_surface": "Discussion, Marital status; Discussion passage on selection into the treated cohort",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2 (single); DA",
+      "source_reviewer_labels": [
+        "R2",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-41",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Give the scope of Noone's 80% figure and carry its caution into the secondary-outcome interpretation"
+      },
+      "operationalization": {
+        "fully_addressed": "The sentence citing Noone et al. (Med Care) for 80% radiation sensitivity states its scope, namely a Medicare-linked older population with the figure pooled across several cancer sites and varying by site, stage and patient characteristics; and the interpretation of the secondary outcome (recorded curative treatment by social group or rurality) carries Noone's caution against using SEER treatment fields to compare treated with untreated people."
+      },
+      "expected_change_surface": "Limitations (Noone 80% sensitivity sentence); Results and Discussion interpretation of the secondary outcome",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2 (single)",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-42",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Replace \"corresponds to\" with candidate-analogue wording in Supplementary Box 2; avoid \"remote\" for US counties"
+      },
+      "operationalization": {
+        "fully_addressed": "Supplementary Box 2 no longer says the Rural-Urban Continuum Code (or county income) 'corresponds to' the Australian measure and uses candidate-analogue or proxy wording instead; and US counties are not called 'remote' (for example nonmetropolitan counties not adjacent to a metropolitan area)."
+      },
+      "expected_change_surface": "Supplementary Box 2; Results and tables terminology for US county categories",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2, R3 (corroborated)",
+      "source_reviewer_labels": [
+        "R2",
+        "R3"
+      ]
+    },
+    {
+      "item_id": "REV-43",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Attribute the waiting-time paradox to [10] and the triage explanation to the authors or a prostate-specific source"
+      },
+      "operationalization": {
+        "fully_addressed": "The Introduction attributes to Ang et al. only the waiting-time paradox (unadjusted lower mortality with longer intervals, pooled across cancers), and attributes the explanation that aggressive disease is treated sooner either to the authors' own inference or to a prostate-specific source that reports it."
+      },
+      "expected_change_surface": "Introduction (waiting-time paradox sentence citing Ang et al.)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2 (single)",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-44",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Set the metropolitan direction and the 2010 to 2022 rise against evidence on large centres and time trends (e.g. Khorana 2019)"
+      },
+      "operationalization": {
+        "fully_addressed": "The Discussion sets both the metropolitan (large-centre) direction and the 2010 to 2022 rise in delay (36.0% to 52.3% in round 1) against published evidence on large or academic centres and on time trends in time to treatment, such as Khorana et al. 2019 (PLoS One, NCDB) or an equivalent source."
+      },
+      "expected_change_surface": "Discussion, The rural direction; Discussion interpretation of the 2010 to 2022 trend",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2 (single); DA",
+      "source_reviewer_labels": [
+        "R2",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-45",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Name the SEER variables for clinical Gleason score and PSA in the manuscript"
+      },
+      "operationalization": {
+        "fully_addressed": "The manuscript names the SEER variables (field or recode names) used for clinical Gleason score and for PSA."
+      },
+      "expected_change_surface": "Methods, Clinical risk groups (or a variable definition table referenced from Methods)",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R2 (single)",
+      "source_reviewer_labels": [
+        "R2"
+      ]
+    },
+    {
+      "item_id": "REV-46",
+      "priority": "must_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Rename or qualify \"social position\" in the title, abstract and Conclusions; state prominently that two of three variables are ecological and that registry differences load onto the block",
+        "letter_text": "Title, Abstract and Conclusions either use the renamed label or qualify \"social position\" with its ecological and registry content.",
+        "letter_item_ref": "R26"
+      },
+      "operationalization": {
+        "fully_addressed": "In the title, Abstract and Conclusions, the block is either renamed (for example area and marital attributes) or 'social position' is qualified wherever it appears with its ecological and registry content; and the manuscript states prominently (for example in the Abstract or where the block is first defined, not only in Methods Uncertainty or Limitations) that two of the three variables, county rurality and county income, are ecological area measures and that unmeasured registry differences load onto the block.",
+        "partially_addressed": "The label is renamed or qualified in only some of title, Abstract and Conclusions, or the ecological and registry statement is present only in a non-prominent place such as Methods Uncertainty or Limitations.",
+        "made_worse_discriminator": "The label is strengthened towards individual socioeconomic position (for example 'socioeconomic status' or 'social disadvantage'), or the existing registry-differences caveat is removed."
+      },
+      "expected_change_surface": "Title; Abstract; Conclusions; Methods definition of the social block",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R3 (single); DA",
+      "source_reviewer_labels": [
+        "R3",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-47",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Report excess waiting days per man, the top-coded share, and why the 7-day threshold could not be applied"
+      },
+      "operationalization": {
+        "fully_addressed": "The manuscript reports excess waiting days per man (not only per 1,000 men), the share of excess days attributable to top-coded intervals (731 days or more), and states that the protocol's pre-specified 7-day meaningful difference could not be applied and why."
+      },
+      "expected_change_surface": "Results (excess waiting days); Supplementary Table S11; Methods",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R3 (single); DA",
+      "source_reviewer_labels": [
+        "R3",
+        "DA"
+      ]
+    },
+    {
+      "item_id": "REV-48",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "Restore the Foley 2025 restriction (men not treated with external beam radiotherapy) in the Discussion"
+      },
+      "operationalization": {
+        "fully_addressed": "Where the Discussion restates the Foley et al. 2025 Tasmanian public-private difference (42 to 59 days), it restricts it to men not treated with external beam radiotherapy."
+      },
+      "expected_change_surface": "Discussion, What an Australian registry could add",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R3 (single)",
+      "source_reviewer_labels": [
+        "R3"
+      ]
+    },
+    {
+      "item_id": "REV-49",
+      "priority": "should_fix",
+      "inherited_criterion": {
+        "roadmap_text": "State the fractional-rank tie rule and whether delay was need-standardised for the concentration index"
+      },
+      "operationalization": {
+        "fully_addressed": "The Methods state the rank rule for men tied within county income bands (for example fractional or average ranks) and state whether the delay outcome used for the concentration index was need-standardised."
+      },
+      "expected_change_surface": "Methods, Income inequality; Supplementary Table S12 note",
+      "equivalence_policy": "allowed",
+      "source_reviewer": "R3 (single)",
+      "source_reviewer_labels": [
+        "R3"
+      ]
+    }
+  ],
+  "new_standards": []
+}

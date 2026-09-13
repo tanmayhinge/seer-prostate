@@ -1,0 +1,734 @@
+{
+  "round_id": "seer-preprint-rereview-round2",
+  "precommitment_hash": "cc2485b1cb393051f64174b225ae34d218a30171c24b453c667234cb5331e3ec",
+  "items": [
+    {
+      "item_id": "REV-1",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Discussion, Interpreting the size of the increment \"The same block is nonetheless associated with standardised differences of 6 to 9 percentage points between specific area or marital profiles.\"",
+        "text: Discussion, Interpreting the size of the increment \"for the cohort as a whole the observed profile differed from the reference by only 1.1 to 1.6 points\"",
+        "absence: Abstract — expected at least one sentence relating the 0.62 and 0.99 point skill increment to the standardised or population-level contrasts; checked Abstract Results and Conclusions, which give the increment and the 9.2/8.8 and 6.7/5.9 point contrasts side by side without saying how they relate"
+      ],
+      "change_summary": "A new Discussion subsection explains how a skill increment below 1.4 points coexists with 6 to 9 point standardised contrasts and a 1.1 to 1.6 point population-level contrast. The Abstract only places the increment and the contrasts next to each other.",
+      "residual_gap": {
+        "text": "The Abstract has no sentence relating the size of the skill increment to the standardised or population-level percentage contrasts; it only lists them in sequence.",
+        "residual_magnitude": "should_fix"
+      },
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-2",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Introduction \"That added predictive value has been measured for other prostate cancer outcomes\"",
+        "text: Discussion, Interpreting the size of the increment \"A skill increment below 1.4 points means that adding area and marital characteristics improves the average accuracy of individual predictions only slightly\"",
+        "absence: Introduction — the claim 'A small gain can still be informative' resting on the AUC 0.671 to 0.673 example is no longer present; checked Introduction paragraphs 3 and 4"
+      ],
+      "change_summary": "The 'small gain can still be informative' claim was removed. The AUC 0.671 to 0.673 study now illustrates prior incremental-value work, and the Discussion argues why a small increment can accompany sizeable standardised differences.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-3",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Results, How much area and marital characteristics add \"which was 82% and 98% of a small step 2 skill (0.76 and 0.99 points)\"",
+        "text: Discussion, Interpreting the size of the increment \"In low-risk men, the block made up most of the step 2 skill, but that skill was under 1 point\"",
+        "absence: Abstract — the low-risk share no longer appears; checked Abstract Results and Conclusions"
+      ],
+      "change_summary": "The share was removed from the Abstract, and the Results now give 82% and 98% with the absolute 0.76 and 0.99 points. The Discussion restates the share as 'most of' with only an approximate bound of under 1 point.",
+      "residual_gap": {
+        "text": "In the Discussion the low-risk share ('most of the step 2 skill') is accompanied by an approximate bound ('under 1 point') rather than the absolute step 2 skill values 0.76 and 0.99.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-4",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Abstract, Conclusions \"Delay was more common in large metropolitan, higher-income counties\"",
+        "text: Discussion, Principal findings \"Delay was more common in large metropolitan, higher-income counties than in non-metropolitan, lower-income counties\"",
+        "text: Discussion, What the direction can and cannot show \"The area direction applies to the joint contrast only.\"",
+        "text: Conclusions \"delay was more common in large metropolitan, higher-income counties among men with recorded curative treatment\""
+      ],
+      "change_summary": "Separate 'rural and lower-income' directions were replaced by joint large metropolitan, higher-income wording in the Abstract, Discussion and Conclusions. 'After clinical features were held as observed' is now attached only to the joint standardised contrast.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-5",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Results, Income concentration \"Crude delay was concentrated among men in higher-income counties\"",
+        "text: Results, Income concentration \"Because higher-income counties are mostly metropolitan, this gradient cannot be separated from rurality.\"",
+        "text: Methods, Income concentration index \"The index is crude within each stratum: it is not standardised for clinical features and does not separate income from rurality.\"",
+        "absence: Abstract and Discussion — the concentration index is no longer reported or interpreted; checked Abstract, Discussion Principal findings, Interpreting the size, What the direction can and cannot show, Conclusions"
+      ],
+      "change_summary": "The index was dropped from the Abstract. The Results, Methods, Figure 4b caption and Supplementary Table S20 now describe it as crude and not separable from rurality.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-6",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Title \"What area and marital characteristics add to clinical need in predicting waits beyond 90 days for prostate cancer surgery or radiotherapy\""
+      ],
+      "change_summary": "The title was rewritten around what area and marital characteristics add to clinical need, dropping 'how much is clinical need?' and the Australian benchmark. It falls from 33 to 32 words.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-7",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Introduction \"Time from diagnosis to first treatment is widely used to judge the timeliness of cancer care.\"",
+        "text: Introduction \"Several studies have examined who waits longer, usually with multivariable models.\"",
+        "text: Discussion, Australian context \"No Australian data were analysed, and the US results cannot be compared directly with Australian findings\""
+      ],
+      "change_summary": "The Introduction now opens with US evidence. All Tasmanian, Queensland and lung cancer material moved to a Discussion subsection headed 'Australian context', and no sentence sets US and Tasmanian findings against each other.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-8",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Outcome \"This threshold has been used in US registry research on prostate cancer treatment delay [6]\"",
+        "text: Methods, Outcome \"The SEER interval is not the pathway's own measure.\""
+      ],
+      "change_summary": "Methods, Outcome now justifies the 90-day threshold by its use in US registry research, citing Montiel Ishino (renumbered [6]), before noting the Australian pathway. It also states that the SEER interval is not the pathway's own measure.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-9",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Design, data, protocol and reporting \"The protocol and all analysis code are public at https://github.com/tanmayhinge/seer-prostate.\"",
+        "text: Methods, Design, data, protocol and reporting \"so the order of commits can be inspected but is not independently timestamped\"",
+        "table: Supplementary Table S44 — commits 5954e76 (v1.0) to c1b6fd7 (v1.9) with author-computer commit times, including 52982e0 (first Phase 4 model results, v1.7)"
+      ],
+      "change_summary": "A repository URL, a commit-by-version table (S44) and a candid statement that commit times are not independent timestamps were added. The protocol link is still the repository home page.",
+      "residual_gap": {
+        "text": "No public timestamped protocol record is given: the link is the repository home page, not a tagged release, commit permalink or archived DOI. The four unnumbered amendments at the top of S43 are not mapped to commits. S44 shows version 1.9 committed together with the robustness analyses and revised preprint, yet the Methods disclosure of versions committed alongside the work they govern names only 1.1 to 1.3 and 1.5 to 1.7, while claiming the 1.9 analyses were specified before being run.",
+        "residual_magnitude": "should_fix"
+      },
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-10",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Declarations, Code and protocol availability \"https://github.com/tanmayhinge/seer-prostate (protocol, amendment log, analysis code, tests and aggregate results)\""
+      ],
+      "change_summary": "The code URL placeholder in the Declarations was replaced by a public GitHub repository URL.",
+      "residual_gap": {
+        "text": "The Declarations link is the repository home page only; it is not versioned or timestamped (no tag, commit-specific link or archived DOI).",
+        "residual_magnitude": "should_fix"
+      },
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-11",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "table: Supplementary Table S45 — STROBE items 1a to 22 and RECORD items 1.1 to 22.1, each with a section location or 'Not applicable'",
+        "table: Supplementary Table S46 — TRIPOD+AI items 1 to 27c, each with a location, 'Not applicable', 'Not addressed' or 'Not examined'",
+        "table: Supplementary Table S46, item 21 (participants and events per analysis) — cites 'Table 2; Tables S2, S8 and S10', but revised S8 is step performance without counts and S10 is tuned hyperparameters"
+      ],
+      "change_summary": "The 'IN PREPARATION' placeholder was replaced by a combined STROBE and RECORD checklist (S45) and a TRIPOD+AI checklist (S46), with section references and not-applicable or not-examined flags.",
+      "residual_gap": {
+        "text": "At least one checklist pointer is stale after supplement renumbering: TRIPOD+AI item 21 cites Supplementary Tables S8 and S10, which do not contain participants or outcome events per analysis.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-12",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Declarations, Use of AI tools \"code, analyses and manuscript text were developed with assistance from Claude (Anthropic)\"",
+        "text: Declarations, Ethics \"no ethics committee approval was sought\"",
+        "absence: Title page and Declarations — expected an affiliation statement (or an explicit statement of no institutional affiliation); checked the Author line, Correspondence line and Declarations list"
+      ],
+      "change_summary": "All '[AUTHOR TO CONFIRM' and '[TO BE COMPLETED' placeholders were removed. Funding, competing interests, ethics, patient involvement, code and AI-use statements are now substantive, but the affiliation placeholder was deleted without an affiliation being given.",
+      "residual_gap": {
+        "text": "No affiliation (or statement of no institutional affiliation) is given; the author line reads only 'Tanmay Hinge'.",
+        "residual_magnitude": "should_fix"
+      },
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-13",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Results, How much area and marital characteristics add \"Removing marital status or rurality from step 2 each lost 0.18 to 0.45 points in the pooled, intermediate- and high-risk strata.\"",
+        "table: Supplementary Table S9 — minimum 0.18 (intermediate risk, penalised logistic regression, marital status) and maximum 0.45 (high risk, LightGBM, marital status)"
+      ],
+      "change_summary": "The range was corrected from 0.22 to 0.45 to 0.18 to 0.45, matching the renumbered leave-one-variable-out table (S9). The old range appears nowhere else.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-14",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Results, Secondary outcome \"in high-risk men it was -3.3 and -2.5, with only one model reaching 3 points\"",
+        "text: Discussion, What the direction can and cannot show \"recorded treatment was itself less common in non-metropolitan counties among high-risk men (75.3% against 81.9%)\""
+      ],
+      "change_summary": "The Discussion's 'under 3 points' clause was removed. The Results now attribute -2.9 and -1.4 to the pooled stratum and state that only one model reached 3 points in high-risk men.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-15",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "table: Table 3 — low risk, marital status 3.6 and 2.4 labelled 'same direction, only one model 3 points or more'",
+        "table: Supplementary Table S31 — threshold of 180 days, -3.0 and -3.2 labelled 'same direction, only one model 3 points or more'",
+        "table: Supplementary Table S41 — high risk area contrast -3.3 and -2.5 labelled 'same direction, only one model 3 points or more'; Supplementary Table S17 labels opposite-sign cases 'opposite directions, at least one model 3 points or more'"
+      ],
+      "change_summary": "'Models disagree' was replaced by 'same direction, only one model 3 points or more' in Table 3 and the renumbered S31 and S41. Opposite-direction cases in the new S17 carry a distinct label.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-16",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Results, Secondary outcome \"Logistic regression chose C at an edge of the grid for intermediate-risk (0.01) and high-risk men (10).\"",
+        "absence: Strengths and limitations — no statement that the secondary-outcome models chosen at a grid edge were not re-tuned; checked Methods Secondary outcome, Results Secondary outcome, Limitations paragraph, Supplementary Tables S36 to S42"
+      ],
+      "change_summary": "The Results for the secondary outcome now report the chosen C values and that they lie at grid edges.",
+      "residual_gap": {
+        "text": "The manuscript does not state that the secondary-outcome models were not re-tuned on a wider grid, and the grid-edge choice is not presented as a limitation.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-17",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Introduction \"Several studies have examined who waits longer, usually with multivariable models.\"",
+        "text: Discussion, Principal findings \"whether a man waited more than 90 days was only weakly predictable from recorded clinical, area and marital information\"",
+        "text: Abstract, Background \"Time from diagnosis to treatment is a common quality measure.\""
+      ],
+      "change_summary": "The Introduction and Discussion were rewritten as connected prose paragraphs, and the bullet-structured abstract (about 430 words) became four prose paragraphs of about 330 words.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-18",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Discussion, Strengths and limitations \"a cluster bootstrap over rurality by income cells as a proxy for county-level dependence\""
+      ],
+      "change_summary": "'Uncertainty that respects county-level exposures' was replaced by a description of the cell-level cluster bootstrap as a proxy for county-level dependence. Methods state that no county identifier exists.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-19",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Figure 3 caption \"the x-axis scale differs between panels\"",
+        "text: Figure 4 caption \"the x-axis does not start at 0\"",
+        "figure: Figure 4b — five concentration curves still plotted as cumulative shares against the line of equality and overlapping closely; not shown as differences from equality and not dropped"
+      ],
+      "change_summary": "The Figure 3 caption now says panel scales differ, and the Figure 4a caption notes the truncated axis. Figure 4b is unchanged apart from caption wording.",
+      "residual_gap": {
+        "text": "Figure 4b was not revised to make the concentration curves distinguishable (for example as difference from the line of equality) and was not replaced by the table.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-20",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Table 1 note \"County income quartiles group the 16 bands of county median household income: Q1 under $55,000, Q2 $55,000 to $74,999\"",
+        "table: Table 1 — rows still labelled 'County median household income (quartile of 16 bands)', Q1 (lowest) to Q4 (highest)"
+      ],
+      "change_summary": "A Table 1 note now gives each group's dollar range; the ranges are consistent with the 16 bands in config/analysis.yaml. The groups are still labelled quartiles.",
+      "residual_gap": {
+        "text": "The income groups are still labelled 'quartile of 16 bands' and Q1 to Q4 rather than renamed as band groups.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-21",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Introduction \"Several studies have examined who waits longer, usually with multivariable models.\"",
+        "text: Introduction \"In a PubMed search screened by title and abstract by one reviewer, we found no study that applied this incremental approach\"",
+        "text: Abstract, Background \"US registry studies report multivariable associations between social factors and waiting time, but not how much area and marital characteristics add to predicting delay\""
+      ],
+      "change_summary": "Prior studies are now described as multivariable, and the Introduction describes the PubMed search and scopes the novelty claim to it. The Abstract's gap statement is still unqualified.",
+      "residual_gap": {
+        "text": "The Abstract Background still states flatly that US registry studies do not report the incremental quantity, without scoping the claim to the search performed.",
+        "residual_magnitude": "should_fix"
+      },
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-22",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Introduction \"In SEER-Medicare data for 2004 to 2007, time from diagnosis to definitive treatment was longer for African American than for White men\"",
+        "text: Introduction \"They do not measure how much of the variation in waiting can be predicted from recorded clinical need\"",
+        "text: Introduction \"a SEER study compared clinical-only and clinical-plus-sociodemographic machine learning models for cancer-specific survival in high-risk disease [10]\"",
+        "text: Introduction \"That added predictive value has been measured for other prostate cancer outcomes\"",
+        "text: Discussion, Australian context \"In Queensland, the median treatment interval was 65 days (interquartile range 36 to 107)\""
+      ],
+      "change_summary": "Stokes 2013 [4], Semprini 2026 [7], Ajjawi 2026 [10] and Baade 2012 [26] were added. The first three are set apart as association or survival studies, and Baade sits under a lead stating that Australian results cannot be compared. The neighbourhood-variable AUC study is now framed as prior incremental-value work.",
+      "verified_by": "EIC",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-23",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "table: Supplementary Table S11 — mean (minimum to maximum) increment over 10 fold seeds for all five strata and both models, e.g. unknown risk logistic 0.41 (0.32 to 0.48), all men LightGBM 0.99 (0.98 to 0.99)",
+        "text: Methods, Post-review robustness analyses \"repeating cross-fitting with 10 fold-assignment seeds under that tuning\"",
+        "text: Methods, Models and validation \"The bootstrap does not refit or re-tune the models, so these intervals do not include model-fitting variability.\"",
+        "text: Discussion, Principal findings \"although none of these checks refits the models within bootstrap resamples\""
+      ],
+      "change_summary": "A 10-fold-seed repetition under per-step tuning was added for every stratum and model, and Methods describe it. The seed range never approaches 0, and the headline interval claims now carry the no-refit disclosure.",
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-24",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "table: Supplementary Table S14 — number of clusters, smallest, median and largest cluster, and largest cluster share of men per stratum (all men 79 cells, largest 8.5%)",
+        "table: Supplementary Table S11 — intervals with county income band clusters for every stratum and model, e.g. all men logistic 0.62 (0.38 to 0.90)",
+        "text: Results, Post-review robustness analyses \"In all men the bootstrap used 79 cells; the smallest held 23 men and the largest 8.5% of men.\""
+      ],
+      "change_summary": "Cell counts and size distributions per stratum were added, along with an alternative-clustering sensitivity analysis using county income band alone and its intervals.",
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-25",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Post-review robustness analyses \"tuning separately at steps 0, 1 and 2\"",
+        "table: Supplementary Table S11 — per-step tuning, first fold seed increments for all strata and both models",
+        "table: Supplementary Table S12 — LightGBM clinical model at least as good: yes in all men, intermediate and high risk; no in low (0.05 against 0.14) and unknown risk (0.55 against 0.64)",
+        "text: Discussion, The machine learning comparison \"The inference that flexible clinical adjustment did not absorb the area and marital signal therefore rests on all men and on intermediate- and high-risk men.\""
+      ],
+      "change_summary": "Per-step tuning at steps 0 to 2 was added. The resulting increments and step 1 comparisons are reported for every stratum, and the model-comparison inference is restricted to the strata where the LightGBM clinical model is at least as good.",
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-26",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "table: Supplementary Table S17 — rurality-only and county-income-only contrasts for both models in every stratum; all men -8.7 and 1.7 (rurality), -0.9 and -8.7 (income)",
+        "text: Supplementary Tables S17 and S18 \"The two model types conflict, which is why joint area profiles are reported instead (amendment 1.7).\"",
+        "text: Results, Standardised percentages and excess days \"so the separate contributions of rurality and income cannot be identified\""
+      ],
+      "change_summary": "The promised one-at-a-time profile tables (S17 contrasts, S18 percentages) were published for both models with the conflict stated. Amendment 1.7's 'kept in a supplementary table' is now true, and version 1.7 is still labelled post hoc.",
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-27",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Standardised percentages \"we adopted a post hoc rule: a contrast is described as meaningful only when both model types agree on 3 percentage points or more\"",
+        "text: Abstract, Results \"these contrasts were judged by a post hoc two-model agreement rule and have no intervals\"",
+        "text: Methods, Standardised percentages \"Standardised contrasts have no uncertainty intervals.\""
+      ],
+      "change_summary": "Methods and the Abstract now label the 3-point agreement rule as post hoc and state that the standardised contrasts have no intervals. The decision to drop the pre-specified intervals is not labelled post hoc.",
+      "residual_gap": {
+        "text": "The dropping of the protocol-specified intervals for standardised contrasts is reported only as a fact ('have no intervals'), not labelled as a post hoc decision, in Methods or the Abstract.",
+        "residual_magnitude": "should_fix"
+      },
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-28",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "table: Supplementary Table S21 — Erreygers index by diagnosis period (2010 to 2014, 2015 to 2019, 2020 to 2022) for all strata",
+        "table: Supplementary Table S22 — county income quartile distribution by diagnosis period (Q4 26.2%, 34.1%, 41.0%)",
+        "text: Results, Income concentration \"Within diagnosis periods the index was smaller in all men\""
+      ],
+      "change_summary": "A period-stratified concentration index and the income group distribution by diagnosis period were added. Period grouping is an allowed equivalent of by-year reporting, and the Results values match reports/phase4_revision.md.",
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-29",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Results, Men without a recorded interval \"Inverse probability weighting changed published group percentages by at most 0.36 points, and by at most 0.21 points in groups of 1,000 men or more.\""
+      ],
+      "change_summary": "The '0.2 points or less' claim was restated as at most 0.36 points overall and 0.21 in groups of 1,000 or more, matching reports/phase4_revision.md.",
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-30",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Models and validation \"LightGBM used a learning rate of 0.05 and handled missing values internally [11].\"",
+        "table: Supplementary Table S14 — number and size of bootstrap clusters per stratum",
+        "table: Supplementary Table S46, item 22 — 'Not released as a clinical model; code that refits every model is in the repository'",
+        "text: Methods, Models and validation \"pairwise interactions among clinical features [18]\"",
+        "table: Supplementary Table S46, item 14 — fairness 'Not addressed as a model property'; item 23a reports performance by risk group only"
+      ],
+      "change_summary": "LightGBM missing-value handling, model availability and cluster number and size were added. Interaction terms are described with the same wording as round 1, and performance by social subgroup is not reported.",
+      "residual_gap": {
+        "text": "The exact interaction terms are not specified beyond 'pairwise interactions among clinical features', and model performance by social subgroup is not reported.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-31",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Results, How much area and marital characteristics add \"no interval was computed for these differences\"",
+        "text: Results, Sensitivity analyses \"LightGBM had higher step 2 skill in 47 of 50 combinations\""
+      ],
+      "change_summary": "The model-comparison claim was removed from the Abstract, and the main Results statement now carries the no-interval caveat. The sensitivity-analysis statement of the same comparison does not.",
+      "residual_gap": {
+        "text": "The Results, Sensitivity analyses statement that LightGBM had higher step 2 skill in 47 of 50 combinations lacks the caveat that no interval was computed for the differences.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-32",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Post-review robustness analyses \"entering year as categories in logistic regression\"",
+        "text: Results, Post-review robustness analyses \"entering year as categories in logistic regression gave 0.62 (0.39 to 0.86)\"",
+        "table: Supplementary Table S15 — year as categories, logistic clinical need and area and marital increments for all five strata"
+      ],
+      "change_summary": "A logistic specification with year as categories was added. Methods state it, and the resulting increments are reported for every stratum.",
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-33",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Abstract, Conclusions \"Among US men with recorded surgery or radiotherapy\"",
+        "text: Conclusions \"these patterns describe who waits among treated men rather than who receives better care\"",
+        "text: Discussion, What the direction can and cannot show \"the bounds for missing intervals do not address this\"",
+        "text: Discussion, What the direction can and cannot show \"If men in rural counties who would have waited longer are more often managed without recorded curative treatment\""
+      ],
+      "change_summary": "The Abstract Conclusions and Conclusions now name the recorded-treatment population and say the pattern is not evidence of better care. The Discussion states that the bounds do not cover selection into treatment and discusses the likely direction of that bias for the area contrast.",
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-34",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Results, Sensitivity analyses \"the 95% interval for the area and marital increment lay above 0 in 98 of 100 scenario, stratum and model combinations\"",
+        "text: Results, Sensitivity analyses \"and one further lower bound was 0.00\"",
+        "absence: Abstract — the '98 of 100' count no longer appears; checked Abstract Results"
+      ],
+      "change_summary": "The count was removed from the Abstract. The Results say it refers to 95% intervals and note the additional 0.00 lower bound.",
+      "verified_by": "R1",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-35",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Outcome \"is often started before radiotherapy in higher-risk disease, can therefore end the interval before surgery or radiotherapy begins\"",
+        "text: Results, Waiting beyond 90 days \"delay was 45.8% in low-risk and 38.4% in high-risk men, against 47.9% and 32.8% in the primary cohort\"",
+        "text: Results, How much area and marital characteristics add \"In the prostatectomy-only scenario, clinical need added 1.66 points in all men under both models and 2.20 and 2.13 in high-risk men\"",
+        "text: Discussion, What the direction can and cannot show \"The lower delay in high-risk men is consistent with triage, but it is also consistent with hormone therapy ending the interval before radiotherapy\""
+      ],
+      "change_summary": "A hormone-therapy caveat was added to the Outcome section, and the prostatectomy-only gradient and clinical-need increment now appear in the main-text Results. Triage is presented as one of two explanations and was removed from the Principal findings and Conclusions.",
+      "verified_by": "R2",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-36",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Risk groups \"Summary stage can incorporate pathological findings for men treated surgically\"",
+        "text: Methods, Ordered feature steps \"Step 1 added clinical need: stage category\"",
+        "text: Methods, Sensitivity analyses \"risk groups from Gleason score and PSA only (stage remained in the clinical block)\"",
+        "absence: Methods — 'Risk groups used clinical information only' no longer present; checked Methods Risk groups"
+      ],
+      "change_summary": "The 'clinical information only' sentence was removed. Methods now state that summary stage can include surgical pathology and that stage stays in step 1 in both the primary and the Gleason-and-PSA-only analyses, and a stage-free sensitivity analysis was added.",
+      "verified_by": "R2",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-37",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Results, Waiting beyond 90 days \"A lower percentage means fewer men waited beyond the benchmark, but for low-risk men a longer wait is not necessarily worse care.\"",
+        "text: Figure 2 caption \"Nothing is adjusted.\"",
+        "absence: Abstract, Results and figure legends — no 'lower is better' or 'fewer is better' label remains; checked Abstract, Results, Figure 2 caption and axis, excess days sentence"
+      ],
+      "change_summary": "The 'lower is better' and 'fewer is better' labels were removed from the Abstract, Results and Figure 2. The Results now say a lower percentage means fewer men waited beyond the benchmark, and that for low-risk men a longer wait is not necessarily worse care.",
+      "verified_by": "R2",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-38",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Results, How much area and marital characteristics add \"but only 0.14 (0.08 to 0.20) in low-risk men, whose clinical variables vary little by definition\"",
+        "text: Discussion, Interpreting the size of the increment \"clinical variables vary little within a group defined by them\"",
+        "absence: Abstract — the low-risk comparison with clinical need was removed; checked Abstract Results"
+      ],
+      "change_summary": "The Abstract comparison was removed. The Results and Discussion now qualify the low-risk clinical increment by noting that clinical variables vary little within the group by definition.",
+      "verified_by": "R2",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-39",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Cohort \"We assumed that men whose first course was active surveillance have surgery and radiation coded as none\"",
+        "text: Methods, Cohort \"we did not verify this against the coding manual\"",
+        "table: Supplementary Table S7 — share of men waiting more than 365 days and top-coded, by risk group and rurality"
+      ],
+      "change_summary": "The surveillance exclusion is now stated as an unverified assumption, and the long and top-coded interval shares by risk group were added.",
+      "residual_gap": {
+        "text": "The SEER first-course-of-treatment coding rule is not cited; the text says it was not checked.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "R2",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-40",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Discussion, What the direction can and cannot show \"but that study covered favourable-risk disease and does not explain the pattern in intermediate- and high-risk men\"",
+        "text: Discussion, What the direction can and cannot show \"urban men with low-risk disease had lower odds of surveillance or watchful waiting than rural men [22], which would remove rural men from this cohort\""
+      ],
+      "change_summary": "Huang et al. is now restricted to favourable-risk disease for the marital finding, and its rural surveillance finding is used in the discussion of selection into the treated cohort.",
+      "verified_by": "R2",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-41",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Secondary outcome \"among Medicare beneficiaries aged 65 or over diagnosed 2000 to 2006, SEER identified radiation therapy with 80% sensitivity against claims\"",
+        "text: Methods, Secondary outcome \"the authors advised against using SEER data to compare treated and untreated patients [20]\""
+      ],
+      "change_summary": "The Noone sentence moved to Methods, Secondary outcome, with the Medicare age and period scope and Noone's caution against comparing treated with untreated patients.",
+      "residual_gap": {
+        "text": "It is not stated that the 80% figure is pooled across several cancer sites and varies by site, stage and patient characteristics.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "R2",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-42",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Supplementary Box 2 \"the county Rural-Urban Continuum Code has a candidate analogue in Australian Statistical Geography Standard remoteness areas\"",
+        "text: Supplementary Box 2 \"They are candidate analogues, not equivalents\"",
+        "text: Results, Sensitivity analyses \"Both models agreed on a lower standardised delay of 3 points or more in non-metropolitan counties not adjacent to a metropolitan area\""
+      ],
+      "change_summary": "Box 2's 'corresponds to' became 'candidate analogue', with a note that constructs and geography differ. 'Remote counties' in the Results became 'non-metropolitan counties not adjacent to a metropolitan area'; 'remote' now appears only for Australian areas and in the verbatim amendment 1.7 log text.",
+      "verified_by": "R2",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-43",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Introduction \"in SEER, unadjusted all-cause mortality was lower among patients with longer intervals\"",
+        "text: Introduction \"a pattern we read as consistent with faster treatment of more aggressive disease\""
+      ],
+      "change_summary": "Ang et al. is now cited only for the unadjusted mortality paradox (26.1% against 11.4%, matching reports/phase1.md), and the aggressive-disease explanation is marked as the authors' own reading.",
+      "verified_by": "R2",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-44",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Discussion, What the direction can and cannot show \"and with national evidence that care at academic centres is associated with longer intervals [1]\"",
+        "absence: Discussion — expected the 2010 to 2022 rise in delay (36.0% to 52.3%) to be set against published time-trend evidence; checked Principal findings, Interpreting the size of the increment, What the direction can and cannot show, Strengths and limitations, Conclusions (Khorana's rise in time to treatment is cited only in the Introduction)"
+      ],
+      "change_summary": "Khorana 2019 was added and the Discussion sets the metropolitan direction against evidence on academic centres. The Discussion does not interpret the 2010 to 2022 rise.",
+      "residual_gap": {
+        "text": "The Discussion does not set the 2010 to 2022 rise in delay against time-trend literature.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "R2",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-45",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Risk groups \"Gleason Score Clinical Recode (2010+)\"",
+        "text: Methods, Risk groups \"PSA Lab Value Recode (2010+)\""
+      ],
+      "change_summary": "The SEER recode variable names for clinical Gleason score and PSA were added to Methods, matching config/analysis.yaml.",
+      "verified_by": "R2",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-46",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Title \"What area and marital characteristics add to clinical need\"",
+        "text: Abstract, Methods \"The primary estimand was the out-of-fold log-loss skill added by the area and marital block\"",
+        "text: Conclusions \"County rurality, county income and marital status add a small, repeatable increment beyond recorded clinical need\"",
+        "text: Methods, Ordered feature steps \"Two of these three variables describe the county, not the man\"",
+        "text: Methods, Ordered feature steps \"the block can also carry differences in registry practice\""
+      ],
+      "change_summary": "The block was renamed 'area and marital characteristics' in the title, Abstract and Conclusions. Where the block is defined, Methods state that two of its variables are county measures and that it can carry registry differences; Table 2, Figure 3 and older supplementary tables keep the 'social position' label with a note.",
+      "verified_by": "R3",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-47",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Results, Standardised percentages and excess days \"Crude excess waiting beyond 90 days averaged 30.6 days per man in large metropolitan counties and 20.0 days\"",
+        "text: Results, Standardised percentages and excess days \"the protocol's 7-day threshold for a meaningful difference applied to standardised waiting days, which were not modelled (amendment 1.6)\"",
+        "absence: Results and supplement — expected the share of excess waiting days attributable to top-coded intervals; checked Results, Supplementary Tables S7 (share of men top-coded, not share of excess days) and S19"
+      ],
+      "change_summary": "Excess days per man were added (30.6 and 20.0, consistent with S19), along with a statement that the 7-day threshold could not be applied because standardised waiting days were not modelled.",
+      "residual_gap": {
+        "text": "The share of excess waiting days attributable to top-coded intervals (731 days or more) is not reported.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "R3",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-48",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Discussion, Australian context \"Among Tasmanian men not treated with external beam radiotherapy, those treated in public facilities started treatment 42 to 59 days later\""
+      ],
+      "change_summary": "The Discussion's restatement of Foley 2025 is now restricted to men not treated with external beam radiotherapy.",
+      "verified_by": "R3",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-49",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Income concentration index \"using fractional ranks with tied men sharing the average rank\"",
+        "text: Methods, Income concentration index \"it is not standardised for clinical features\""
+      ],
+      "change_summary": "Methods now state the fractional-rank tie rule and that the delay outcome used for the index is crude, not need-standardised.",
+      "verified_by": "R3",
+      "applied_criterion": "precommitted"
+    },
+    {
+      "item_id": "REV-50",
+      "verdict": "FULLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Methods, Sensitivity analyses \"The scenarios reuse largely the same men, so agreement across them is not independent replication.\"",
+        "text: Discussion, Strengths and limitations \"The sensitivity analyses reuse largely the same men.\""
+      ],
+      "change_summary": "Methods and Limitations now say the sensitivity scenarios reuse largely the same men, so agreement is not independent replication.",
+      "verified_by": "EIC",
+      "applied_criterion": "not_precommitted"
+    },
+    {
+      "item_id": "REV-51",
+      "verdict": "PARTIALLY_ADDRESSED",
+      "evidence_anchor": [
+        "text: Discussion, Strengths and limitations \"the SEER diagnosis date may not be recorded consistently across registries and years\""
+      ],
+      "change_summary": "A one-clause limitation was added: the diagnosis date may be recorded inconsistently across registries and years.",
+      "residual_gap": {
+        "text": "Consistency across settings (metropolitan against rural) is not mentioned, and the possible effect of an inconsistent start date on the area contrast or the 2010 to 2022 trend is not discussed.",
+        "residual_magnitude": "consider"
+      },
+      "verified_by": "EIC",
+      "applied_criterion": "not_precommitted"
+    }
+  ],
+  "new_issues": [
+    {
+      "new_issue_id": "NEW-1",
+      "description": "The Introduction says rural and income associations with timeliness 'point in different directions across studies [5, 6, 7]', but the cited studies, as the manuscript itself describes them, do not show opposing directions. [5] (Di Vanna) reports shorter intervals for lower-income and non-metropolitan patients, and [6] (Montiel Ishino) lower odds of delay in rural Appalachian counties, which is the same direction. [7] (Semprini) reports that the effect of hospital accreditation differs by county income, not an opposite income or rural direction. The claim motivating the direction-free design is left without citation support.",
+      "location_anchor": "text: Introduction \"rural and income associations with timeliness point in different directions across studies [5, 6, 7]\"",
+      "severity": "minor",
+      "found_by": "R2",
+      "confidence": 3,
+      "competence_basis": "Domain literature on prostate cancer time to treatment (Card #3). Checked against the manuscript's own descriptions of [5], [6] and [7] and against reports/phase1.md (Di Vanna 2025, Montiel Ishino 2021, Semprini 2026); full texts not read.",
+      "attribution": "regression",
+      "attribution_evidence": "Compared the same sentence in both manuscripts. The original cited [2, 7, 8] (Foley 2022 Tasmanian study, where remote men waited longer, plus Di Vanna and Montiel Ishino), which did contain an opposite direction. The revision replaced the Tasmanian citation with Semprini [7], leaving only same-direction or non-directional sources.",
+      "nearest_roadmap_item": "REV-7",
+      "non_match_rationale": "REV-7 required removing the US-versus-Tasmanian directional juxtaposition, which the revision did. This issue is whether the replacement US citations support the 'different directions' claim, a citation-support defect that REV-7's criterion does not test."
+    },
+    {
+      "new_issue_id": "NEW-2",
+      "description": "The supplement guide says Supplementary Table S35 (clinical-need increment in the prostatectomy-only scenario) comes from analyses specified under protocol amendment 1.9, and Methods say the 1.9 analyses were specified before being run. However, amendment 1.9 in Supplementary Table S43 lists items (a) to (h) without this analysis, and the Methods post-review paragraph does not mention it, so its specification status is undocumented.",
+      "location_anchor": "text: Supplementary material, How to read this supplement \"Supplementary Tables S7, S11 to S15, S17, S18, S21, S22 and S35 come from analyses specified after an internal review (protocol amendment 1.9)\"",
+      "severity": "minor",
+      "found_by": "R1",
+      "confidence": 4,
+      "competence_basis": "Analytic provenance and post hoc labelling (Card #2 focus on analytic choices made after seeing results). Compared the supplement guide, Methods post-review paragraph, S43 amendment 1.9 text and reports/phase4_revision.md, which presents this analysis as a separate section outside items (a) to (h).",
+      "attribution": "regression",
+      "attribution_evidence": "S35, the supplement guide sentence and amendment 1.9 exist only in the revised manuscript; the original had no such table or label.",
+      "nearest_roadmap_item": "REV-35",
+      "non_match_rationale": "REV-35 asked for the prostatectomy-only clinical-need increment to appear in the main text, which it does. This issue concerns the undocumented pre-specification label attached to that new analysis, which no roadmap item covers."
+    },
+    {
+      "new_issue_id": "NEW-3",
+      "description": "Under the new per-step tuning, penalised logistic regression chose C at the lower edge of the pre-specified grid (0.01) in 8 of 15 stratum and step combinations (all men at steps 0 to 2, low risk at steps 1 and 2, step 2 in intermediate, high and unknown risk). The wider-grid check was run only for the original step 3 tuning. The manuscript reports the grid edge only for the primary tuning and does not disclose these per-step edge choices.",
+      "location_anchor": "table: Supplementary Table S13 — penalised logistic regression C = 0.01 at step 2 in every stratum and at steps 0 and 1 in all men, the lowest value of the 0.01 to 10 grid",
+      "severity": "minor",
+      "found_by": "R1",
+      "confidence": 3,
+      "competence_basis": "Hyperparameter tuning and grid choices (Card #2 focus). Counted from S13 and confirmed against reports/phase4_revision.md summary ('C was chosen at an edge of the grid (0.01 or 10) in 8 of 15 stratum and step combinations'); impact on increments likely small given S34.",
+      "attribution": "regression",
+      "attribution_evidence": "Per-step tuning, S13 and the post-review paragraph exist only in the revised manuscript. The revised Results grid-edge sentence and Discussion refer to the step 3 tuning and the wider-grid check (S34), which the original also reported.",
+      "nearest_roadmap_item": "REV-25",
+      "non_match_rationale": "REV-25 required per-step tuning, increments and a restricted model-comparison inference, all of which were delivered. This issue is an undisclosed grid-edge result inside that new tuning. REV-16 covers grid-edge disclosure only for the secondary outcome."
+    },
+    {
+      "new_issue_id": "NEW-4",
+      "description": "The reference profile is described as 'a metropolitan county of 1 million or more', and the Results say 'metropolitan counties of 1 million or more'. The Rural-Urban Continuum Code category is counties in metropolitan areas of 1 million or more population, so the wording wrongly implies a county population threshold.",
+      "location_anchor": "text: Methods, Standardised percentages \"living in a metropolitan county of 1 million or more\"",
+      "severity": "minor",
+      "found_by": "R2",
+      "confidence": 4,
+      "competence_basis": "SEER county attribute coding (Card #3). Checked against the rurality labels in config/analysis.yaml ('Counties in metropolitan areas ge 1 million pop').",
+      "attribution": "previously_missed",
+      "attribution_evidence": "The original Results, Cohort already read 'against 1.1% of men in metropolitan counties of 1 million or more', and the revised Results keep this wording, so the defect is present in both versions. The original Methods had the accurate 'a county in a metropolitan area of 1 million or more'; the revision carried the inaccurate form into Methods as well.",
+      "nearest_roadmap_item": "REV-42",
+      "non_match_rationale": "REV-42 concerns 'corresponds to' wording in Supplementary Box 2 and calling US counties 'remote'. It does not cover the metropolitan-area population label of the Rural-Urban Continuum Code categories."
+    }
+  ],
+  "dissents": [],
+  "escalation_exceptions": []
+}

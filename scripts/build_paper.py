@@ -100,9 +100,9 @@ FLOW_LABELS = {
 def flow_figure(root: Path) -> str:
     """TikZ inclusion flow drawn from the primary cohort flow table in reports/phase3.md."""
     lines = [
-        r"\begin{tikzpicture}[>=latex, font=\footnotesize,",
-        r"  cohortbox/.style={draw, align=center, text width=6.2cm, inner sep=3pt},",
-        r"  exclusionbox/.style={draw, align=left, text width=6.0cm, inner sep=3pt, fill=black!4}]",
+        r"\begin{tikzpicture}[>=latex, font=\sffamily\scriptsize,",
+        r"  cohortbox/.style={draw=accent, align=center, text width=3.9cm, inner sep=2.5pt, execute at begin node={\hyphenpenalty=10000}},",
+        r"  exclusionbox/.style={draw=accent, align=left, text width=3.3cm, inner sep=2.5pt, fill=accentlight, execute at begin node={\hyphenpenalty=10000}}]",
     ]
     for i, (step, remaining, excluded, _share) in enumerate(
             rows_under(root, "reports/phase3.md", "## Inclusion flow (primary cohort)")):
@@ -114,20 +114,23 @@ def flow_figure(root: Path) -> str:
         if i:
             middle = rf"$(s{i - 1}.south)!0.5!(s{i}.north)$"
             lines += [
-                rf"\draw[->] (s{i - 1}) -- (s{i});",
-                rf"\node[exclusionbox, anchor=west] (e{i}) at ($(s{i - 1}.south)!0.5!(s{i}.north) + (3.9cm,0)$) "
+                rf"\draw[->, accent] (s{i - 1}) -- (s{i});",
+                rf"\node[exclusionbox, anchor=west] (e{i}) at ($(s{i - 1}.south)!0.5!(s{i}.north) + (2.35cm,0)$) "
                 rf"{{{reason}\\n = {excluded}}};",
-                rf"\draw[->] ({middle}) -- (e{i}.west);",
+                rf"\draw[->, accent] ({middle}) -- (e{i}.west);",
             ]
     return "\n".join(lines + [r"\end{tikzpicture}"]) + "\n"
 
 
 def float_table(label: str, caption: str, tabular: str, note: str, size: str = r"\footnotesize",
-                colsep: str = "3pt") -> str:
+                colsep: str = "3pt", wide: bool = False) -> str:
+    """A captioned table with a shaded header row; ``wide`` spans both columns of the two-column paper."""
+    environment = "table*" if wide else "table"
+    tabular = tabular.replace("\\toprule\n", "\\toprule\n\\rowcolor{tablehead}", 1)
     return (
-        f"\\begin{{table}}[tbp]\n\\centering\n{size}\n\\setlength{{\\tabcolsep}}{{{colsep}}}\n"
+        f"\\begin{{{environment}}}[tbp]\n\\centering\\sffamily\n{size}\n\\setlength{{\\tabcolsep}}{{{colsep}}}\n"
         f"\\caption{{{caption}}}\n\\label{{{label}}}\n{tabular}\n\\par\\smallskip\n"
-        f"\\begin{{minipage}}{{\\linewidth}}\\scriptsize {note}\\end{{minipage}}\n\\end{{table}}\n"
+        f"\\begin{{minipage}}{{\\linewidth}}\\scriptsize {note}\\end{{minipage}}\n\\end{{{environment}}}\n"
     )
 
 
@@ -178,7 +181,7 @@ def table1(root: Path) -> str:
             r"Research Data Use Agreement, either because it rests on 1 to 4 men or because a total would reveal "
             r"such a cell. County income quartiles are formed from 16 bands of county median household income.")
     return float_table("tab:cohort", "Characteristics of the 330,827 men in the cohort, by county rurality",
-                       tabular, note)
+                       tabular, note, colsep="6pt", wide=True)
 
 
 def table2(root: Path) -> str:
@@ -200,7 +203,7 @@ def table2(root: Path) -> str:
             r"fold assignments, from the post-review analysis with per-step tuning (protocol amendment 1.9). AUC: "
             r"0.5 is chance.")
     return float_table("tab:models", "Predictive performance and skill added by clinical need and by area and "
-                       "marital characteristics, by risk group and model", tabular, note, colsep="3.5pt")
+                       "marital characteristics, by risk group and model", tabular, note, colsep="5pt", wide=True)
 
 
 def s1(root: Path) -> str:
@@ -382,8 +385,8 @@ def check(name: str, tex: str, sources: list[str]) -> list[str]:
         raise SystemExit(f"{name}.tex: citations in order of first use {cited} differ from bibliography {listed}")
     words = {"words (prose)": len(prose.split())}
     if name == "main":
-        words["abstract words"] = len(tex_prose(between(body, r"\textbf{Background.}", r"\textbf{Keywords")).split())
-        words["main text words"] = len(tex_prose(between(body, r"\section{Introduction}", r"\section*{Declarations}")).split())
+        words["abstract words"] = len(tex_prose(between(body, "%% abstract-start", "%% abstract-end")).split())
+        words["main text words"] = len(tex_prose(between(body, "%% main-text-start", "%% main-text-end")).split())
     missing = unsupported_numbers(prose, sources)
     print(f"{name}.tex: " + ", ".join(f"{k} {v:,}" for k, v in words.items()) + f"; {len(cited)} references; "
           f"{len(missing)} unsupported number(s)")

@@ -48,6 +48,16 @@ def test_tex_prose_keeps_running_text_and_drops_floats_citations_and_comments():
     assert "comment" not in prose and "99" not in prose and "2024" not in prose and "cite" not in prose
 
 
+def test_tex_prose_drops_environment_arguments():
+    prose = tex_prose("\\begin{minipage}[t]{0.325\\textwidth}Key 42.5 points\\end{minipage}")
+    assert "0.325" not in prose and "42.5" in prose
+
+
+def test_tex_prose_keeps_text_inside_a_bracketed_command_argument():
+    prose = tex_prose("\\twocolumn[{\\begin{minipage}[t]{0.6\\textwidth}Front 12.5 matter\\end{minipage}\n}]Body")
+    assert "12.5" in prose and "Front" in prose and "Body" in prose
+
+
 def test_cite_order_and_bibitem_order():
     assert cite_order("x \\cite{b,a} y \\cite{a} z \\cite{c}") == ["b", "a", "c"]
     assert bibitem_order("\\bibitem{b} one \\bibitem{a} two") == ["b", "a"]

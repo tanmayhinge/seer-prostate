@@ -1,12 +1,12 @@
-\begin{table}[tbp]
-\centering
+\begin{table*}[tbp]
+\centering\sffamily
 \footnotesize
-\setlength{\tabcolsep}{3.5pt}
+\setlength{\tabcolsep}{5pt}
 \caption{Predictive performance and skill added by clinical need and by area and marital characteristics, by risk group and model}
 \label{tab:models}
 \begin{tabular}{@{}llrrrrrr@{}}
 \toprule
-\makecell[l]{Risk group} & \makecell[l]{Model} & \makecell[r]{Men} & \makecell[r]{Skill at\\step 2 (\%)} & \makecell[r]{AUC at\\step 2} & \makecell[r]{Clinical need\\added (95\% interval)} & \makecell[r]{Area and marital\\added (95\% interval)} & \makecell[r]{Fold-seed\\range\textsuperscript{a}} \\
+\rowcolor{tablehead}\makecell[l]{Risk group} & \makecell[l]{Model} & \makecell[r]{Men} & \makecell[r]{Skill at\\step 2 (\%)} & \makecell[r]{AUC at\\step 2} & \makecell[r]{Clinical need\\added (95\% interval)} & \makecell[r]{Area and marital\\added (95\% interval)} & \makecell[r]{Fold-seed\\range\textsuperscript{a}} \\
 \midrule
 All men & Logistic & 330,827 & 3.63 & 0.638 & 3.01 (2.69 to 3.38) & 0.62 (0.39 to 0.87) & 0.61 to 0.62 \\
  & LightGBM & 330,827 & 4.17 & 0.648 & 3.18 (2.85 to 3.54) & 0.99 (0.73 to 1.30) & 0.98 to 0.99 \\
@@ -22,4 +22,4 @@ Unknown & Logistic & 14,817 & 1.07 & 0.610 & 0.65 (0.41 to 0.89) & 0.42 (0.08 to
 \end{tabular}
 \par\smallskip
 \begin{minipage}{\linewidth}\scriptsize Skill is the percentage reduction in out-of-fold log-loss against the step 0 model (year of diagnosis only); added values are in percentage points. Intervals are 95\% cluster bootstrap intervals over 79 rurality by county income cells (500 resamples of out-of-fold predictions, no refitting), so they exclude model-fitting variability. \textsuperscript{a}Range of the area and marital increment over 10 fold assignments, from the post-review analysis with per-step tuning (protocol amendment 1.9). AUC: 0.5 is chance.\end{minipage}
-\end{table}
+\end{table*}

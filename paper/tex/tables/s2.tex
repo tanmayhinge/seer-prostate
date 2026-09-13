@@ -1,12 +1,12 @@
 \begin{table}[H]
-\centering
+\centering\sffamily
 \footnotesize
 \setlength{\tabcolsep}{3pt}
 \caption{Performance at step 2 by risk group and model}
 \label{tab:s2}
 \begin{tabular}{@{}llrrrrr@{}}
 \toprule
-\makecell[l]{Stratum} & \makecell[l]{Model} & \makecell[r]{Log-loss\\skill (\%)} & \makecell[r]{Brier\\skill (\%)} & \makecell[r]{AUC} & \makecell[r]{Calibration\\intercept} & \makecell[r]{Calibration\\slope} \\
+\rowcolor{tablehead}\makecell[l]{Stratum} & \makecell[l]{Model} & \makecell[r]{Log-loss\\skill (\%)} & \makecell[r]{Brier\\skill (\%)} & \makecell[r]{AUC} & \makecell[r]{Calibration\\intercept} & \makecell[r]{Calibration\\slope} \\
 \midrule
 All men & Logistic & 3.63 & 4.66 & 0.638 & $-$0.000 & 1.000 \\
  & LightGBM & 4.17 & 5.34 & 0.648 & $-$0.000 & 1.030 \\

@@ -1,19 +1,26 @@
+\documentclass[10pt,a4paper]{article}
 \input{preamble}
-\rhead{\small Supplementary material}
+\geometry{top=21mm, bottom=22mm, left=20mm, right=20mm, headsep=5mm, footskip=9mm}
+\renewcommand{\doclabel}{Supplementary material}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.45em}
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\thefigure}{S\arabic{figure}}
 
 \begin{document}
 
-\thispagestyle{plain}
-{\raggedright
-{\LARGE\bfseries Supplementary material\par}
-\vspace{0.6em}
-{\large How much do area and marital characteristics add to clinical need in predicting delayed prostate cancer treatment? A machine learning analysis of US SEER data, 2010 to 2022\par}
-\vspace{0.4em}
-{\small Tanmay Hinge. Code, protocol and full analysis reports: \url{https://github.com/tanmayhinge/seer-prostate}\par}
-}
-\vspace{0.8em}
+\thispagestyle{firstpage}
+\topband{SUPPLEMENTARY MATERIAL}{PREPRINT \textbullet{} NOT PEER REVIEWED}
+
+\vspace{12pt}
+{\raggedright\sffamily\bfseries\fontsize{16}{20}\selectfont How much do area and marital characteristics add to clinical need in predicting delayed prostate cancer treatment?\par}
+\vspace{4pt}
+{\raggedright\sffamily\large\color{black!70} A machine learning analysis of US SEER data, 2010 to 2022\par}
+\vspace{8pt}
+{\raggedright\sffamily\small\textbf{Tanmay Hinge}\enspace\textcolor{black!70}{Code, protocol and full analysis reports: \url{https://github.com/tanmayhinge/seer-prostate}}\par}
+\vspace{8pt}
+{\color{accent}\hrule height 0.8pt}
+\vspace{4pt}
 
 \section{How to read this supplement}
 \begin{itemize}
@@ -78,11 +85,11 @@ Data gaps reported in those analyses were no comorbidity data~\cite{foley2022}, 
 \begin{longtable}{@{}>{\raggedright}p{2.3cm}>{\raggedright}p{5.0cm}>{\raggedright\arraybackslash}p{7.8cm}@{}}
 \caption{STROBE and RECORD checklist. Item wording is abbreviated from the RECORD statement, which includes the STROBE items~\cite{strobe2007,record2015}. Locations are sections of the main text unless marked S (this supplement).}\label{tab:strobe}\\
 \toprule
-Item & Topic & Where reported \\
+\rowcolor{tablehead}Item & Topic & Where reported \\
 \midrule
 \endfirsthead
 \toprule
-Item & Topic & Where reported \\
+\rowcolor{tablehead}Item & Topic & Where reported \\
 \midrule
 \endhead
 1a, 1b & Design in title or abstract; informative abstract & Abstract (retrospective cohort study) \\
@@ -122,11 +129,11 @@ RECORD 22.1 & Access to protocol, data and code & Methods, Protocol, reporting a
 \begin{longtable}{@{}>{\raggedright}p{2.3cm}>{\raggedright}p{5.0cm}>{\raggedright\arraybackslash}p{7.8cm}@{}}
 \caption{TRIPOD+AI checklist. Item wording is abbreviated from the TRIPOD+AI checklist~\cite{tripodai2024}. Development and internal evaluation use the same data through cross-fitting; the models are measurement tools and are not proposed for clinical use.}\label{tab:tripod}\\
 \toprule
-Item & Topic & Where reported \\
+\rowcolor{tablehead}Item & Topic & Where reported \\
 \midrule
 \endfirsthead
 \toprule
-Item & Topic & Where reported \\
+\rowcolor{tablehead}Item & Topic & Where reported \\
 \midrule
 \endhead
 1, 2 & Title; abstract & Title; Abstract \\

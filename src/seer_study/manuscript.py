@@ -97,8 +97,9 @@ def tex_prose(tex: str) -> str:
     text = re.sub(r"(?<!\\)%.*", "", tex)
     text = re.sub(r"\\begin\{(thebibliography|figure|table)(\*?)\}.*?\\end\{\1\2\}", " ", text, flags=re.S)
     text = re.sub(r"\\(?:cite[pt]?|label|ref|input|includegraphics|url|href)(?:\[[^\]]*\])*\{[^}]*\}", " ", text)
-    text = re.sub(r"\\(?:begin|end)\{[^}]*\}", " ", text)
-    text = re.sub(r"\\[A-Za-z]+\*?(?:\[[^\]]*\])?", " ", text)
+    text = re.sub(r"\\begin\{[^}]*\}(?:\[[^\]]*\])*(?:\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\})?", " ", text)
+    text = re.sub(r"\\end\{[^}]*\}", " ", text)
+    text = re.sub(r"\\[A-Za-z]+\*?(?:\[[^\]{}\n]*\])?", " ", text)  # a short option list, never a {...} argument
     text = re.sub(r"\\([%&$#_{}])", r"\1", text)
     text = text.replace("~", " ").replace("{", "").replace("}", "").replace("\\\\", " ")
     return re.sub(r"[ \t]+", " ", text)

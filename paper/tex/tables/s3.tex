@@ -1,12 +1,12 @@
 \begin{table}[H]
-\centering
+\centering\sffamily
 \footnotesize
 \setlength{\tabcolsep}{2pt}
 \caption{Robustness of the area and marital increment to tuning, fold assignment and clustering}
 \label{tab:s3}
 \begin{tabular}{@{}llrrrr@{}}
 \toprule
-\makecell[l]{Stratum} & \makecell[l]{Model} & \makecell[r]{Primary analysis\\(tuned at step 3)} & \makecell[r]{Tuned at\\each step} & \makecell[r]{Mean (range) over\\10 fold seeds} & \makecell[r]{Clustered by county\\income band only} \\
+\rowcolor{tablehead}\makecell[l]{Stratum} & \makecell[l]{Model} & \makecell[r]{Primary analysis\\(tuned at step 3)} & \makecell[r]{Tuned at\\each step} & \makecell[r]{Mean (range) over\\10 fold seeds} & \makecell[r]{Clustered by county\\income band only} \\
 \midrule
 All men & Logistic & 0.62 (0.39 to 0.87) & 0.62 (0.39 to 0.87) & 0.62 (0.61 to 0.62) & 0.62 (0.38 to 0.90) \\
  & LightGBM & 0.99 (0.73 to 1.30) & 0.99 (0.73 to 1.30) & 0.99 (0.98 to 0.99) & 0.99 (0.72 to 1.35) \\

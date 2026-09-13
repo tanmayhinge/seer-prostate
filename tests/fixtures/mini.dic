@@ -1,0 +1,21 @@
+[System]
+Output filename=mini_export.txt
+
+[Export Options]
+Variable format=labels
+Field delimiter=tab
+Variable names included=false
+
+[Variables]
+Var1Name=Patient ID
+Var2Name=Year of diagnosis
+Var3Name=Time from diagnosis to treatment in days recode
+Var4Name=Gleason Score Clinical Recode (2010+)
+Var5Name=Gleason Score Pathological Recode (2010+)
+Var6Name=RX Summ--Surg Prim Site (1998-2022)
+Var7Name=RX Summ--Surg Prim Site 2023 (2023+)
+Var8Name=Sequence number
+Var9Name=Derived EOD 2018 T Recode (2018+)
+Var10Name=Combined Summary Stage with Expanded Regional Codes (2004+)
+Var11Name=PSA Lab Value Recode (2010+)
+Var12Name=Reason no cancer-directed surgery

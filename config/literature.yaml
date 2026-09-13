@@ -1,0 +1,45 @@
+# Phase 1 literature search: PubMed through NCBI E-utilities.
+# The four topics requested in the brief, plus two novelty checks that are not
+# restricted to SEER: timeliness disparities in any data source, and machine
+# learning or decomposition approaches to treatment disparities.
+
+database: pubmed
+esearch_url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi
+efetch_url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi
+tool: seer_prostate_timeliness_study
+date_from: "2000/01/01"
+date_to: "2026/09/13"
+retmax: 300
+efetch_batch_size: 150
+request_interval_seconds: 0.4      # NCBI allows 3 requests per second without an API key
+output_dir: reports/phase1_search
+seer_markers: ["SEER", "Surveillance, Epidemiology, and End Results"]
+
+queries:
+  - key: timeliness_seer
+    topic: Time to treatment and treatment delay in prostate cancer (SEER)
+    term: '("Prostatic Neoplasms"[mh] OR "prostate cancer"[tiab] OR "prostatic cancer"[tiab] OR "prostate carcinoma"[tiab] OR "prostate adenocarcinoma"[tiab]) AND ("Time-to-Treatment"[mh] OR "time to treatment"[tiab] OR "time-to-treatment"[tiab] OR "treatment delay"[tiab] OR "treatment delays"[tiab] OR "delay in treatment"[tiab] OR "delayed treatment"[tiab] OR "time to surgery"[tiab] OR "surgical delay"[tiab] OR "time to radical prostatectomy"[tiab] OR "time to radiotherapy"[tiab] OR "waiting time"[tiab] OR "wait time"[tiab] OR "treatment interval"[tiab] OR "time to initiation"[tiab]) AND ("SEER Program"[mh] OR SEER[tiab] OR "Surveillance, Epidemiology, and End Results"[tiab])'
+
+  - key: marital_seer
+    topic: Marital status and prostate cancer treatment receipt (SEER)
+    term: '("Prostatic Neoplasms"[mh] OR "prostate cancer"[tiab] OR "prostatic cancer"[tiab] OR "prostate carcinoma"[tiab]) AND ("Marital Status"[mh] OR marital[tiab] OR married[tiab] OR unmarried[tiab] OR marriage[tiab]) AND ("SEER Program"[mh] OR SEER[tiab] OR "Surveillance, Epidemiology, and End Results"[tiab])'
+
+  - key: rural_seer
+    topic: Rural and urban disparities in prostate cancer treatment (SEER)
+    term: '("Prostatic Neoplasms"[mh] OR "prostate cancer"[tiab] OR "prostatic cancer"[tiab] OR "prostate carcinoma"[tiab]) AND ("Rural Population"[mh] OR "Rural Health"[mh] OR rural[tiab] OR rurality[tiab] OR "rural-urban"[tiab] OR nonmetropolitan[tiab] OR "non-metropolitan"[tiab]) AND (treatment[tiab] OR therapy[tiab] OR prostatectomy[tiab] OR radiotherapy[tiab] OR radiation[tiab] OR "active surveillance"[tiab]) AND ("SEER Program"[mh] OR SEER[tiab] OR "Surveillance, Epidemiology, and End Results"[tiab])'
+
+  - key: income_seer
+    topic: County-level income and cancer treatment access (SEER)
+    term: '("Neoplasms"[mh] OR cancer[tiab]) AND ("county-level"[tiab] OR county[tiab] OR "area-level"[tiab] OR "census tract"[tiab]) AND ("Income"[mh] OR income[tiab] OR socioeconomic[tiab] OR poverty[tiab]) AND (treatment[tiab] OR access[tiab] OR receipt[tiab] OR "time to treatment"[tiab] OR delay[tiab]) AND ("SEER Program"[mh] OR SEER[tiab] OR "Surveillance, Epidemiology, and End Results"[tiab])'
+
+  - key: timeliness_disparities_any_source
+    topic: Novelty check, prostate cancer treatment timeliness and social factors in any data source
+    term: '("Prostatic Neoplasms"[mh] OR "prostate cancer"[tiab] OR "prostatic cancer"[tiab]) AND ("Time-to-Treatment"[mh] OR "time to treatment"[tiab] OR "treatment delay"[tiab] OR "time to surgery"[tiab] OR "time to radical prostatectomy"[tiab] OR "waiting time"[tiab] OR "wait time"[tiab] OR "treatment interval"[tiab]) AND (disparit*[tiab] OR rural*[tiab] OR marital[tiab] OR income[tiab] OR socioeconomic[tiab] OR racial[tiab] OR race[tiab] OR insurance[tiab] OR "National Cancer Database"[tiab] OR NCDB[tiab])'
+
+  - key: incremental_value_social_factors
+    topic: Novelty check, added predictive value of social or non-clinical factors for prostate cancer treatment or timing
+    term: '("Prostatic Neoplasms"[mh] OR "prostate cancer"[tiab]) AND ("social determinants"[tiab] OR "Social Determinants of Health"[mh] OR "non-clinical factors"[tiab] OR "nonclinical factors"[tiab] OR sociodemographic[tiab]) AND ("area under the curve"[tiab] OR AUC[tiab] OR "C-statistic"[tiab] OR "c-index"[tiab] OR discrimination[tiab] OR "explained variance"[tiab] OR "variance explained"[tiab] OR "relative importance"[tiab] OR "incremental"[tiab]) AND (treatment[tiab] OR "time to treatment"[tiab] OR delay[tiab] OR receipt[tiab] OR prostatectomy[tiab] OR radiotherapy[tiab])'
+
+  - key: ml_decomposition
+    topic: Novelty check, machine learning or decomposition of prostate cancer treatment disparities
+    term: '("Prostatic Neoplasms"[mh] OR "prostate cancer"[tiab] OR "prostatic cancer"[tiab]) AND ("Machine Learning"[mh] OR "machine learning"[tiab] OR "gradient boosting"[tiab] OR XGBoost[tiab] OR "random forest"[tiab] OR decomposition[tiab] OR "Oaxaca"[tiab] OR "Shapley"[tiab]) AND (disparit*[tiab] OR inequit*[tiab] OR "time to treatment"[tiab] OR "treatment receipt"[tiab] OR "treatment delay"[tiab] OR rural[tiab] OR marital[tiab] OR socioeconomic[tiab] OR "non-clinical"[tiab] OR nonclinical[tiab])'

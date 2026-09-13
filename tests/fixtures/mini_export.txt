@@ -1,0 +1,6 @@
+00000225	2011	Unable to calculate	Gleason score 6	No prostatectomy done	00	Blank(s)	One primary only	Blank(s)	Localized only	6.6	Not recommended
+00000262	2011	45	Gleason score 7	Gleason score 7	50	Blank(s)	1st of 2 or more primaries	Blank(s)	Localized only	7.7	Surgery performed
+00000508	2021	127	Not documented; Not assessed or unknown if assessed	No prostatectomy done	00	Blank(s)	2nd of 2 or more primaries	T2	Distant site(s)/node(s) involved	Not documented; not assessed; unknown	Not recommended
+00000601	2023	731+ days	Gleason score 8	Not documented; Not assessed or unknown if assessed	Blank(s)	A500	One primary only	Blank(s)	Localized only	98.0 ng/ml or greater	Surgery performed
+00000777	2023	0	Gleason score 9	No prostatectomy done	Blank(s)	A000	One primary only	88	Regional lymph nodes involved only	Blank(s)	Not recommended
+00000999	2019	12	Gleason score 7	No prostatectomy done	00	Blank(s)	One primary only	T1c	Localized only	4.5	Not recommended

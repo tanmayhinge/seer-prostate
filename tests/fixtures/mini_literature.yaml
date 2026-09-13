@@ -1,0 +1,19 @@
+# Minimal literature search configuration for tests.
+database: pubmed
+esearch_url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi
+efetch_url: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi
+tool: seer_prostate_timeliness_study
+date_from: "2000/01/01"
+date_to: "2026/09/13"
+retmax: 50
+efetch_batch_size: 1
+request_interval_seconds: 0.4
+output_dir: reports/phase1_search
+seer_markers: ["SEER", "Surveillance, Epidemiology, and End Results"]
+queries:
+  - key: timeliness
+    topic: Time to treatment in prostate cancer
+    term: 'prostate AND "time to treatment"'
+  - key: rural
+    topic: Rural and urban disparities in prostate cancer treatment
+    term: prostate AND rural

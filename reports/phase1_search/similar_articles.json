@@ -1,0 +1,471 @@
+{
+  "method": "PubMed similar articles (elink pubmed_pubmed), top 25 per seed, titles via esummary",
+  "run_at": "2026-09-12T21:12:14Z",
+  "seeds": {
+    "41969320": {
+      "why": "clinical vs sociodemographic model gain",
+      "similar": [
+        {
+          "pmid": "42500284",
+          "year": "2026",
+          "title": "Machine learning-based prognostic model for triple-negative breast cancer with axillary lymph node metastasis.",
+          "journal": "Front Oncol"
+        },
+        {
+          "pmid": "41529257",
+          "year": "2026",
+          "title": "Explainable AI for Predicting Mortality Risk in Metastatic Cancer: Retrospective Cohort Study Using the Memorial Sloan Kettering-Metastatic Dataset.",
+          "journal": "JMIR Cancer"
+        },
+        {
+          "pmid": "32282466",
+          "year": "2020",
+          "title": "Can Predictive Modeling Tools Identify Patients at High Risk of Prolonged Opioid Use After ACL Reconstruction?",
+          "journal": "Clin Orthop Relat Res"
+        },
+        {
+          "pmid": "41230149",
+          "year": "2025",
+          "title": "Predicting bone metastasis and high-grade Gleason scores in prostate cancer: a retrospective study integrating clinical features and magnetic resonance imaging radiomics.",
+          "journal": "Transl Androl Urol"
+        },
+        {
+          "pmid": "42337207",
+          "year": "2026",
+          "title": "Predicting High-Risk Colorectal Polyps in African Americans Using Pre-colonoscopy Clinical Features: Machine Learning Model Development and Temporal Validation.",
+          "journal": "Dig Dis Sci"
+        },
+        {
+          "pmid": "42475469",
+          "year": "2026",
+          "title": "Personality Theories.",
+          "journal": ""
+        },
+        {
+          "pmid": "40619463",
+          "year": "2025",
+          "title": "Interpretable machine learning models for survival prediction in prostate cancer bone metastases.",
+          "journal": "Sci Rep"
+        },
+        {
+          "pmid": "38517402",
+          "year": "2024",
+          "title": "Are Current Survival Prediction Tools Useful When Treating Subsequent Skeletal-related Events From Bone Metastases?",
+          "journal": "Clin Orthop Relat Res"
+        },
+        {
+          "pmid": "41814305",
+          "year": "2026",
+          "title": "A novel machine learning-based model for precise prediction of postoperative recurrence in gallbladder cancer: development and multicenter validation across four centers.",
+          "journal": "World J Surg Oncol"
+        },
+        {
+          "pmid": "42583236",
+          "year": "2026",
+          "title": "Machine learning models based on XGBoost algorithm to predict prognosis of lung cancer brain metastases.",
+          "journal": "J Thorac Dis"
+        },
+        {
+          "pmid": "42445719",
+          "year": "2026",
+          "title": "Development and validation of an explainable machine learning model for mortality prediction in ICU patients with lung cancer.",
+          "journal": "Front Cell Dev Biol"
+        },
+        {
+          "pmid": "40106382",
+          "year": "2025",
+          "title": "Development of Machine Learning-based Algorithms to Predict the 2- and 5-year Risk of TKA After Tibial Plateau Fracture Treatment.",
+          "journal": "Clin Orthop Relat Res"
+        },
+        {
+          "pmid": "39722042",
+          "year": "2024",
+          "title": "Construction of a random survival forest model based on a machine learning algorithm to predict early recurrence after hepatectomy for adult hepatocellular carcinoma.",
+          "journal": "BMC Cancer"
+        },
+        {
+          "pmid": "42324504",
+          "year": "2026",
+          "title": "Contribution of resting pulse rate to fall risk prediction in patients with glaucoma: a nationwide retrospective study based on an XGBoost model.",
+          "journal": "BMC Ophthalmol"
+        },
+        {
+          "pmid": "41116179",
+          "year": "2025",
+          "title": "Development of a radiomics-3D deep learning fusion model for prognostic prediction in pancreatic cancer.",
+          "journal": "BMC Cancer"
+        },
+        {
+          "pmid": "42129764",
+          "year": "2026",
+          "title": "Development and internal validation of a machine learning-based model for predicting postoperative complications after primary liver cancer resection.",
+          "journal": "BMC Surg"
+        },
+        {
+          "pmid": "41297023",
+          "year": "2025",
+          "title": "Comparison of Machine Learning Models for Colon Cancer Survival: Predictive Modeling Approach.",
+          "journal": "JMIR Cancer"
+        },
+        {
+          "pmid": "41537209",
+          "year": "2026",
+          "title": "Development and Validation of a Machine Learning-Based Radiomics Model Using Ultrasound Image Features for Prostate Cancer Risk Stratification.",
+          "journal": "Ann Ital Chir"
+        },
+        {
+          "pmid": "42204546",
+          "year": "2026",
+          "title": "Machine learning-based prognostic model integrating preoperative HALP score and lactate dehydrogenase for predicting postoperative recurrence of prostate cancer.",
+          "journal": "World J Surg Oncol"
+        },
+        {
+          "pmid": "34849027",
+          "year": "2021",
+          "title": "Application of Machine Learning Techniques to Predict Bone Metastasis in Patients with Prostate Cancer.",
+          "journal": "Cancer Manag Res"
+        },
+        {
+          "pmid": "42592066",
+          "year": "2026",
+          "title": "Development and internal validation of an XGBoost-based prognostic prediction model and risk stratification system for overall survival in pediatric neuroblastoma: a SEER-based study.",
+          "journal": "Transl Pediatr"
+        },
+        {
+          "pmid": "40418571",
+          "year": "2025",
+          "title": "Supervised Machine Learning Models for Predicting Sepsis-Associated Liver Injury in Patients With Sepsis: Development and Validation Study Based on a Multicenter Cohort Study.",
+          "journal": "J Med Internet Res"
+        },
+        {
+          "pmid": "40522559",
+          "year": "2025",
+          "title": "Automated feature learning and survival prognostication in grade 4 glioma using supervised machine learning models.",
+          "journal": "J Neurooncol"
+        },
+        {
+          "pmid": "39864427",
+          "year": "2025",
+          "title": "Constructing and Validating Models for Predicting Gleason Grade Group Upgrading following Radical Prostatectomy in Localized Prostate Cancer: A Comparison between Machine Learning Algorithms and Conventional Logistic Regression.",
+          "journal": "Oncology"
+        },
+        {
+          "pmid": "41670376",
+          "year": "2026",
+          "title": "Comparison and validation of multiple machine learning algorithms for predicting MDRO infection in catheter-related bloodstream patients: a multicenter cohort study.",
+          "journal": "Microbiol Spectr"
+        }
+      ]
+    },
+    "38214587": {
+      "why": "decomposition of treatment receipt",
+      "similar": [
+        {
+          "pmid": "36776124",
+          "year": "2023",
+          "title": "Racial inequities in the quality of surgical care among Medicare beneficiaries with localized prostate cancer.",
+          "journal": "Cancer"
+        },
+        {
+          "pmid": "26502115",
+          "year": "2016",
+          "title": "Racial Differences in the Surgical Care of Medicare Beneficiaries With Localized Prostate Cancer.",
+          "journal": "JAMA Oncol"
+        },
+        {
+          "pmid": "14625261",
+          "year": "2003",
+          "title": "Racial differences in mortality among Medicare recipients after treatment for localized prostate cancer.",
+          "journal": "J Natl Cancer Inst"
+        },
+        {
+          "pmid": "35238879",
+          "year": "2022",
+          "title": "Mediators of Racial Disparity in the Use of Prostate Magnetic Resonance Imaging Among Patients With Prostate Cancer.",
+          "journal": "JAMA Oncol"
+        },
+        {
+          "pmid": "21692067",
+          "year": "2011",
+          "title": "Hospital racial composition and the treatment of localized prostate cancer.",
+          "journal": "Cancer"
+        },
+        {
+          "pmid": "33999405",
+          "year": "2021",
+          "title": "Racial differences in the treatment and outcomes for prostate cancer in Massachusetts.",
+          "journal": "Cancer"
+        },
+        {
+          "pmid": "15795905",
+          "year": "2005",
+          "title": "Marriage and ethnicity predict treatment in localized prostate carcinoma.",
+          "journal": "Cancer"
+        },
+        {
+          "pmid": "9749657",
+          "year": "1998",
+          "title": "Trends and black/white differences in treatment for nonmetastatic prostate cancer.",
+          "journal": "Med Care"
+        },
+        {
+          "pmid": "23716470",
+          "year": "2013",
+          "title": "Racial differences in time from prostate cancer diagnosis to treatment initiation: a population-based study.",
+          "journal": "Cancer"
+        },
+        {
+          "pmid": "22245306",
+          "year": "2012",
+          "title": "Understanding variation in primary prostate cancer treatment within the Veterans Health Administration.",
+          "journal": "Urology"
+        },
+        {
+          "pmid": "15612083",
+          "year": "2005",
+          "title": "Racial treatment trends in localized/regional prostate carcinoma: 1992-1999.",
+          "journal": "Cancer"
+        },
+        {
+          "pmid": "16783608",
+          "year": "2006",
+          "title": "Racial differences in clinical progression among Medicare recipients after treatment for localized prostate cancer (United States).",
+          "journal": "Cancer Causes Control"
+        },
+        {
+          "pmid": "27816300",
+          "year": "2017",
+          "title": "Racial Variation in Patient-Reported Outcomes Following Treatment for Localized Prostate Cancer: Results from the CEASAR Study.",
+          "journal": "Eur Urol"
+        },
+        {
+          "pmid": "30506310",
+          "year": "2019",
+          "title": "Racial Disparities in the Presentation, Early Definitive Surgical Treatment, and Mortality Among Men Diagnosed with Poorly Differentiated/Undifferentiated Non-metastatic Prostate Cancer in the USA.",
+          "journal": "J Racial Ethn Health Disparities"
+        },
+        {
+          "pmid": "25306287",
+          "year": "2015",
+          "title": "Income inequality and treatment of African American men with high-risk prostate cancer.",
+          "journal": "Urol Oncol"
+        },
+        {
+          "pmid": "31094098",
+          "year": "2019",
+          "title": "Racial differences in patterns of treatment among men diagnosed with de novo advanced prostate cancer: A SEER-Medicare investigation.",
+          "journal": "Cancer Med"
+        },
+        {
+          "pmid": "15596192",
+          "year": "2004",
+          "title": "Racial disparity in primary and adjuvant treatment for nonmetastatic prostate cancer: SEER-Medicare trends 1991 to 1999.",
+          "journal": "Urology"
+        },
+        {
+          "pmid": "38261043",
+          "year": "2024",
+          "title": "Functional Outcomes After Localized Prostate Cancer Treatment.",
+          "journal": "JAMA"
+        },
+        {
+          "pmid": "32232449",
+          "year": "2020",
+          "title": "Geographic Distribution of Racial Differences in Prostate Cancer Mortality.",
+          "journal": "JAMA Netw Open"
+        },
+        {
+          "pmid": "20299055",
+          "year": "2010",
+          "title": "Evidence supports a faster growth rate and/or earlier transformation to clinically significant prostate cancer in black than in white American men, and influences racial progression and mortality disparity.",
+          "journal": "J Urol"
+        },
+        {
+          "pmid": "22005606",
+          "year": "2011",
+          "title": "Racial disparities in changing to a high-volume urologist among men with localized prostate cancer.",
+          "journal": "Med Care"
+        },
+        {
+          "pmid": "31120534",
+          "year": "2019",
+          "title": "Association of Black Race With Prostate Cancer-Specific and Other-Cause Mortality.",
+          "journal": "JAMA Oncol"
+        },
+        {
+          "pmid": "28099688",
+          "year": "2017",
+          "title": "Discerning the survival advantage among patients with prostate cancer who undergo radical prostatectomy or radiotherapy: The limitations of cancer registry data.",
+          "journal": "Cancer"
+        },
+        {
+          "pmid": "21456009",
+          "year": "2011",
+          "title": "Racial/ethnic differences in receipt of pelvic lymph node dissection among men with localized/regional prostate cancer.",
+          "journal": "Cancer"
+        },
+        {
+          "pmid": "14521648",
+          "year": "2003",
+          "title": "Racial differences in initial treatment for clinically localized prostate cancer. Results from the prostate cancer outcomes study.",
+          "journal": "J Gen Intern Med"
+        }
+      ]
+    },
+    "40476571": {
+      "why": "timeliness by county income",
+      "similar": [
+        {
+          "pmid": "39167405",
+          "year": "2024",
+          "title": "Hospital Accreditation Status and Treatment Differences Among Black Patients With Colon Cancer.",
+          "journal": "JAMA Netw Open"
+        },
+        {
+          "pmid": "41865265",
+          "year": "2026",
+          "title": "Place-Based Disparities in Treatment and Time-to-Initiation for Head and Neck Cancer.",
+          "journal": "Otolaryngol Head Neck Surg"
+        },
+        {
+          "pmid": "38963176",
+          "year": "2025",
+          "title": "Geographic distance to Commission on Cancer-accredited and nonaccredited hospitals in the United States.",
+          "journal": "J Rural Health"
+        },
+        {
+          "pmid": "30646225",
+          "year": "2018",
+          "title": "Factors Associated With Cancer Disparities Among Low-, Medium-, and High-Income US Counties.",
+          "journal": "JAMA Netw Open"
+        },
+        {
+          "pmid": "41257359",
+          "year": "2025",
+          "title": "Trends in initial primary treatment approach and biomarker testing across social determinants of health in early-stage non-small cell lung cancer.",
+          "journal": "Future Oncol"
+        },
+        {
+          "pmid": "34241630",
+          "year": "2021",
+          "title": "Trends in Patient Volume by Hospital Type and the Association of These Trends With Time to Cancer Treatment Initiation.",
+          "journal": "JAMA Netw Open"
+        },
+        {
+          "pmid": "39245428",
+          "year": "2025",
+          "title": "Geographic and racial disparities in the quality of surgical care among patients with nonmetastatic uterine cancer.",
+          "journal": "Am J Obstet Gynecol"
+        },
+        {
+          "pmid": "41933566",
+          "year": "2026",
+          "title": "The Role of Geography in United States Retinoblastoma Care.",
+          "journal": "Am J Ophthalmol"
+        },
+        {
+          "pmid": "34870619",
+          "year": "2022",
+          "title": "Does Hypothetical Centralization of Revision THA and TKA Exacerbate Existing Geographic or Demographic Disparities in Access to Care by Increased Patient Travel Distances or Times? A Large-database Study.",
+          "journal": "Clin Orthop Relat Res"
+        },
+        {
+          "pmid": "40298936",
+          "year": "2025",
+          "title": "Applying a Novel Measure of Community-Level Healthcare Access to Assess Breast Cancer Care Timeliness.",
+          "journal": "Cancer Epidemiol Biomarkers Prev"
+        },
+        {
+          "pmid": "38698670",
+          "year": "2024",
+          "title": "Impact of the Affordable Care Act on access to accredited facilities for cancer treatment.",
+          "journal": "Health Serv Res"
+        },
+        {
+          "pmid": "27231822",
+          "year": "2016",
+          "title": "Racial disparities in health care access among pediatric patients with craniosynostosis.",
+          "journal": "J Neurosurg Pediatr"
+        },
+        {
+          "pmid": "38411981",
+          "year": "2024",
+          "title": "Socioeconomic Disparities in Anal Cancer: Effect on Treatment Delay and Survival.",
+          "journal": "Dis Colon Rectum"
+        },
+        {
+          "pmid": "40663723",
+          "year": "2025",
+          "title": "The Impact of Digital Inequities on Nasal and Paranasal-Sinus Cancer Disparities in the United States: A Cohort Study.",
+          "journal": "JMIR Cancer"
+        },
+        {
+          "pmid": "37721750",
+          "year": "2023",
+          "title": "School-Based Health Centers, Access to Care, and Income-Based Disparities.",
+          "journal": "JAMA Netw Open"
+        },
+        {
+          "pmid": "31995216",
+          "year": "2020",
+          "title": "Market Share of US Catholic Hospitals and Associated Geographic Network Access to Reproductive Health Services.",
+          "journal": "JAMA Netw Open"
+        },
+        {
+          "pmid": "39986339",
+          "year": "2025",
+          "title": "Delay to timely treatment in locally advanced cervical cancer: insurance inequities in access to gynecologic oncology.",
+          "journal": "Am J Obstet Gynecol"
+        },
+        {
+          "pmid": "42160049",
+          "year": "2026",
+          "title": "County-Level Structural Racism Indices and Racial Disparities in Lung Cancer Care.",
+          "journal": "JAMA Netw Open"
+        },
+        {
+          "pmid": "39297529",
+          "year": "2025",
+          "title": "Social Vulnerability and Receipt of Guideline-Concordant Care among Patients with Colorectal Cancer.",
+          "journal": "J Am Coll Surg"
+        },
+        {
+          "pmid": "36321557",
+          "year": "2022",
+          "title": "Folic acid supplementation and malaria susceptibility and severity among people taking antifolate antimalarial drugs in endemic areas.",
+          "journal": "Cochrane Database Syst Rev"
+        },
+        {
+          "pmid": "22818388",
+          "year": "2014",
+          "title": "Race and income disparity in ischemic stroke care: nationwide inpatient sample database, 2002 to 2008.",
+          "journal": "J Stroke Cerebrovasc Dis"
+        },
+        {
+          "pmid": "34665238",
+          "year": "2021",
+          "title": "Analysis of Suicide After Cancer Diagnosis by US County-Level Income and Rural vs Urban Designation, 2000-2016.",
+          "journal": "JAMA Netw Open"
+        },
+        {
+          "pmid": "28231239",
+          "year": "2017",
+          "title": "Surveillance for Health Care Access and Health Services Use, Adults Aged 18-64 Years - Behavioral Risk Factor Surveillance System, United States, 2014.",
+          "journal": "MMWR Surveill Summ"
+        },
+        {
+          "pmid": "23691732",
+          "year": "2013",
+          "title": "Exploring implications of Medicaid participation and wait times for colorectal screening on early detection efforts in Connecticut--a secret-shopper survey.",
+          "journal": "Conn Med"
+        },
+        {
+          "pmid": "25052723",
+          "year": "2014",
+          "title": "Do low-income coronary artery bypass surgery patients have equal opportunity to access excellent quality of care and enjoy good outcome in Taiwan?",
+          "journal": "Int J Equity Health"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+# Display settings for tables and figures. Nothing here changes an analysis result.
+
+# SEER Research Data Use Agreement: statistics based on counts of 1 to 4 must be suppressed in publications.
+small_count_threshold: 5
+suppression_mask: "<5"
+
+income_groups: 4
+year_period_width: 5
+gleason_max_display: 10
+rurality_display:
+  "Counties in metropolitan areas ge 1 million pop": "Metro, 1 million or more"
+  "Counties in metropolitan areas of 250,000 to 1 million pop": "Metro, 250,000 to 1 million"
+  "Counties in metropolitan areas of lt 250 thousand pop": "Metro, under 250,000"
+  "Nonmetropolitan counties adjacent to a metropolitan area": "Nonmetro, adjacent to metro"
+  "Nonmetropolitan counties not adjacent to a metropolitan area": "Nonmetro, not adjacent to metro"
+rurality_unknown_display: "Unknown"
+modality_display:
+  surgery_only: "Radical prostatectomy"
+  radiotherapy_only: "Radiotherapy"
+  both: "Both"
+stage_display:
+  localised: "Localised"
+  regional_extension: "Regional, direct extension"
+  regional_nodes: "Regional, lymph nodes"

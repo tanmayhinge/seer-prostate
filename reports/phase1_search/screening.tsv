@@ -1,0 +1,37 @@
+pmid	year	first_author	source	decision	reason
+41591736	2026	Abdel-Rahman O	SEER	top10	Diagnosis-to-treatment time in SEER including prostate; race associations with longer interval
+40476571	2026	Semprini JT	SEER	top10	Time to treatment by county income in SEER 2018-2021; distributional (quantile) approach; health services framing
+41925394	2026	Dirican CD	SEER	top10	Rural-urban guideline-concordant prostate management 2010-2022, stratified by active surveillance eligibility; overlaps secondary question
+42352495	2026	Pustake M	SEER	top10	Marital status, race, income and radical prostatectomy use 2004-2022
+41969320	2026	Ajjawi I	SEER	top10	Clinical-only versus clinical plus sociodemographic machine learning models; closest design analogue, but outcome is survival
+40162107	2025	Di Vanna M	SEER	top10	Sociodemographic contributors to time to treatment initiation, four cancers including prostate, 2015-2020
+40556964	2025	Ang SP	SEER	top10	Time to treatment initiation and all-cause mortality in SEER, four cancers including prostate
+38214587	2024	Hammarlund N	SEER-Medicare	top10	Kitagawa-Oaxaca-Blinder decomposition of racial gap in definitive treatment; closest decomposition analogue
+36727535	2023	Huang D	SEER Prostate with Watchful Waiting	top10	Marital status, SES and rurality with active surveillance or watchful waiting use
+37460568	2023	Han JH	SEER Prostate with Watchful Waiting	top10	Explainable machine learning (SHAP) for treatment choice including socioeconomic and geographic factors
+41990793	2026	Dirican CD	SEER	supporting	Conference abstract (no abstract text) from the same group as 41925394 on rural definitive therapy 2010-2022
+33577898	2021	Sayyid RK	SEER Prostate with Watchful Waiting	supporting	Married and higher SES men on active surveillance more likely to take definitive treatment
+23716470	2013	Stokes WA	SEER-Medicare	supporting	Foundational: racial differences in diagnosis-to-treatment time by risk group, 2004-2007
+26782713	2016	Cary C	SEER	supporting	Share of treatment variation attributable to county and SEER region (variance partition)
+23765584	2013	Baldwin LM	SEER	supporting	Rural versus urban definitive treatment rates, 2004-2006
+25306287	2015	Ziehr DR	SEER	supporting	Race by census-tract income interaction in definitive therapy for high-risk disease
+34927741	2022	He H	SEER	supporting	Competing-risk prostate-specific and other-cause mortality by socioeconomic factors (relevant to Q3)
+33315115	2020	Cone EB	NCDB	supporting_non_seer	Time to treatment initiation and mortality; prostate median 79 days; benchmark for delay and outcome
+37537835	2023	Janopaul-Naylor JR	NCDB	supporting_non_seer	Delay beyond 180 days in intermediate and high-risk men; race and insurance
+35190652	2022	Jain B	NCDB	supporting_non_seer	Racial disparity in delay beyond 6 months among men 55 or younger
+34836465	2021	Montiel Ishino FA	Tennessee registry	supporting_non_seer	Delay beyond 90 days by race, marital status and Appalachian residence
+22382868	2012	Baade PD	Queensland cohort	supporting_non_seer	Australian diagnostic and treatment intervals; median treatment interval 65 days
+34181467	2021	Oake JD	Manitoba registry	supporting_non_seer	Income and prostatectomy versus radiotherapy in a universal health system
+40121103	2025	Tagai EK	Single health system	supporting_non_seer	Neighbourhood variables added to a clinical risk model: AUC 0.671 to 0.673
+33289846	2020	Xia L	NCDB	supporting_non_seer	Surgical delay and pathology in high-risk disease
+38697001	2024	Luu J	NCDB	supporting_non_seer	Delay beyond 6 months in favourable-risk disease and pathology
+41062130	2025	Adatorwovor R	Kentucky registry	excluded	Machine learning for survival predictors, not treatment receipt or timing
+31246547	2019	Hanson HA	SEER	excluded	Random forest relative importance for mortality, not treatment receipt or timing
+37947332	2023	Gulati R	SEER-calibrated model	excluded	Model-based decomposition of mortality disparity, not treatment
+40865035	2025	Lin JK	SEER-Medicare	excluded	Oaxaca decomposition along treatment cascade in metastatic disease; out of scope (localised disease)
+33145705	2021	Swords DS	SEER and NCDB	excluded	Decomposition method example in pancreatic cancer; methods reference only
+41865265	2026	Erickson A	SEER	excluded	Place-based time to treatment in head and neck cancer; methods analogue only
+26967329	2018	Kendal WS	SEER	excluded	Age bias in survival comparisons; methods reference for Q3 only
+34094691	2021	Wang J	SEER	excluded	Treatment trends 2010-2015; descriptive only
+15795905	2005	Denberg TD	SEER-Medicare	excluded	Marriage and ethnicity predict treatment; outside recency window for the top ten
+32191331	2020	Bagley AF	NCDB	excluded	Nondefinitive therapy in younger high-risk men; insurance-driven, not SEER

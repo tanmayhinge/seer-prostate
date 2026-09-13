@@ -1,0 +1,75 @@
+{
+  "database": "pubmed",
+  "date_from": "2000/01/01",
+  "date_to": "2026/09/13",
+  "retmax_per_query": 300,
+  "sort": "pub_date",
+  "queries": [
+    {
+      "key": "timeliness_seer",
+      "topic": "Time to treatment and treatment delay in prostate cancer (SEER)",
+      "term": "(\"Prostatic Neoplasms\"[mh] OR \"prostate cancer\"[tiab] OR \"prostatic cancer\"[tiab] OR \"prostate carcinoma\"[tiab] OR \"prostate adenocarcinoma\"[tiab]) AND (\"Time-to-Treatment\"[mh] OR \"time to treatment\"[tiab] OR \"time-to-treatment\"[tiab] OR \"treatment delay\"[tiab] OR \"treatment delays\"[tiab] OR \"delay in treatment\"[tiab] OR \"delayed treatment\"[tiab] OR \"time to surgery\"[tiab] OR \"surgical delay\"[tiab] OR \"time to radical prostatectomy\"[tiab] OR \"time to radiotherapy\"[tiab] OR \"waiting time\"[tiab] OR \"wait time\"[tiab] OR \"treatment interval\"[tiab] OR \"time to initiation\"[tiab]) AND (\"SEER Program\"[mh] OR SEER[tiab] OR \"Surveillance, Epidemiology, and End Results\"[tiab])",
+      "query_translation": "(\"Prostatic Neoplasms\"[MeSH Terms] OR \"prostate cancer\"[Title/Abstract] OR \"prostatic cancer\"[Title/Abstract] OR \"prostate carcinoma\"[Title/Abstract] OR \"prostate adenocarcinoma\"[Title/Abstract]) AND (\"time to treatment\"[MeSH Terms] OR \"time to treatment\"[Title/Abstract] OR \"time to treatment\"[Title/Abstract] OR \"treatment delay\"[Title/Abstract] OR \"treatment delays\"[Title/Abstract] OR \"delay in treatment\"[Title/Abstract] OR \"delayed treatment\"[Title/Abstract] OR \"time to surgery\"[Title/Abstract] OR \"surgical delay\"[Title/Abstract] OR \"time to radiotherapy\"[Title/Abstract] OR \"waiting time\"[Title/Abstract] OR \"wait time\"[Title/Abstract] OR \"treatment interval\"[Title/Abstract] OR \"time to initiation\"[Title/Abstract]) AND (\"SEER Program\"[MeSH Terms] OR \"SEER\"[Title/Abstract] OR \"surveillance epidemiology and end results\"[Title/Abstract]) AND 2000/01/01:2026/09/13[Date - Publication]",
+      "count": 21,
+      "retrieved": 21,
+      "run_at": "2026-09-12T21:11:47Z"
+    },
+    {
+      "key": "marital_seer",
+      "topic": "Marital status and prostate cancer treatment receipt (SEER)",
+      "term": "(\"Prostatic Neoplasms\"[mh] OR \"prostate cancer\"[tiab] OR \"prostatic cancer\"[tiab] OR \"prostate carcinoma\"[tiab]) AND (\"Marital Status\"[mh] OR marital[tiab] OR married[tiab] OR unmarried[tiab] OR marriage[tiab]) AND (\"SEER Program\"[mh] OR SEER[tiab] OR \"Surveillance, Epidemiology, and End Results\"[tiab])",
+      "query_translation": "(\"Prostatic Neoplasms\"[MeSH Terms] OR \"prostate cancer\"[Title/Abstract] OR \"prostatic cancer\"[Title/Abstract] OR \"prostate carcinoma\"[Title/Abstract]) AND (\"Marital Status\"[MeSH Terms] OR \"marital\"[Title/Abstract] OR \"married\"[Title/Abstract] OR \"unmarried\"[Title/Abstract] OR \"marriage\"[Title/Abstract]) AND (\"SEER Program\"[MeSH Terms] OR \"SEER\"[Title/Abstract] OR \"surveillance epidemiology and end results\"[Title/Abstract]) AND 2000/01/01:2026/09/13[Date - Publication]",
+      "count": 131,
+      "retrieved": 131,
+      "run_at": "2026-09-12T21:11:49Z"
+    },
+    {
+      "key": "rural_seer",
+      "topic": "Rural and urban disparities in prostate cancer treatment (SEER)",
+      "term": "(\"Prostatic Neoplasms\"[mh] OR \"prostate cancer\"[tiab] OR \"prostatic cancer\"[tiab] OR \"prostate carcinoma\"[tiab]) AND (\"Rural Population\"[mh] OR \"Rural Health\"[mh] OR rural[tiab] OR rurality[tiab] OR \"rural-urban\"[tiab] OR nonmetropolitan[tiab] OR \"non-metropolitan\"[tiab]) AND (treatment[tiab] OR therapy[tiab] OR prostatectomy[tiab] OR radiotherapy[tiab] OR radiation[tiab] OR \"active surveillance\"[tiab]) AND (\"SEER Program\"[mh] OR SEER[tiab] OR \"Surveillance, Epidemiology, and End Results\"[tiab])",
+      "query_translation": "(\"Prostatic Neoplasms\"[MeSH Terms] OR \"prostate cancer\"[Title/Abstract] OR \"prostatic cancer\"[Title/Abstract] OR \"prostate carcinoma\"[Title/Abstract]) AND (\"Rural Population\"[MeSH Terms] OR \"Rural Health\"[MeSH Terms] OR \"rural\"[Title/Abstract] OR \"rurality\"[Title/Abstract] OR \"rural-urban\"[Title/Abstract] OR \"nonmetropolitan\"[Title/Abstract] OR \"non-metropolitan\"[Title/Abstract]) AND (\"treatment\"[Title/Abstract] OR \"therapy\"[Title/Abstract] OR \"prostatectomy\"[Title/Abstract] OR \"radiotherapy\"[Title/Abstract] OR \"radiation\"[Title/Abstract] OR \"active surveillance\"[Title/Abstract]) AND (\"SEER Program\"[MeSH Terms] OR \"SEER\"[Title/Abstract] OR \"surveillance epidemiology and end results\"[Title/Abstract]) AND 2000/01/01:2026/09/13[Date - Publication]",
+      "count": 32,
+      "retrieved": 32,
+      "run_at": "2026-09-12T21:11:50Z"
+    },
+    {
+      "key": "income_seer",
+      "topic": "County-level income and cancer treatment access (SEER)",
+      "term": "(\"Neoplasms\"[mh] OR cancer[tiab]) AND (\"county-level\"[tiab] OR county[tiab] OR \"area-level\"[tiab] OR \"census tract\"[tiab]) AND (\"Income\"[mh] OR income[tiab] OR socioeconomic[tiab] OR poverty[tiab]) AND (treatment[tiab] OR access[tiab] OR receipt[tiab] OR \"time to treatment\"[tiab] OR delay[tiab]) AND (\"SEER Program\"[mh] OR SEER[tiab] OR \"Surveillance, Epidemiology, and End Results\"[tiab])",
+      "query_translation": "(\"Neoplasms\"[MeSH Terms] OR \"cancer\"[Title/Abstract]) AND (\"county-level\"[Title/Abstract] OR \"county\"[Title/Abstract] OR \"area-level\"[Title/Abstract] OR \"census tract\"[Title/Abstract]) AND (\"Income\"[MeSH Terms] OR \"Income\"[Title/Abstract] OR \"socioeconomic\"[Title/Abstract] OR \"poverty\"[Title/Abstract]) AND (\"treatment\"[Title/Abstract] OR \"access\"[Title/Abstract] OR \"receipt\"[Title/Abstract] OR \"time to treatment\"[Title/Abstract] OR \"delay\"[Title/Abstract]) AND (\"SEER Program\"[MeSH Terms] OR \"SEER\"[Title/Abstract] OR \"surveillance epidemiology and end results\"[Title/Abstract]) AND 2000/01/01:2026/09/13[Date - Publication]",
+      "count": 210,
+      "retrieved": 210,
+      "run_at": "2026-09-12T21:11:51Z"
+    },
+    {
+      "key": "timeliness_disparities_any_source",
+      "topic": "Novelty check, prostate cancer treatment timeliness and social factors in any data source",
+      "term": "(\"Prostatic Neoplasms\"[mh] OR \"prostate cancer\"[tiab] OR \"prostatic cancer\"[tiab]) AND (\"Time-to-Treatment\"[mh] OR \"time to treatment\"[tiab] OR \"treatment delay\"[tiab] OR \"time to surgery\"[tiab] OR \"time to radical prostatectomy\"[tiab] OR \"waiting time\"[tiab] OR \"wait time\"[tiab] OR \"treatment interval\"[tiab]) AND (disparit*[tiab] OR rural*[tiab] OR marital[tiab] OR income[tiab] OR socioeconomic[tiab] OR racial[tiab] OR race[tiab] OR insurance[tiab] OR \"National Cancer Database\"[tiab] OR NCDB[tiab])",
+      "query_translation": "(\"Prostatic Neoplasms\"[MeSH Terms] OR \"prostate cancer\"[Title/Abstract] OR \"prostatic cancer\"[Title/Abstract]) AND (\"Time-to-Treatment\"[MeSH Terms] OR \"Time-to-Treatment\"[Title/Abstract] OR \"treatment delay\"[Title/Abstract] OR \"time to surgery\"[Title/Abstract] OR \"waiting time\"[Title/Abstract] OR \"wait time\"[Title/Abstract] OR \"treatment interval\"[Title/Abstract]) AND (\"disparit*\"[Title/Abstract] OR \"rural*\"[Title/Abstract] OR \"marital\"[Title/Abstract] OR \"income\"[Title/Abstract] OR \"socioeconomic\"[Title/Abstract] OR \"racial\"[Title/Abstract] OR \"race\"[Title/Abstract] OR \"insurance\"[Title/Abstract] OR \"National Cancer Database\"[Title/Abstract] OR \"NCDB\"[Title/Abstract]) AND 2000/01/01:2026/09/13[Date - Publication]",
+      "count": 71,
+      "retrieved": 71,
+      "run_at": "2026-09-12T21:11:53Z"
+    },
+    {
+      "key": "incremental_value_social_factors",
+      "topic": "Novelty check, added predictive value of social or non-clinical factors for prostate cancer treatment or timing",
+      "term": "(\"Prostatic Neoplasms\"[mh] OR \"prostate cancer\"[tiab]) AND (\"social determinants\"[tiab] OR \"Social Determinants of Health\"[mh] OR \"non-clinical factors\"[tiab] OR \"nonclinical factors\"[tiab] OR sociodemographic[tiab]) AND (\"area under the curve\"[tiab] OR AUC[tiab] OR \"C-statistic\"[tiab] OR \"c-index\"[tiab] OR discrimination[tiab] OR \"explained variance\"[tiab] OR \"variance explained\"[tiab] OR \"relative importance\"[tiab] OR \"incremental\"[tiab]) AND (treatment[tiab] OR \"time to treatment\"[tiab] OR delay[tiab] OR receipt[tiab] OR prostatectomy[tiab] OR radiotherapy[tiab])",
+      "query_translation": "(\"Prostatic Neoplasms\"[MeSH Terms] OR \"prostate cancer\"[Title/Abstract]) AND (\"social determinants\"[Title/Abstract] OR \"Social Determinants of Health\"[MeSH Terms] OR \"non-clinical factors\"[Title/Abstract] OR \"nonclinical factors\"[Title/Abstract] OR \"sociodemographic\"[Title/Abstract]) AND (\"area under the curve\"[Title/Abstract] OR \"AUC\"[Title/Abstract] OR \"C-statistic\"[Title/Abstract] OR \"c-index\"[Title/Abstract] OR \"discrimination\"[Title/Abstract] OR \"explained variance\"[Title/Abstract] OR \"variance explained\"[Title/Abstract] OR \"relative importance\"[Title/Abstract] OR \"incremental\"[Title/Abstract]) AND (\"treatment\"[Title/Abstract] OR \"time to treatment\"[Title/Abstract] OR \"delay\"[Title/Abstract] OR \"receipt\"[Title/Abstract] OR \"prostatectomy\"[Title/Abstract] OR \"radiotherapy\"[Title/Abstract]) AND 2000/01/01:2026/09/13[Date - Publication]",
+      "count": 15,
+      "retrieved": 15,
+      "run_at": "2026-09-12T21:11:53Z"
+    },
+    {
+      "key": "ml_decomposition",
+      "topic": "Novelty check, machine learning or decomposition of prostate cancer treatment disparities",
+      "term": "(\"Prostatic Neoplasms\"[mh] OR \"prostate cancer\"[tiab] OR \"prostatic cancer\"[tiab]) AND (\"Machine Learning\"[mh] OR \"machine learning\"[tiab] OR \"gradient boosting\"[tiab] OR XGBoost[tiab] OR \"random forest\"[tiab] OR decomposition[tiab] OR \"Oaxaca\"[tiab] OR \"Shapley\"[tiab]) AND (disparit*[tiab] OR inequit*[tiab] OR \"time to treatment\"[tiab] OR \"treatment receipt\"[tiab] OR \"treatment delay\"[tiab] OR rural[tiab] OR marital[tiab] OR socioeconomic[tiab] OR \"non-clinical\"[tiab] OR nonclinical[tiab])",
+      "query_translation": "(\"Prostatic Neoplasms\"[MeSH Terms] OR \"prostate cancer\"[Title/Abstract] OR \"prostatic cancer\"[Title/Abstract]) AND (\"Machine Learning\"[MeSH Terms] OR \"Machine Learning\"[Title/Abstract] OR \"gradient boosting\"[Title/Abstract] OR \"XGBoost\"[Title/Abstract] OR \"random forest\"[Title/Abstract] OR \"decomposition\"[Title/Abstract] OR \"Oaxaca\"[Title/Abstract] OR \"Shapley\"[Title/Abstract]) AND (\"disparit*\"[Title/Abstract] OR \"inequit*\"[Title/Abstract] OR \"time to treatment\"[Title/Abstract] OR \"treatment receipt\"[Title/Abstract] OR \"treatment delay\"[Title/Abstract] OR \"rural\"[Title/Abstract] OR \"marital\"[Title/Abstract] OR \"socioeconomic\"[Title/Abstract] OR \"non-clinical\"[Title/Abstract] OR \"nonclinical\"[Title/Abstract]) AND 2000/01/01:2026/09/13[Date - Publication]",
+      "count": 48,
+      "retrieved": 48,
+      "run_at": "2026-09-12T21:11:54Z"
+    }
+  ],
+  "unique_pmids": 493,
+  "fetched": 493,
+  "unfetched": []
+}

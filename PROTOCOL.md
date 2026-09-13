@@ -1,12 +1,14 @@
 # Protocol
 
-**Waiting for prostate cancer treatment: how much is clinical need? Social position and time to treatment against the Australian optimal care pathway benchmark in US men, 2010 to 2022**
+**Waiting for prostate cancer treatment: how much is clinical need? A machine learning analysis of social position and time to treatment against the Australian optimal care pathway benchmark, US SEER 2010 to 2022**
 
-Version 1.0, dated 2026-09-13. Written before any outcome modelling. Every constant below lives in `config/analysis.yaml`; this document states the rationale. Nothing later deviates from it without an entry in the amendment log at the end.
+Version 1.3, dated 2026-09-13 (see the amendment log). Written before any outcome modelling. Every constant below lives in `config/analysis.yaml`; this document states the rationale. Nothing later deviates from it without an entry in the amendment log at the end.
 
 ## 1. Background and aim
 
 Timely treatment is a core measure of cancer care quality. The Australian optimal care pathway (OCP) for prostate cancer sets the benchmark that surgery or radiation therapy should begin within 3 months of diagnosis, or within 4 weeks when local symptoms are pronounced (Cancer Australia and Cancer Council, second edition, June 2021). In Tasmania, men from outer regional and remote areas took longer to start active treatment (Foley et al., Sci Rep 2022), and public-hospital patients started 40 to 59 days later than private patients in most risk groups (Foley et al., Cancers 2025).
+
+In Tasmanian lung cancer care, a hospital-based study benchmarked referral, diagnosis and treatment intervals against national quality indicators and the OCP, and on average 7% of patients (range 0 to 16%) met the treatment-time standards (Leong et al., Aust Health Rev 2025). Interviews with Tasmanian general practitioners described fragmented referral systems and limited rural specialist access as barriers to timely lung cancer care (Usman et al., Aust J Prim Health 2026). These studies concern lung cancer. They are cited as context for assessing timeliness against OCP benchmarks, not for comparison with this study's results.
 
 In the US, SEER studies report adjusted associations between single social factors and time to treatment, but none measures how much of the variation in waiting is predictable from clinical need, and how much is added by social position (reports/phase1.md).
 
@@ -118,26 +120,44 @@ A difference is pre-specified as meaningful when it reaches 3 percentage points 
   - strict first primary;
   - excluding prostatectomy not otherwise specified.
 - **A9. Secondary question.** Among intermediate- and high-risk men meeting cohort steps 1 to 5: receipt of radical prostatectomy or radiotherapy, using ordered steps 0 to 2 with penalised logistic regression and standardised percentage treated by rurality and income.
-- **A10. Survival (methods box only, not run).** Comparing survival between treated and untreated men is exposed to immortal time bias, because treated men must survive until treatment starts. The appropriate design is a landmark analysis at 12 months with competing-risks cumulative incidence (prostate cancer death against other-cause death). It is described, not estimated, in this study.
-- **A11. Australian bridge.** Map SEER variables to PCOR-TAS equivalents:
-  - Rural-Urban Continuum Code to ASGS remoteness;
-  - county income to IRSD;
-  - no insurance variable to public or private sector.
+- **A10. Survival (methods box only, not run).** Comparing survival between treated and untreated men is exposed to immortal time bias, because treated men must survive until treatment starts. A simulation study of observational research (Zheng et al., Front Med 2023) found that time-fixed and exclusion methods overestimated a treatment's benefit, that a 1-year landmark method reduced but did not remove the bias, and recommended the time-dependent method.
+  - **Preferred design:** treatment as a time-dependent exposure, with competing risks of prostate cancer death and other-cause death.
+  - **Sensitivity analysis only:** a 12-month landmark analysis.
+  - This design is described, not estimated, in this study.
+- **A11. Australian context (no Australian data are analysed).** List candidate Australian equivalents of the SEER variables, to be confirmed against an Australian registry's data dictionary before any use:
+  - Rural-Urban Continuum Code to Australian Statistical Geography Standard remoteness areas;
+  - county income to an area-level socioeconomic index such as IRSD;
+  - no insurance variable to public or private treating sector.
 
-  Name what a registry with referral, biopsy and multidisciplinary meeting dates, comorbidity and patient-reported outcomes would add.
+  Describe which additional data (for example referral, biopsy and multidisciplinary meeting dates, comorbidity and patient-reported outcomes) would strengthen the analysis, without assuming which of these any particular registry holds.
 
 ## 9. Limitations stated in advance
 
 - **No race or ethnicity in this export,** so a known determinant of delay is omitted from the social block.
-- **No insurance variable,** the closest US analogue of the public and private sector difference seen in Tasmania.
+- **No insurance variable,** the closest US analogue of the public and private sector difference reported in Tasmania (Foley et al., Cancers 2025).
 - **No registry or county identifier,** so regional clustering cannot be modelled directly, and practice differences between registries may load onto the social block.
 - **No comorbidity data:** clinical need means recorded stage, grade, PSA and age, and part of what the social block adds may be unmeasured health.
+- **No data on referral or care coordination:** qualitative work in Tasmanian lung cancer care describes these as barriers to timely care (Usman et al., Aust J Prim Health 2026), but a registry cannot observe them.
 - **The interval ends at the first treatment of any kind,** including hormone therapy.
 - **SEER under-captures treatment** given outside reporting facilities, especially radiotherapy.
 - **Summary stage cannot separate T1 from T2** and partly uses pathology for surgical patients.
 - **Surgery coding changes in 2023.**
 - **US payment and access structures differ from Australia's.**
 - **All findings are associations, not causal effects.**
+
+## References
+
+The data source is cited in full in section 2. Details for the journal articles below were taken from their PubMed records. Only the abstracts have been read so far; the full texts must be read before any detail is quoted in the paper.
+
+1. Cancer Australia, Cancer Council. Optimal care pathway for men with prostate cancer, second edition: quick reference guide. June 2021. https://www.cancer.org.au/assets/pdf/ocp/prostate-cancer-quick-reference-guide
+2. National Cancer Institute. SEER Program Coding and Staging Manual 2021 and 2023, Appendix C: Surgery Codes, Prostate. https://seer.cancer.gov/manuals/2023/AppendixC/Surgery_Codes_Prostate_2023.pdf
+3. Foley GR, Blizzard CL, Stokes B, Skala M, Redwig F, Dickinson JL, et al. Urban-rural prostate cancer disparities in a regional state of Australia. Sci Rep. 2022;12(1):3022. doi:10.1038/s41598-022-06958-2. PMID 35194109.
+4. Foley GR, Blizzard CL, Skala M, Redwig F, Roydhouse J, Dickinson JL, et al. Prostate cancer disparities between public and private healthcare patients in Tasmania, a regional state of Australia. Cancers (Basel). 2025;18(1):79. doi:10.3390/cancers18010079. PMID 41514591.
+5. Leong CL, Cox I, Grundy R, Harkness N, Palmer AJ, de Graaff B, et al. Optimal lung cancer care pathways: a Tasmanian perspective. Aust Health Rev. 2025;49:AH24249. doi:10.1071/AH24249. PMID 39928915.
+6. Usman SK, van Dam P, de Graaff B, Palmer AJ, Otahal P, Harkness N, et al. Bridging the divide: GP narratives on lung cancer care in Tasmania. Aust J Prim Health. 2026;32(4):PY26059. doi:10.1071/PY26059. PMID 42373555.
+7. Zheng Q, Otahal P, Cox IA, de Graaff B, Campbell JA, Ahmad H, et al. The influence of immortal time bias in observational studies examining associations of antifibrotic therapy with survival in idiopathic pulmonary fibrosis: a simulation study. Front Med (Lausanne). 2023;10:1157706. doi:10.3389/fmed.2023.1157706. PMID 37113607.
+
+The literature reviewed for novelty is listed with PubMed identifiers in reports/phase1.md.
 
 ## Amendment log
 
@@ -147,3 +167,6 @@ A difference is pre-specified as meaningful when it reaches 3 percentage points 
 | 2026-09-13 | Analysis built on the current export without race, Type of Reporting Source or histology | Re-export not available before the application deadline; death-certificate proxy and stated limitations used instead |
 | 2026-09-13 | Modality moved after social position; ordered steps replace order-invariant decomposition; binary outcome only; cohort limited to 2010 to 2022; 0-day intervals excluded; cluster bootstrap over rurality by income cells | Independent design review: modality partly carries social effects; every treated man has the event, so survival framing does not apply; follow-up truncation; county-level exposures |
 | 2026-09-13 | Selection statement corrected: no age filter was applied at export | Session file inspection (reports/phase1.md) |
+| 2026-09-13 | Title changed to name the machine learning approach (version 1.1) | Clarity about methods; no change to the cohort, definitions, estimand or analyses |
+| 2026-09-13 | Wording clarified: no Australian data are analysed; Tasmanian findings are cited as background only; Australian registry variables are candidate equivalents to be confirmed (version 1.2) | Avoid implying a cross-country comparison or unverified registry contents; no change to the cohort, definitions, estimand or analyses |
+| 2026-09-13 | Survival methods box (A10) now prefers a time-dependent treatment exposure, with the 12-month landmark as a sensitivity analysis only; citations added for Leong 2025, Usman 2026 and Zheng 2023; references section added (version 1.3) | Simulation evidence that landmark methods only partly remove immortal time bias (Zheng et al. 2023). A10 is not estimated, so no result changes |

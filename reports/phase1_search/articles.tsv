@@ -1,0 +1,494 @@
+pmid	year	uses_seer	queries	journal	title
+42240667	2026	True	timeliness_seer	World journal of urology	Early vs. delayed primary local therapy and survival in de novo metastatic prostate cancer: target trial emulation.
+41969320	2026	True	timeliness_seer,marital_seer,timeliness_disparities_any_source,incremental_value_social_factors,ml_decomposition	Current urology	Machine learning approaches to optimize the integration of sociodemographic factors for predicting cancer-specific survival among patients with high-risk prostate cancer.
+41674181	2026	True	timeliness_seer	Cancer medicine	Evaluating Potential Impacts of Climate-Related Natural Disasters on Subsequent Prostate Cancer Mortality.
+41591736	2026	True	timeliness_seer,timeliness_disparities_any_source	Journal of racial and ethnic health disparities	Disparities in time to Treatment Initiation Among Patients with Major Types of Cancer in the United States.
+40556964	2025	True	timeliness_seer,marital_seer,timeliness_disparities_any_source	World journal of oncology	Time-to-Treatment Initiation and Its Effect on All-Cause Mortality: Insights From the Surveillance, Epidemiology, and End Results Database.
+40162107	2025	True	timeliness_seer,marital_seer,rural_seer,timeliness_disparities_any_source	World journal of oncology	Time to Treatment Initiation of Lung, Breast, Colorectal, and Prostate Cancers and Contributing Factors From 2015 to 2020 Utilizing Surveillance, Epidemiology, and End Results Program Database.
+38685667	2024	True	timeliness_seer	The Prostate	Differences in real-world outcomes by risk classification for localized prostate cancer patients after radiation therapy.
+33577898	2021	True	timeliness_seer,marital_seer	Urology	Influence of Sociodemographic Factors on Definitive Intervention Among Low-risk Active Surveillance Patients.
+33598420	2020	True	timeliness_seer	Frontiers in oncology	Treatment-Emergent Neuroendocrine Prostate Cancer: A Clinicopathological and Immunohistochemical Analysis of 94 Cases.
+29959759	2019	True	timeliness_seer,rural_seer,timeliness_disparities_any_source	Journal of racial and ethnic health disparities	Racial, Socioeconomic, and Geographic Disparities in the Receipt, Timing to Initiation, and Duration of Adjuvant Androgen Deprivation Therapy in Men with Prostate Cancer.
+29724482	2018	True	timeliness_seer	Urologic oncology	Physician visits and the timing of skeletal-related events among men newly diagnosed with metastatic prostate cancer: A cohort analysis.
+26967329	2018	True	timeliness_seer	American journal of clinical oncology	Age Bias in Time From Diagnosis Comparisons of Prostate Cancer Treatment.
+28239006	2017	True	timeliness_seer,timeliness_disparities_any_source	Journal of health care for the poor and underserved	Cancer Treatment Delays in American Indians and Alaska Natives Enrolled in Medicare.
+27352280	2016	True	timeliness_seer,rural_seer,timeliness_disparities_any_source	Cancer	Ascertainment of postprostatectomy radiotherapy for prostate cancer in the Surveillance, Epidemiology, and End Results database.
+27166412	2016	True	timeliness_seer,timeliness_disparities_any_source	Inquiry : a journal of medical care organization, provision and financing	Prostate Cancer Care Before and After Medicare Eligibility.
+26502115	2016	True	timeliness_seer,timeliness_disparities_any_source	JAMA oncology	Racial Differences in the Surgical Care of Medicare Beneficiaries With Localized Prostate Cancer.
+23716470	2013	True	timeliness_seer,timeliness_disparities_any_source	Cancer	Racial differences in time from prostate cancer diagnosis to treatment initiation: a population-based study.
+23300364	2012	True	timeliness_seer	Current oncology (Toronto, Ont.)	Disparities in timeliness of care for U.S. Medicare patients diagnosed with cancer.
+22672479	2012	True	timeliness_seer	The journal of sexual medicine	Is a treatment delay in radical prostatectomy safe in individuals with low-risk prostate cancer?
+24048800	2011	True	timeliness_seer,timeliness_disparities_any_source	Cancer	Variation in quality of care among older men with localized prostate cancer.
+12065564	2002	True	timeliness_seer	Journal of clinical oncology : official journal of the American Society of Clinical Oncology	Comparing the costs of radiation therapy and radical prostatectomy for the initial treatment of early-stage prostate cancer.
+41503827	2026	True	marital_seer	The aging male : the official journal of the International Society for the Study of the Aging Male	Development and validation of a nomogram for the overall survival of patients with locally advanced prostate cancer treated with radiotherapy and surgery.
+42557188	2026	True	marital_seer,rural_seer	Urologic oncology	Cancer-specific mortality in high-risk or very high-risk prostate cancer patients treated with focal therapy vs. radical prostatectomy.
+42443263	2026	True	marital_seer	Scientific reports	Metabolic syndrome is associated with increased mortality in patients with breast or prostate cancer.
+42368671	2026	True	marital_seer	Current urology	Cancer-specific mortality of grade group 1 prostate cancer: Results from Surveillance, Epidemiology, and End Results Database, 2004-2021.
+42352495	2026	True	marital_seer	Cancers	Clinical and Sociodemographic Determinants of Treatment Selection in Prostate Cancer: A Population-Based Study in the United States (2004-2022).
+41570161	2026	True	marital_seer	The Prostate	Effect of Marital Status on Years of Life Lost From Metastatic Prostate Cancer According to Race/Ethnicity.
+42036417	2026	True	marital_seer	Scientific reports	Advanced age increases cancer-specific mortality in bone-only metastatic prostate cancer: a SEER analysis.
+41729968	2026	True	marital_seer	PloS one	Survival study of cytoreductive prostatectomy for prostate cancer with lung metastasis: A propensity score matching study based on the SEER database.
+41650062	2026	True	marital_seer	Medicine	Construction and validation of a competing risk model for specific survival of patients with second primary malignancies after prostate cancer.
+41176642	2025	True	marital_seer	Cancer	Association between medication burden and acute care use in older metastatic prostate cancer patients on androgen receptor signaling inhibitors.
+40675872	2025	True	marital_seer	European urology oncology	Years of Life Lost in Metastatic and Locally Advanced Prostate Cancer.
+40394805	2025	True	marital_seer	The Prostate	Survival Outcomes for Rural Patients With Advanced Prostate Cancer: A SEER Investigation.
+40619463	2025	True	marital_seer	Scientific reports	Interpretable machine learning models for survival prediction in prostate cancer bone metastases.
+40457502	2025	True	marital_seer	Cardio-oncology (London, England)	Atherosclerosis as a cause of death in patients with cancer: a cohort study.
+40334346	2025	True	marital_seer	European journal of oncology nursing : the official journal of European Oncology Nursing Society	Suicide risk in prostate cancer patients: Trends, predictors, and development of predictive nomograms using SEER data.
+38102521	2025	True	marital_seer	Journal of cancer survivorship : research and practice	Health-related quality of life among prostate cancer survivors with metastatic disease and non-metastatic disease and men without a cancer history in the USA.
+40788211	2025	True	marital_seer	Zhonghua nan ke xue = National journal of andrology	[Clinical prediction model for patients with early-onset prostate cancer without surgical treatment: Based on the SEER Database].
+40215231	2025	True	marital_seer	PloS one	Chemotherapy and Heart-Specific Mortality in Elderly Men with Prostate Cancer: A Propensity Score Matching Analysis.
+40276742	2025	True	marital_seer	Frontiers in medicine	Developing a model for predicting suicide risk among prostate cancer survivors.
+39731026	2024	True	marital_seer	International journal of emergency medicine	Stomach and duodenal ulcer as a cause of death in patients with cancer: a cohort study.
+39158464	2024	True	marital_seer	Cancer	Assessing sociodemographic and regional disparities in Oncotype DX Genomic Prostate Score uptake.
+39678407	2024	True	marital_seer	Gland surgery	Development and external validation of a nomogram to predict the prognosis of patients with metastatic prostate cancer who underwent radiotherapy.
+38702689	2024	True	marital_seer	BMC surgery	Survival benefit of radical prostatectomy in patients with advanced TURP-diagnosed prostate cancer: a population-based real-world study.
+38796687	2024	True	marital_seer	JNCI cancer spectrum	Emergency department involvement in the diagnosis of cancer among older adults: a SEER-Medicare study.
+38485743	2024	True	marital_seer	Scientific reports	A study on the impact of marital status on the survival status of prostate cancer patients based on propensity score matching.
+38567600	2024	True	marital_seer	European review for medical and pharmacological sciences	Risk factor analysis and nomogram construction in patients with distant metastatic prostate cancer at different PSA levels: a study based on the SEER database.
+38281261	2024	True	marital_seer	Journal of cancer research and clinical oncology	Nomogram for predicting the overall survival and cancer-specific survival of patients with intraductal carcinoma of the prostate.
+38184526	2024	True	marital_seer	BMC urology	Prognostic significance of surgery and radiotherapy in elderly patients with localized prostate cancer: establishing and time-based external validation a nomogram from SEER-based study.
+38049755	2023	True	marital_seer	BMC urology	Development and validation of two nomograms for predicting overall survival and Cancer-specific survival in prostate cancer patients with bone metastases: a population-based study.
+38044985	2023	True	marital_seer	Frontiers in oncology	Incidence and associated factors of developing second pelvic malignant neoplasms among prostate cancer patients treated with radiotherapy.
+37933039	2023	True	marital_seer	Medicine	Establishment and assessment of a nomogram for predicting prognosis in bone-metastatic prostate cancer.
+37754206	2023	True	marital_seer	Urology practice	Inequities in Definitive Treatment for Localized Prostate Cancer Among Those With Clinically Significant Mental Health Disorders.
+37891423	2023	True	marital_seer,ml_decomposition	Scientific reports	Development of machine learning prognostic models for overall survival of prostate cancer patients with lymph node-positive.
+37853026	2023	True	marital_seer	Scientific reports	Development and validation of a nomogram to predict cancer-specific survival in nonsurgically treated elderly patients with prostate cancer.
+37145881	2023	True	marital_seer	American journal of clinical oncology	Clinical Characteristics and Survival Analysis of Patients With Second Primary Malignancies After Hepatocellular Carcinoma Liver Transplantation: A SEER-based Analysis.
+36727535	2023	True	marital_seer,rural_seer	Cancer medicine	Socioeconomic determinants are associated with the utilization and outcomes of active surveillance or watchful waiting in favorable-risk prostate cancer.
+35993499	2023	True	marital_seer	Cancer medicine	Nomograms and scoring system for forecasting overall and cancer-specific survival of patients with prostate cancer.
+36760871	2023	True	marital_seer	Translational andrology and urology	Influencing factors for mortality in prostate cancer patients with T1 and T2 stage: a retrospective cohort study.
+36472651	2023	True	marital_seer	World journal of urology	Prostate cancer mortality rates in low- and favorable intermediate-risk active surveillance patients: a population-based competing risks analysis.
+35758717	2023	True	marital_seer	Cancer medicine	Effects of marital status on survival of retroperitoneal liposarcomas stratified by age and sex: A population-based study.
+36329203	2022	True	marital_seer	Scientific reports	Construction and validation of web-based nomograms for detecting and prognosticating in prostate adenocarcinoma with bone metastasis.
+36041992	2022	True	marital_seer	Journal of geriatric oncology	A comparison of end-of-life care patterns between older patients with both cancer and Alzheimer's disease and related dementias versus those with only cancer.
+36330113	2022	True	marital_seer	Frontiers in public health	Gleason score, surgical and distant metastasis are associated with cancer-specific survival and overall survival in middle aged high-risk prostate cancer: A population-based study.
+36313203	2022	True	marital_seer	American journal of clinical and experimental urology	Analysis of the influence of marital status on prognosis of prostate cancer patients based on big data.
+36130756	2022	True	marital_seer	BMJ open	Contribution of insurance status to the association between marital status and cancer-specific survival: a mediation analysis.
+36217401	2022	True	marital_seer	Translational andrology and urology	Development and validation of a nomogram for predicting the overall survival of prostate cancer patients: a large population-based cohort study.
+35322943	2022	True	marital_seer	Cancer medicine	Nomogram for predicting the overall survival of patients with early-onset prostate cancer: A population-based retrospective study.
+35903379	2022	True	marital_seer	Frontiers in public health	A Web-Based Prediction Model for Cancer-Specific Survival of Elderly Patients Undergoing Surgery With Prostate Cancer: A Population-Based Study.
+35814387	2022	True	marital_seer	Frontiers in oncology	Development and Validation of Nomograms to Predict Cancer-Specific Survival and Overall Survival in Elderly Patients With Prostate Cancer: A Population-Based Study.
+35534219	2022	True	marital_seer	Investigative and clinical urology	Relationships between erectile dysfunction, prostate cancer treatment type and inflatable penile prosthesis implantation.
+35331219	2022	True	marital_seer	BMC urology	Competing risk of the specific mortality among Asian-American patients with prostate cancer: a surveillance, epidemiology, and end results analysis.
+34927741	2022	True	marital_seer,income_seer	The Prostate	How socioeconomic and clinical factors impact prostate-cancer-specific and other-cause mortality in prostate cancer stratified by clinical stage: Competing-risk analysis.
+34108645	2022	True	marital_seer	Prostate cancer and prostatic diseases	Trends and practices for managing low-risk prostate cancer: a SEER-Medicare study.
+35150221	2022	True	marital_seer	The Canadian journal of urology	Single black men have the worst prognosis with localized prostate cancer.
+34462244	2022	True	marital_seer	Clinical lymphoma, myeloma & leukemia	Differential Survival Outcomes Between De Novo and Secondary Acute Promyelocytic Leukemia: An Updated Population-based study.
+34171209	2021	True	marital_seer	Canadian Urological Association journal = Journal de l'Association des urologues du Canada	Incidence and mortality trends of metastatic prostate cancer: Surveillance, Epidemiology, and End Results database analysis.
+34901145	2021	True	marital_seer	Frontiers in surgery	Predicting Cancer-Specific Survival Among Patients With Prostate Cancer After Radical Prostatectomy Based on the Competing Risk Model: Population-Based Study.
+33992522	2021	True	marital_seer	Urologic oncology	The effect of race/ethnicity on active treatment rates among septuagenarian or older low risk prostate cancer patients.
+34275018	2021	True	marital_seer	European journal of epidemiology	Marital status and prostate cancer incidence: a pooled analysis of 12 case-control studies from the PRACTICAL consortium.
+34221015	2021	True	marital_seer	Journal of oncology	Systematic Pan-Cancer Population-Based Analysis Reveals the Incidence and Prognosis of Lung Metastases at Diagnosis.
+34047792	2021	True	marital_seer	JAMA network open	Assessment of Modifiable Factors for the Association of Marital Status With Cancer-Specific Survival.
+33981602	2021	True	marital_seer	Frontiers in oncology	Prognostic Models for Patients With Gleason Score 9 Prostate Cancer: A Population-Based Study.
+33847621	2021	True	marital_seer	Medicine	Clinicopathological characteristics and survival outcomes in neuroendocrine prostate cancer: A population-based study.
+33928035	2021	True	marital_seer	Frontiers in oncology	Population-Based Comparison of Different Risk Stratification Systems Among Prostate Cancer Patients.
+33532305	2021	True	marital_seer	Translational andrology and urology	Cause-specific mortality of low and selective intermediate-risk prostate cancer patients with active surveillance or watchful waiting.
+33284845	2020	True	marital_seer,incremental_value_social_factors	PloS one	Predicting the 10-year risk of death from other causes in men with localized prostate cancer using patient-reported factors: Development of a tool.
+32499554	2020	True	marital_seer,rural_seer	Scientific reports	Prognosis of prostate cancer and bone metastasis pattern of patients: a SEER-based study and a local hospital based study from China.
+32321456	2020	True	marital_seer	BMC cancer	Tumor characteristics, treatments, and survival outcomes in prostate cancer patients with a PSA level < 4 ng/ml: a population-based study.
+31769876	2020	True	marital_seer	Cancer	Impact of age at diagnosis of de novo metastatic prostate cancer on survival.
+32019501	2020	True	marital_seer	BMC cancer	Development and validation of a preoperative nomogram for predicting survival of patients with locally advanced prostate cancer after radical prostatectomy.
+35117404	2020	True	marital_seer	Translational cancer research	Widowed status predicts poor overall survival of Chinese patients with prostate cancer.
+32268338	2020	True	marital_seer	Urologia internationalis	Examined and Positive Lymph Node Counts Are Associated with Mortality in Prostate Cancer: A Population-Based Analysis.
+31784868	2019	True	marital_seer	Clinical and translational medicine	Sites of synchronous distant metastases and prognosis in prostate cancer patients with bone metastases at initial diagnosis: a population-based study of 16,643 patients.
+31289983	2019	False	marital_seer	International urology and nephrology	Development and validation of prognostic nomograms for patients with metastatic prostate cancer.
+31129038	2019	True	marital_seer	Urologic oncology	Contemporary clinicopathological characteristics of pT0 prostate cancer at radical prostatectomy: A population-based study.
+31103337	2019	True	marital_seer	Urologic oncology	Contemporary analysis of the effect of marital status on survival of prostate cancer patients across all stages: A population-based study.
+31423166	2019	True	marital_seer	Oncology letters	A Surveillance, Epidemiology and End Results database analysis of the prognostic value of organ-specific metastases in patients with advanced prostatic adenocarcinoma.
+30332597	2019	True	marital_seer	Canadian Urological Association journal = Journal de l'Association des urologues du Canada	The impact of marriage on the overall survival of prostate cancer patients: A Surveillance, Epidemiology, and End Results (SEER) analysis.
+30450562	2019	True	marital_seer	The Prostate	Death due to sepsis in patients diagnosed with prostate cancer.
+30342845	2019	True	marital_seer	Clinical genitourinary cancer	Increasing Rate of Noninterventional Treatment Management in Localized Prostate Cancer Candidates for Active Surveillance: A North American Population-Based Study.
+29752141	2019	True	marital_seer	Journal of geriatric oncology	Predictors of falls in older survivors of breast and prostate cancer: A retrospective cohort study of surveillance, epidemiology and end results-Medicare health outcomes survey linkage.
+32855903	2018	True	marital_seer	Spatial statistics	Bayesian cure-rate survival model with spatially structured censoring.
+29970963	2018	True	marital_seer	Cancer management and research	The homogeneous and heterogeneous risk factors for the morbidity and prognosis of bone metastasis in patients with prostate cancer.
+29579318	2018	True	marital_seer	Cancer	Increased resource use in men with metastatic prostate cancer does not result in improved survival or quality of care at the end of life.
+29773955	2018	True	marital_seer	Cancer management and research	Survival outcomes of radical prostatectomy and external beam radiotherapy in clinically localized high-risk prostate cancer: a population-based, propensity score matched study.
+29552113	2018	False	marital_seer	Oncology letters	Marital status independently predicts prostate cancer survival in men who underwent radical prostatectomy: An analysis of 95,846 individuals.
+29339806	2018	True	marital_seer	Prostate cancer and prostatic diseases	Tumor characteristics, treatments, and oncological outcomes of prostate cancer in men aged ≤50 years: a population-based study.
+28753764	2018	True	marital_seer	European urology focus	Contemporary Management of Prostate Cancer Patients Suitable for Active Surveillance: A North American Population-based Study.
+26951945	2016	True	marital_seer	European urology	Assessment of the Rate of Adherence to International Guidelines for Androgen Deprivation Therapy with External-beam Radiation Therapy: A Population-based Study.
+26329748	2015	True	marital_seer	International urology and nephrology	A population-based analysis of contemporary patterns of care in younger men (<60 years old) with localized prostate cancer.
+26220664	2015	True	marital_seer	Radiation oncology (London, England)	Conditional cancer-specific mortality in T4, N1, or M1 prostate cancer: implications for long-term prognosis.
+25990612	2015	True	marital_seer	Urologic oncology	Differential post-prostatectomy cancer-specific survival of occult T3 vs. clinical T3 prostate cancer: Implications for managing patients upstaged on prostate magnetic resonance imaging.
+25917222	2015	True	marital_seer	Cancer	Variation in insurance status by patient demographics and tumor site among nonelderly adult patients with cancer.
+25690909	2015	True	marital_seer	Cancer	Factors associated with suicide in patients with genitourinary malignancies.
+25644324	2015	True	marital_seer,income_seer	The American journal of medicine	Who bears the greatest burden of aggressive treatment of indolent prostate cancer?
+25554010	2015	True	marital_seer	Clinical genitourinary cancer	National trends in the recommendation of radiotherapy after prostatectomy for prostate cancer before and after the reporting of a survival benefit in March 2009.
+25547676	2015	True	marital_seer	Clinical genitourinary cancer	Cardiovascular mortality in patients with metastatic prostate cancer exposed to androgen deprivation therapy: a population-based study.
+24748076	2015	True	marital_seer,rural_seer	Journal of immigrant and minority health	Prostate Cancer Prognostic Factors Among Asian Patients Born in the US Compared to Those Born Abroad.
+25151595	2015	True	marital_seer	Urologic oncology	Gleason stratifications prognostic for survival in men receiving definitive external beam radiation therapy for localized prostate cancer.
+25583770	2015	True	marital_seer	Journal of the National Comprehensive Cancer Network : JNCCN	Cost implications and complications of overtreatment of low-risk prostate cancer in the United States.
+25106900	2015	True	marital_seer	The Journal of urology	National trends in the management of low and intermediate risk prostate cancer in the United States.
+24931803	2014	True	marital_seer,income_seer	The Journal of urology	Current clinical presentation and treatment of localized prostate cancer in the United States.
+25002728	2014	True	marital_seer,rural_seer	Journal of clinical oncology : official journal of the American Society of Clinical Oncology	Effect of depression on diagnosis, treatment, and mortality of men with clinically localized prostate cancer.
+24050892	2014	True	marital_seer,income_seer	Brachytherapy	Declining use of brachytherapy for the treatment of prostate cancer.
+24392353	2013	True	marital_seer	Frontiers in oncology	Age and Racial Differences among PSA-Detected (AJCC Stage T1cN0M0) Prostate Cancer in the U.S.: A Population-Based Study of 70,345 Men.
+22892435	2013	True	marital_seer	American journal of clinical oncology	Patterns of care for elderly men diagnosed with favorable-risk prostate cancer from 2004 to 2008: a population-based analysis.
+21906968	2013	True	marital_seer	Urologic oncology	Use of radical cystectomy as initial therapy for the treatment of high-grade T1 urothelial carcinoma of the bladder: a SEER database analysis.
+24674370	2013	True	marital_seer	Practical radiation oncology	Radiation therapy for clinically node-positive prostate adenocarcinoma is correlated with improved overall and prostate cancer-specific survival.
+23587510	2013	True	marital_seer	The Canadian journal of urology	Marital status and prostate cancer outcomes.
+22449122	2012	True	marital_seer	BJU international	Marital status: a gender-independent risk factor for poorer survival after radical cystectomy.
+22300560	2012	True	marital_seer	International journal of radiation oncology, biology, physics	Is primary prostate cancer treatment influenced by likelihood of extraprostatic disease? A surveillance, epidemiology and end results patterns of care study.
+22085255	2012	True	marital_seer	BJU international	Locally advanced prostate cancer: a population-based study of treatment patterns.
+22184761	2011	True	marital_seer	Archives of dermatology	Risk and survival of cutaneous melanoma diagnosed subsequent to a previous cancer.
+21643929	2011	True	marital_seer	Cancer causes & control : CCC	The effect of marital status on stage and survival of prostate cancer patients treated with radical prostatectomy: a population-based study.
+21426495	2011	True	marital_seer	The journal of sexual medicine	Penile implant utilization following treatment for prostate cancer: analysis of the SEER-Medicare database.
+20333462	2010	True	marital_seer	Cancer causes & control : CCC	Racial differences in PSA screening interval and stage at diagnosis.
+19012905	2009	False	marital_seer	The Journal of urology	Provider case volume and outcomes following prostate brachytherapy.
+16879674	2006	True	marital_seer	BJU international	Trends and predictors of aggressive therapy for clinical locally advanced prostate carcinoma.
+16118801	2005	True	marital_seer	Cancer	Impact of brachytherapy on regional, racial, marital status, and age-related patterns of definitive treatment for clinically localized prostate carcinoma.
+16078264	2005	True	marital_seer	Cancer	Marriage and mortality in bladder carcinoma.
+15795905	2005	True	marital_seer	Cancer	Marriage and ethnicity predict treatment in localized prostate carcinoma.
+15612083	2005	True	marital_seer	Cancer	Racial treatment trends in localized/regional prostate carcinoma: 1992-1999.
+15230937	2004	True	marital_seer	Health services research	Hospice use by Hispanic and non-Hispanic white cancer decedents.
+15017208	2004	True	marital_seer	The Journal of urology	Racial/ethnic disparities in the treatment of localized/regional prostate cancer.
+14734948	2004	True	marital_seer	Medical care	Decreasing variation in the use of hospice among older adults with breast, colorectal, lung, and prostate cancer.
+12785419	2003	True	marital_seer	Ethnicity & disease	Black-white differences in survival from late-stage prostate cancer.
+12146848	2002	True	marital_seer	Cancer causes & control : CCC	Effect of young age on prostate cancer survival: a population-based assessment (United States).
+41925394	2026	True	rural_seer	Urologic oncology	Rural-urban variation in guideline-concordant management of early-stage kidney, prostate, and testicular cancer in the United States (2010-2022).
+41990793	2026	True	rural_seer	Journal of the National Comprehensive Cancer Network : JNCCN	BPI26-020: Rural Disparities in Definitive Therapy for Prostate Cancer in the United States, 2010-2022: A Population-Based SEER Analysis.
+41671443	2025	True	rural_seer	Journal of the National Comprehensive Cancer Network : JNCCN	Geographic Variability in Germline Genetic Testing for Prostate Cancer: A Nationwide Medicare Claims Study With Evidence of Low Uptake.
+40423551	2025	True	rural_seer	Urology practice	Rural-Urban Differences and Socioeconomic Disparities in Long-Term Urinary Adverse Events Following Prostate Cancer Treatment.
+40073832	2025	True	rural_seer	Journal of the National Comprehensive Cancer Network : JNCCN	Rurality Status and Cardiovascular Events/Survival in Older Men With Prostate Cancer.
+40344273	2025	True	rural_seer	The Journal of rural health : official journal of the American Rural Health Association and the National Rural Health Care Association	Risks of adverse health outcomes among older rural prostate cancer survivors in the SEER-Medicare data.
+39663166	2024	True	rural_seer	BMJ open	Prediction of relative survival trends in patients with cutaneous squamous cell carcinoma using a model-based period analysis: a retrospective analysis of the surveillance, epidemiology, and end results database.
+39495143	2024	True	rural_seer	JNCI cancer spectrum	County-level racial disparities in prostate cancer-specific mortality from 2005 to 2020.
+39268691	2024	True	rural_seer,income_seer	Cancer medicine	The COVID-19 pandemic and associated declines in cancer incidence by race/ethnicity and census-tract level SES, rurality, and persistent poverty status.
+39036758	2024	True	rural_seer	Prostate international	Association between pelvic lymph node dissection and survival among patients with prostate cancer treated with radical prostatectomy.
+37046601	2023	True	rural_seer	Cancers	Rural-Urban Disparities in Patient Care Experiences among Prostate Cancer Survivors: A SEER-CAHPS Study.
+34242060	2021	True	rural_seer	JCO oncology practice	Potential Winners and Losers: Understanding How the Oncology Care Model May Differentially Affect Hospitals.
+33155063	2021	True	rural_seer	World journal of urology	Differences between rural and urban prostate cancer patients.
+34094691	2021	True	rural_seer,income_seer	American journal of cancer research	Trends in treatments for prostate cancer in the United States, 2010-2015.
+33136241	2021	True	rural_seer	Quality of life research : an international journal of quality of life aspects of treatment, care and rehabilitation	Rural-urban differences in health-related quality of life: patterns for cancer survivors compared to other older adults.
+27486887	2017	True	rural_seer	Urologia internationalis	Differences in Patient Characteristics among Men Choosing Open or Robot-Assisted Radical Prostatectomy in Contemporary Practice - Analysis of Surveillance, Epidemiology, and End Results Database.
+26782713	2016	True	rural_seer	Prostate cancer and prostatic diseases	Variation in prostate cancer treatment associated with population density of the county of residence.
+25153773	2014	True	rural_seer	Urologic oncology	Mental health outcomes in elderly men with prostate cancer.
+24980272	2014	True	rural_seer	Prostate cancer and prostatic diseases	The association between insurance status and prostate cancer outcomes: implications for the Affordable Care Act.
+23765584	2013	True	rural_seer,income_seer	Cancer	Treatment of early-stage prostate cancer among rural and urban patients.
+23017528	2013	True	rural_seer	The Journal of urology	Trends in the use of incontinence procedures after radical prostatectomy: a population based analysis.
+22192688	2012	True	rural_seer	BJU international	Comparative effectiveness of cryotherapy vs brachytherapy for localised prostate cancer.
+21823112	2012	True	rural_seer	Cancer	Inappropriate utilization of radiographic imaging in men with newly diagnosed prostate cancer in the United States.
+21351084	2011	True	rural_seer,income_seer	Cancer	Racial/ethnic disparities in survival among men diagnosed with prostate cancer in Texas.
+42726934	2026	False	income_seer	Otolaryngology--head and neck surgery : official journal of American Academy of Otolaryngology-Head and Neck Surgery	Differences of Community-Level Vulnerability Associations With Early- and Later-Onset Nasopharyngeal Cancer Prognosis in the United States.
+42714329	2026	True	income_seer	Clinical orthopaedics and related research	The Area Deprivation Index Identifies Survival Disparities in Osteosarcoma When Other Social Determinants of Health Do Not.
+42663776	2026	True	income_seer	Annals of surgical oncology	Urban-Rural Disparities in Treatment and Outcomes for Colorectal Liver Metastases in the United States: A SEER-Medicare Analysis.
+42583918	2026	True	income_seer	Medical care	Geographic Access, Transportation Resources, and Early-Stage Lung Cancer Treatment Among Socioeconomically Disadvantaged Patients.
+42692955	2026	True	income_seer	International journal of gynecological cancer : official journal of the International Gynecological Cancer Society	Association of digital access with survival in gynecologic cancers: Analysis of the surveillance, epidemiology, and end results (SEER) database.
+42526581	2026	True	income_seer	Journal of gastrointestinal surgery : official journal of the Society for Surgery of the Alimentary Tract	Socioeconomic gradients measured by the Yost index and colorectal cancer outcomes: a Surveillance, Epidemiology, and End Results-Medicare analysis.
+41933566	2026	True	income_seer	American journal of ophthalmology	The Role of Geography in United States Retinoblastoma Care.
+42504871	2026	True	income_seer	Journal of the National Cancer Institute	Cancer-attributable costs in older adults: SEER-Medicare analysis of variation by site, stage, and race.
+42224734	2026	True	income_seer	Neurosurgical focus	Racial disparities in the survival outcomes of craniopharyngioma: a 17-year population-based analysis.
+42224733	2026	True	income_seer	Neurosurgical focus	Racial and socioeconomic disparities in long-term survival in craniopharyngioma: a SEER database analysis.
+41865265	2026	True	income_seer	Otolaryngology--head and neck surgery : official journal of American Academy of Otolaryngology-Head and Neck Surgery	Place-Based Disparities in Treatment and Time-to-Initiation for Head and Neck Cancer.
+40768681	2026	True	income_seer	JCO oncology practice	Racial and Ethnic Disparities in Receipt of Guideline-Concordant Pancreatic Cancer Care Among Older Adults in the United States.
+41996299	2026	True	income_seer	American journal of clinical oncology	Racial Disparities in Pancreatic Cancer: A Comprehensive Population-Based Analysis of Survival, Surgical Access, and Prognostic Factors.
+41955246	2026	True	income_seer	PloS one	Association of medicaid expansion with lung cancer-specific and overall mortality: A difference-in-differences analysis.
+41543492	2026	True	income_seer	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	Census Tract-Level Persistent Poverty and Liver Cancer Survival: A Population-Based Study.
+41351693	2026	True	income_seer	Annals of surgical oncology	Short-and Long-term Patient Outcomes in Hospitals Primarily Serving Patients with Colorectal Cancer from High-Poverty Areas-An Observational Cohort Study.
+40601879	2026	True	income_seer	JCO oncology practice	Physician Specialization and Receipt of Updated Breast Cancer Care in the United States: A SEER-Medicare Analysis.
+40476571	2026	True	income_seer	Health services research	Hospital Accreditation and Geographic Disparities in Timely Cancer Care.
+41741192	2026	True	income_seer	Cancer medicine	Cardiovascular Mortality Risk After Cancer Diagnosis by County-Level Characteristics in the United States 2000-2021.
+41634999	2026	True	income_seer	Journal of neuroendocrinology	Determinants of incidence trends in pancreatic neuroendocrine neoplasms.
+41418446	2026	True	income_seer	Clinical breast cancer	The Influence of Socioeconomic Status on Stage at Diagnosis and Survival in Young Breast Cancer Patients.
+40906319	2025	True	income_seer	Cancer causes & control : CCC	County-level socioeconomic status, rurality, and second primary cancer risk among breast cancer survivors in the United States.
+41187936	2025	True	income_seer	Cancer medicine	Adequate Catchment Area Representation in Cancer Clinical Trials at NCI Designated Cancer Centers: The University of California Irvine Experience.
+40456459	2025	True	income_seer	Annals of epidemiology	County-level socioeconomic, race-ethnicity, household, and infrastructure vulnerability associations with bone cancer treatment and prognosis in the US.
+40663723	2025	True	income_seer	JMIR cancer	The Impact of Digital Inequities on Nasal and Paranasal-Sinus Cancer Disparities in the United States: A Cohort Study.
+40563652	2025	True	income_seer	Cancers	Barriers to Post-Mastectomy Breast Reconstruction: A Comprehensive Retrospective Study.
+40105752	2025	True	income_seer	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	Racialized Economic Segregation, Treatment, and Outcomes in Women with Triple-Negative Breast Cancer.
+40422507	2025	True	income_seer	Current oncology (Toronto, Ont.)	The Influence of Poverty and Rurality on Colorectal Cancer Survival by Race/Ethnicity: An Analysis of SEER Data with a Census Tract-Level Measure of Persistent Poverty.
+40370889	2025	True	income_seer	Cureus	Distance Traveled by Colorectal Liver Metastasis Patients to the Nearest Cancer Hospital To Receive Liver Metastasectomy.
+39616300	2025	True	income_seer	Cancer causes & control : CCC	Breast cancer screening needs assessment in 19 Northern California counties: geography, poverty, and racial/ethnic identity composition.
+40995351	2025	True	income_seer	CHEST pulmonary	Racialized economic segregation and disparities in non-small cell lung cancer care and outcomes.
+42110479	2025	True	income_seer	Journal of registry management	Addressing the Challenge of Geospatial Accuracy in Cancer Registration: The Louisiana Tumor Registry Experience.
+39442650	2024	True	income_seer	Journal of cancer policy	Income disparities have a significant impact on thyroid cancer recurrence and survival.
+39105992	2024	True	income_seer	Cancer causes & control : CCC	Comparing SEER and NCDB: a case study using colorectal cancer.
+38972769	2024	True	income_seer	Surgery	Low neighborhood socioeconomic status is associated with poor outcomes in young adults with colorectal cancer.
+38861205	2024	True	income_seer	Annals of surgical oncology	Area Socioeconomic Status is Associated with Refusal of Recommended Surgery in Patients with Metastatic Bone and Joint Disease.
+38838257	2024	True	income_seer	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	Racialized Economic Segregation and Treatment and Outcomes of Small Cell Lung Cancer.
+39030995	2024	True	income_seer	Cancer medicine	Effects of housing stability and contemporary mortgage lending bias on breast cancer stage at diagnosis among older women in the United States.
+38676975	2024	True	income_seer	Journal of geriatric oncology	Predictors of high-intensity care at the end of life among older adults with solid tumors: A population-based study.
+38648421	2024	True	income_seer	Journal of surgical oncology	The associations of food environment with gastrointestinal cancer outcomes in the United States.
+38701843	2024	True	income_seer	Southern medical journal	Incidence Rates and Outcomes of Nodular and Superficial Spreading Melanoma along the Rural-Urban Continuum in Kentucky and Their Relationship to Provider Care Access.
+38418655	2024	True	income_seer	Annals of surgical oncology	Assessment of Social Vulnerabilities of Care and Prognosis in Adult Ocular Melanomas in the US.
+38270521	2024	True	income_seer	International journal of cancer	Recent trends in cervical cancer incidence, stage at diagnosis, and mortality according to county-level income in the United States, 2000-2019.
+38087980	2024	True	income_seer	Neuro-oncology	Association of county-level socioeconomic status with meningioma incidence and outcomes.
+38635268	2024	True	income_seer	JAMA network open	Neighborhood Disadvantage and Breast Cancer-Specific Survival in the US.
+38354415	2024	True	income_seer	The Journal of the American Academy of Orthopaedic Surgeons	Association of Socioeconomic Status With Worse Overall Survival in Patients With Bone and Joint Cancer.
+37877990	2024	True	income_seer	Journal of neurosurgery	Association between county-level socioeconomic status and the incidence of and surgical treatment for pituitary adenoma.
+38348574	2024	True	income_seer	Cancer medicine	Racial disparities in the relationship of regional socioeconomic status and colorectal cancer survival in the five regions of Georgia.
+37922543	2024	True	income_seer	Journal of neurosurgery. Pediatrics	An online calculator using machine learning for predicting survival in pediatric patients with medulloblastoma.
+37820390	2024	True	income_seer	American journal of otolaryngology	The impact of digital inequities on laryngeal cancer disparities in the US.
+37639986	2024	True	income_seer	American journal of otolaryngology	Differences in presentation, treatment, and outcomes among minority head and neck cancer patient groups in Los Angeles County.
+37979223	2023	True	income_seer	Cancer epidemiology	Racial and ethnic minorities in lower income brackets are associated with late-stage diagnosis of non-ocular melanoma.
+37667099	2023	True	income_seer	Annals of surgical oncology	Association of Race/Ethnicity, Persistent Poverty, and Opioid Access Among Patients with Gastrointestinal Cancer Near the End of Life.
+37955896	2023	False	income_seer	JAMA network open	Geographic Variation in Late-Stage Cervical Cancer Diagnosis.
+37913538	2023	True	income_seer	Neurosurgical focus	County-level disparities in care for patients with glioblastoma.
+37870550	2023	True	income_seer	The American journal of managed care	Association of guideline-concordant care with survival, health care utilization, and costs among older women with advanced epithelial ovarian cancer.
+37377037	2023	True	income_seer	Journal of surgical oncology	Persistent poverty impacts access to minimally invasive surgery among patients with hepatopancreatobiliary cancer.
+37669050	2023	True	income_seer	JAMA network open	State Public Assistance Spending and Survival Among Adults With Cancer.
+37296055	2023	True	income_seer	Surgery	County characteristics associated with refusing breast cancer surgery: Evidence from the Surveillance, Epidemiology, and End Results program.
+37686560	2023	True	income_seer	Cancers	Racial/Ethnic Disparities in Prostate Cancer 5-Year Survival: The Role of Health-Care Access and Disease Severity.
+37540510	2023	True	income_seer	JAMA network open	Racial and Ethnic Disparities in Survival Among People With Second Primary Cancer in the US.
+37390596	2023	True	income_seer	Gynecologic oncology	The association of black race with receipt of hysterectomy and survival in low-risk endometrial cancer.
+35837973	2023	True	income_seer	Annals of surgery	Socioeconomic Mediation of Racial Segregation in Pancreatic Cancer Treatment and Outcome Disparities.
+37551220	2023	True	income_seer	Cureus	Sociodemographic Disparities in the Diagnosis and Prognosis of Patients With Cervical Cancer: An Analysis of the Surveillance, Epidemiology, and End Results Program.
+37150737	2023	True	income_seer	Urologic oncology	Characteristics of prostate cancer patients captured by facility-based versus geography-based cancer registries.
+36975186	2023	True	income_seer	Journal of surgical oncology	The impact of digital inequities on gastrointestinal cancer disparities in the United States.
+36974082	2023	True	income_seer	Technical innovations & patient support in radiation oncology	Community socioeconomic status and rural/racial disparities in HPV-/+ head and neck cancer.
+36774319	2023	True	income_seer	Surgery	Hepatopancreaticobiliary cancer outcomes are associated with county-level duration of poverty.
+35882950	2023	True	income_seer	Prostate cancer and prostatic diseases	Intensity of observation with active surveillance or watchful waiting in men with prostate cancer in the United States.
+35796386	2023	True	income_seer	Annals of surgery	The Persistence of Poverty and its Impact on Cancer Diagnosis, Treatment and Survival.
+36795405	2023	True	income_seer	JAMA oncology	Association of Social Determinants and Tumor Biology With Racial Disparity in Survival From Early-Stage, Hormone-Dependent Breast Cancer.
+35129521	2023	True	income_seer	Annals of surgery	Association of County-level Upward Economic Mobility with Stage at Diagnosis and Receipt of Treatment Among Patients Diagnosed with Pancreatic Adenocarcinoma.
+37056393	2023	True	income_seer	Journal of Cancer	Revisiting Exclusion of Prior Cancer in Clinical Trials of Male Breast Cancer.
+36897588	2023	True	income_seer	JAMA network open	Mediation of Racial and Ethnic Inequities in the Diagnosis of Advanced-Stage Cervical Cancer by Insurance Status.
+36848088	2023	True	income_seer	JAMA network open	Association of Variation in US County-Level Rates of Liver Surgical Resection for Colorectal Liver Metastasis With Poverty Rates in 2010.
+36822658	2023	True	income_seer	BMJ open gastroenterology	Appendiceal adenocarcinoma is associated with better prognosis than cecal adenocarcinoma: a population-based comparative survival study.
+36567214	2023	True	income_seer	Clinical lymphoma, myeloma & leukemia	Improvement of Early Death in Acute Promyelocytic Leukemia: A Population-Based Analysis.
+35866998	2022	True	income_seer	Journal of the National Cancer Institute	Sociodemographic Survival Disparities for Lung Cancer in the United States, 2000-2016.
+36091633	2022	True	income_seer	Journal of neurological surgery. Part B, Skull base	Impact of Race, Ethnicity, and Socioeconomic Status on Nasopharyngeal Carcinoma Disease-Specific and Conditional Survival.
+35437584	2022	True	income_seer	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	The Role of Socioeconomic Status and Race/Ethnicity in Malignant Peripheral Nerve Sheath Tumor Survival: A Surveillance, Epidemiology, and End Results-Based Analysis.
+35864368	2022	True	income_seer	Cancer causes & control : CCC	Racial and ethnic differences in patient ratings of colorectal and non-small-cell lung cancer care: A SEER-CAHPS study.
+36091170	2022	True	income_seer	Frontiers in oncology	Socioeconomic deprivation and survival outcomes in primary central nervous system lymphomas.
+35441305	2022	True	income_seer	Annals of surgical oncology	Association of County-Level Upward Economic Mobility with Stage at Diagnosis and Receipt of Curative-Intent Treatment among Patients with Hepatocellular Carcinoma.
+35337204	2022	True	income_seer	The American surgeon	Persistence of Disparity in Thyroid Cancer Survival After Adjustments for Socioeconomic Status and Access.
+34281443	2022	True	income_seer	Otolaryngology--head and neck surgery : official journal of American Academy of Otolaryngology-Head and Neck Surgery	Impact of Socioeconomic Status on Paranasal Sinus Cancer Disease-Specific and Conditional Survival.
+34954755	2022	False	income_seer	Annals of surgery	The Impact of Income and Social Mobility on Colorectal Cancer Outcomes and Treatment: A Cross-sectional Study.
+34889456	2022	True	income_seer	Journal of surgical oncology	Sex, racial/ethnic and socioeconomic disparities in patients with metastatic bone disease.
+34876291	2022	True	income_seer	Surgery	From street address to survival: Neighborhood socioeconomic status and pancreatic cancer outcomes.
+34857388	2022	True	income_seer	Surgery	Inflammatory breast cancer, trimodal treatment, and mortality: Does where you live matter?
+35174302	2022	True	income_seer	OTO open	Association of Race, Ethnicity, and Socioeconomic Status With Esthesioneuroblastoma Presentation, Treatment, and Survival.
+34495548	2022	True	income_seer	Cancer	Impact of sociodemographic factors on early mortality in acute promyelocytic leukemia in the United States: A time-trend analysis.
+34331158	2022	False	income_seer	Annals of surgical oncology	Racial and Socioeconomic Disparities in Breast Cancer Outcomes within the AJCC Pathologic Prognostic Staging System.
+34340925	2021	True	income_seer	Journal of the American Pharmacists Association : JAPhA	Pharmacy deserts and patients with breast cancer receipt of influenza vaccines.
+34256174	2021	True	income_seer	World neurosurgery	Socioeconomic Disparities in Non-Small Cell Lung Cancer With Brain Metastases at Presentation: A Population-Based Study.
+34022098	2021	True	income_seer	Pediatric blood & cancer	Socioeconomic disparities in survival after high-risk neuroblastoma treatment with modern therapy.
+34197047	2021	True	income_seer	Cancer medicine	The impact of socioeconomic status on survival in stage III colon cancer patients: A retrospective cohort study using the SEER census-tract dataset.
+33516743	2021	True	income_seer	The Journal of investigative dermatology	Late-Stage Melanoma in New York State: Associations with Socioeconomic Factors and Healthcare Access at the County Level.
+32918677	2021	True	income_seer	Journal of gastrointestinal surgery : official journal of the Society for Surgery of the Alimentary Tract	County-Level Variation in Utilization of Surgical Resection for Early-Stage Hepatopancreatic Cancer Among Medicare Beneficiaries in the USA.
+33709456	2021	True	income_seer	American journal of hematology	Acute lymphoblastic leukemia: A population-based study of outcome in the United States based on the surveillance, epidemiology, and end results (SEER) database, 1980-2017.
+33145705	2021	True	income_seer	Annals of surgical oncology	Decompositions of the Contribution of Treatment Disparities to Survival Disparities in Stage I-II Pancreatic Adenocarcinoma.
+34170893	2021	False	income_seer	Journal of registry management	A Midwest Tri-State Study of Overall Survival in Ovarian Cancer with Adjuvant Chemotherapy.
+33392903	2021	True	income_seer	Cancer causes & control : CCC	Rural representation of the surveillance, epidemiology, and end results database.
+33369661	2020	True	income_seer	JAMA network open	Regional Variation in Active Surveillance for Low-Risk Prostate Cancer in the US.
+33275039	2020	False	income_seer	Journal of comparative effectiveness research	Impact of socioeconomic status on presentation, treatment and outcomes of patients with pancreatic cancer.
+32757135	2020	True	income_seer	Breast cancer research and treatment	A population-based study of invitation to and participation in clinical trials among women with early-stage breast cancer.
+32766799	2020	True	income_seer	JAMA network open	Associations of Socioeconomic Status, Public vs Private Insurance, and Race/Ethnicity With Metastatic Sarcoma at Diagnosis.
+31710664	2020	True	income_seer	Journal of the National Cancer Institute	Factors Associated With Use of High-Cost Agents for the Treatment of Metastatic Non-Small Cell Lung Cancer.
+31792804	2020	True	income_seer	Breast cancer (Tokyo, Japan)	Income disparities in needle biopsy patients prior to breast cancer surgery across physician peer groups.
+31948677	2020	True	income_seer	Urology	Temporal Changes in Demographic and Clinical Characteristics of Men With Prostate Cancer Electing for Conservative Management in the United States.
+31725657	2019	True	income_seer	Medicine	Mediation analyses of socioeconomic factors determining racial differences in the treatment of diffuse large B-cell lymphoma in a cohort of older adults.
+30554272	2019	True	income_seer	World journal of urology	Incorporating non-biological factors into the TNM staging system for better prognostication and decision-making in testicular cancer.
+31568536	2019	True	income_seer	PloS one	Intensity modulated radiation therapy following lumpectomy in early-stage breast cancer: Patterns of use and cost consequences among Medicare beneficiaries.
+31201223	2019	True	income_seer	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	Providing Higher Resolution Indicators of Rurality in the Surveillance, Epidemiology, and End Results (SEER) Database: Implications for Patient Privacy and Research.
+31150741	2019	True	income_seer	International journal of radiation oncology, biology, physics	The Impact of the Affordable Care Act on Disparities in Private and Medicaid Insurance Coverage Among Patients Under 65 With Newly Diagnosed Cancer.
+31390587	2019	True	income_seer	Journal of the National Comprehensive Cancer Network : JNCCN	Lung Cancer in Nonelderly Patients: Facility and Patient Characteristics Associated With Not Receiving Treatment.
+31200352	2019	True	income_seer	Journal of the National Comprehensive Cancer Network : JNCCN	Uptake of the 21-Gene Assay Among Women With Node-Positive, Hormone Receptor-Positive Breast Cancer.
+31108497	2019	True	income_seer	Oncology	Racial Disparities, Outcomes, and Surgical Utilization among Hispanics with Esophageal Cancer: A Surveillance, Epidemiology, and End Results Program Database Analysis.
+29936977	2018	True	income_seer	The Journal of surgical research	Regional diagnostic rates, treatments, and outcomes among patients with invasive ductal carcinoma.
+29746178	2018	False	income_seer	Journal of adolescent and young adult oncology	Head and Neck Squamous Cell Carcinoma in Adolescents and Young Adults: Survivorship Patterns and Disparities.
+29704152	2018	True	income_seer	Cancer causes & control : CCC	Racialized economic segregation and stage at diagnosis of colorectal cancer in the United States.
+29527660	2018	True	income_seer	Cancer	Impact of socioeconomic status on survival for patients with anal cancer.
+29397099	2018	True	income_seer	The Annals of thoracic surgery	Underperformance of Mediastinal Lymph Node Evaluation in Resectable Non-Small Cell Lung Cancer.
+29306788	2018	True	income_seer	Cancer epidemiology	Epithelial ovarian cancer mortality among Hispanic women: Sub-ethnic disparities and survival trend across time: An analysis of SEER 1992-2013.
+28884392	2018	True	income_seer	Breast cancer research and treatment	Socioeconomic status and breast cancer treatment.
+28736233	2017	True	income_seer	The Journal of investigative dermatology	Continued Increase in Melanoma Incidence across all Socioeconomic Status Groups in California, 1998-2012.
+28830564	2017	True	income_seer	Journal of ovarian research	Availability of healthcare resources and epithelial ovarian cancer stage of diagnosis and mortality among Blacks and Whites.
+28600296	2017	True	income_seer	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	Making the Case for Investment in Rural Cancer Control: An Analysis of Rural Cancer Incidence, Mortality, and Funding Trends.
+28464280	2017	True	income_seer	Cancer	Association between insurance status at diagnosis and overall survival in chronic myeloid leukemia: A population-based study.
+28453646	2017	True	income_seer	American journal of epidemiology	Protecting Confidentiality in Cancer Registry Data With Geographic Identifiers.
+28170302	2017	True	income_seer	Journal of women's health (2002)	Disparities in the Initial Local Treatment of Older Women with Early-Stage Breast Cancer: A Population-Based Study.
+28580352	2017	True	income_seer	Frontiers in public health	Recent Spatiotemporal Patterns of US Lung Cancer by Histologic Type.
+28195022	2017	True	income_seer	Otolaryngology--head and neck surgery : official journal of American Academy of Otolaryngology-Head and Neck Surgery	Impact of County-Level Socioeconomic Status on Oropharyngeal Cancer Survival in the United States.
+27859019	2017	True	income_seer	Cancer	The impact of health insurance on cancer care in disadvantaged communities.
+28118039	2017	True	income_seer	Annals of the American Thoracic Society	Residence in Rural Areas of the United States and Lung Cancer Mortality. Disease Incidence, Treatment Disparities, and Stage-Specific Survival.
+27409991	2017	True	income_seer	Journal of adolescent and young adult oncology	Impact of Urologist Density and County Rurality on the Practice of Retroperitoneal Lymph Node Dissection and Cancer-Specific Death in Patients with Nonseminomatous Germ Cell Tumors.
+27548407	2016	True	income_seer	Cancer	Impact of marital status, insurance status, income, and race/ethnicity on the survival of younger patients diagnosed with multiple myeloma in the United States.
+27138583	2016	True	income_seer	Journal of clinical oncology : official journal of the American Society of Clinical Oncology	Racial/Ethnic Disparities in Survival Among Patients With Young-Onset Colorectal Cancer.
+27255533	2016	True	income_seer	Breast cancer research and treatment	Racial disparities in individual breast cancer outcomes by hormone-receptor subtype, area-level socio-economic status and healthcare resources.
+26954853	2016	True	income_seer	American journal of otolaryngology	Sociodemographic disparities in choice of therapy and survival in advanced laryngeal cancer.
+37592704	2016	True	income_seer	Urology practice	Health Insurance Status and Disparities in Kidney Cancer Care.
+26657478	2016	True	income_seer	Nursing research	Factors Associated With Unplanned Hospitalizations Among Patients With Nonmetastatic Colorectal Cancers Intended for Treatment in the Ambulatory Setting.
+26436436	2015	True	income_seer	JAMA pediatrics	Ethnic, Racial, and Socioeconomic Disparities in Retinoblastoma.
+24064751	2015	True	income_seer	American journal of clinical oncology	The Integration of Multimodality Care for the Treatment of Small Cell Lung Cancer in a Rural Population and Its Impact on Survival.
+26084209	2015	False	income_seer	Cancer causes & control : CCC	US trends in survival disparities among adolescents and young adults with non-Hodgkin lymphoma.
+25751200	2015	True	income_seer	Obstetrics and gynecology	Sociodemographic disparities in advanced ovarian cancer survival and adherence to treatment guidelines.
+25527416	2015	True	income_seer	Annals of oncology : official journal of the European Society for Medical Oncology	Socioeconomic disparities in survival from childhood leukemia in the United States and globally: a meta-analysis.
+25306287	2015	True	income_seer	Urologic oncology	Income inequality and treatment of African American men with high-risk prostate cancer.
+25342577	2014	True	income_seer	Journal of gastrointestinal cancer	The association between county-level surgeon density and esophageal and gastric cancer mortality.
+25417237	2014	True	income_seer	Journal of the National Cancer Institute. Monographs	Racial and ethnic disparities in cancer survival by neighborhood socioeconomic status in Surveillance, Epidemiology, and End Results (SEER) Registries.
+25104569	2014	True	income_seer	Cancer causes & control : CCC	Postoperative 30-day mortality in patients undergoing surgery for colorectal cancer: development of a prognostic model using administrative claims data.
+25092774	2014	True	income_seer	Journal of clinical oncology : official journal of the American Society of Clinical Oncology	Disparities in stage at diagnosis, treatment, and survival in nonelderly adult patients with cancer according to insurance status.
+24673560	2014	True	income_seer	Health services research	Hospital and geographic variability in thirty-day all-cause mortality following colorectal cancer surgery.
+24346819	2014	True	income_seer	Journal of community health	Non-small cell lung cancer treatment receipt and survival among African-Americans and whites in a rural area.
+24500502	2014	True	income_seer	Melanoma research	Individual and ecological factors associated with early detection of nodular melanoma in the United States.
+24378070	2014	True	income_seer	Thyroid : official journal of the American Thyroid Association	The impact of socioeconomic status on the use of adjuvant radioactive iodine for papillary thyroid cancer.
+23909950	2014	True	income_seer	Health services research	Geographic and racial disparities in breast cancer-related outcomes in Georgia.
+24246773	2014	True	income_seer	Gynecologic oncology	Regional variation in surgical assessment of lymph nodes for staging among women with early-stage epithelial ovarian cancer.
+24935602	2014	True	income_seer	Asian Pacific journal of cancer prevention : APJCP	Under-use of radiotherapy in stage III bronchioaveolar lung cancer and socio-economic disparities in cause specific survival: a population study.
+24143148	2013	True	income_seer	Journal of contemporary brachytherapy	Racial and socioeconomic disparities in the selection of prostate brachytherapy.
+23445478	2013	True	income_seer	Health services research	Radiation therapy resources and guideline-concordant radiotherapy for early-stage breast cancer patients in an underserved region.
+23517343	2013	True	income_seer	Thyroid : official journal of the American Thyroid Association	The increasing incidence of thyroid cancer: the influence of access to care.
+23512326	2013	True	income_seer	Cancer	Determinants of adjuvant oxaliplatin receipt among older stage II and III colorectal cancer patients.
+24460264	2013	True	income_seer	Asian Pacific journal of cancer prevention : APJCP	Assessing the impact of socio-economic variables on breast cancer treatment outcome disparity.
+24460261	2013	True	income_seer	Asian Pacific journal of cancer prevention : APJCP	Racial and socioeconomic disparities in malignant carcinoid cancer cause specific survival: analysis of the surveillance, epidemiology and end results national cancer registry.
+24175773	2013	True	income_seer	Asian Pacific journal of cancer prevention : APJCP	Low income and rural county of residence increase mortality from bone and joint sarcomas.
+23803107	2013	True	income_seer	Asian Pacific journal of cancer prevention : APJCP	Using SEER data to quantify effects of low income neighborhoods on cause specific survival of skin melanoma.
+23509460	2013	False	income_seer	Journal of cancer epidemiology	Individual and neighborhood socioeconomic status and healthcare resources in relation to black-white breast cancer survival disparities.
+22771484	2012	True	income_seer	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	Disparities in the early adoption of chemoimmunotherapy for diffuse large B-cell lymphoma in the United States.
+22733221	2012	True	income_seer	Breast cancer research and treatment	Inflammatory and non-inflammatory breast cancer survival by socioeconomic position in the Surveillance, Epidemiology, and End Results database, 1990-2008.
+22487264	2012	True	income_seer	The breast journal	A population-based study of breast cancer-specific survival following mastectomy and immediate or early-delayed breast reconstruction.
+21947698	2012	True	income_seer	Annals of surgical oncology	Race and health disparities in patient refusal of surgery for early-stage non-small cell lung cancer: a SEER cohort study.
+21596483	2011	True	income_seer	International journal of radiation oncology, biology, physics	Predictors of IMRT and conformal radiotherapy use in head and neck squamous cell carcinoma: a SEER-Medicare analysis.
+21266522	2011	True	income_seer	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	U.S. geographic distribution of prevaccine era cervical cancer screening, incidence, stage, and mortality.
+21300617	2011	True	income_seer	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	Demographic disparities in patterns of care and survival outcomes for patients with resected gastric adenocarcinoma.
+21228670	2011	True	income_seer	Diseases of the colon and rectum	Presence of specialty surgeons reduces the likelihood of colostomy after proctectomy for rectal cancer.
+21073707	2010	True	income_seer	BMC cancer	Racial differences in treatment and survival in older patients with diffuse large B-cell lymphoma (DLBCL).
+20827881	2010	True	income_seer	Journal of the Mississippi State Medical Association	Pancreas cancer in Mississippi: present challenges and future directions.
+19543799	2009	True	income_seer	Cancer causes & control : CCC	Trends in colorectal cancer incidence rates by age, race/ethnicity, and indices of access to medical care, 1995–2004 (United States).
+19828016	2009	True	income_seer	BMC cancer	Socioeconomic disparities in breast cancer survival: relation to stage at diagnosis, treatment and race.
+19789367	2009	False	income_seer	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	Medical advances and racial/ethnic disparities in cancer survival.
+19598220	2009	True	income_seer	Cancer	Racial differences in colorectal cancer survival in the Detroit Metropolitan Area.
+19452539	2009	True	income_seer	Cancer	Racial and socioeconomic disparities in adjuvant chemotherapy for older women with lymph node-positive, operable breast cancer.
+19131946	2009	True	income_seer	The Journal of investigative dermatology	Increasing burden of melanoma in the United States.
+19103608	2009	True	income_seer	American journal of epidemiology	The role of poverty rate and racial distribution in the geographic clustering of breast cancer survival among older women: a geographic and multilevel analysis.
+19130463	2009	True	income_seer	Cancer	Racial disparities in the development of breast cancer metastases among older women: a multilevel study.
+21331349	2009	True	income_seer	The open health services and policy journal	Contextual Analysis of Breast Cancer Stage at Diagnosis Among Women in the United States, 2004.
+19093916	2008	True	income_seer	Journal of the American Geriatrics Society	Area-level poverty is associated with greater risk of ambulatory-care-sensitive hospitalizations in older breast cancer survivors.
+18990733	2008	True	income_seer	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	Neighborhood composition and cancer among Hispanics: tumor stage and size at time of diagnosis.
+18663535	2008	True	income_seer	Annals of surgical oncology	Disparities in urban and rural mastectomy populations : the effects of patient- and county-level factors on likelihood of receipt of mastectomy.
+18391595	2008	True	income_seer	American journal of clinical oncology	Impact of treatment and socioeconomic status on racial disparities in survival among older women with breast cancer.
+18257090	2008	True	income_seer	Cancer	Racial differences in cervical cancer survival in the Detroit metropolitan area.
+16434087	2006	True	income_seer	Gynecologic oncology	Socioeconomic status and cervical cancer survival among older women: findings from the SEER-Medicare linked data cohorts.
+16204005	2005	True	income_seer	Journal of clinical oncology : official journal of the American Society of Clinical Oncology	Geographic and socioeconomic variation in the treatment of prostate cancer.
+15809671	2005	True	income_seer	Prostate cancer and prostatic diseases	Sociodemographic factors associated with postprostatectomy radiotherapy.
+15061598	2004	True	income_seer	CA: a cancer journal for clinicians	Cancer disparities by race/ethnicity and socioeconomic status.
+14758094	2004	True	income_seer	Breast cancer research and treatment	Chemotherapy of nonelderly breast cancer patients by poverty-rate of area of residence in Connecticut.
+14572836	2003	True	income_seer	Social science & medicine (1982)	Does stage at diagnosis influence the observed relationship between socioeconomic status and breast cancer incidence, case-fatality, and mortality?
+14625261	2003	True	income_seer	Journal of the National Cancer Institute	Racial differences in mortality among Medicare recipients after treatment for localized prostate cancer.
+12496533	2003	True	income_seer	Annals of surgery	Prognostic factors following curative resection for pancreatic adenocarcinoma: a population-based, linked database analysis of 396 patients.
+12491484	2003	True	income_seer	Cancer	Existing data on breast cancer in African-American women: what we know and what we need to know.
+11936816	2002	True	income_seer	Cancer causes & control : CCC	Projecting SEER cancer survival rates to the US: an ecological regression approach.
+11880791	2002	True	income_seer	Medical care	Persistent differences in sociodemographic determinants of breast conserving treatment despite overall increased adoption.
+42391057	2026	False	timeliness_disparities_any_source	JNCI cancer spectrum	Sociodemographic trends in prostate cancer: insights from the All of Us Research Program.
+42393670	2026	False	timeliness_disparities_any_source	BMC urology	Quality of services and patient reported outcomes for prostate cancer in Tanzania: the role of patients' satisfaction from a cross-sectional study.
+41667321	2026	False	timeliness_disparities_any_source	Clinical genitourinary cancer	Outcomes for Patients With SPOP Mutated Castration-Resistant Prostate Cancer (CRPC) Treated With an Androgen Receptor Pathway Inhibitor (ARPI).
+40615515	2026	False	timeliness_disparities_any_source	Prostate cancer and prostatic diseases	Assessing racial differences in time to subsequent treatment following androgen deprivation therapy among Veterans with prostate cancer.
+41464449	2025	False	timeliness_disparities_any_source	International journal of environmental research and public health	Travel Distance and Its Impact on Wait Time for Positron Emission Tomography-Computed Tomography in Patients with Cancers.
+41082031	2025	False	timeliness_disparities_any_source	Cancer causes & control : CCC	Differences in prostate cancer treatment receipt and timeliness of treatment between African American/Black and White Iowans.
+40978091	2025	False	timeliness_disparities_any_source	American journal of clinical and experimental urology	Factors associated with time to prostate cancer treatment initiation during the COVID-19 pandemic.
+40189880	2025	False	timeliness_disparities_any_source	Future oncology (London, England)	Study of persistence and adherence to ADT in prostate cancer: relugolix, degarelix, and GnRH agonists in the US.
+40127382	2025	False	timeliness_disparities_any_source	JCO global oncology	Quality of Care and Survival Outcomes Among Patients With Clinically Localized Prostate Cancer in Nigeria.
+39941913	2025	False	timeliness_disparities_any_source	Cancers	Association Between Medicaid Expansion and Insurance Status, Risk Group, Receipt, and Refusal of Treatment Among Men with Prostate Cancer.
+39421172	2024	False	timeliness_disparities_any_source	Ecancermedicalscience	Treatment delays for cancer patients in Sub-Saharan Africa: South Africa as a microcosm.
+38697001	2024	False	timeliness_disparities_any_source	Clinical genitourinary cancer	Delaying Surgery in Favorable-Risk Prostate Cancer Patients: An NCDB Analysis of Oncologic Outcomes.
+38395662	2024	False	timeliness_disparities_any_source	Brachytherapy	The impact of a positive COVID-19 test on timeliness of radiation in patients receiving brachytherapy.
+38788158	2024	False	timeliness_disparities_any_source	West African journal of medicine	Waiting Times in Prostate Cancer Diagnosis and Treatment: A Ten-Year Experience in A Nigerian Teaching Hospital.
+37537835	2023	False	timeliness_disparities_any_source	Cancer medicine	Disparities in time to prostate cancer treatment initiation before and after the Affordable Care Act.
+37262399	2023	False	timeliness_disparities_any_source	JCO oncology practice	Disparities in Diagnosis, Treatment Access, and Time to Treatment Among Hispanic Men With Metastatic Prostate Cancer.
+37114585	2023	False	timeliness_disparities_any_source	Cancer medicine	Demographic disparities in receipt of care at a comprehensive cancer center.
+36653224	2023	False	timeliness_disparities_any_source	Clinical genitourinary cancer	Role of Race and Insurance Status in Prostate Cancer Diagnosis-to-Treatment Interval.
+36759298	2023	False	timeliness_disparities_any_source	Urologic oncology	Access to definitive treatment and survival for intermediate-risk and high-risk prostate cancer at hospital systems serving health disparity populations.
+40778070	2023	False	timeliness_disparities_any_source	Frontiers in urology	Increasing surgical wait time does not increase the risk of node positive prostate cancer: Implications for surgical planning during the COVID-19 pandemic and beyond.
+35194179	2022	False	timeliness_disparities_any_source	Prostate cancer and prostatic diseases	Substantial Gleason reclassification in Black men with national comprehensive cancer network low-risk prostate cancer - A propensity score analysis.
+35190652	2022	False	timeliness_disparities_any_source	Prostate cancer and prostatic diseases	Racial disparities in treatment delay among younger men with prostate cancer.
+35330713	2022	False	timeliness_disparities_any_source	Frontiers in oncology	Comparative Effectiveness of Abiraterone and Enzalutamide in Patients With Metastatic Castration-Resistant Prostate Cancer in Taiwan.
+35190441	2022	False	timeliness_disparities_any_source	BMJ open	Five-year follow-up study of a population-based prospective cohort of men with low-risk prostate cancer: the treatment options in prostate cancer study (TOPCS): study protocol.
+34807485	2022	False	timeliness_disparities_any_source	The Prostate	Effects of the 2012 and 2018 US preventive services task force prostate cancer screening guidelines on pathologic outcomes after prostatectomy.
+34516660	2022	False	timeliness_disparities_any_source	Cancer	Treatment in the absence of disease reclassification among men on active surveillance for prostate cancer.
+34836465	2021	False	timeliness_disparities_any_source	American journal of men's health	Sociodemographic and Geographic Disparities of Prostate Cancer Treatment Delay in Tennessee: A Population-Based Study.
+33974827	2021	False	timeliness_disparities_any_source	JCO oncology practice	Effect of Medicaid Expansion on Receipt of Definitive Treatment and Time to Treatment Initiation by Racial and Ethnic Minorities and at Minority-Serving Hospitals: A Patient-Level and Facility-Level Analysis of Breast, Colon, Lung, and Prostate Cancer.
+33738172	2021	False	timeliness_disparities_any_source	Cureus	The Effect of Payer Status on Survival of Patients With Prostate Cancer.
+33315115	2020	False	timeliness_disparities_any_source	JAMA network open	Assessment of Time-to-Treatment Initiation and Survival in a Cohort of Patients With Common Cancers.
+33289846	2020	False	timeliness_disparities_any_source	JAMA network open	Surgical Delay and Pathological Outcomes for Clinically Localized High-Risk Prostate Cancer.
+33372564	2020	False	timeliness_disparities_any_source	American journal of men's health	Identifying Risk Profiles of Malignant Prostate Cancer Surgical Delay Using a Person-Centered Approach to Understand Prostate Cancer Disparities: The Constellation of Health Determinants Using Latent Class Analysis on Cancer Registry Data.
+32356508	2020	False	timeliness_disparities_any_source	The Journal of urology	Delayed Radical Prostatectomy is Not Associated with Adverse Oncologic Outcomes: Implications for Men Experiencing Surgical Delay Due to the COVID-19 Pandemic.
+32139288	2020	False	timeliness_disparities_any_source	Urologic oncology	A prospective analysis of health-related quality of life in intermediate and high-risk prostate cancer patients managed with intensity modulated radiation therapy, with vs. without hormonal therapy.
+33082847	2020	False	timeliness_disparities_any_source	Ecancermedicalscience	Radiotherapy waiting time in Northern Nigeria: experience from a resource-limited setting.
+32473650	2020	False	timeliness_disparities_any_source	BMC cancer	Patient and tumour characteristics associated with inclusion in Cancer patient pathways in Norway in 2015-2016.
+32241385	2020	False	timeliness_disparities_any_source	Advances in cancer research	Race differences in mobility status among prostate cancer survivors: The role of socioeconomic status.
+31508747	2019	False	timeliness_disparities_any_source	Ciencia & saude coletiva	Association of sociodemographic and clinical variables with time to start prostate cancer treatment.
+30151598	2019	False	timeliness_disparities_any_source	World journal of urology	Prostate cancer navigation: initial experience and association with time to care.
+30414956	2019	False	timeliness_disparities_any_source	The Journal of urology	Quality of Care in the Treatment of Localized Intermediate and High Risk Prostate Cancer at Minority Serving Hospitals.
+29904743	2018	False	timeliness_disparities_any_source	Advances in radiation oncology	Risk factors involved in treatment delays and differences in treatment type for patients with prostate cancer by risk category in an academic safety net hospital.
+25966639	2016	False	timeliness_disparities_any_source	Neurourology and urodynamics	Utilization of surgical procedures and racial disparity in the treatment of urinary incontinence after prostatectomy.
+26540571	2016	False	timeliness_disparities_any_source	Oncotarget	Social inequalities and cancer: can the European deprivation index predict patients' difficulties in health care access? a pilot study.
+27009456	2016	False	timeliness_disparities_any_source	Cancer control : journal of the Moffitt Cancer Center	Racial Disparity in Time Between First Diagnosis and Initial Treatment of Prostate Cancer.
+29698146	2015	False	timeliness_disparities_any_source	Value in health regional issues	Prognosis, Cost, and Occurrence of Colorectal, Lung, Breast, and Prostate Cancer in Hungary.
+26048455	2015	False	timeliness_disparities_any_source	European journal of cancer (Oxford, England : 1990)	A randomised, double-blind study comparing the addition of bicalutamide with or without dutasteride to GnRH analogue therapy in men with non-metastatic castrate-resistant prostate cancer.
+25766484	2015	False	timeliness_disparities_any_source	Clinical genitourinary cancer	Effect of Patient Demographic Characteristics and Radiation Timing on PSA Reduction in Patients Treated With Definitive Radiation Therapy for Prostate Cancer.
+25908909	2015	False	timeliness_disparities_any_source	Current oncology (Toronto, Ont.)	Patient-expressed perceptions of wait-time causes and wait-related satisfaction.
+25091019	2014	False	timeliness_disparities_any_source	Journal of medical imaging and radiation oncology	Radiotherapy in the Barwon South Western Region: a rural perspective.
+24938303	2014	False	timeliness_disparities_any_source	Journal of the National Cancer Institute	Impact of patient navigation on timely cancer care: the Patient Navigation Research Program.
+24158562	2013	False	timeliness_disparities_any_source	Bulletin du cancer	[Waiting times for cancer care in four most frequent cancers in several French regions in 2011 and 2012].
+23947435	2013	False	timeliness_disparities_any_source	BMC health services research	Navigating veterans with an abnormal prostate cancer screening test: a quasi-experimental study.
+23069729	2013	False	timeliness_disparities_any_source	Prostate cancer and prostatic diseases	Race is associated with discontinuation of active surveillance of low-risk prostate cancer: results from the Duke Prostate Center.
+23374784	2013	False	timeliness_disparities_any_source	Urology	Racial and ethnic differences in time to treatment for patients with localized prostate cancer.
+23107396	2012	False	timeliness_disparities_any_source	Urology	Socioeconomic and clinical factors influence the interval between positive prostate biopsy and radical prostatectomy.
+22093486	2012	False	timeliness_disparities_any_source	BJU international	Effect of delaying surgery on radical prostatectomy outcomes: a contemporary analysis.
+22382868	2012	False	timeliness_disparities_any_source	Cancer causes & control : CCC	Factors associated with diagnostic and treatment intervals for prostate cancer in Queensland, Australia: a large cohort study.
+15887794	2005	False	timeliness_disparities_any_source	Canadian journal of surgery. Journal canadien de chirurgie	Using administrative databases to measure waiting times for patients undergoing major cancer surgery in Ontario, 1993-2000.
+15877937	2005	False	timeliness_disparities_any_source	The Canadian journal of urology	A population-based study of the waiting times for prostatectomy in Ontario.
+15305806	2004	False	timeliness_disparities_any_source	Clinical and investigative medicine. Medecine clinique et experimentale	Radiotherapy wait times for patients with a diagnosis of invasive cancer, 1992-2000.
+40871470	2025	False	incremental_value_social_factors	Molecules (Basel, Switzerland)	The Oncometabolite 2-Hydroxyglutarate Is Upregulated in Post-Prostatectomy PSA Recurrence of Prostate Cancer: A Metabolomic Analysis.
+38987514	2025	False	incremental_value_social_factors	Journal of racial and ethnic health disparities	Evidence-based Prostate Cancer Screening Interventions for Black Men: A Systematic Review.
+40121103	2025	False	incremental_value_social_factors	Urologic oncology	Does inclusion of neighborhood variables improve clinical risk prediction for advanced prostate cancer in Black and White men?
+39023888	2024	False	incremental_value_social_factors	JAMA network open	Trends and Disparities in Next-Generation Sequencing in Metastatic Prostate and Urothelial Cancers.
+37054742	2023	False	incremental_value_social_factors	Psychotherapie, Psychosomatik, medizinische Psychologie	[Impact of Oncological Treatment on Perceived Stigmatization - A Register-Based Study].
+36291899	2022	False	incremental_value_social_factors	Cancers	Circadian Rhythm Disruption as a Contributor to Racial Disparities in Prostate Cancer.
+35258460	2022	False	incremental_value_social_factors	JMIR cancer	Comparing Survivors of Cancer in Population-Based Samples With Those in Online Cancer Communities: Cross-sectional Questionnaire Study.
+34181467	2021	False	incremental_value_social_factors	The Journal of urology	The Association between Income Status and Treatment Selection for Prostate Cancer in a Universal Health Care System: A Population-Based Analysis.
+32895938	2021	False	incremental_value_social_factors	Cancer	Racial disparities in mortality for patients with prostate cancer after radical prostatectomy.
+32533247	2021	False	incremental_value_social_factors	World journal of urology	Treatment decision satisfaction and regret after focal HIFU for localized prostate cancer.
+32191331	2020	False	incremental_value_social_factors	JAMA network open	Association of Sociodemographic and Health-Related Factors With Receipt of Nondefinitive Therapy Among Younger Men With High-Risk Prostate Cancer.
+17100939	2006	False	incremental_value_social_factors	The journal of sexual medicine	Clinical and psychosocial characteristics of men with erectile dysfunction: baseline data from ExCEED.
+16698362	2006	False	incremental_value_social_factors	Urology	Ethnicity and determinants of quality of life after prostate cancer treatment.
+42582767	2026	False	ml_decomposition	Translational andrology and urology	HOXC4 as a machine learning-derived immune biomarker for predicting treatment and prognosis in prostate cancer patients.
+42418409	2026	False	ml_decomposition	PloS one	Identification of the oxidation stress-related gene signatures and functional verification of MINK1 in prostate cancer cells.
+42388593	2026	False	ml_decomposition	Cancer diagnosis & prognosis	Optimized Prostate Cancer Stage Classification Using XGBoost Based on Racial miRNA Expression.
+42466157	2026	False	ml_decomposition	Computational molecular bioscience	Machine Learning Classification of Prostate Cancer Genomic Sequences Using K-Mer and Sequence-Derived Features.
+42237462	2026	False	ml_decomposition	Journal of biophotonics	Machine Learning-Integrated Raman Spectroscopy Identifies Race-Associated Biochemical Signatures in Prostate Cancer.
+42238430	2026	False	ml_decomposition	medRxiv : the preprint server for health sciences	Socioeconomic and Clinical Determinants Driving Access to BRCA Genetic Testing in Cancer : A Case-Control Study Using Observational Electronic Health Records Across Multiple Sites.
+42192906	2026	False	ml_decomposition	Cancers	Artificial Intelligence in Oncology: A Comprehensive Cross-Cancer Translational Readiness Analysis Across 18 Malignancies.
+41617107	2026	False	ml_decomposition	Environmental research	Associations of fine particulate matter pollution components with overall, prostate cancer, and cardiovascular disease mortality in men with prostate cancer: A cohort study.
+41329033	2026	False	ml_decomposition	The Prostate	A Comparative Study of the Global Burden of Prostate Cancer (1990-2021): Emphasis on the Disparities Between the United States and China.
+41736007	2026	False	ml_decomposition	World journal of surgical oncology	Global, regional, and national burden of early-onset prostate cancer, 1990-2021: a systematic analysis for the global burden of disease study 2021.
+41589030	2026	False	ml_decomposition	Cancer medicine	Mitigating Disparities in Prostate Cancer Survival Prediction Through Fairness-Aware Machine Learning Models.
+41516076	2025	False	ml_decomposition	International journal of molecular sciences	AI/ML-Assisted Detection of HMGA2 RNA Isoforms in Prostate Cancer Patient Tissue.
+41446223	2025	False	ml_decomposition	bioRxiv : the preprint server for biology	A Multi-Modal Transfer Learning Framework to Reduce Health Disparities in Prostate Adenocarcinoma.
+40445307	2025	False	ml_decomposition	Abdominal radiology (New York)	Using AI to triage patients without clinically significant prostate cancer using biparametric MRI and PSA.
+41179326	2025	False	ml_decomposition	Cancer diagnosis & prognosis	Robust Logistic Regression-based Diagnosis Method of Prostate Cancer Using Optimized Feature Selection on Race Specific Gene-expression Datasets.
+40865035	2025	True	ml_decomposition	Journal of clinical oncology : official journal of the American Society of Clinical Oncology	Racial and Ethnic Disparities Along the Treatment Cascade Among Medicare Fee-for-Service Beneficiaries With Metastatic Breast, Colorectal, Lung, and Prostate Cancers.
+41150999	2025	False	ml_decomposition	JCO clinical cancer informatics	Leveraging Centralized Health System Data Management and Large Language Model-Based Data Preprocessing to Identify Predictors for Radiation Therapy Interruption.
+41129153	2025	False	ml_decomposition	JAMA network open	Community Factors and County-Level Cancer Screening, Prevalence, and Mortality.
+41024066	2025	False	ml_decomposition	BioData mining	Decoding ancestry-specific genetic risk: interpretable deep feature selection reveals prostate cancer SNP disparities in diverse populations.
+40770349	2025	False	ml_decomposition	Experimental hematology & oncology	Incidence, mortality, and risk factors of bladder, kidney, prostate and testicular cancers in China and comparisons with the United States, the United Kingdom, Japan, and the Republic of Korea: an up-to-date overview based on the Global Burden of Disease 2021.
+40739951	2025	False	ml_decomposition	Cancer biology & medicine	Cancer mortality trends in China from 2013-2021 and projections to 2030.
+40855895	2025	False	ml_decomposition	JU open plus	Population-Specific Radiomics From Biparametric Magnetic Resonance Imaging Improves Prostate Cancer Risk Stratification in African American Men.
+40567976	2025	False	ml_decomposition	Frontiers in public health	Global, regional, and national prevalence of prostate cancer from 1990 to 2021: a trend and health inequality analyses.
+40508192	2025	False	ml_decomposition	International journal of molecular sciences	Transforming Prostate Cancer Care: Innovations in Diagnosis, Treatment, and Future Directions.
+40475298	2025	False	ml_decomposition	Digital health	Global trends in the use of artificial intelligence for urological tumor histopathology: A 20-year bibliometric analysis.
+40442579	2025	False	ml_decomposition	Clinical proteomics	Integrating multimodal data to predict the progression of hormone-sensitive prostate cancer.
+39604057	2025	False	ml_decomposition	The Prostate	Personalized Medicine: Leave no Patient Behind; Report From the 2024 Coffey-Holden Prostate Cancer Academy Meeting.
+41062130	2025	False	ml_decomposition	Cancer control : journal of the Moffitt Cancer Center	Leveraging Machine Learning Models to Explore Disparities in Prostate Cancer Diagnosis, Treatment, and Survival.
+39419353	2025	False	ml_decomposition	Radiotherapy and oncology : journal of the European Society for Therapeutic Radiology and Oncology	Achieving accurate prostate auto-segmentation on CT in the absence of MR imaging.
+39098988	2024	False	ml_decomposition	Scientific reports	Insights into immune microenvironment and therapeutic targeting in androgen-associated prostate cancer subtypes.
+38970097	2024	False	ml_decomposition	World journal of surgical oncology	Population-Specific gene expression profiles in prostate cancer: insights from Weighted Gene Co-expression Network Analysis (WGCNA).
+38214587	2024	True	ml_decomposition	Cancer epidemiology, biomarkers & prevention : a publication of the American Association for Cancer Research, cosponsored by the American Society of Preventive Oncology	Isolating the Drivers of Racial Inequities in Prostate Cancer Treatment.
+37947332	2023	True	ml_decomposition	Journal of the National Cancer Institute. Monographs	Racial disparities in prostate cancer mortality: a model-based decomposition of contributing factors.
+37460568	2023	True	ml_decomposition	Scientific reports	Explainable ML models for a deeper insight on treatment decision for localized prostate cancer.
+35484517	2022	False	ml_decomposition	BMC cancer	Comprehensive analysis of the associations between clinical factors and outcomes by machine learning, using post marketing surveillance data of cabazitaxel in patients with castration-resistant prostate cancer.
+34529282	2021	False	ml_decomposition	The Prostate	Predicting survival after radical prostatectomy: Variation of machine learning performance by race.
+34183072	2021	False	ml_decomposition	Cardio-oncology (London, England)	TAVR and cancer: machine learning-augmented propensity score mortality and cost analysis in over 30 million patients.
+33925159	2021	False	ml_decomposition	Cancers	Prediction of Incident Cancers in the Lifelines Population-Based Cohort.
+33718117	2020	False	ml_decomposition	Frontiers in oncology	Ten-Year Single Institutional Analysis of Geographic and Demographic Characteristics of Patients Treated With Stereotactic Body Radiation Therapy for Localized Prostate Cancer.
+32985908	2021	True	ml_decomposition	Journal of computational biology : a journal of computational molecular cell biology	Machine-Learning Models for Multicenter Prostate Cancer Treatment Plans.
+33085787	2021	False	ml_decomposition	The Prostate	The 26th Annual Prostate Cancer Foundation Scientific Retreat Report.
+33302880	2020	False	ml_decomposition	BMC medical research methodology	Variable selection in social-environmental data: sparse regression and tree ensemble machine learning approaches.
+32790761	2020	False	ml_decomposition	PloS one	The effect of neighborhood social environment on prostate cancer development in black and white men at high risk for prostate cancer.
+31246547	2019	True	ml_decomposition	The Journal of urology	The Relative Importance of Race Compared to Health Care and Social Factors in Predicting Prostate Cancer Mortality: A Random Forest Approach.
+22734084	2012	False	ml_decomposition	Journal of health services research & policy	Prostate cancer screening practices in the Republic of Ireland: the determinants of uptake.
+21905151	2012	False	ml_decomposition	Health economics	The role of private medical insurance in socio-economic inequalities in cancer screening uptake in Ireland.

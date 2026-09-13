@@ -1,0 +1,133 @@
+# Minimal study configuration for tests. Mirrors config/study.yaml in shape only.
+seed: 20260913
+
+paths:
+  export: mini_export.txt
+  dictionary: mini.dic
+  archive: mini_export.zip
+  archive_member: mini_export.txt
+  selection_note: mini_selection.txt
+  session_file: mini_session.slf
+  reports_dir: reports
+  tables_dir: reports/tables
+
+data:
+  expected_columns: 12
+  expected_rows: 6
+  id_column: Patient ID
+  year_column: Year of diagnosis
+  year_min: 2010
+  year_max: 2023
+  blank_label: "Blank(s)"
+
+roles:
+  clinical:
+    - Combined Summary Stage with Expanded Regional Codes (2004+)
+    - Gleason Score Clinical Recode (2010+)
+    - Gleason Score Pathological Recode (2010+)
+    - PSA Lab Value Recode (2010+)
+    - Year of diagnosis
+  nonclinical: []
+  treatment:
+    - RX Summ--Surg Prim Site (1998-2022)
+    - RX Summ--Surg Prim Site 2023 (2023+)
+    - Reason no cancer-directed surgery
+  outcome:
+    - Time from diagnosis to treatment in days recode
+  cohort:
+    - Sequence number
+  secondary:
+    - Derived EOD 2018 T Recode (2018+)
+
+columns:
+  Patient ID:
+    kind: identifier
+    source: test fixture
+  Year of diagnosis:
+    kind: categorical
+    source: test fixture
+  Time from diagnosis to treatment in days recode:
+    kind: numeric_string
+    missing: ["Unable to calculate"]
+    top_codes: ["731+ days"]
+    source: test fixture
+  Gleason Score Clinical Recode (2010+):
+    kind: categorical
+    missing: ["Not documented; Not assessed or unknown if assessed"]
+    not_applicable:
+      - "No needle core biopsy/TURP performed"
+      - "Not applicable: Information not collected for this case"
+    source: test fixture
+  Gleason Score Pathological Recode (2010+):
+    kind: categorical
+    missing: ["Not documented; Not assessed or unknown if assessed"]
+    not_applicable:
+      - "No prostatectomy done"
+      - "Not applicable: Information not collected for this case"
+    source: test fixture
+  RX Summ--Surg Prim Site (1998-2022):
+    kind: categorical
+    missing: ["99"]
+    era: {first_year: 1998, last_year: 2022}
+    source: test fixture
+  RX Summ--Surg Prim Site 2023 (2023+):
+    kind: categorical
+    missing: ["A990"]
+    era: {first_year: 2023, last_year: null}
+    source: test fixture
+  Sequence number:
+    kind: categorical
+    missing: ["Unknown seq num - federally required in situ or malig tumors"]
+    source: test fixture
+  Derived EOD 2018 T Recode (2018+):
+    kind: categorical
+    not_applicable: ["88"]
+    era: {first_year: 2018, last_year: null}
+    source: test fixture
+  Combined Summary Stage with Expanded Regional Codes (2004+):
+    kind: categorical
+    missing: ["Unknown/unstaged/unspecified/DCO"]
+    source: test fixture
+  PSA Lab Value Recode (2010+):
+    kind: numeric_string
+    missing:
+      - "Not documented; not assessed; unknown"
+      - "Test ordered, results not in chart"
+    top_codes:
+      - "98.0 ng/ml or greater"
+      - "0.1 or less nanograms/milliliter (ng/ml)"
+    source: test fixture
+  Reason no cancer-directed surgery:
+    kind: categorical
+    missing: ["Unknown; death certificate; or autopsy only (2003+)"]
+    source: test fixture
+
+inventory:
+  quantiles: [0.05, 0.25, 0.5, 0.75, 0.95]
+  time_to_treatment_bin_edges: [0, 30, 90, 180, 365, 731]
+  time_to_treatment_column: Time from diagnosis to treatment in days recode
+  sequence_column: Sequence number
+  first_primary_strict: ["One primary only"]
+  first_primary_inclusive: ["One primary only", "1st of 2 or more primaries"]
+  reason_no_surgery_column: Reason no cancer-directed surgery
+  stage_column: Combined Summary Stage with Expanded Regional Codes (2004+)
+  clinical_grade_columns: ["Gleason Score Clinical Recode (2010+)"]
+  pathological_grade_columns: ["Gleason Score Pathological Recode (2010+)"]
+  psa_columns: ["PSA Lab Value Recode (2010+)"]
+  surgery_columns:
+    - RX Summ--Surg Prim Site (1998-2022)
+    - RX Summ--Surg Prim Site 2023 (2023+)
+  surgery_none_codes: ["00", "A000"]
+  surgery_unknown_codes: ["99", "A990"]
+  absent_variable_keywords:
+    insurance: ["insurance"]
+    registry: ["registry"]
+    month_of_diagnosis: ["month"]
+  available_not_exported: {}
+  age_column: null
+  age_labels_below_18: []
+  age_labels_straddling_18: []
+  radiation_column: null
+  expected_selection_variables: ["Site recode", "Year of diagnosis"]
+  session_file_extensions: [".slf", ".slm"]
+  suspect_label_patterns: ["unknown", "not documented", "not assessed", "^NA$", "^N/A", "^88$", "^99$", "no match", "not available", "not applicable"]

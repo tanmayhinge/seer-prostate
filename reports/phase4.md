@@ -185,7 +185,7 @@ The Erreygers concentration index ranks men by county median household income. A
 **Standardised contrasts** (pooled, logistic regression against LightGBM)
 - **Marital status:** never-married men were 6.5 and 5.9 points less likely to have a recorded curative treatment than married men. Both models agreed in every stratum.
 - **Area:** remote against large metropolitan counties, each at its typical income, gave -2.9 and -1.4 points, under the 3-point rule.
-  - In high-risk men the models disagreed (-3.3 and -2.5).
+  - In high-risk men only one model reached 3 points (-3.3 and -2.5).
   - The crude differences by rurality shrink below the 3-point rule when each man's clinical features and year are kept as observed and marital status is set to married.
 - **All social features as observed against the reference profile:** -4.3 and -3.5 points.
 

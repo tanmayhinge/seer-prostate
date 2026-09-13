@@ -1,40 +1,26 @@
 # Supplementary material
 
-**Waiting for prostate cancer treatment: how much is clinical need? A machine learning analysis of social position and time to treatment against the Australian optimal care pathway benchmark, US SEER 2010 to 2022**
+**What area and marital characteristics add to clinical need in predicting waits beyond 90 days for prostate cancer surgery or radiotherapy: a machine learning analysis of US SEER data, 2010 to 2022**
 
 How to read this supplement:
-- **Source of tables:** every table is copied by script from the generated analysis reports in the code repository, so the tables match the analysis outputs exactly.
-- **Numbers of men:** in cross-tabulations they are rounded to the nearest 10.
-- **Suppression:** statistics resting on 1 to 4 men are shown as <5.
+- **Source of tables:** every table is copied by script from the generated analysis reports in the public repository (https://github.com/tanmayhinge/seer-prostate), so the tables match the analysis outputs exactly.
+- **Labels:** tables generated before revision 1 call the area and marital block "social position".
+- **Post-review analyses:** Supplementary Tables S7, S11 to S15, S17, S18, S21, S22 and S35 come from analyses specified after an internal review (protocol amendment 1.9); S17 and S18 publish results computed under amendment 1.7.
+- **Numbers of men:** in cross-tabulations they are rounded to the nearest 10, and statistics resting on 1 to 4 men are shown as <5.
 - **References:** numbered as in the main text.
 
 ## Supplementary Box 1. Survival comparisons and immortal time bias (not estimated)
 
-**The problem.** Comparing survival between treated and untreated men is exposed to immortal time bias, because treated men must survive until treatment starts. A simulation study of observational research found three things [23]:
-- time-fixed and exclusion methods overestimated a treatment's benefit;
-- a 1-year landmark method reduced the bias but did not remove it;
-- the time-dependent method was recommended.
+Comparing survival between treated and untreated men is exposed to immortal time bias, because treated men must survive until treatment starts. A simulation study of observational research found that time-fixed and exclusion methods overestimated a treatment's benefit, that a 1-year landmark method reduced the bias but did not remove it, and recommended the time-dependent method [29]. A suitable design would treat treatment as a time-dependent exposure, with competing risks of prostate cancer death and death from other causes, and use a 12-month landmark analysis only as a sensitivity analysis. This design is described, not estimated, in this study.
 
-**Preferred design**
-- Treatment as a time-dependent exposure.
-- Competing risks of prostate cancer death and death from other causes.
-- A 12-month landmark analysis as a sensitivity analysis only.
+## Supplementary Box 2. Candidate Australian analogues of the SEER variables (no Australian data analysed)
 
-This design is described, not estimated, in this study.
+Published analyses of the Prostate Cancer Outcomes Registry in Tasmania used the measures below [24, 25]. They are candidate analogues, not equivalents: the geographic units, the construction of the measures and the health systems differ, and availability for any new study must be confirmed against the registry's data dictionary.
+- **Rurality:** the county Rural-Urban Continuum Code has a candidate analogue in Australian Statistical Geography Standard remoteness areas, assigned by residential postcode.
+- **Area income:** county median household income has a candidate analogue in the SEIFA Index of Relative Socio-Economic Advantage and Disadvantage, assigned by postcode.
+- **Insurance and sector:** SEER has no insurance variable. The closest Australian contrast studied is a public or private treating facility.
 
-## Supplementary Box 2. Candidate Australian equivalents of the SEER variables (no Australian data analysed)
-
-Published analyses of the Prostate Cancer Outcomes Registry in Tasmania used the following measures [2, 3]. Availability for any new study must be confirmed against the registry's data dictionary.
-- **Rurality:** the Rural-Urban Continuum Code corresponds to Australian Statistical Geography Standard remoteness areas, assigned by residential postcode.
-- **Area income:** county median household income corresponds to the SEIFA Index of Relative Socio-Economic Advantage and Disadvantage, assigned by postcode.
-- **Insurance:** SEER has no insurance variable. The closest Australian contrast is a public or private treating facility.
-
-Data gaps reported in those analyses:
-- no comorbidity data [2];
-- patient-reported outcomes collected consistently only from 2018 [3];
-- no way to tell whether external beam radiotherapy was given in a public or private facility [3].
-
-Referral, biopsy and multidisciplinary meeting dates are not assumed to be available.
+Data gaps reported in those analyses were no comorbidity data [24], patient-reported outcomes collected consistently only from 2018 [25], and no way to tell whether external beam radiotherapy was given in a public or private facility [25]. Referral, biopsy and multidisciplinary meeting dates are not assumed to be available.
 
 ## Supplementary Table S1. Treated men by interval status
 Men meeting cohort steps 1 to 6.
@@ -205,7 +191,21 @@ Medians and 90th percentiles treat top-coded intervals as 731 days.
 | 2021 | 28,750 | 46.3 | 85.0 | 188.0 |
 | 2022 | 28,780 | 52.3 | 93.0 | 199.0 |
 
-## Supplementary Table S7. Model performance at every step
+## Supplementary Table S7. Long and top-coded intervals (post-review)
+| variable | group | % of men waiting more than 365 days | % of men top-coded (731 days or more) |
+|---|---|---|---|
+| risk group | intermediate | 1.3 | 0.25 |
+| risk group | high | 0.8 | 0.17 |
+| risk group | low | 3.0 | 0.80 |
+| risk group | unknown | 4.2 | 1.57 |
+| rurality | Metro, 1 million or more | 1.7 | 0.40 |
+| rurality | Metro, 250,000 to 1 million | 1.4 | 0.35 |
+| rurality | Nonmetro, adjacent to metro | 1.1 | 0.23 |
+| rurality | Nonmetro, not adjacent to metro | 0.9 | 0.22 |
+| rurality | Metro, under 250,000 | 1.5 | 0.41 |
+| rurality | Unknown | <5 | <5 |
+
+## Supplementary Table S8. Model performance at every step
 AUC: 0.5 is chance. Calibration intercept: 0 is ideal. Calibration slope: 1 is ideal.
 
 | stratum | model | step | log-loss skill % | Brier skill % | AUC | calibration intercept | calibration slope |
@@ -251,7 +251,7 @@ AUC: 0.5 is chance. Calibration intercept: 0 is ideal. Calibration slope: 1 is i
 | unknown risk | LightGBM | 2 | 1.96 | 2.64 | 0.629 | -0.000 | 0.882 |
 | unknown risk | LightGBM | 3 | 2.67 | 3.54 | 0.640 | -0.000 | 0.901 |
 
-## Supplementary Table S8. Skill lost when one social variable is removed from step 2
+## Supplementary Table S9. Skill lost when one variable is removed from step 2
 Rurality and county income are strongly correlated, so removing one lets the other partly stand in for it.
 
 | stratum | model | variable removed | skill lost when removed (points) |
@@ -287,7 +287,7 @@ Rurality and county income are strongly correlated, so removing one lets the oth
 | unknown risk | LightGBM | rurality | 0.16 |
 | unknown risk | LightGBM | county income | 0.59 |
 
-## Supplementary Table S9. Tuned hyperparameters
+## Supplementary Table S10. Tuned hyperparameters (primary analysis, tuned at step 3)
 
 | stratum | model | max_iter | C | seconds | learning_rate | n_estimators | num_leaves | min_child_samples |
 |---|---|---|---|---|---|---|---|---|
@@ -302,7 +302,116 @@ Rurality and county income are strongly correlated, so removing one lets the oth
 | unknown risk | penalised logistic regression | 2000 | 0.01 | 0.4 | n/a | n/a | n/a | n/a |
 | unknown risk | LightGBM | n/a | n/a | 30.7 | 0.05 | 200 | 15 | 200 |
 
-## Supplementary Table S10. Standardised percentage waiting more than 90 days by profile, all men
+## Supplementary Tables S11 to S15. Post-review robustness analyses of the primary estimand
+
+### Supplementary Table S11. Area and marital increment with per-step tuning and repeated fold assignment
+Intervals come from the first fold seed and do not include model-fitting variability; the seed range shows how much the estimate moves across 10 fold assignments.
+
+| stratum | model | social position added, primary (step 3 tuning) | social position added, per-step tuning, first fold seed | mean (minimum to maximum) over 10 fold seeds | interval with county income band clusters |
+|---|---|---|---|---|---|
+| all men (pooled) | penalised logistic regression | 0.62 (0.39 to 0.87) | 0.62 (0.39 to 0.87) | 0.62 (0.61 to 0.62) | 0.62 (0.38 to 0.90) |
+| all men (pooled) | LightGBM | 0.99 (0.73 to 1.30) | 0.99 (0.73 to 1.30) | 0.99 (0.98 to 0.99) | 0.99 (0.72 to 1.35) |
+| low risk | penalised logistic regression | 0.62 (0.32 to 0.94) | 0.62 (0.32 to 0.94) | 0.62 (0.59 to 0.63) | 0.62 (0.28 to 1.07) |
+| low risk | LightGBM | 0.96 (0.67 to 1.28) | 0.96 (0.67 to 1.28) | 0.98 (0.95 to 1.01) | 0.96 (0.64 to 1.36) |
+| intermediate risk | penalised logistic regression | 0.56 (0.35 to 0.83) | 0.56 (0.34 to 0.83) | 0.56 (0.54 to 0.56) | 0.56 (0.33 to 0.89) |
+| intermediate risk | LightGBM | 0.93 (0.65 to 1.27) | 0.93 (0.65 to 1.27) | 0.93 (0.91 to 0.97) | 0.93 (0.63 to 1.31) |
+| high risk | penalised logistic regression | 0.86 (0.60 to 1.15) | 0.86 (0.60 to 1.15) | 0.85 (0.85 to 0.86) | 0.86 (0.58 to 1.15) |
+| high risk | LightGBM | 1.18 (0.90 to 1.56) | 1.18 (0.90 to 1.54) | 1.18 (1.16 to 1.20) | 1.18 (0.87 to 1.55) |
+| unknown risk | penalised logistic regression | 0.42 (0.08 to 0.80) | 0.40 (0.07 to 0.80) | 0.41 (0.32 to 0.48) | 0.40 (0.07 to 0.78) |
+| unknown risk | LightGBM | 1.37 (0.80 to 2.19) | 1.37 (0.80 to 2.19) | 1.29 (1.22 to 1.43) | 1.37 (0.78 to 2.09) |
+
+### Supplementary Table S12. Clinical model comparison under per-step tuning
+| stratum | clinical need added, logistic (seed mean) | clinical need added, LightGBM (seed mean) | LightGBM clinical model at least as good | step 2 skill, logistic (seed mean) | step 2 skill, LightGBM (seed mean) |
+|---|---|---|---|---|---|
+| all men (pooled) | 3.01 | 3.18 | yes | 3.63 | 4.17 |
+| low risk | 0.14 | 0.05 | no | 0.76 | 1.03 |
+| intermediate risk | 0.49 | 0.53 | yes | 1.05 | 1.47 |
+| high risk | 3.53 | 3.72 | yes | 4.38 | 4.90 |
+| unknown risk | 0.64 | 0.55 | no | 1.05 | 1.84 |
+
+### Supplementary Table S13. Hyperparameters chosen at each step
+| stratum | model | step | max_iter | C | learning_rate | n_estimators | num_leaves | min_child_samples |
+|---|---|---|---|---|---|---|---|---|
+| all men (pooled) | penalised logistic regression | 0 | 2000 | 0.01 | n/a | n/a | n/a | n/a |
+| all men (pooled) | penalised logistic regression | 1 | 2000 | 0.01 | n/a | n/a | n/a | n/a |
+| all men (pooled) | penalised logistic regression | 2 | 2000 | 0.01 | n/a | n/a | n/a | n/a |
+| all men (pooled) | LightGBM | 0 | n/a | n/a | 0.05 | 200 | 15 | 50 |
+| all men (pooled) | LightGBM | 1 | n/a | n/a | 0.05 | 200 | 15 | 50 |
+| all men (pooled) | LightGBM | 2 | n/a | n/a | 0.05 | 200 | 15 | 200 |
+| low risk | penalised logistic regression | 0 | 2000 | 0.1 | n/a | n/a | n/a | n/a |
+| low risk | penalised logistic regression | 1 | 2000 | 0.01 | n/a | n/a | n/a | n/a |
+| low risk | penalised logistic regression | 2 | 2000 | 0.01 | n/a | n/a | n/a | n/a |
+| low risk | LightGBM | 0 | n/a | n/a | 0.05 | 200 | 15 | 50 |
+| low risk | LightGBM | 1 | n/a | n/a | 0.05 | 200 | 15 | 200 |
+| low risk | LightGBM | 2 | n/a | n/a | 0.05 | 200 | 15 | 200 |
+| intermediate risk | penalised logistic regression | 0 | 2000 | 0.1 | n/a | n/a | n/a | n/a |
+| intermediate risk | penalised logistic regression | 1 | 2000 | 0.1 | n/a | n/a | n/a | n/a |
+| intermediate risk | penalised logistic regression | 2 | 2000 | 0.01 | n/a | n/a | n/a | n/a |
+| intermediate risk | LightGBM | 0 | n/a | n/a | 0.05 | 200 | 15 | 50 |
+| intermediate risk | LightGBM | 1 | n/a | n/a | 0.05 | 200 | 15 | 200 |
+| intermediate risk | LightGBM | 2 | n/a | n/a | 0.05 | 200 | 15 | 200 |
+| high risk | penalised logistic regression | 0 | 2000 | 0.1 | n/a | n/a | n/a | n/a |
+| high risk | penalised logistic regression | 1 | 2000 | 0.1 | n/a | n/a | n/a | n/a |
+| high risk | penalised logistic regression | 2 | 2000 | 0.01 | n/a | n/a | n/a | n/a |
+| high risk | LightGBM | 0 | n/a | n/a | 0.05 | 200 | 15 | 50 |
+| high risk | LightGBM | 1 | n/a | n/a | 0.05 | 200 | 15 | 50 |
+| high risk | LightGBM | 2 | n/a | n/a | 0.05 | 200 | 15 | 200 |
+| unknown risk | penalised logistic regression | 0 | 2000 | 0.1 | n/a | n/a | n/a | n/a |
+| unknown risk | penalised logistic regression | 1 | 2000 | 0.1 | n/a | n/a | n/a | n/a |
+| unknown risk | penalised logistic regression | 2 | 2000 | 0.01 | n/a | n/a | n/a | n/a |
+| unknown risk | LightGBM | 0 | n/a | n/a | 0.05 | 200 | 15 | 50 |
+| unknown risk | LightGBM | 1 | n/a | n/a | 0.05 | 200 | 15 | 200 |
+| unknown risk | LightGBM | 2 | n/a | n/a | 0.05 | 200 | 15 | 200 |
+
+### Supplementary Table S14. Bootstrap clusters by stratum
+| stratum | clustering | clusters | smallest cluster (men) | median cluster (men) | largest cluster (men) | largest cluster, % of men |
+|---|---|---|---|---|---|---|
+| all men (pooled) | rurality by income cells | 79 | 23 | 1,870 | 28,195 | 8.5 |
+| all men (pooled) | county income band only | 17 | 28 | 22,703 | 36,147 | 10.9 |
+| low risk | rurality by income cells | 78 | <5 | 310 | 5,288 | 9.2 |
+| low risk | county income band only | 17 | <5 | 3,342 | 6,807 | 11.8 |
+| intermediate risk | rurality by income cells | 79 | 7 | 659 | 11,724 | 9.2 |
+| intermediate risk | county income band only | 17 | 7 | 8,879 | 14,291 | 11.2 |
+| high risk | rurality by income cells | 79 | 12 | 717 | 11,366 | 8.7 |
+| high risk | county income band only | 17 | 13 | 9,352 | 14,824 | 11.3 |
+| unknown risk | rurality by income cells | 77 | <5 | 70 | 1,226 | 8.3 |
+| unknown risk | county income band only | 17 | <5 | 967 | 1,644 | 11.1 |
+
+### Supplementary Table S15. Stage-free clinical block and year as categories
+| analysis | stratum | model | comparison | estimate (95% interval) | primary |
+|---|---|---|---|---|---|
+| stage-free clinical block | all men (pooled) | penalised logistic regression | clinical need (step 0 to 1) | 2.97 (2.64 to 3.34) | 3.01 (2.69 to 3.38) |
+| stage-free clinical block | all men (pooled) | penalised logistic regression | social position (step 1 to 2) | 0.62 (0.39 to 0.87) | 0.62 (0.39 to 0.87) |
+| stage-free clinical block | all men (pooled) | LightGBM | clinical need (step 0 to 1) | 3.13 (2.80 to 3.48) | 3.18 (2.85 to 3.54) |
+| stage-free clinical block | all men (pooled) | LightGBM | social position (step 1 to 2) | 1.02 (0.75 to 1.33) | 0.99 (0.73 to 1.30) |
+| stage-free clinical block | low risk | penalised logistic regression | clinical need (step 0 to 1) | 0.14 (0.08 to 0.20) | 0.14 (0.08 to 0.20) |
+| stage-free clinical block | low risk | penalised logistic regression | social position (step 1 to 2) | 0.62 (0.32 to 0.94) | 0.62 (0.32 to 0.94) |
+| stage-free clinical block | low risk | LightGBM | clinical need (step 0 to 1) | 0.02 (-0.09 to 0.13) | 0.02 (-0.09 to 0.13) |
+| stage-free clinical block | low risk | LightGBM | social position (step 1 to 2) | 0.96 (0.67 to 1.28) | 0.96 (0.67 to 1.28) |
+| stage-free clinical block | intermediate risk | penalised logistic regression | clinical need (step 0 to 1) | 0.49 (0.41 to 0.57) | 0.49 (0.41 to 0.56) |
+| stage-free clinical block | intermediate risk | penalised logistic regression | social position (step 1 to 2) | 0.56 (0.34 to 0.83) | 0.56 (0.35 to 0.83) |
+| stage-free clinical block | intermediate risk | LightGBM | clinical need (step 0 to 1) | 0.55 (0.44 to 0.65) | 0.55 (0.44 to 0.65) |
+| stage-free clinical block | intermediate risk | LightGBM | social position (step 1 to 2) | 0.93 (0.65 to 1.27) | 0.93 (0.65 to 1.27) |
+| stage-free clinical block | high risk | penalised logistic regression | clinical need (step 0 to 1) | 3.42 (3.07 to 3.76) | 3.53 (3.16 to 3.86) |
+| stage-free clinical block | high risk | penalised logistic regression | social position (step 1 to 2) | 0.85 (0.59 to 1.14) | 0.86 (0.60 to 1.15) |
+| stage-free clinical block | high risk | LightGBM | clinical need (step 0 to 1) | 3.64 (3.27 to 3.99) | 3.72 (3.34 to 4.06) |
+| stage-free clinical block | high risk | LightGBM | social position (step 1 to 2) | 1.19 (0.91 to 1.57) | 1.18 (0.90 to 1.56) |
+| stage-free clinical block | unknown risk | penalised logistic regression | clinical need (step 0 to 1) | 0.66 (0.41 to 0.92) | 0.65 (0.41 to 0.89) |
+| stage-free clinical block | unknown risk | penalised logistic regression | social position (step 1 to 2) | 0.40 (0.06 to 0.80) | 0.42 (0.08 to 0.80) |
+| stage-free clinical block | unknown risk | LightGBM | clinical need (step 0 to 1) | 0.59 (0.27 to 0.95) | 0.59 (0.27 to 0.95) |
+| stage-free clinical block | unknown risk | LightGBM | social position (step 1 to 2) | 1.37 (0.80 to 2.19) | 1.37 (0.80 to 2.19) |
+| year as categories | all men (pooled) | penalised logistic regression | clinical need (step 0 to 1) | 2.98 (2.66 to 3.34) | 3.01 (2.69 to 3.38) |
+| year as categories | all men (pooled) | penalised logistic regression | social position (step 1 to 2) | 0.62 (0.39 to 0.86) | 0.62 (0.39 to 0.87) |
+| year as categories | low risk | penalised logistic regression | clinical need (step 0 to 1) | 0.15 (0.09 to 0.21) | 0.14 (0.08 to 0.20) |
+| year as categories | low risk | penalised logistic regression | social position (step 1 to 2) | 0.60 (0.31 to 0.92) | 0.62 (0.32 to 0.94) |
+| year as categories | intermediate risk | penalised logistic regression | clinical need (step 0 to 1) | 0.50 (0.42 to 0.58) | 0.49 (0.41 to 0.56) |
+| year as categories | intermediate risk | penalised logistic regression | social position (step 1 to 2) | 0.56 (0.34 to 0.83) | 0.56 (0.35 to 0.83) |
+| year as categories | high risk | penalised logistic regression | clinical need (step 0 to 1) | 3.48 (3.12 to 3.82) | 3.53 (3.16 to 3.86) |
+| year as categories | high risk | penalised logistic regression | social position (step 1 to 2) | 0.87 (0.61 to 1.16) | 0.86 (0.60 to 1.15) |
+| year as categories | unknown risk | penalised logistic regression | clinical need (step 0 to 1) | 0.65 (0.41 to 0.90) | 0.65 (0.41 to 0.89) |
+| year as categories | unknown risk | penalised logistic regression | social position (step 1 to 2) | 0.47 (0.11 to 0.89) | 0.42 (0.08 to 0.80) |
+
+## Supplementary Table S16. Standardised percentage waiting more than 90 days by profile, all men
 
 | profile | penalised logistic regression | LightGBM |
 |---|---|---|
@@ -321,7 +430,118 @@ Rurality and county income are strongly correlated, so removing one lets the oth
 | marital status: Unmarried or Domestic Partner | 46.7 | 45.9 |
 | marital status: Unknown | 45.6 | 45.7 |
 
-## Supplementary Table S11. Crude excess waiting days beyond 90 days per 1,000 men
+## Supplementary Tables S17 and S18. One-at-a-time rurality and income profiles (not interpreted)
+These profiles change rurality or county income alone, holding the other at the reference profile, which creates combinations rarely observed in the data. The two model types conflict, which is why joint area profiles are reported instead (amendment 1.7).
+
+### Supplementary Table S17. Contrasts (percentage points)
+| stratum | contrast | penalised logistic regression | LightGBM | agreement |
+|---|---|---|---|---|
+| all men (pooled) | rurality only: Nonmetro, not adjacent to metro minus Metro, 1 million or more | -8.7 | 1.7 | opposite directions, at least one model 3 points or more |
+| all men (pooled) | county income only: Q1 (lowest) minus Q4 (highest) | -0.9 | -8.7 | same direction, only one model 3 points or more |
+| low risk | rurality only: Nonmetro, not adjacent to metro minus Metro, 1 million or more | -7.3 | -4.9 | both models 3 points or more, same direction |
+| low risk | county income only: Q1 (lowest) minus Q4 (highest) | -7.0 | -14.8 | both models 3 points or more, same direction |
+| intermediate risk | rurality only: Nonmetro, not adjacent to metro minus Metro, 1 million or more | -7.7 | -2.5 | same direction, only one model 3 points or more |
+| intermediate risk | county income only: Q1 (lowest) minus Q4 (highest) | -2.0 | -10.9 | same direction, only one model 3 points or more |
+| high risk | rurality only: Nonmetro, not adjacent to metro minus Metro, 1 million or more | -9.9 | -3.3 | both models 3 points or more, same direction |
+| high risk | county income only: Q1 (lowest) minus Q4 (highest) | 3.4 | -4.8 | opposite directions, at least one model 3 points or more |
+| unknown risk | rurality only: Nonmetro, not adjacent to metro minus Metro, 1 million or more | -11.4 | -6.2 | both models 3 points or more, same direction |
+| unknown risk | county income only: Q1 (lowest) minus Q4 (highest) | -1.5 | -9.6 | same direction, only one model 3 points or more |
+
+### Supplementary Table S18. Standardised percentages
+| stratum | model | profile | standardised % |
+|---|---|---|---|
+| all men (pooled) | penalised logistic regression | rurality only: Metro, 1 million or more (county income held at reference) | 40.8 |
+| all men (pooled) | penalised logistic regression | rurality only: Metro, 250,000 to 1 million (county income held at reference) | 36.6 |
+| all men (pooled) | penalised logistic regression | rurality only: Metro, under 250,000 (county income held at reference) | 33.3 |
+| all men (pooled) | penalised logistic regression | rurality only: Nonmetro, adjacent to metro (county income held at reference) | 32.4 |
+| all men (pooled) | penalised logistic regression | rurality only: Nonmetro, not adjacent to metro (county income held at reference) | 32.1 |
+| all men (pooled) | penalised logistic regression | county income only: Q1 (lowest) (rurality held at reference) | 39.9 |
+| all men (pooled) | penalised logistic regression | county income only: Q2 (rurality held at reference) | 40.2 |
+| all men (pooled) | penalised logistic regression | county income only: Q3 (rurality held at reference) | 40.5 |
+| all men (pooled) | penalised logistic regression | county income only: Q4 (highest) (rurality held at reference) | 40.8 |
+| all men (pooled) | LightGBM | rurality only: Metro, 1 million or more (county income held at reference) | 41.3 |
+| all men (pooled) | LightGBM | rurality only: Metro, 250,000 to 1 million (county income held at reference) | 37.4 |
+| all men (pooled) | LightGBM | rurality only: Metro, under 250,000 (county income held at reference) | 37.4 |
+| all men (pooled) | LightGBM | rurality only: Nonmetro, adjacent to metro (county income held at reference) | 38.0 |
+| all men (pooled) | LightGBM | rurality only: Nonmetro, not adjacent to metro (county income held at reference) | 43.0 |
+| all men (pooled) | LightGBM | county income only: Q1 (lowest) (rurality held at reference) | 32.6 |
+| all men (pooled) | LightGBM | county income only: Q2 (rurality held at reference) | 34.6 |
+| all men (pooled) | LightGBM | county income only: Q3 (rurality held at reference) | 40.4 |
+| all men (pooled) | LightGBM | county income only: Q4 (highest) (rurality held at reference) | 41.3 |
+| low risk | penalised logistic regression | rurality only: Metro, 1 million or more (county income held at reference) | 51.3 |
+| low risk | penalised logistic regression | rurality only: Metro, 250,000 to 1 million (county income held at reference) | 48.9 |
+| low risk | penalised logistic regression | rurality only: Metro, under 250,000 (county income held at reference) | 46.1 |
+| low risk | penalised logistic regression | rurality only: Nonmetro, adjacent to metro (county income held at reference) | 42.8 |
+| low risk | penalised logistic regression | rurality only: Nonmetro, not adjacent to metro (county income held at reference) | 44.0 |
+| low risk | penalised logistic regression | county income only: Q1 (lowest) (rurality held at reference) | 44.6 |
+| low risk | penalised logistic regression | county income only: Q2 (rurality held at reference) | 46.9 |
+| low risk | penalised logistic regression | county income only: Q3 (rurality held at reference) | 49.3 |
+| low risk | penalised logistic regression | county income only: Q4 (highest) (rurality held at reference) | 51.6 |
+| low risk | LightGBM | rurality only: Metro, 1 million or more (county income held at reference) | 52.6 |
+| low risk | LightGBM | rurality only: Metro, 250,000 to 1 million (county income held at reference) | 50.0 |
+| low risk | LightGBM | rurality only: Metro, under 250,000 (county income held at reference) | 50.0 |
+| low risk | LightGBM | rurality only: Nonmetro, adjacent to metro (county income held at reference) | 48.7 |
+| low risk | LightGBM | rurality only: Nonmetro, not adjacent to metro (county income held at reference) | 47.7 |
+| low risk | LightGBM | county income only: Q1 (lowest) (rurality held at reference) | 37.8 |
+| low risk | LightGBM | county income only: Q2 (rurality held at reference) | 41.5 |
+| low risk | LightGBM | county income only: Q3 (rurality held at reference) | 47.7 |
+| low risk | LightGBM | county income only: Q4 (highest) (rurality held at reference) | 52.6 |
+| intermediate risk | penalised logistic regression | rurality only: Metro, 1 million or more (county income held at reference) | 44.2 |
+| intermediate risk | penalised logistic regression | rurality only: Metro, 250,000 to 1 million (county income held at reference) | 40.2 |
+| intermediate risk | penalised logistic regression | rurality only: Metro, under 250,000 (county income held at reference) | 36.7 |
+| intermediate risk | penalised logistic regression | rurality only: Nonmetro, adjacent to metro (county income held at reference) | 36.0 |
+| intermediate risk | penalised logistic regression | rurality only: Nonmetro, not adjacent to metro (county income held at reference) | 36.6 |
+| intermediate risk | penalised logistic regression | county income only: Q1 (lowest) (rurality held at reference) | 42.3 |
+| intermediate risk | penalised logistic regression | county income only: Q2 (rurality held at reference) | 43.0 |
+| intermediate risk | penalised logistic regression | county income only: Q3 (rurality held at reference) | 43.6 |
+| intermediate risk | penalised logistic regression | county income only: Q4 (highest) (rurality held at reference) | 44.3 |
+| intermediate risk | LightGBM | rurality only: Metro, 1 million or more (county income held at reference) | 44.4 |
+| intermediate risk | LightGBM | rurality only: Metro, 250,000 to 1 million (county income held at reference) | 40.9 |
+| intermediate risk | LightGBM | rurality only: Metro, under 250,000 (county income held at reference) | 43.0 |
+| intermediate risk | LightGBM | rurality only: Nonmetro, adjacent to metro (county income held at reference) | 40.9 |
+| intermediate risk | LightGBM | rurality only: Nonmetro, not adjacent to metro (county income held at reference) | 41.9 |
+| intermediate risk | LightGBM | county income only: Q1 (lowest) (rurality held at reference) | 33.5 |
+| intermediate risk | LightGBM | county income only: Q2 (rurality held at reference) | 37.0 |
+| intermediate risk | LightGBM | county income only: Q3 (rurality held at reference) | 43.5 |
+| intermediate risk | LightGBM | county income only: Q4 (highest) (rurality held at reference) | 44.4 |
+| high risk | penalised logistic regression | rurality only: Metro, 1 million or more (county income held at reference) | 32.7 |
+| high risk | penalised logistic regression | rurality only: Metro, 250,000 to 1 million (county income held at reference) | 27.2 |
+| high risk | penalised logistic regression | rurality only: Metro, under 250,000 (county income held at reference) | 24.5 |
+| high risk | penalised logistic regression | rurality only: Nonmetro, adjacent to metro (county income held at reference) | 24.2 |
+| high risk | penalised logistic regression | rurality only: Nonmetro, not adjacent to metro (county income held at reference) | 22.9 |
+| high risk | penalised logistic regression | county income only: Q1 (lowest) (rurality held at reference) | 35.9 |
+| high risk | penalised logistic regression | county income only: Q2 (rurality held at reference) | 34.8 |
+| high risk | penalised logistic regression | county income only: Q3 (rurality held at reference) | 33.7 |
+| high risk | penalised logistic regression | county income only: Q4 (highest) (rurality held at reference) | 32.6 |
+| high risk | LightGBM | rurality only: Metro, 1 million or more (county income held at reference) | 32.9 |
+| high risk | LightGBM | rurality only: Metro, 250,000 to 1 million (county income held at reference) | 27.8 |
+| high risk | LightGBM | rurality only: Metro, under 250,000 (county income held at reference) | 28.0 |
+| high risk | LightGBM | rurality only: Nonmetro, adjacent to metro (county income held at reference) | 29.0 |
+| high risk | LightGBM | rurality only: Nonmetro, not adjacent to metro (county income held at reference) | 29.6 |
+| high risk | LightGBM | county income only: Q1 (lowest) (rurality held at reference) | 28.1 |
+| high risk | LightGBM | county income only: Q2 (rurality held at reference) | 29.2 |
+| high risk | LightGBM | county income only: Q3 (rurality held at reference) | 33.7 |
+| high risk | LightGBM | county income only: Q4 (highest) (rurality held at reference) | 32.9 |
+| unknown risk | penalised logistic regression | rurality only: Metro, 1 million or more (county income held at reference) | 42.3 |
+| unknown risk | penalised logistic regression | rurality only: Metro, 250,000 to 1 million (county income held at reference) | 41.2 |
+| unknown risk | penalised logistic regression | rurality only: Metro, under 250,000 (county income held at reference) | 34.4 |
+| unknown risk | penalised logistic regression | rurality only: Nonmetro, adjacent to metro (county income held at reference) | 36.2 |
+| unknown risk | penalised logistic regression | rurality only: Nonmetro, not adjacent to metro (county income held at reference) | 30.8 |
+| unknown risk | penalised logistic regression | county income only: Q1 (lowest) (rurality held at reference) | 40.9 |
+| unknown risk | penalised logistic regression | county income only: Q2 (rurality held at reference) | 41.4 |
+| unknown risk | penalised logistic regression | county income only: Q3 (rurality held at reference) | 41.9 |
+| unknown risk | penalised logistic regression | county income only: Q4 (highest) (rurality held at reference) | 42.3 |
+| unknown risk | LightGBM | rurality only: Metro, 1 million or more (county income held at reference) | 42.1 |
+| unknown risk | LightGBM | rurality only: Metro, 250,000 to 1 million (county income held at reference) | 42.0 |
+| unknown risk | LightGBM | rurality only: Metro, under 250,000 (county income held at reference) | 35.0 |
+| unknown risk | LightGBM | rurality only: Nonmetro, adjacent to metro (county income held at reference) | 41.5 |
+| unknown risk | LightGBM | rurality only: Nonmetro, not adjacent to metro (county income held at reference) | 36.0 |
+| unknown risk | LightGBM | county income only: Q1 (lowest) (rurality held at reference) | 32.5 |
+| unknown risk | LightGBM | county income only: Q2 (rurality held at reference) | 32.7 |
+| unknown risk | LightGBM | county income only: Q3 (rurality held at reference) | 42.5 |
+| unknown risk | LightGBM | county income only: Q4 (highest) (rurality held at reference) | 42.1 |
+
+## Supplementary Table S19. Crude excess waiting days beyond 90 days per 1,000 men
 
 | stratum | variable | group | men | excess days per 1,000 men (crude) |
 |---|---|---|---|---|
@@ -348,7 +568,8 @@ Rurality and county income are strongly correlated, so removing one lets the oth
 | high risk | county income quartile | Q4 (highest) | 43,650 | 19,625 |
 | high risk | county income quartile | Unknown | 10 | 18,462 |
 
-## Supplementary Table S12. Erreygers concentration index by risk group
+## Supplementary Table S20. Erreygers concentration index by risk group
+Crude within each stratum; it does not separate income from rurality.
 
 | stratum | Erreygers index (95% interval) |
 |---|---|
@@ -358,10 +579,38 @@ Rurality and county income are strongly correlated, so removing one lets the oth
 | high risk | 0.041 (0.017 to 0.065) |
 | unknown risk | 0.077 (0.037 to 0.128) |
 
-## Supplementary Tables S13 to S16. Bounds for men without a recorded interval
-The lower bound assumes every man without a recorded interval waited 90 days or less; the upper bound assumes every such man waited longer.
+## Supplementary Tables S21 and S22. Concentration index by diagnosis period (post-review)
 
-### Supplementary Table S13. By risk group
+### Supplementary Table S21. Erreygers index by period
+| stratum | period | Erreygers index (95% interval) |
+|---|---|---|
+| all men (pooled) | 2010 to 2014 | 0.059 (0.025 to 0.092) |
+| all men (pooled) | 2015 to 2019 | 0.037 (0.011 to 0.065) |
+| all men (pooled) | 2020 to 2022 | 0.027 (0.003 to 0.061) |
+| high risk | 2010 to 2014 | 0.028 (-0.011 to 0.062) |
+| high risk | 2015 to 2019 | 0.020 (-0.004 to 0.049) |
+| high risk | 2020 to 2022 | 0.015 (-0.013 to 0.056) |
+| intermediate risk | 2010 to 2014 | 0.058 (0.023 to 0.099) |
+| intermediate risk | 2015 to 2019 | 0.048 (0.019 to 0.080) |
+| intermediate risk | 2020 to 2022 | 0.039 (0.015 to 0.067) |
+| low risk | 2010 to 2014 | 0.092 (0.053 to 0.136) |
+| low risk | 2015 to 2019 | 0.084 (0.052 to 0.121) |
+| low risk | 2020 to 2022 | 0.052 (0.017 to 0.092) |
+| unknown risk | 2010 to 2014 | 0.060 (0.001 to 0.130) |
+| unknown risk | 2015 to 2019 | 0.023 (-0.041 to 0.100) |
+| unknown risk | 2020 to 2022 | 0.049 (-0.005 to 0.101) |
+
+### Supplementary Table S22. County income quartile distribution by period
+| period | Q1 (lowest) | Q2 | Q3 | Q4 (highest) | Unknown |
+|---|---|---|---|---|---|
+| 2010 to 2014 | 9.7 | 30.4 | 33.7 | 26.2 | 0.0 |
+| 2015 to 2019 | 7.9 | 20.9 | 37.1 | 34.1 | 0.0 |
+| 2020 to 2022 | 5.4 | 19.3 | 34.3 | 41.0 | <5 |
+
+## Supplementary Tables S23 to S26. Bounds for men without a recorded interval
+The lower bound assumes every man without a recorded interval waited 90 days or less; the upper bound assumes every such man waited longer. These bounds do not address selection into recorded treatment.
+
+### Supplementary Table S23. By risk group
 | risk group | men | % over 90 days (recorded men) | lower bound % | upper bound % | % with no recorded interval |
 |---|---|---|---|---|---|
 | low | 59,930 | 47.9 | 46.0 | 50.0 | 4.1 |
@@ -369,7 +618,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | high | 137,950 | 32.8 | 31.1 | 36.2 | 5.1 |
 | unknown | 17,300 | 42.1 | 36.1 | 50.5 | 14.4 |
 
-### Supplementary Table S14. By rurality
+### Supplementary Table S24. By rurality
 | rurality | men | % over 90 days (recorded men) | lower bound % | upper bound % | % with no recorded interval |
 |---|---|---|---|---|---|
 | Metro, 1 million or more | 205,980 | 42.5 | 40.2 | 45.7 | 5.5 |
@@ -379,7 +628,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | Nonmetro, not adjacent to metro | 14,780 | 32.2 | 31.3 | 34.0 | 2.7 |
 | Unknown | 170 | 33.3 | 31.9 | 36.1 | 4.2 |
 
-### Supplementary Table S15. By county income quartile
+### Supplementary Table S25. By county income quartile
 | county income quartile | men | % over 90 days (recorded men) | lower bound % | upper bound % | % with no recorded interval |
 |---|---|---|---|---|---|
 | Q1 (lowest) | 27,000 | 31.7 | 31.0 | 33.1 | 2.1 |
@@ -388,7 +637,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | Q4 (highest) | 113,500 | 41.4 | 39.6 | 44.1 | 4.5 |
 | Unknown | 30 | 39.3 | 32.4 | 50.0 | 17.6 |
 
-### Supplementary Table S16. By marital status
+### Supplementary Table S26. By marital status
 | marital status | men | % over 90 days (recorded men) | lower bound % | upper bound % | % with no recorded interval |
 |---|---|---|---|---|---|
 | Married (including common law) | 244,030 | 38.1 | 36.3 | 41.0 | 4.7 |
@@ -399,14 +648,14 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | Unmarried or Domestic Partner | 1,420 | 46.7 | 45.0 | 48.8 | 3.8 |
 | Unknown | 27,350 | 42.4 | 39.8 | 46.0 | 6.1 |
 
-## Supplementary Table S17. Skill added in predicting a missing interval
+## Supplementary Table S27. Skill added in predicting a missing interval
 
 | comparison | skill added, percentage points (95% interval) |
 |---|---|
 | clinical need (step 0 to 1) | 4.99 (4.51 to 5.42) |
 | social position (step 1 to 2) | 0.53 (0.07 to 1.02) |
 
-## Supplementary Table S18. Inverse probability weighted percentages
+## Supplementary Table S28. Inverse probability weighted percentages
 
 | variable | group | men | % over 90 days (unweighted) | % over 90 days (weighted) |
 |---|---|---|---|---|
@@ -429,9 +678,9 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | marital status | Unmarried or Domestic Partner | 1,370 | 46.7 | 46.6 |
 | marital status | Unknown | 25,670 | 42.4 | 42.4 |
 
-## Supplementary Tables S19 to S24. Sensitivity analyses
+## Supplementary Tables S29 to S35. Sensitivity analyses
 
-### Supplementary Table S19. Percentage waiting beyond the threshold, by scenario
+### Supplementary Table S29. Percentage waiting beyond the threshold, by scenario
 | scenario | threshold (days) | men | % over threshold, all men | % over threshold, low risk | % over threshold, intermediate risk | % over threshold, high risk | % over threshold, unknown risk |
 |---|---|---|---|---|---|---|---|
 | primary analysis | 90 | 330,830 | 39.7 | 47.9 | 42.8 | 32.8 | 42.1 |
@@ -446,7 +695,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | one primary cancer only (strict first primary) | 90 | 296,120 | 40.1 | 48.3 | 43.2 | 33.2 | 42.7 |
 | excluding prostatectomy not otherwise specified | 90 | 330,180 | 39.7 | 47.9 | 42.8 | 32.8 | 42.2 |
 
-### Supplementary Table S20. Social position increment by scenario
+### Supplementary Table S30. Area and marital increment by scenario
 | scenario | model | all men (pooled) | low risk | intermediate risk | high risk | unknown risk |
 |---|---|---|---|---|---|---|
 | primary analysis | penalised logistic regression | 0.62 (0.39 to 0.87) | 0.62 (0.32 to 0.94) | 0.56 (0.35 to 0.83) | 0.86 (0.60 to 1.15) | 0.42 (0.08 to 0.80) |
@@ -472,13 +721,13 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | excluding prostatectomy not otherwise specified | penalised logistic regression | 0.62 (0.39 to 0.87) | 0.61 (0.30 to 0.94) | 0.54 (0.32 to 0.80) | 0.86 (0.59 to 1.15) | 0.52 (0.15 to 0.93) |
 | excluding prostatectomy not otherwise specified | LightGBM | 0.98 (0.72 to 1.28) | 1.03 (0.76 to 1.32) | 0.93 (0.65 to 1.28) | 1.19 (0.92 to 1.55) | 1.37 (0.74 to 2.13) |
 
-### Supplementary Table S21. Standardised area contrast by scenario, all men
+### Supplementary Table S31. Standardised area contrast by scenario, all men
 | scenario | penalised logistic regression | LightGBM | agreement |
 |---|---|---|---|
 | primary analysis | -9.2 | -8.8 | both models 3 points or more, same direction |
 | threshold of 60 days | -10.6 | -10.3 | both models 3 points or more, same direction |
 | threshold of 120 days | -6.9 | -7.1 | both models 3 points or more, same direction |
-| threshold of 180 days | -3.0 | -3.2 | models disagree |
+| threshold of 180 days | -3.0 | -3.2 | same direction, only one model 3 points or more |
 | risk groups from Gleason score and PSA only | -9.2 | -8.8 | both models 3 points or more, same direction |
 | radical prostatectomy without radiotherapy only | -8.9 | -7.8 | both models 3 points or more, same direction |
 | excluding men diagnosed in 2020 | -9.4 | -8.9 | both models 3 points or more, same direction |
@@ -487,7 +736,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | one primary cancer only (strict first primary) | -9.1 | -9.3 | both models 3 points or more, same direction |
 | excluding prostatectomy not otherwise specified | -9.2 | -9.1 | both models 3 points or more, same direction |
 
-### Supplementary Table S22. Standardised marital status contrast by scenario, all men
+### Supplementary Table S32. Standardised marital status contrast by scenario, all men
 | scenario | penalised logistic regression | LightGBM | agreement |
 |---|---|---|---|
 | primary analysis | 6.7 | 5.9 | both models 3 points or more, same direction |
@@ -502,7 +751,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | one primary cancer only (strict first primary) | 6.6 | 5.6 | both models 3 points or more, same direction |
 | excluding prostatectomy not otherwise specified | 6.7 | 5.9 | both models 3 points or more, same direction |
 
-### Supplementary Table S23. All social features as observed minus the reference profile, by scenario, all men
+### Supplementary Table S33. All area and marital features as observed minus the reference profile, by scenario, all men
 | scenario | penalised logistic regression | LightGBM | agreement |
 |---|---|---|---|
 | primary analysis | -1.1 | -1.6 | both models under 3 points |
@@ -517,7 +766,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | one primary cancer only (strict first primary) | -1.1 | -1.6 | both models under 3 points |
 | excluding prostatectomy not otherwise specified | -1.1 | -1.6 | both models under 3 points |
 
-### Supplementary Table S24. Penalised logistic regression with a wider C grid (post hoc)
+### Supplementary Table S34. Penalised logistic regression with a wider C grid (post hoc)
 | stratum | C chosen (wider grid) | at an edge of the wider grid | logistic step 2 skill, original grid | logistic step 2 skill, wider grid | LightGBM step 2 skill | social position added, original grid | social position added, wider grid |
 |---|---|---|---|---|---|---|---|
 | all men (pooled) | 0.01 | no | 3.63 | 3.63 | 4.17 | 0.62 (0.39 to 0.87) | 0.62 (0.39 to 0.87) |
@@ -526,16 +775,30 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | high risk | 0.01 | no | 4.39 | 4.39 | 4.90 | 0.86 (0.60 to 1.15) | 0.86 (0.60 to 1.15) |
 | unknown risk | 0.01 | no | 1.07 | 1.07 | 1.96 | 0.42 (0.08 to 0.80) | 0.42 (0.08 to 0.80) |
 
-## Supplementary Tables S25 to S31. Secondary outcome: recorded curative treatment
-**What the outcome means.** No record can mean active surveillance, watchful waiting, hormone therapy only, refusal, or treatment the registry did not capture. A lower percentage cannot be read as under-treatment.
+### Supplementary Table S35. Clinical need increment with and without radiotherapy patients
+| stratum | model | clinical need added, primary cohort | clinical need added, prostatectomy without radiotherapy only |
+|---|---|---|---|
+| all men (pooled) | penalised logistic regression | 3.01 (2.69 to 3.38) | 1.66 (1.49 to 1.81) |
+| all men (pooled) | LightGBM | 3.18 (2.85 to 3.54) | 1.66 (1.49 to 1.81) |
+| low risk | penalised logistic regression | 0.14 (0.08 to 0.20) | 0.05 (-0.01 to 0.12) |
+| low risk | LightGBM | 0.02 (-0.09 to 0.13) | -0.15 (-0.28 to -0.02) |
+| intermediate risk | penalised logistic regression | 0.49 (0.41 to 0.56) | 0.33 (0.21 to 0.44) |
+| intermediate risk | LightGBM | 0.55 (0.44 to 0.65) | 0.06 (-0.06 to 0.17) |
+| high risk | penalised logistic regression | 3.53 (3.16 to 3.86) | 2.20 (1.96 to 2.42) |
+| high risk | LightGBM | 3.72 (3.34 to 4.06) | 2.13 (1.88 to 2.32) |
+| unknown risk | penalised logistic regression | 0.65 (0.41 to 0.89) | 0.91 (0.57 to 1.25) |
+| unknown risk | LightGBM | 0.59 (0.27 to 0.95) | 0.62 (0.12 to 1.16) |
 
-### Supplementary Table S25. By risk group
+## Supplementary Tables S36 to S42. Secondary outcome: recorded curative treatment
+No record can mean active surveillance, watchful waiting, hormone therapy only, refusal, or treatment the registry did not capture [20]. A lower percentage cannot be read as under-treatment.
+
+### Supplementary Table S36. By risk group
 | risk group | men | % with a recorded curative treatment |
 |---|---|---|
 | intermediate | 178,250 | 75.4 |
 | high | 174,390 | 81.1 |
 
-### Supplementary Table S26. By risk group and county rurality
+### Supplementary Table S37. By risk group and county rurality
 | risk group | rurality | men | % with a recorded curative treatment |
 |---|---|---|---|
 | intermediate | Metro, 1 million or more | 104,530 | 76.0 |
@@ -551,7 +814,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | high | Nonmetro, not adjacent to metro | 8,490 | 75.3 |
 | high | Unknown | 150 | 63.9 |
 
-### Supplementary Table S27. By risk group and county income quartile
+### Supplementary Table S38. By risk group and county income quartile
 | risk group | county income quartile | men | % with a recorded curative treatment |
 |---|---|---|---|
 | intermediate | Q1 (lowest) | 14,140 | 72.7 |
@@ -565,7 +828,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | high | Q4 (highest) | 56,310 | 83.0 |
 | high | Unknown | 30 | 51.6 |
 
-### Supplementary Table S28. By risk group and marital status
+### Supplementary Table S39. By risk group and marital status
 | risk group | marital status | men | % with a recorded curative treatment |
 |---|---|---|---|
 | intermediate | Married (including common law) | 118,930 | 79.0 |
@@ -583,7 +846,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | high | Unmarried or Domestic Partner | 730 | 86.5 |
 | high | Unknown | 16,140 | 54.7 |
 
-### Supplementary Table S29. Value added at each step
+### Supplementary Table S40. Value added at each step
 | stratum | model | skill at step 2 | clinical need added | social position added | social position as % of step 2 skill | AUC at step 2 | calibration slope at step 2 |
 |---|---|---|---|---|---|---|---|
 | intermediate and high risk (pooled) | penalised logistic regression | 17.18 | 15.22 (14.85 to 15.65) | 1.96 (1.72 to 2.31) | 11 | 0.771 | 1.00 |
@@ -593,7 +856,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | high risk | penalised logistic regression | 29.29 | 27.25 (26.63 to 27.96) | 2.04 (1.84 to 2.33) | 7 | 0.854 | 1.00 |
 | high risk | LightGBM | 31.76 | 29.54 (28.94 to 30.17) | 2.22 (2.00 to 2.53) | 7 | 0.865 | 1.01 |
 
-### Supplementary Table S30. Standardised contrasts
+### Supplementary Table S41. Standardised contrasts
 | stratum | contrast | penalised logistic regression | LightGBM | agreement |
 |---|---|---|---|---|
 | intermediate and high risk (pooled) | all social features as observed minus reference profile | -4.3 | -3.5 | both models 3 points or more, same direction |
@@ -603,10 +866,10 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | intermediate risk | area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income | -2.2 | -0.3 | both models under 3 points |
 | intermediate risk | marital status: Single (never married) minus Married (including common law) | -7.2 | -6.4 | both models 3 points or more, same direction |
 | high risk | all social features as observed minus reference profile | -4.3 | -3.8 | both models 3 points or more, same direction |
-| high risk | area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income | -3.3 | -2.5 | models disagree |
+| high risk | area: Nonmetro, not adjacent to metro minus Metro, 1 million or more, each at its typical county income | -3.3 | -2.5 | same direction, only one model 3 points or more |
 | high risk | marital status: Single (never married) minus Married (including common law) | -5.8 | -5.1 | both models 3 points or more, same direction |
 
-### Supplementary Table S31. Standardised percentages by profile, intermediate and high risk pooled
+### Supplementary Table S42. Standardised percentages by profile, intermediate and high risk pooled
 | profile | penalised logistic regression | LightGBM |
 |---|---|---|
 | as observed | 78.2 | 78.2 |
@@ -624,7 +887,7 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | marital status: Unmarried or Domestic Partner | 79.8 | 77.4 |
 | marital status: Unknown | 65.0 | 66.9 |
 
-## Supplementary Table S32. Protocol amendment log
+## Supplementary Table S43. Protocol amendment log
 
 | date | amendment | reason |
 |---|---|---|
@@ -640,17 +903,128 @@ The lower bound assumes every man without a recorded interval waited 90 days or 
 | 2026-09-13 | Deviation in A5: excess waiting days beyond 90 per 1,000 men are reported as crude observed values by rurality and county income quartile, not standardised, because no model for the number of days was built. Standardised contrasts are reported for the percentage delayed only, with intervals that hold the fitted model fixed (version 1.6) | Time available before the write-up; the primary estimand and the percentage-delayed contrasts are unaffected |
 | 2026-09-13 | A5 revised after a development run (5 bootstrap resamples). One-at-a-time rurality and county income profiles are no longer interpreted. The two variables are strongly correlated, so holding one fixed creates combinations rarely observed (for example remote counties in the top income tertile), and the two model types gave conflicting estimates for them. Joint area profiles (each rurality level at the median county income band of men living there) are reported instead, with the one-at-a-time results kept in a supplementary table. Bootstrap intervals that hold the fitted model fixed are not reported for standardised contrasts, because they ignore model-fitting uncertainty; a contrast is described as meaningful only when both model types agree on 3 percentage points or more in the same direction (version 1.7) | Prompted by the model disagreement seen in the development run; the rurality and income collinearity had been noted in Phase 3. The primary estimand (A2 to A4) is unaffected |
 | 2026-09-13 | A8 and A9 implementation specified before either was run (version 1.8). **A8:** each scenario rebuilds the cohort with exactly one change from the primary definition; a cohort option excluding men diagnosed in 2020 was added. For each scenario the report gives the number of men and percentage delayed by risk group, the social position increment (step 1 to 2) with cluster bootstrap intervals for both model types in every stratum, and the standardised area and marital status contrasts judged by the agreement rule of amendment 1.7. Hyperparameters are reused from the primary tuning for the same model and stratum; step 3 and leave-one-variable-out refits are not repeated. One model sensitivity analysis is added: penalised logistic regression re-tuned on a wider C grid (0.0001 to 10) in the primary cohort, with steps 0 to 2 refitted. **A9:** the outcome is a record of radical prostatectomy or radiotherapy in the first course of treatment. Men without such a record include men on active surveillance or watchful waiting, men treated with hormone therapy only, men who refused, and men whose treatment was not captured, so the outcome is described as a recorded curative treatment, not as treatment itself. Strata are intermediate risk, high risk, and both groups pooled. LightGBM is fitted alongside penalised logistic regression so that the agreement rule of amendment 1.7 can be applied. Hyperparameters are tuned once per model and stratum on step 2, because modality (step 3) is part of the outcome. Crude percentages with a recorded curative treatment by rurality, county income quartile and marital status use the same disclosure rules as A1 | The protocol listed A8 and A9 without implementation detail. The wider C grid was added after Phase 4 showed C = 0.01 chosen at the edge of the pre-specified grid in every stratum, and is labelled as a post hoc check. No change to the primary cohort, estimand or reported Phase 4 results |
+| 2026-09-13 | Revision analyses specified after an internal multi-reviewer review of the draft preprint and before running them (version 1.9). All are labelled post-review. **(a) Per-step tuning:** hyperparameters are tuned separately at steps 0, 1 and 2 for each model and stratum, using the section 7 procedure, and the social position increment is re-estimated. **(b) Cross-fitting variability:** under per-step tuning, steps 0 to 2 are cross-fitted with 10 fold-assignment seeds per model and stratum; the mean, minimum and maximum increment across seeds are reported with the cell-bootstrap interval for the first seed. Tuning is not repeated per seed and no refitting bootstrap is run, for computing time; both are stated as limitations. **(c) Clustering:** the number of bootstrap cells and the cell size distribution are reported per stratum, and intervals are recomputed with county income band alone as a coarser clustering. **(d) Stage-free clinical block:** steps 0 to 2 are refitted with summary stage removed from the clinical block (risk strata unchanged). **(e) Year specification:** logistic regression is refitted with year of diagnosis as categories. **(f) Year-aware concentration index:** the Erreygers index is estimated by diagnosis period (2010 to 2014, 2015 to 2019, 2020 to 2022), with the county income quartile distribution by period. **(g) Long intervals:** the share of intervals above 365 days and the share top-coded are reported by risk group and by rurality. **(h)** The one-at-a-time rurality and income profiles computed under amendment 1.7 are published as a supplementary table, as that amendment stated | The review (paper/review/round1/synthesis.md) found that headline intervals omit model-fitting variability, that reusing step 3 hyperparameters may weaken the LightGBM clinical model in small strata, that the concentration index is pooled over years, and that the promised one-at-a-time table was missing. These analyses test the robustness of reported results. The primary estimand is unchanged, and all results from versions 1.0 to 1.8 remain reported |
+
+## Supplementary Table S44. Protocol versions by commit
+Commit times are recorded by the author's computer; the repository was first made public on 13 September 2026, after the analyses.
+
+| commit | commit time (author's computer) | protocol version | commit message |
+|---|---|---|---|
+| 5954e76 | 2026-09-13 16:15:01 +0530 | 1.0 | Add study protocol v1.0 and analysis definitions (2026-09-13) |
+| 5eb2280 | 2026-09-13 16:56:24 +0530 | 1.3 | Add inventory, literature search, cohort pipeline and protocol v1.3 |
+| 66a99f1 | 2026-09-13 16:59:55 +0530 | 1.4 | Protocol v1.4: check citations against full texts |
+| 52982e0 | 2026-09-13 17:50:31 +0530 | 1.7 | Phase 4: descriptive results, stepwise models, standardisation, equity and selection (A1 to A7) |
+| d9b3851 | 2026-09-13 18:40:30 +0530 | 1.8 | Phase 4: sensitivity analyses (A8) and recorded curative treatment (A9) |
+| c1b6fd7 | 2026-09-13 21:24:50 +0530 | 1.9 | Revision 1 after internal review: protocol amendment 1.9, robustness analyses, revised preprint |
 
 ## Supplementary figures
 
 ![Supplementary Figure S1](figures/figureS1_calibration.png)
 
-**Supplementary Figure S1. Calibration of out-of-fold predicted probabilities at step 2** (clinical need and social position), in 10 equal-count bins, by risk group and model type. The dashed line marks perfect calibration.
+**Supplementary Figure S1. Calibration of out-of-fold predicted probabilities at step 2** (clinical need plus area and marital characteristics), in 10 equal-count bins, by risk group and model type. The dashed line marks perfect calibration.
 
 ![Supplementary Figure S2](figures/figureS2_sensitivity.png)
 
-**Supplementary Figure S2. Log-loss skill added by social position under each sensitivity scenario,** all men, with 95% cluster bootstrap intervals. Each scenario changes one setting from the primary analysis. The threshold scenarios use a different outcome, so their values are not directly comparable with the others.
+**Supplementary Figure S2. Log-loss skill added by the area and marital block under each sensitivity scenario,** all men, with 95% cluster bootstrap intervals. Each scenario changes one setting from the primary analysis. The threshold scenarios use a different outcome, so their values are not directly comparable with the others.
 
-## Reporting checklists
+## Supplementary Table S45. STROBE and RECORD checklist
 
-[IN PREPARATION: STROBE, RECORD and TRIPOD+AI checklists with page references.]
+Item wording is abbreviated from the RECORD statement checklist, which includes the STROBE items [13, 14]. Locations refer to sections of the main text unless marked S (supplement).
+
+| Item | Topic | Where reported |
+|---|---|---|
+| 1a, 1b | Design in title or abstract; informative abstract | Abstract (Methods names a retrospective cohort study) |
+| RECORD 1.1 | Type of data and database named | Title and Abstract (SEER registry data) |
+| RECORD 1.2 | Region and time frame | Title and Abstract (US, 2010 to 2022) |
+| RECORD 1.3 | Linkage stated | Methods, Design: county attributes linked by SEER; no person-level linkage |
+| 2 | Background and rationale | Introduction |
+| 3 | Objectives | Introduction, final paragraph |
+| 4 | Study design | Methods, Design |
+| 5 | Setting, locations and dates | Methods, Design and Cohort |
+| 6a | Eligibility and selection | Methods, Cohort; Figure 1 |
+| 6b | Matching | Not applicable |
+| RECORD 6.1 | Codes and algorithms for population selection | Methods, Cohort; config/analysis.yaml in the repository |
+| RECORD 6.2 | Validation of codes | Methods, Secondary outcome [20]; no validation study of the cohort algorithm |
+| RECORD 6.3 | Linkage flow diagram | Not applicable (no person-level linkage) |
+| 7 | Outcomes, exposures, predictors defined | Methods, Outcome, Risk groups and Ordered feature steps |
+| RECORD 7.1 | Complete list of codes | config/analysis.yaml in the repository |
+| 8 | Data sources and measurement | Methods, Design, Outcome and Risk groups |
+| 9 | Efforts to address bias | Methods, Men without a recorded interval and Sensitivity analyses; Discussion, Strengths and limitations |
+| 10 | Study size | Methods, Cohort (all eligible men, no sample size calculation); Figure 1 |
+| 11 | Quantitative variables | Methods, Ordered feature steps |
+| 12a | Statistical methods | Methods, Models and validation, Standardised percentages and Income concentration index |
+| 12b | Subgroups and interactions | Methods, Models and validation (risk-group strata; clinical interaction terms) |
+| 12c | Missing data | Methods, Ordered feature steps, Models and validation, and Men without a recorded interval |
+| 12d | Loss to follow-up | Not applicable (outcome is the recorded interval; top-coding described in Methods, Outcome) |
+| 12e | Sensitivity analyses | Methods, Sensitivity analyses and post-review robustness analyses |
+| RECORD 12.1 | Access to the database population | Methods, Design (full case listing of the selected site and years) |
+| RECORD 12.2 | Data cleaning | Methods, Cohort (explicit label mapping) |
+| RECORD 12.3 | Linkage methods | Not applicable (no person-level linkage) |
+| 13a to 13c | Numbers at each stage, reasons, flow diagram | Results, Cohort; Figure 1 |
+| RECORD 13.1 | Selection of included persons | Methods, Cohort; Figure 1 |
+| 14a, 14b | Characteristics and missing data | Table 1 (unknown categories shown) |
+| 14c | Follow-up time | Not applicable |
+| 15 | Outcome data | Results, Waiting beyond 90 days; Tables S2 to S6 |
+| 16a | Estimates and precision | Table 2 (intervals); Table 3 (no intervals, stated) |
+| 16b | Category boundaries | Methods, Risk groups; Table 1 note (income quartiles) |
+| 16c | Absolute measures | Results, Standardised percentages and excess days |
+| 17 | Other analyses | Results, Sensitivity analyses and post-review robustness analyses; Tables S11 to S15, S29 to S35 |
+| 18 | Key results | Discussion, Principal findings |
+| 19 | Limitations | Discussion, Strengths and limitations |
+| RECORD 19.1 | Implications of routinely collected data | Discussion, Strengths and limitations; What the direction can and cannot show |
+| 20 | Interpretation | Discussion |
+| 21 | Generalisability | Discussion, Australian context and Strengths and limitations |
+| 22 | Funding | Declarations |
+| RECORD 22.1 | Access to protocol, data and code | Methods, Design; Declarations |
+
+## Supplementary Table S46. TRIPOD+AI checklist
+
+Item wording is abbreviated from the TRIPOD+AI checklist [15]. Development and internal evaluation use the same data through cross-fitting; the models are measurement tools and are not proposed for clinical use.
+
+| Item | Topic | Where reported |
+|---|---|---|
+| 1 | Title | Title (prediction, population and outcome named) |
+| 2 | Abstract | Abstract |
+| 3a | Healthcare context and rationale | Introduction |
+| 3b | Target population and intended purpose | Introduction, final paragraph; Methods, Models and validation (not intended for clinical use) |
+| 3c | Known health inequalities | Introduction, second paragraph |
+| 4 | Objectives | Introduction, final paragraph |
+| 5a | Data sources | Methods, Design |
+| 5b | Dates of data | Methods, Design and Cohort |
+| 6a | Setting | Methods, Design (population-based registries) |
+| 6b | Eligibility | Methods, Cohort |
+| 6c | Treatments | Methods, Cohort and Ordered feature steps (treatment type at step 3) |
+| 7 | Data preparation | Methods, Cohort (label mapping) |
+| 8a | Outcome definition | Methods, Outcome |
+| 8b, 8c | Outcome assessors and blinding | Not applicable (registry-abstracted outcome) |
+| 9a | Choice of predictors | Methods, Ordered feature steps (pre-specified in the protocol) |
+| 9b | Predictor definitions | Methods, Risk groups and Ordered feature steps; config/analysis.yaml |
+| 9c | Predictor assessors | Not applicable (registry-coded predictors) |
+| 10 | Sample size | Methods, Cohort (all eligible men) |
+| 11 | Missing data | Methods, Ordered feature steps, Models and validation, and Men without a recorded interval |
+| 12a | Data use and partitioning | Methods, Models and validation (5-fold cross-fitting) |
+| 12b | Predictor handling | Methods, Ordered feature steps and Models and validation |
+| 12c | Model type, building steps, tuning, internal validation | Methods, Models and validation |
+| 12d | Heterogeneity across clusters | Methods, Models and validation (cluster bootstrap only; heterogeneity across clusters not quantified) |
+| 12e | Performance measures | Methods, Models and validation; Supplementary Figure S1 |
+| 12f | Model updating | Not applicable |
+| 12g | How predictions were calculated | Code in the repository |
+| 13 | Class imbalance | Methods, Models and validation (none used) |
+| 14 | Fairness | Not addressed as a model property; differences by area and marital status are the study's measured quantity |
+| 15 | Model output | Predicted probabilities; no classification threshold |
+| 16 | Training versus evaluation differences | Not applicable (cross-fitting within the same data) |
+| 17 | Ethical approval | Methods, Design; Declarations |
+| 18a to 18f | Funding, conflicts, protocol, registration, data and code sharing | Methods, Design; Declarations |
+| 19 | Patient and public involvement | Methods, Design; Declarations (none) |
+| 20a | Participant flow and outcome counts | Results, Cohort and Waiting beyond 90 days; Figure 1 |
+| 20b | Participant characteristics | Table 1 |
+| 20c | Comparison with development data | Not applicable |
+| 21 | Participants and events per analysis | Table 2; Tables S2, S8 and S10 |
+| 22 | Full model specification | Not released as a clinical model; code that refits every model is in the repository |
+| 23a | Performance with confidence intervals, including subgroups | Table 2 and Table S8 by risk group (skill increments with intervals; AUC and calibration without intervals) |
+| 23b | Heterogeneity across clusters | Not examined |
+| 24 | Model updating results | Not applicable |
+| 25 | Interpretation | Discussion |
+| 26 | Limitations | Discussion, Strengths and limitations |
+| 27a, 27b | Input data handling and user interaction in implementation | Not applicable (no implementation proposed) |
+| 27c | Next steps | Discussion, Australian context; Conclusions |

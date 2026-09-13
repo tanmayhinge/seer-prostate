@@ -1,12 +1,14 @@
 # Phase 4. Results overview
 
-Written 2026-09-13 from three generated reports. Every number below is copied from them, and each section names its source:
+Written 2026-09-13 from five generated reports. Every number below is copied from them, and each section names its source:
 
 - `reports/phase4_descriptive.md` (A1)
 - `reports/phase4_models.md` (A2 to A4)
 - `reports/phase4_equity_selection.md` (A5 to A7)
+- `reports/phase4_sensitivity.md` (A8)
+- `reports/phase4_receipt.md` (A9)
 
-Definitions are in `PROTOCOL.md` version 1.7. All results are associations in observational registry data. None is a causal effect.
+Definitions are in `PROTOCOL.md` version 1.8. All results are associations in observational registry data. None is a causal effect.
 
 ## Cohort and outcome
 
@@ -49,7 +51,7 @@ The table shows skill added in percentage points of log-loss reduction, with 95%
 - **Skill:** LightGBM had higher out-of-fold log-loss skill than penalised logistic regression at step 2 in every stratum. The difference ranged from 0.23 points (low risk) to 0.90 points (unknown risk).
 - **Caveats:**
   - No interval was computed for this difference.
-  - Logistic regression chose the smallest C in the pre-specified grid (0.01, the strongest penalty) in all 5 strata, so a better logistic model may lie outside the grid. This is a limitation and was not changed after seeing results.
+  - Logistic regression chose the smallest C in the pre-specified grid (0.01, the strongest penalty) in all 5 strata. A post hoc re-tune on a wider grid chose C = 0.01 again in every stratum, with identical results (section 6), so the grid edge did not limit the logistic model.
 - **Calibration slopes at step 2** (1 is ideal):
   - logistic regression: 0.98 to 1.00;
   - LightGBM: 0.88 to 1.03, where values below 1 mean predictions are more extreme than observed.
@@ -118,17 +120,77 @@ The Erreygers concentration index ranks men by county median household income. A
 - **Unmeasured factors:** part of the social increment may reflect them, including differences between registries, which the cluster bootstrap describes only as unmeasured area effects.
 - **Comparison with Tasmania:** the SEER direction for rurality is opposite to the longer waits reported for outer regional and remote Tasmanian men (Foley et al. 2022). The area definitions, health systems and interval definitions differ, so the two cannot be compared directly.
 
+## 6. Sensitivity analyses (A8)
+
+**What was run**
+- **Scenarios:** 10, each changing one setting: thresholds of 60, 120 and 180 days; risk groups from Gleason score and PSA only; prostatectomy without radiotherapy only; excluding 2020; including 2023; including 0-day intervals; strict first primary; excluding prostatectomy not otherwise specified.
+- **Models:** steps 0 to 2 refitted for both model types with the primary hyperparameters.
+
+**Crude delay**
+- **By threshold:** 66.6% of men waited more than 60 days, 23.0% more than 120 days and 9.1% more than 180 days.
+- **Other scenarios:** from 38.8% (including 0-day intervals) to 41.1% (prostatectomy only) waited more than 90 days, against 39.7% in the primary analysis.
+
+**Social position increment**
+- **Intervals:** the 95% interval lay above 0 in 98 of 100 scenario, stratum and model combinations. Both exceptions were in the unknown-risk group, the smallest stratum:
+  - prostatectomy only, LightGBM: 0.74 (-0.13 to 1.42);
+  - strict first primary, logistic regression: 0.40 (-0.04 to 0.79).
+- **Pooled estimates:** from 0.54 to 0.68 points under logistic regression, and 0.94 to 1.06 under LightGBM. The primary analysis gave 0.62 and 0.99.
+
+**LightGBM against penalised logistic regression**
+- **Result:** LightGBM had higher step 2 skill in 47 of 50 scenario and stratum combinations.
+- **The 3 exceptions** differed by 0.17 points or less:
+  - prostatectomy only, low risk: 0.73 against 0.76;
+  - prostatectomy only, unknown risk: 1.36 against 1.53;
+  - 180 days, low risk: 0.61 against 0.63.
+
+**Standardised contrasts**
+- **Area (remote against large metro):** both models agreed on 3 points or more, lower in remote areas, in 9 of 10 scenarios for all men.
+  - The exception was the 180-day threshold, at -2.96 (logistic regression) and -3.20 (LightGBM): same direction, one model just under the rule.
+  - Across risk groups the rule was met in 47 of 50 combinations; the other two exceptions were also at 180 days.
+- **Marital status (never married against married):** both models agreed on 3 points or more, higher for never-married men, in 10 of 10 scenarios for all men, at 3.1 to 7.1 points.
+  - Across risk groups the rule was met in 38 of 50 combinations.
+  - 10 of the 12 exceptions were in low-risk men, where the primary analysis also did not meet the rule.
+
+**Wider C grid (post hoc)**
+- **Result:** re-tuning logistic regression on C from 0.0001 to 10 chose C = 0.01 again in every stratum, now an interior value, and gave identical results.
+- **What this means:** LightGBM's advantage is not explained by the original grid edge.
+
+**Scenario with pooled results equal to the primary analysis**
+- Risk groups from Gleason score and PSA only change which men fall in each risk stratum, but not the pooled cohort.
+
+## 7. Secondary question: recorded curative treatment (A9)
+
+**Men and outcome**
+- **Men:** 352,644 intermediate- and high-risk men meeting every cohort step before treatment.
+- **Outcome:** a record of radical prostatectomy or radiotherapy in the first course.
+- **What no record can mean:** active surveillance, watchful waiting, hormone therapy only, refusal, or treatment SEER did not capture. The data do not say which, so a lower percentage cannot be read as under-treatment.
+
+**Crude percentages**
+- **By risk group:** 75.4% of intermediate-risk and 81.1% of high-risk men had a recorded curative treatment.
+- **High-risk men by social group:**
+  - large metropolitan counties 81.9%, against 75.3% in non-metropolitan counties not adjacent to a metro area;
+  - lowest county income quartile 73.7%, against 83.0% in the highest;
+  - married 86.2%, never married 79.2%, widowed 64.7%, and unknown marital status 54.7%.
+
+**Models**
+- **Predictability:** higher than for delay, with AUC at step 2 from 0.692 to 0.865.
+- **Social position increment:**
+  - intermediate and high risk pooled: 1.96 (1.72 to 2.31) under logistic regression and 2.16 (1.92 to 2.54) under LightGBM;
+  - every interval lay above 0;
+  - social position made up 7% (high risk) to 23% (intermediate risk) of step 2 skill.
+- **Model comparison:** LightGBM had higher step 2 skill in all 3 strata.
+- **Tuning:** logistic regression chose C at an edge of the grid in intermediate risk (0.01) and high risk (10). This is a limitation and was not re-tuned.
+
+**Standardised contrasts** (pooled, logistic regression against LightGBM)
+- **Marital status:** never-married men were 6.5 and 5.9 points less likely to have a recorded curative treatment than married men. Both models agreed in every stratum.
+- **Area:** remote against large metropolitan counties, each at its typical income, gave -2.9 and -1.4 points, under the 3-point rule.
+  - In high-risk men the models disagreed (-3.3 and -2.5).
+  - The crude differences by rurality shrink below the 3-point rule when each man's clinical features and year are kept as observed and marital status is set to married.
+- **All social features as observed against the reference profile:** -4.3 and -3.5 points.
+
 ## Not yet done
 
-- **A8 sensitivity analyses:**
-  - thresholds of 60, 120 and 180 days;
-  - Gleason and PSA-only risk groups;
-  - surgery only;
-  - excluding 2020;
-  - including 2023;
-  - including 0-day intervals;
-  - strict first primary;
-  - excluding prostatectomy not otherwise specified.
-- **A9:** treatment receipt (Q2).
 - **Figures.**
-- **Optional:** a logistic regression refit with a wider C grid, reported as a sensitivity analysis because the choice was at the grid edge.
+- **medRxiv preprint** and supplement.
+- **Two-page application summary.**
+- **Web article** (last).

@@ -1,0 +1,6 @@
+stratum,C,grid,at lowest C,at highest C
+all,0.01,0.0001 0.001 0.01 0.1 1 10,False,False
+low,0.01,0.0001 0.001 0.01 0.1 1 10,False,False
+intermediate,0.01,0.0001 0.001 0.01 0.1 1 10,False,False
+high,0.01,0.0001 0.001 0.01 0.1 1 10,False,False
+unknown,0.01,0.0001 0.001 0.01 0.1 1 10,False,False

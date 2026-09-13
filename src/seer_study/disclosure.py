@@ -33,6 +33,13 @@ def _mask_smallest(masked: pd.DataFrame, counts: pd.DataFrame, cells: list[tuple
     return True
 
 
+def rounded_count(n: float, threshold: int, mask: str, rounding: int) -> int | str:
+    """One published count: 1 to ``threshold - 1`` is masked, anything else is rounded half up to ``rounding``."""
+    if 1 <= n < threshold:
+        return mask
+    return int(np.floor(n / rounding + 0.5) * rounding)
+
+
 PUBLISHED_STATISTICS = ("n", "pct_delayed", "median_days", "p90_days")
 
 

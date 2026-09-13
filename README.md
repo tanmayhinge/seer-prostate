@@ -47,9 +47,13 @@ Each phase has one script, run from the project root:
 .venv/bin/python scripts/run_phase4_models.py             # A2 to A4 cross-fitted models and bootstrap (long run)
 .venv/bin/python scripts/run_phase4_models_report.py      # A2 to A4 report from the saved model tables
 .venv/bin/python scripts/run_phase4_equity_selection.py   # A5 to A7 standardisation, equity index, selection
+.venv/bin/python scripts/run_phase4_receipt.py            # A9 recorded curative treatment (secondary question)
+.venv/bin/python scripts/run_phase4_receipt_report.py     # A9 report
+.venv/bin/python scripts/run_phase4_sensitivity.py        # A8 sensitivity scenarios (long run; needs model_tuning.csv)
+.venv/bin/python scripts/run_phase4_sensitivity_report.py # A8 report
 ```
 
-`reports/phase4.md` summarises the three Phase 4 reports.
+`reports/phase4.md` summarises the Phase 4 reports.
 
 ## Data
 

@@ -192,3 +192,43 @@ modelling:
   reference_marital: "Married (including common law)"
   reference_rurality: "Counties in metropolitan areas ge 1 million pop"
   reference_income_quantile: 0.8333  # midpoint of the top income tertile of the cohort's county income rank
+
+# Pre-specified sensitivity analyses (PROTOCOL.md A8, amendment 1.8). Each scenario changes exactly one setting
+# from the primary cohort; the threshold scenarios must match interval.sensitivity_thresholds_days.
+sensitivity:
+  logistic_wide_c_grid: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0]   # post hoc: C = 0.01 was at the grid edge
+  scenarios:
+    - name: threshold_60
+      description: "threshold of 60 days"
+      threshold_days: 60
+    - name: threshold_120
+      description: "threshold of 120 days"
+      threshold_days: 120
+    - name: threshold_180
+      description: "threshold of 180 days"
+      threshold_days: 180
+    - name: risk_grade_psa_only
+      description: "risk groups from Gleason score and PSA only"
+      risk_from_grade_and_psa_only: true
+    - name: surgery_only
+      description: "radical prostatectomy without radiotherapy only"
+      surgery_only: true
+    - name: exclude_2020
+      description: "excluding men diagnosed in 2020"
+      exclude_covid_year: true
+    - name: include_2023
+      description: "including men diagnosed in 2023"
+      include_2023: true
+    - name: include_zero_days
+      description: "including intervals of 0 days"
+      include_zero_days: true
+    - name: strict_first_primary
+      description: "one primary cancer only (strict first primary)"
+      strict_first_primary: true
+    - name: exclude_prostatectomy_nos
+      description: "excluding prostatectomy not otherwise specified"
+      exclude_prostatectomy_nos: true
+
+# Secondary question (PROTOCOL.md A9, amendment 1.8): record of radical prostatectomy or radiotherapy.
+receipt:
+  risk_groups: ["intermediate", "high"]

@@ -57,7 +57,7 @@ The same question is answered step by step, each time adding one group of inform
 | Phase 1: literature check | Searched PubMed to see whether this study already exists | Done |
 | Protocol | Wrote down the full study plan and every definition before looking at any results | Done, saved in git on 13 September 2026 |
 | Phase 3: study group | Built the group of men to analyse, with a record of every exclusion | Done |
-| Phase 4: results | Descriptive results, the step-by-step models, results in patient terms, income inequality, and checks on men with no recorded waiting time | Main results done; sensitivity checks and the second question still to do |
+| Phase 4: results | Descriptive results, the step-by-step models, results in patient terms, income inequality, and checks on men with no recorded waiting time | Done, including the checks and the second question |
 | Write-up | A short research paper (preprint) and a web article | Planned |
 
 ### Phase 0: data check
@@ -75,7 +75,11 @@ The same question is answered step by step, each time adding one group of inform
 ### Protocol
 - **Written before results:** the cohort, treatment codes, risk groups, outcome, models and checks were all fixed in `PROTOCOL.md` before any results.
 - **Why 90 days:** the threshold comes from the Australian optimal care pathway.
-- **Changes are logged:** any change must be recorded in the protocol's amendment log. Eleven changes are logged so far (the protocol is at version 1.7), each with its reason. Earlier ones renamed the study to name the machine learning approach, made clear that no Australian data are analysed, and added and checked citations. The three most recent, made during Phase 4, wrote down the model tuning details before the full models were run, reported extra waiting days as plain counts rather than adjusted figures, and changed how rurality and income are compared because the two are too closely linked to change one at a time.
+- **Changes are logged:** any change must be recorded in the protocol's amendment log. Twelve changes are logged so far (the protocol is at version 1.8), each with its reason. Earlier ones renamed the study to name the machine learning approach, made clear that no Australian data are analysed, and added and checked citations. The four most recent were made during Phase 4:
+  - the model tuning details were written down before the full models were run;
+  - extra waiting days are reported as plain counts rather than adjusted figures;
+  - rurality and income are compared together, because the two are too closely linked to change one at a time;
+  - how the checks and the second question would be run was written down before running them. This change also added one check that was not in the original plan, and it is labelled that way.
 
 ### Phase 3: study group
 
@@ -105,7 +109,7 @@ The full summary is in `reports/phase4.md`. All of these are associations, not p
   - Adding marital status, rurality and county income improved prediction in every risk group, under both models. The uncertainty range stayed above zero every time.
   - For all men, the gain was 0.62 points under logistic regression and 0.99 points under gradient boosting.
   - For low-risk men, social position added more than medical need did.
-- **Which model did better:** gradient boosting (LightGBM) predicted better than penalised logistic regression in every risk group. The logistic model chose the strongest penalty on offer, so it might have done a little better with a wider search. This is recorded as a limitation.
+- **Which model did better:** gradient boosting (LightGBM) predicted better than penalised logistic regression in every risk group. The logistic model first chose the strongest penalty on offer. A later check with a wider range of settings picked the same penalty and gave identical results, so that did not hold it back.
 - **In patient terms, after accounting for medical need:**
   - Men in the most remote type of county were about 9 percentage points less likely to wait more than 90 days than men in large cities, when each area is taken at its typical income. Both models agreed.
   - Never-married men were about 6 to 7 points more likely to wait than married men.
@@ -113,14 +117,23 @@ The full summary is in `reports/phase4.md`. All of these are associations, not p
 - **Men with no recorded waiting time (2.7% to 5.5% by area):**
   - The unadjusted differences by area, income and marital status held even under the most extreme assumptions about these men.
   - Reweighting for them changed percentages by 0.2 points or less.
+- **Checks with 10 alternative definitions** (other waiting-time cut-offs, surgery only, leaving out 2020, adding 2023, and others):
+  - The small but reliable gain from social position held in 98 of 100 check results. Both exceptions were in the smallest group (men whose risk group could not be worked out).
+  - The finding that remote-county men waited less often held in 9 of 10 checks for all men. The exception was the 180-day cut-off, where one model gave 2.96 points, just under the 3-point rule.
+  - The finding that never-married men waited more often held in all 10.
+  - Gradient boosting predicted better in 47 of 50 check results.
+- **Second question: who has a recorded surgery or radiotherapy at all** (352,644 intermediate- and high-risk men):
+  - 75.4% of intermediate-risk and 81.1% of high-risk men had one on record.
+  - Having no record does not prove a man went untreated. It can mean active surveillance, hormone therapy only, refusal, or treatment the registry missed.
+  - After accounting for medical need, never-married men were about 6 points less likely than married men to have a record. Both models agreed.
+  - The difference between remote and big-city counties was under 3 points for men with the same medical features, with each area at its typical county income.
 - **How this sits next to Tasmania:** in these US data, city men waited more often. In Tasmania, men from outer regional and remote areas started treatment later (Foley et al. 2022). The two studies measure areas and waiting times differently, so this is not a direct comparison.
 
 ## What comes next
 
-1. **Checks:** different thresholds (60, 120 and 180 days), risk groups from Gleason and PSA only, surgery only, excluding 2020, including 2023, including 0-day waits, a stricter first-cancer rule, and excluding unspecified prostatectomy.
-2. **Second question:** whether men receive surgery or radiotherapy at all.
-3. **Figures.**
-4. **Write-up:** a short preprint, then a web article.
+1. **Figures.**
+2. **Write-up:** a short preprint (medRxiv) and a two-page summary.
+3. **Web article,** built last from the preprint.
 
 ## Known limits
 
@@ -133,7 +146,7 @@ The full summary is in `reports/phase4.md`. All of these are associations, not p
 ## How the project is kept tidy
 
 - **Settings in one place:** every setting lives in `config/`, not in the code.
-- **Tests first:** tests were written before each piece of code, and 258 tests currently pass.
+- **Tests first:** tests were written before each piece of code, and 284 tests currently pass.
 - **Private data stays local:** raw data and outputs with individual-level detail are kept out of git.
 - **A report per phase:** each phase writes a report to `reports/`. `README.md` has the folder map and the commands to run everything.
 

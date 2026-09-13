@@ -2,16 +2,16 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, fields
 
 import numpy as np
 import pandas as pd
 
-from seer_study.analysis_config import AnalysisConfig
+from seer_study.analysis_config import AnalysisConfig, ScenarioSpec
 from seer_study.labels import UnmappedLabelError, require_known
 from seer_study.risk import assign_risk, parse_gleason, parse_psa, stage_class
 
-__all__ = ["MODALITIES", "CohortOptions", "CohortResult", "UnmappedLabelError", "build_cohort"]
+__all__ = ["MODALITIES", "CohortOptions", "CohortResult", "UnmappedLabelError", "build_cohort", "scenario_options"]
 
 MODALITIES = ("surgery_only", "radiotherapy_only", "both")
 
@@ -21,6 +21,7 @@ class CohortOptions:
     """Switches for the pre-specified sensitivity analyses (PROTOCOL.md A8). Defaults give the primary cohort."""
 
     include_2023: bool = False
+    exclude_covid_year: bool = False
     include_zero_days: bool = False
     strict_first_primary: bool = False
     exclude_prostatectomy_nos: bool = False
@@ -31,11 +32,21 @@ class CohortOptions:
 
 @dataclass(frozen=True)
 class CohortResult:
+    """``eligible``: men meeting every step before treatment, with risk group and a ``curative`` flag (A9).
+    ``treated``: the curative part of ``eligible``, before interval exclusions (A7). ``frame``: the analysis cohort.
+    """
+
     frame: pd.DataFrame
     treated: pd.DataFrame
     flow: pd.DataFrame
     options: CohortOptions
     threshold_days: int
+    eligible: pd.DataFrame
+
+
+def scenario_options(spec: ScenarioSpec) -> CohortOptions:
+    """Cohort options for a configured sensitivity scenario."""
+    return CohortOptions(**{f.name: getattr(spec, f.name) for f in fields(CohortOptions)})
 
 
 def _validate_labels(frame: pd.DataFrame, config: AnalysisConfig) -> None:
@@ -101,8 +112,11 @@ def build_cohort(frame: pd.DataFrame, config: AnalysisConfig, options: CohortOpt
         ("not death certificate or autopsy only", ~frame[c.survival_flag].isin(cohort.dco_labels)),
         ("age 40 or over", ~frame[c.age].isin(cohort.excluded_age_labels)),
         (f"diagnosed {cohort.year_min} to {year_max}", data["year_int"].between(cohort.year_min, year_max)),
-        (curative_step, curative),
     ]
+    if options.exclude_covid_year:
+        covid_year = config.features.covid_year
+        treated_steps.append((f"not diagnosed in {covid_year}", data["year_int"].ne(covid_year)))
+    treated_steps.append((curative_step, curative))
     interval_steps = [
         ("interval recorded or top-coded", data["interval_class"].ne("missing")),
         ("interval above 0 days" if not options.include_zero_days else "interval above 0 days (not applied)", positive),
@@ -110,27 +124,30 @@ def build_cohort(frame: pd.DataFrame, config: AnalysisConfig, options: CohortOpt
 
     keep = pd.Series(True, index=data.index)
     flow = [("all records", len(data), 0)]
-    treated_keep = None
+    eligible_keep = None
     for position, (step, condition) in enumerate(treated_steps + interval_steps):
         before = int(keep.sum())
         keep &= condition.fillna(False).astype(bool)
         flow.append((step, int(keep.sum()), before - int(keep.sum())))
-        if position == len(treated_steps) - 1:
-            treated_keep = keep.copy()
+        if position == len(treated_steps) - 2:
+            eligible_keep = keep.copy()
 
-    treated = data[treated_keep].copy()
-    gleason = parse_gleason(treated[c.gleason_clinical], config.risk)
-    psa = parse_psa(treated[c.psa], config.risk)
-    treated["gleason_score"] = gleason
-    treated["psa_value"] = psa
-    treated["risk_group"] = assign_risk(
-        treated["stage_class"], gleason, psa, config.risk, use_stage=not options.risk_from_grade_and_psa_only
+    eligible = data[eligible_keep].copy()
+    eligible["curative"] = curative[eligible_keep].fillna(False).astype(bool)
+    gleason = parse_gleason(eligible[c.gleason_clinical], config.risk)
+    psa = parse_psa(eligible[c.psa], config.risk)
+    eligible["gleason_score"] = gleason
+    eligible["psa_value"] = psa
+    eligible["risk_group"] = assign_risk(
+        eligible["stage_class"], gleason, psa, config.risk, use_stage=not options.risk_from_grade_and_psa_only
     )
-    final = treated.loc[keep[treated_keep].index[keep[treated_keep]]].copy()
+    treated = eligible[eligible["curative"].to_numpy()].copy()
+    final = treated[keep.loc[treated.index].to_numpy()].copy()
     return CohortResult(
         frame=final,
         treated=treated,
         flow=pd.DataFrame(flow, columns=["step", "remaining", "excluded"]),
         options=options,
         threshold_days=threshold,
+        eligible=eligible,
     )

@@ -1,0 +1,6 @@
+rurality,median income rank,income band
+Counties in metropolitan areas ge 1 million pop,12.0,"$90,000 - $94,999"
+"Counties in metropolitan areas of 250,000 to 1 million pop",10.0,"$80,000 - $84,999"
+Counties in metropolitan areas of lt 250 thousand pop,7.0,"$65,000 - $69,999"
+Nonmetropolitan counties adjacent to a metropolitan area,5.0,"$55,000 - $59,999"
+Nonmetropolitan counties not adjacent to a metropolitan area,5.0,"$55,000 - $59,999"

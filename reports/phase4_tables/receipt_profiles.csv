@@ -1,0 +1,85 @@
+stratum,model,profile,standardised %
+all,logistic,as observed,78.20683754206806
+all,logistic,reference profile,82.49225455668181
+all,logistic,area: Counties in metropolitan areas ge 1 million pop,82.05597481571951
+all,logistic,"area: Counties in metropolitan areas of 250,000 to 1 million pop",81.51953249093718
+all,logistic,area: Counties in metropolitan areas of lt 250 thousand pop,80.72962498224601
+all,logistic,area: Nonmetropolitan counties adjacent to a metropolitan area,79.7102552396313
+all,logistic,area: Nonmetropolitan counties not adjacent to a metropolitan area,79.16105887838319
+all,logistic,marital status: Married (including common law),82.49225455668181
+all,logistic,marital status: Single (never married),75.95179692500297
+all,logistic,marital status: Divorced,78.09251738415554
+all,logistic,marital status: Separated,75.5143164315639
+all,logistic,marital status: Widowed,78.40453192614922
+all,logistic,marital status: Unmarried or Domestic Partner,79.81839916175234
+all,logistic,marital status: Unknown,65.04445457595386
+all,lightgbm,as observed,78.20809825417929
+all,lightgbm,reference profile,81.73297323108281
+all,lightgbm,area: Counties in metropolitan areas ge 1 million pop,81.48675025402862
+all,lightgbm,"area: Counties in metropolitan areas of 250,000 to 1 million pop",81.64584211958665
+all,lightgbm,area: Counties in metropolitan areas of lt 250 thousand pop,81.1003448129364
+all,lightgbm,area: Nonmetropolitan counties adjacent to a metropolitan area,80.07197969465784
+all,lightgbm,area: Nonmetropolitan counties not adjacent to a metropolitan area,80.11261666229838
+all,lightgbm,marital status: Married (including common law),81.73297323108281
+all,lightgbm,marital status: Single (never married),75.87645536443344
+all,lightgbm,marital status: Divorced,77.06376810946477
+all,lightgbm,marital status: Separated,75.94846404660098
+all,lightgbm,marital status: Widowed,78.33761637865057
+all,lightgbm,marital status: Unmarried or Domestic Partner,77.36143396666793
+all,lightgbm,marital status: Unknown,66.87011162060995
+intermediate,logistic,as observed,75.40894743120978
+intermediate,logistic,reference profile,79.65343654748904
+intermediate,logistic,area: Counties in metropolitan areas ge 1 million pop,79.35894571317718
+intermediate,logistic,"area: Counties in metropolitan areas of 250,000 to 1 million pop",78.58198005694113
+intermediate,logistic,area: Counties in metropolitan areas of lt 250 thousand pop,78.255362656483
+intermediate,logistic,area: Nonmetropolitan counties adjacent to a metropolitan area,77.77862770327255
+intermediate,logistic,area: Nonmetropolitan counties not adjacent to a metropolitan area,77.183828169357
+intermediate,logistic,marital status: Married (including common law),79.65343654748904
+intermediate,logistic,marital status: Single (never married),72.42169425071843
+intermediate,logistic,marital status: Divorced,74.70493185725442
+intermediate,logistic,marital status: Separated,71.12199434949086
+intermediate,logistic,marital status: Widowed,76.07494527216801
+intermediate,logistic,marital status: Unmarried or Domestic Partner,75.4620661628521
+intermediate,logistic,marital status: Unknown,59.35745621308117
+intermediate,lightgbm,as observed,75.40628986517825
+intermediate,lightgbm,reference profile,78.61637436946258
+intermediate,lightgbm,area: Counties in metropolitan areas ge 1 million pop,78.29923776256311
+intermediate,lightgbm,"area: Counties in metropolitan areas of 250,000 to 1 million pop",79.01851511063425
+intermediate,lightgbm,area: Counties in metropolitan areas of lt 250 thousand pop,78.95404115030134
+intermediate,lightgbm,area: Nonmetropolitan counties adjacent to a metropolitan area,78.20481063245447
+intermediate,lightgbm,area: Nonmetropolitan counties not adjacent to a metropolitan area,78.03019641116636
+intermediate,lightgbm,marital status: Married (including common law),78.61637436946258
+intermediate,lightgbm,marital status: Single (never married),72.26499995182986
+intermediate,lightgbm,marital status: Divorced,73.43488243314997
+intermediate,lightgbm,marital status: Separated,71.70224968901961
+intermediate,lightgbm,marital status: Widowed,76.02994571984328
+intermediate,lightgbm,marital status: Unmarried or Domestic Partner,73.66183037238645
+intermediate,lightgbm,marital status: Unknown,60.64923898568013
+high,logistic,as observed,81.06896231093936
+high,logistic,reference profile,85.36356111518668
+high,logistic,area: Counties in metropolitan areas ge 1 million pop,84.79996945300243
+high,logistic,"area: Counties in metropolitan areas of 250,000 to 1 million pop",84.52284010898866
+high,logistic,area: Counties in metropolitan areas of lt 250 thousand pop,83.20920130197193
+high,logistic,area: Nonmetropolitan counties adjacent to a metropolitan area,81.9343619926152
+high,logistic,area: Nonmetropolitan counties not adjacent to a metropolitan area,81.49814526558113
+high,logistic,marital status: Married (including common law),85.36356111518668
+high,logistic,marital status: Single (never married),79.56975383275974
+high,logistic,marital status: Divorced,81.42970706064764
+high,logistic,marital status: Separated,79.65626930872415
+high,logistic,marital status: Widowed,81.05624826365171
+high,logistic,marital status: Unmarried or Domestic Partner,84.31154780844011
+high,logistic,marital status: Unknown,71.1090063684064
+high,lightgbm,as observed,81.07170150932512
+high,lightgbm,reference profile,84.90170554760806
+high,lightgbm,area: Counties in metropolitan areas ge 1 million pop,84.39045005558272
+high,lightgbm,"area: Counties in metropolitan areas of 250,000 to 1 million pop",84.65812009847437
+high,lightgbm,area: Counties in metropolitan areas of lt 250 thousand pop,83.61250517374553
+high,lightgbm,area: Nonmetropolitan counties adjacent to a metropolitan area,81.82064216711076
+high,lightgbm,area: Nonmetropolitan counties not adjacent to a metropolitan area,81.90607102664327
+high,lightgbm,marital status: Married (including common law),84.90170554760806
+high,lightgbm,marital status: Single (never married),79.848145661518
+high,lightgbm,marital status: Divorced,80.76574679162876
+high,lightgbm,marital status: Separated,80.46277591028395
+high,lightgbm,marital status: Widowed,81.39650284966503
+high,lightgbm,marital status: Unmarried or Domestic Partner,81.9248398797044
+high,lightgbm,marital status: Unknown,72.51498101380606

@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, fields
 from pathlib import Path
 
 from seer_study.config import ConfigError, load_typed_yaml
@@ -103,6 +103,36 @@ class ModellingSpec:
 
 
 @dataclass(frozen=True)
+class ScenarioSpec:
+    """One sensitivity analysis (PROTOCOL.md A8): the primary cohort with exactly one setting changed."""
+
+    name: str
+    description: str
+    threshold_days: int | None = None
+    include_2023: bool = False
+    exclude_covid_year: bool = False
+    include_zero_days: bool = False
+    strict_first_primary: bool = False
+    exclude_prostatectomy_nos: bool = False
+    surgery_only: bool = False
+    risk_from_grade_and_psa_only: bool = False
+
+
+SCENARIO_SETTINGS = tuple(f for f in fields(ScenarioSpec) if f.name not in ("name", "description"))
+
+
+@dataclass(frozen=True)
+class SensitivitySpec:
+    logistic_wide_c_grid: tuple[float, ...]
+    scenarios: tuple[ScenarioSpec, ...]
+
+
+@dataclass(frozen=True)
+class ReceiptSpec:
+    risk_groups: tuple[str, ...]
+
+
+@dataclass(frozen=True)
 class AnalysisConfig:
     seed: int
     columns: AnalysisColumns
@@ -112,10 +142,30 @@ class AnalysisConfig:
     risk: RiskSpec
     features: FeatureSpec
     modelling: ModellingSpec
+    sensitivity: SensitivitySpec
+    receipt: ReceiptSpec
+
+
+def _validate_scenarios(config: AnalysisConfig) -> None:
+    names = [scenario.name for scenario in config.sensitivity.scenarios]
+    duplicates = sorted({name for name in names if names.count(name) > 1})
+    if duplicates:
+        raise ConfigError(f"sensitivity: duplicate scenario name(s) {duplicates}")
+    for scenario in config.sensitivity.scenarios:
+        changed = [f.name for f in SCENARIO_SETTINGS if getattr(scenario, f.name) != f.default]
+        if len(changed) != 1:
+            raise ConfigError(f"sensitivity: scenario {scenario.name!r} must change exactly one setting, changes {changed}")
+    thresholds = sorted(s.threshold_days for s in config.sensitivity.scenarios if s.threshold_days is not None)
+    if thresholds != sorted(config.interval.sensitivity_thresholds_days):
+        raise ConfigError(
+            f"sensitivity: threshold scenarios {thresholds} must match interval.sensitivity_thresholds_days "
+            f"{sorted(config.interval.sensitivity_thresholds_days)}"
+        )
 
 
 def load_analysis_config(path: str | Path) -> AnalysisConfig:
     config = load_typed_yaml(path, AnalysisConfig)
+    _validate_scenarios(config)
     overlap = set(config.treatment.prostatectomy_codes) & set(config.treatment.surgery_other_codes)
     if overlap:
         raise ConfigError(f"treatment: codes listed as both prostatectomy and other: {sorted(overlap)}")

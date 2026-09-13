@@ -38,7 +38,9 @@ def _one_hot(series: pd.Series, labels: tuple[str, ...], prefix: str) -> pd.Data
     )
 
 
-def build_feature_blocks(cohort: pd.DataFrame, config: AnalysisConfig) -> FeatureBlocks:
+def build_feature_blocks(cohort: pd.DataFrame, config: AnalysisConfig, include_pathway: bool = True) -> FeatureBlocks:
+    """Feature blocks for the ordered steps. ``include_pathway=False`` leaves the pathway block empty, for men
+    without a recorded curative treatment (A9), where modality is part of the outcome."""
     c, spec, risk = config.columns, config.features, config.risk
     index = cohort.index
 
@@ -90,8 +92,11 @@ def build_feature_blocks(cohort: pd.DataFrame, config: AnalysisConfig) -> Featur
         axis=1,
     )
 
-    require_known(cohort["modality"], MODALITIES, "modality")
-    pathway = _one_hot(cohort["modality"], MODALITIES, "modality")
+    if include_pathway:
+        require_known(cohort["modality"], MODALITIES, "modality")
+        pathway = _one_hot(cohort["modality"], MODALITIES, "modality")
+    else:
+        pathway = pd.DataFrame(index=index)
 
     blocks = {"base": base, "clinical": clinical, "social": social, "pathway": pathway}
     return FeatureBlocks(
@@ -101,5 +106,8 @@ def build_feature_blocks(cohort: pd.DataFrame, config: AnalysisConfig) -> Featur
 
 
 def design_matrix(blocks: FeatureBlocks, step: int) -> pd.DataFrame:
-    columns = [column for name in STEPS[step] for column in blocks.columns_by_block[name]]
+    empty = [name for name in STEPS[step] if not blocks.columns_by_block[name]]
+    if empty:
+        raise ValueError(f"step {step} needs the {', '.join(empty)} block, which was not built")
+    columns =[column for name in STEPS[step] for column in blocks.columns_by_block[name]]
     return blocks.frame[columns]

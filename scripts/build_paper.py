@@ -200,7 +200,7 @@ def table2(root: Path) -> str:
             r"only); added values are in percentage points. Intervals are 95\% cluster bootstrap intervals over "
             r"79 rurality by county income cells (500 resamples of out-of-fold predictions, no refitting), so they "
             r"exclude model-fitting variability. \textsuperscript{a}Range of the area and marital increment over 10 "
-            r"fold assignments, from the post-review analysis with per-step tuning (protocol amendment 1.9). AUC: "
+            r"fold assignments, from the robustness analysis with per-step tuning (protocol amendment 1.9). AUC: "
             r"0.5 is chance.")
     return float_table("tab:models", "Predictive performance and skill added by clinical need and by area and "
                        "marital characteristics, by risk group and model", tabular, note, colsep="5pt", wide=True)
@@ -237,7 +237,7 @@ def s3(root: Path) -> str:
                             body, "@{}llrrrr@{}", escape=False)
     note = (r"Percentage points of out-of-fold log-loss skill added by area and marital characteristics (step 1 "
             r"to 2), with 95\% cluster bootstrap intervals (first fold seed, 500 resamples, no refitting). Tuning "
-            r"was not repeated per seed. Specified after an internal review (protocol amendment 1.9).")
+            r"was not repeated per seed. Added by protocol amendment 1.9 and specified before being run.")
     return float_table("tab:s3", "Robustness of the area and marital increment to tuning, fold assignment and "
                        "clustering", tabular, note, colsep="2pt")
 
@@ -254,7 +254,7 @@ def s4(root: Path) -> str:
     note = (r"Stage-free: summary stage removed from the clinical block, risk strata unchanged. Year as "
             r"categories: logistic regression only, one indicator per year replacing linear year and the 2020 "
             r"indicator. Both use per-step tuning and the first fold seed. Primary estimates are in Table 2 of the "
-            r"main text. Specified after an internal review (protocol amendment 1.9).")
+            r"main text. Added by protocol amendment 1.9 and specified before being run.")
     return float_table("tab:s4", "Stage-free clinical block and year of diagnosis as categories", tabular, note)
 
 
@@ -319,8 +319,8 @@ def s7(root: Path) -> str:
     note = (r"Erreygers-corrected concentration index (95\% cluster bootstrap interval) of waiting more than 90 "
             r"days, ranking men by county median household income, poorest first. Positive values mean delay is "
             r"concentrated in higher-income counties. Crude: not standardised for clinical features, and it does "
-            r"not separate income from rurality. Indices by period were specified after an internal review "
-            r"(amendment 1.9).")
+            r"not separate income from rurality. Indices by period were added by protocol amendment "
+            r"1.9 and specified before being run.")
     return float_table("tab:s7", "Income concentration of delay, overall and by period of diagnosis", tabular, note)
 
 

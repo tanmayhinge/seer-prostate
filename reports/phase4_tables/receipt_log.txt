@@ -1,8 +1,0 @@
-18:04:26 eligible intermediate/high risk men: 352,644, 0.7821 with a recorded curative treatment
-18:05:13 all logistic: tuned {'max_iter': 2000, 'C': 1.0}; social increment 1.96 points (46s)
-18:06:30 all lightgbm: tuned {'learning_rate': 0.05, 'n_estimators': 200, 'num_leaves': 15, 'min_child_samples': 200}; social increment 2.16 points (77s)
-18:06:40 intermediate logistic: tuned {'max_iter': 2000, 'C': 0.01}; social increment 1.97 points (10s)
-18:07:39 intermediate lightgbm: tuned {'learning_rate': 0.05, 'n_estimators': 200, 'num_leaves': 15, 'min_child_samples': 50}; social increment 2.31 points (59s)
-18:07:58 high logistic: tuned {'max_iter': 2000, 'C': 10.0}; social increment 2.04 points (18s)
-18:08:57 high lightgbm: tuned {'learning_rate': 0.05, 'n_estimators': 200, 'num_leaves': 15, 'min_child_samples': 200}; social increment 2.22 points (60s)
-18:08:57 finished

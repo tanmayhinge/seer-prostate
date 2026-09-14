@@ -1,11 +1,11 @@
-# Waiting for prostate cancer treatment: how much is clinical need?
+# Predicting treatment delays of more than 90 days in prostate cancer
 
-A machine learning analysis of social position and time to treatment against the Australian optimal care pathway benchmark, US SEER 2010 to 2022.
+Added value of county rurality, county income and marital status over clinical characteristics: a machine learning cohort study of 330,827 men treated with surgery or radiotherapy in US SEER registries, 2010 to 2022.
 
-This project measures how much of the wait between a prostate cancer diagnosis and the start of surgery or radiotherapy is explained by clinical need, and how much more is explained by social position (marital status, rurality, county income). It uses the US SEER cancer registry only; no Australian data are analysed. The 90-day threshold comes from the Australian optimal care pathway for prostate cancer, and published Tasmanian findings are cited as background.
+This project measures how well registry data predict whether a man with prostate cancer waits more than 90 days from diagnosis to surgery or radiotherapy, and how much county rurality, county income and marital status add to clinical information. It uses the US SEER cancer registry only; no Australian data are analysed. The 90-day threshold matches the Australian optimal care pathway for prostate cancer, and published Australian findings are cited as background.
 
-- **Plain-language summary and status:** [PROGRESS.md](PROGRESS.md)
-- **Pre-specified study protocol:** [PROTOCOL.md](PROTOCOL.md)
+- **Paper:** [paper/paper.pdf](paper/paper.pdf) and [supplement](paper/supplement.pdf)
+- **Study protocol and amendment log:** [PROTOCOL.md](PROTOCOL.md)
 
 ## Project layout
 
@@ -16,14 +16,15 @@ config/           All analysis settings (no constants in code)
   reporting.yaml    Display names, bands and small-count suppression
   literature.yaml   PubMed search terms
   figures.yaml      Figure size, formats and colours
-paper/figures/    Preprint figures (PNG and PDF) and captions, drawn from aggregate tables
+paper/paper.pdf   The paper; paper/supplement.pdf is its supplement
+paper/tex/        LaTeX sources for both PDFs, with tables generated from the reports
+paper/figures/    Figures (PDF) and captions, drawn from aggregate tables
 data/raw/         SEER export and session files (not in git; see Data below)
 reports/          Phase reports (phase1.md, phase3.md, phase4*.md), aggregate result tables and PubMed search record
 scripts/          One entry point per phase
 src/seer_study/   Library code, one module per concern
 tests/            Unit tests, written before each module, with synthetic fixtures
 PROTOCOL.md       Study protocol and amendment log
-PROGRESS.md       What the project is and what is done so far
 ```
 
 ## Setup
@@ -53,8 +54,8 @@ Each phase has one script, run from the project root:
 .venv/bin/python scripts/run_phase4_receipt_report.py     # A9 report
 .venv/bin/python scripts/run_phase4_sensitivity.py        # A8 sensitivity scenarios (long run; needs model_tuning.csv)
 .venv/bin/python scripts/run_phase4_sensitivity_report.py # A8 report
-.venv/bin/python scripts/run_phase4_revision.py           # post-review robustness analyses (amendment 1.9; long run)
-.venv/bin/python scripts/run_phase4_revision_report.py    # post-review report
+.venv/bin/python scripts/run_phase4_revision.py           # further robustness analyses (amendment 1.9; long run)
+.venv/bin/python scripts/run_phase4_revision_report.py    # robustness report
 .venv/bin/python scripts/protocol_history.py              # protocol versions by commit, from git history
 ```
 

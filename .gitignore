@@ -34,5 +34,17 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 
-# LaTeX build intermediates from scripts/build_paper.py
+# LaTeX build intermediates and check output from scripts/build_paper.py
 paper/tex/build/
+paper/number_audit.txt
+
+# Kept locally, not published: working notes, review records, run logs, raw search dumps,
+# PNG copies of figures and the superseded matplotlib flow chart (the paper draws it in TikZ)
+PROGRESS.md
+QUICK_VIEW.md
+paper/review/
+paper/figures/*.png
+paper/figures/figure1_flow.*
+reports/phase4_tables/*_log.txt
+reports/phase1_search/articles.json
+reports/phase1_search/similar_articles.json

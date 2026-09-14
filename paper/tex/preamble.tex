@@ -59,7 +59,7 @@
 \newcommand{\shorttitle}{Predicting prostate cancer treatment delays of more than 90 days}
 \newcommand{\docversion}{Version 1, 14 September 2026}
 \newcommand{\doclabel}{Preprint}
-\newcommand{\footline}{\sffamily\scriptsize\textcolor{black!55}{Not peer reviewed \textbullet{} \docversion}}
+\newcommand{\footline}{\sffamily\scriptsize\textcolor{black!55}{\docversion}}
 \fancypagestyle{journal}{%
   \fancyhf{}%
   \fancyhead[L]{\sffamily\scriptsize\textcolor{accent}{\bfseries\MakeUppercase{\doclabel}}\quad
@@ -76,7 +76,3 @@
   \renewcommand{\headrulewidth}{0pt}%
   \renewcommand{\headrule}{}}
 \pagestyle{journal}
-
-% Coloured band across the top of the first page
-\newcommand{\topband}[2]{\noindent\colorbox{accent}{\parbox{\dimexpr\textwidth-2\fboxsep}{%
-  \sffamily\footnotesize\bfseries\color{white}\strut #1\hfill #2}}}

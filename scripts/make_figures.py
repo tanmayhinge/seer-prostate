@@ -29,7 +29,7 @@ from seer_study.risk import RISK_GROUPS
 
 COMPARISONS = {
     "clinical need (step 0 to 1)": "Clinical need added",
-    "social position (step 1 to 2)": "Social position added",
+    "social position (step 1 to 2)": "Area and marital added",
     "pathway (step 2 to 3)": "Treatment type added",
 }
 SOCIAL = "social position (step 1 to 2)"
@@ -88,7 +88,7 @@ def main() -> None:
     written += save_figure(increments_figure(increments, COMPARISONS, strata, spec), "figure3_skill_added", args.out_dir, spec)
     captions.append(
         "**Figure 3. Out-of-fold log-loss skill added by each block of features,** in percentage points, by risk group and "
-        f"model type. Blocks are added in order: clinical need, then social position, then treatment type. Bars are "
+        f"model type. Blocks are added in order: clinical need, then area and marital characteristics, then treatment type. Bars are "
         f"{modelling.interval_level:.0%} cluster bootstrap intervals ({modelling.bootstrap_resamples} resamples over rurality "
         "by county income cells). The dashed line marks no added skill. The x-axis scale differs between panels. "
         "Associations, not causal effects."
@@ -129,8 +129,8 @@ def main() -> None:
     bins.to_csv(t / "calibration_bins.csv", index=False)
     written += save_figure(calibration_figure(bins, strata, spec), "figureS1_calibration", args.out_dir, spec)
     captions.append(
-        f"**Supplementary Figure S1. Calibration of out-of-fold predicted probabilities at step 2** (clinical need and social "
-        f"position), in {spec.calibration_bins} equal-count bins, by risk group and model type. The dashed line marks perfect "
+        f"**Supplementary Figure S1. Calibration of out-of-fold predicted probabilities at step 2** (clinical need and area "
+        f"and marital characteristics), in {spec.calibration_bins} equal-count bins, by risk group and model type. The dashed line marks perfect "
         "calibration."
     )
 
@@ -142,7 +142,7 @@ def main() -> None:
     scenarios = {"primary": "Primary analysis", **{s.name: s.description[0].upper() + s.description[1:] for s in acfg.sensitivity.scenarios}}
     written += save_figure(sensitivity_figure(sens, SOCIAL, scenarios, spec), "figureS2_sensitivity", args.out_dir, spec)
     captions.append(
-        "**Supplementary Figure S2. Log-loss skill added by social position under each sensitivity scenario,** all men, with "
+        "**Supplementary Figure S2. Log-loss skill added by area and marital characteristics under each sensitivity scenario,** all men, with "
         f"{modelling.interval_level:.0%} cluster bootstrap intervals. Each scenario changes one setting from the primary "
         "analysis (`PROTOCOL.md` A8). The threshold scenarios use a different outcome, so their values are not directly "
         "comparable with the others."
